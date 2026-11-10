@@ -42,6 +42,16 @@ Regra: o que o código decide, o código decide; o juiz fica com o resto.
 
 O juiz só é calibrado (TPR/TNR contra a anotação humana) nos critérios que ele decide. Onde o código decide, não há calibração.
 
+### D4. Fonte dos traces: Claude Code não interativo
+
+Os traces vêm do **Claude Code em modo não interativo** (`claude -p --output-format stream-json`), que roda o P2 como ele é: server, skill e hook. Só assim se medem H11 (com e sem skill) e H12 (o hook não cobre o server remoto), as hipóteses que ligam o P3 ao P4.
+
+Consequências:
+- "Trocar de modelo" significa, na primeira versão, trocar entre modelos Claude. Comparar famílias fica para depois.
+- O trace bruto do Claude Code é **normalizado para um formato próprio, independente da fonte**, que é o que o formato de anotação lê. Assim, uma segunda fonte (o laço do P1 via OpenRouter, por exemplo) pode entrar sem mexer na anotação. O desenho desse formato é a próxima decisão.
+
+Alternativas descartadas por ora: Claude Agent SDK (mais controle, mais uma dependência, mesma limitação de modelos) e o laço do P1 (qualquer modelo, mas sem skill nem hook).
+
 ## Ainda em aberto
 
-Agente que gera os traces; com e sem skill; modelos e juiz de família diferente; orçamento e teto de custo; conjunto de calibração e divisão dos dados; regressão em CI; local ou remoto; Meister; relatório antes/depois. Ver `docs/decisoes-em-aberto.md`.
+Formato do trace normalizado; com e sem skill (como ligar e desligar); modelos e juiz de família diferente; orçamento e teto de custo; conjunto de calibração e divisão dos dados; regressão em CI; local ou remoto; Meister; relatório antes/depois. Ver `docs/decisoes-em-aberto.md`.

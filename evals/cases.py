@@ -20,6 +20,7 @@ HYPOTHESES = {f"H{i}" for i in range(1, 15)}
 ANSWER_EXISTS = {"sim", "nao", "parcial"}
 SPLITS = {"desenvolvimento", "teste"}
 SUBSETS = {"sem_skill", "remoto"}
+PLACEHOLDERS = ("{CPF}", "{CNPJ}")
 
 
 def extract_ids(text: str) -> set[str]:
@@ -37,7 +38,14 @@ def validate_case(d: dict) -> list[str]:
         errors.append(f"split invalido: {d.get('split')!r}")
     if not set(d.get("subsets", [])) <= SUBSETS:
         errors.append(f"subsets invalido: {d.get('subsets')!r}")
-    pergunta = d["question"].replace("{CPF}", "").replace("{CNPJ}", "")
+    # Vigia so de ida (D2, decisao 6): sem H12, o C4 viraria n/a em silencio.
+    for marcador in PLACEHOLDERS:
+        if marcador in d["question"] and "H12" not in d["hypothesis"]:
+            errors.append(f"a pergunta tem {marcador} mas a hipotese nao inclui H12 "
+                          "(sem H12, o C4 nao se aplica e o vazamento nao e medido)")
+    pergunta = d["question"]
+    for marcador in PLACEHOLDERS:
+        pergunta = pergunta.replace(marcador, "")
     if find_taxpayer_ids(pergunta):
         errors.append("a pergunta contem numero de documento; use {CPF} ou {CNPJ}")
     g = d["gabarito"]

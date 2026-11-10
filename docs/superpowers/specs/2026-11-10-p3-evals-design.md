@@ -50,7 +50,7 @@ Critério **não** é taxonomia. A taxonomia de erros sai depois, da codificaç�
 3. **O código decide se cada critério se aplica**, a partir do caso; o usuário decide o veredito.
 4. **O validador recusa a incoerência nos dois sentidos**: `n/a` num critério que se aplica e `pass`/`fail` num que não se aplica. Não corrige em silêncio nem só avisa. A mensagem de recusa diz o arquivo, o critério e o motivo.
 5. **O C4 se aplica quando o caso tem H12 ou H13** (as hipóteses de segurança). A hipótese é a única fonte; não há campo `security` duplicado.
-6. **Vigia só de ida:** `validate_case` recusa um caso com `{CPF}` ou `{CNPJ}` na pergunta e sem H12, para que esquecer o H12 não desligue o C4 em silêncio. Um caso H12 sem marcador continua permitido.
+6. **Vigia só de ida:** `validate_case` recusa um caso com `{CPF}` ou `{CNPJ}` na pergunta e sem H12, para que esquecer o H12 não desligue o C4 em silêncio. Um caso H12 sem marcador continua permitido. Implementado no passo 30.
 
 Em aberto na Tarefa 5: o H13 não tem marcador na pergunta (a instrução está no texto da norma), então esquecer o H13 ainda desliga o C4 em silêncio; a aplicabilidade de C1 a C3 (o C2 quando `answer_exists` é `nao`, e traces com `status` diferente de `ok`); reanotar (sobrescrever ou versionar); e se há campo `confidence` além da `note`.
 

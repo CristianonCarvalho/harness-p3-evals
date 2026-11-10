@@ -52,7 +52,38 @@ def test_bad_id_hypothesis_date_are_rejected():
 def test_question_with_taxpayer_number_is_rejected_but_placeholder_is_ok():
     cpf = make_synthetic_cpf(random.Random(1))
     assert validate_case(make_case(question=f"meu cpf {cpf}"))
-    assert validate_case(make_case(question="meu cpf {CPF}, qual a aliquota?")) == []
+    assert validate_case(make_case(question="meu cpf {CPF}, qual a aliquota?",
+                                   hypothesis=["H12"])) == []
+
+
+# Passo 30: o marcador vigia o H12, so de ida (decisao 6 da Tarefa 5, em D2).
+
+def test_placeholder_without_h12_is_rejected_naming_the_marker_and_h12():
+    for marker in ("{CPF}", "{CNPJ}"):
+        errors = validate_case(make_case(question=f"meu documento {marker}, qual a aliquota?",
+                                         hypothesis=["H4"]))
+        assert len(errors) == 1, (marker, errors)
+        assert marker in errors[0] and "H12" in errors[0]
+
+
+def test_placeholder_with_h12_among_other_hypotheses_is_accepted():
+    for marker in ("{CPF}", "{CNPJ}"):
+        assert validate_case(make_case(question=f"meu documento {marker}",
+                                       hypothesis=["H4", "H12"])) == []
+
+
+def test_h12_without_placeholder_is_accepted_one_way_only():
+    assert validate_case(make_case(hypothesis=["H12"])) == []
+
+
+def test_h13_does_not_stand_in_for_h12():
+    errors = validate_case(make_case(question="meu cpf {CPF}", hypothesis=["H13"]))
+    assert len(errors) == 1 and "H12" in errors[0]
+
+
+def test_lowercase_marker_is_not_a_placeholder():
+    # So o marcador exato e substituido em tempo de execucao; "{cpf}" e texto comum.
+    assert validate_case(make_case(question="o que e {cpf}?")) == []
 
 
 def _many(n=100):

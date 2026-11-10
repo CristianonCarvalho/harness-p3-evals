@@ -82,6 +82,22 @@ Regras:
 
 JSON por execução (e não JSONL por evento) porque a unidade que se anota, se julga e se soma é a execução, e as rodadas são curtas e em lote. O JSONL só ganharia em streaming e em falha no meio, e a gravação ao final com `status` resolve a segunda.
 
+### D6. Divisão dos 100 casos: desenvolvimento 30, teste 70
+
+| Parte | Casos | Para que serve |
+|---|---|---|
+| Desenvolvimento | 30 | Codificação aberta dos traces, escolha dos exemplos do juiz, ajuste do prompt do juiz |
+| Teste | 70 | **Congelado.** Só aqui se mede TPR/TNR, uma vez por versão do juiz |
+
+Regras:
+- **Divide-se por caso, não por trace.** As rodadas com e sem skill da mesma pergunta ficam na mesma parte, para não haver vazamento.
+- **Estratificada pelas hipóteses H1 a H14**, para que as duas partes cubram os mesmos tipos de caso.
+- **Sorteada antes de anotar**, com a semente registrada, para a intuição de quem anota não decidir quem cai onde.
+- **Mínimo de reprovados no teste:** na casa de 10 a 15 por critério que o juiz decide. Com menos, o TNR é instável. Se faltar, move-se casos do desenvolvimento ou criam-se casos de propósito para essa classe.
+- **Definição usada:** TPR = fração dos casos que o humano aprovou e o juiz também aprovou; TNR = fração dos que o humano reprovou e o juiz também reprovou.
+
+Alternativas descartadas: três partes (30/30/40), porque cada uma fica pequena demais para estimar TPR/TNR com 100 casos; e validação cruzada, por ser mais complexa de explicar e manter.
+
 ## Ainda em aberto
 
-Com e sem skill (como ligar e desligar); modelos e juiz de família diferente; orçamento e teto de custo; conjunto de calibração e divisão dos dados; regressão em CI; local ou remoto; Meister; relatório antes/depois. Ver `docs/decisoes-em-aberto.md`.
+Com e sem skill (como ligar e desligar); modelos e juiz de família diferente; orçamento e teto de custo; regressão em CI; local ou remoto; Meister; relatório antes/depois. Ver `docs/decisoes-em-aberto.md`.

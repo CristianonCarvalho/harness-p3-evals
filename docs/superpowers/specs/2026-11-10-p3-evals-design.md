@@ -154,6 +154,16 @@ Alternativas descartadas: matriz completa (até 400 traces, fora da escala) e s�
 
 Alternativas descartadas: um só modelo (criterio 1 sem demonstração) e três modelos (mais rodadas e mais traces, sem necessidade na primeira versão).
 
+### D11. Método de execução: sem Meister, passo a passo, com Haiku 5.5 no desenvolvimento
+
+O **entorno** (adaptador do Claude Code, runner das rodadas, cliente e ledger adaptados do P1, fixtures, CI) é implementado **na conversa, em passos pequenos, com TDD**, e o usuário revisa cada commit (`step-NN`). **Sem Meister**: o projeto não ganha `.meister/` nem `meister.config.yaml`. Se o volume crescer, o Meister entra depois, como um passo à parte.
+
+O **núcleo** (formato de anotação, TPR/TNR e juiz) é **escrito pelo usuário**; o Claude revisa, explica e pergunta (D1). Isto vale também para a forma de trabalho: nenhum método de execução implementa o núcleo.
+
+**Custo do desenvolvimento:** sempre que possível, a implementação do entorno é feita por um subagente **Haiku 5.5**, e a sessão principal revisa o resultado antes do commit. O que exige julgamento (decisões de desenho, revisão do núcleo, explicações) fica na sessão principal. Isto reduz o custo de **desenvolver o P3**; não tem relação com os modelos que o P3 **avalia** (D10).
+
+Cuidados: o subagente começa sem contexto, então cada tarefa delegada leva um enunciado autossuficiente (arquivos, interface esperada, testes a passar). O resultado é conferido (testes rodando, diff lido) antes de entrar no commit, e nada que toque o núcleo é delegado.
+
 ## Ainda em aberto
 
-Como ligar e desligar a skill no Claude Code; valor do teto de custo (depois da piloto); onde mora o limiar de TPR/TNR e quem aprova baixá-lo; Meister; relatório antes/depois. Ver `docs/decisoes-em-aberto.md`.
+Como ligar e desligar a skill no Claude Code; valor do teto de custo (depois da piloto); onde mora o limiar de TPR/TNR e quem aprova baixá-lo; relatório antes/depois. Ver `docs/decisoes-em-aberto.md`.

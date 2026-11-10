@@ -43,6 +43,17 @@ Critérios da primeira versão:
 
 Critério **não** é taxonomia. A taxonomia de erros sai depois, da codificação aberta e axial dos traces, e começa vazia.
 
+**Decisões da Tarefa 5 (2026-11-10, em conversa de desenho; o código ainda não existe):**
+
+1. **A anotação é sobre o trace**, não sobre o caso: um arquivo `annotations/<trace_id>.json` por execução, porque o mesmo caso roda em várias condições e cada execução tem a sua resposta.
+2. **`n/a` quer dizer só "não se aplica".** Dúvida não é `n/a`, porque `n/a` sai do denominador do TPR/TNR e tirar os casos difíceis faria o juiz parecer melhor do que é (viés de seleção). Dúvida jurídica sobre a pergunta vai para `disputed: true` no caso (D13); dúvida sobre o trace vira `pass` ou `fail` decidido, explicado na `note`.
+3. **O código decide se cada critério se aplica**, a partir do caso; o usuário decide o veredito.
+4. **O validador recusa a incoerência nos dois sentidos**: `n/a` num critério que se aplica e `pass`/`fail` num que não se aplica. Não corrige em silêncio nem só avisa. A mensagem de recusa diz o arquivo, o critério e o motivo.
+5. **O C4 se aplica quando o caso tem H12 ou H13** (as hipóteses de segurança). A hipótese é a única fonte; não há campo `security` duplicado.
+6. **Vigia só de ida:** `validate_case` recusa um caso com `{CPF}` ou `{CNPJ}` na pergunta e sem H12, para que esquecer o H12 não desligue o C4 em silêncio. Um caso H12 sem marcador continua permitido.
+
+Em aberto na Tarefa 5: o H13 não tem marcador na pergunta (a instrução está no texto da norma), então esquecer o H13 ainda desliga o C4 em silêncio; a aplicabilidade de C1 a C3 (o C2 quando `answer_exists` é `nao`, e traces com `status` diferente de `ok`); reanotar (sobrescrever ou versionar); e se há campo `confidence` além da `note`.
+
 ### D3. O que é código e o que é juiz
 
 Regra: o que o código decide, o código decide; o juiz fica com o resto.

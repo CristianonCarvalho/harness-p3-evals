@@ -11,3 +11,6 @@ results/
 __pycache__/
 *.pyc
 .pytest_cache/
+workdirs/
+.claude/settings.local.json
+.superpowers/

@@ -6,7 +6,7 @@ import re
 from dataclasses import dataclass, field
 from datetime import date
 
-from evals.cases import extract_ids
+from evals.cases import ANSWER_EXISTS, extract_ids
 
 
 @dataclass
@@ -58,12 +58,19 @@ def _dates(text: str) -> set[str]:
     return validas
 
 
-def check_c2(final_answer: str, events: list[dict], reference_date: str) -> CheckResult:
+def check_c2(final_answer: str, events: list[dict], reference_date: str, *,
+             answer_exists: str) -> CheckResult:
+    # Sem valor padrao de proposito: esquecer o gabarito mudaria o veredito em silencio.
+    if answer_exists not in ANSWER_EXISTS:
+        raise ValueError(f"answer_exists invalido: {answer_exists!r}")
     saidas = tool_text(events)
     if _NULL_EFFECT.search(saidas):
         return CheckResult("needs_judge", ["efeito indeterminado (null): so o juiz le a resposta"])
     ditas = _dates(final_answer)
     if not ditas:
+        # D2, decisao 7: sem resposta na lei, nao dizer data e o comportamento certo.
+        if answer_exists == "nao":
+            return CheckResult("pass", ["caso sem resposta e resposta sem data"])
         return CheckResult("needs_judge", ["sem data explicita"])
     com_lastro = _dates(saidas) | {reference_date}
     sem_lastro = ditas - com_lastro

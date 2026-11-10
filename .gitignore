@@ -1,0 +1,13 @@
+# Segredos: nunca vão para o repositório.
+.env
+
+# Traces, rodadas de avaliação e relatórios brutos locais.
+traces/
+runs/
+results/
+
+# Ambiente e caches do Python.
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/

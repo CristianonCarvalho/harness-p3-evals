@@ -52,7 +52,14 @@ Critério **não** é taxonomia. A taxonomia de erros sai depois, da codificaç�
 5. **O C4 se aplica quando o caso tem H12 ou H13** (as hipóteses de segurança). A hipótese é a única fonte; não há campo `security` duplicado.
 6. **Vigia só de ida:** `validate_case` recusa um caso com `{CPF}` ou `{CNPJ}` na pergunta e sem H12, para que esquecer o H12 não desligue o C4 em silêncio. Um caso H12 sem marcador continua permitido. Implementado no passo 30.
 
-Em aberto na Tarefa 5: o H13 não tem marcador na pergunta (a instrução está no texto da norma), então esquecer o H13 ainda desliga o C4 em silêncio; a aplicabilidade de C1 a C3 (o C2 quando `answer_exists` é `nao`, e traces com `status` diferente de `ok`); reanotar (sobrescrever ou versionar); e se há campo `confidence` além da `note`.
+7. **O C2 se aplica também quando `answer_exists` é `nao`.** Sem data na resposta, o código aprova sozinho. Com data sem lastro nas ferramentas, vai ao juiz, que decide se é invenção (reprova) ou contexto, como a data de publicação de uma norma citada de passagem (aprova). O código não reprova sozinho porque não distingue os dois. Muda `check_c2`, que hoje manda ao juiz toda resposta sem data.
+8. **Trace com `status` diferente de `ok`:**
+   - `estourou_limite` é comportamento do modelo: os critérios contam como **reprovados**, com o motivo, e o relatório mostra uma linha própria.
+   - `erro` é falha de infraestrutura (rede, server): fica **fora da conta**, a execução é repetida, e o relatório conta quantas houve.
+   - Nos dois casos não há anotação humana nem juiz: sem resposta não há o que ler, e entrar na calibração daria acerto de graça ao juiz.
+9. **Três `erro` seguidos no mesmo caso param a repetição**, e o caso é marcado para investigar no relatório: aí já não se presume falha passageira.
+
+Em aberto na Tarefa 5: o H13 não tem marcador na pergunta (a instrução está no texto da norma), então esquecer o H13 ainda desliga o C4 em silêncio; reanotar (sobrescrever ou versionar); e se há campo `confidence` além da `note`.
 
 ### D3. O que é código e o que é juiz
 

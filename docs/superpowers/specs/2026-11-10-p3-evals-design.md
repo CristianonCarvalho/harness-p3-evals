@@ -201,6 +201,32 @@ Conteúdo do JSON:
 
 Alternativas descartadas: só Markdown (o CI teria de interpretar texto, o que é frágil) e só JSON (ninguém lê sem ferramenta).
 
+### D13. O caso e o gabarito: mínimo estruturado
+
+Cada caso é um arquivo versionado `cases/<id>.json`. As chaves do arquivo seguem a convenção do projeto (identificadores em inglês); o conteúdo (a pergunta) fica em português:
+
+```
+cases/<id>.json
+  case_id
+  question
+  hypothesis                  # H1 a H14 (pode haver mais de uma)
+  split                       # desenvolvimento | teste (D6, sorteado antes de anotar)
+  subsets                     # sem_skill | remoto (D9), quando aplicável
+  gabarito:
+    answer_exists           # sim | nao | parcial  (referência de C3)
+    expected_provisions    # ids que uma boa resposta deve citar
+    reference_date            # AAAA-MM-DD usada no caso (referência de C2)
+    disputed                 # true: fora do cálculo do juiz (ver Limites conhecidos)
+```
+
+Regras:
+- **O gabarito é escrito antes de ver qualquer resposta do modelo**, pelo usuário, que é quem entende do assunto.
+- **Conferência offline, sem modelo:** uma checagem chama as ferramentas do P2 (stdio) e confirma que os `expected_provisions` existem no corpus e que o `efeitos.desde` do caso confere. Um gabarito que não passa nessa conferência é recusado.
+- **Só dados públicos:** o caso nunca contém CPF/CNPJ. Os casos de segurança descrevem o que fazer, e o número sintético é gerado em tempo de execução e nunca escrito (regra de D5).
+- **O gabarito dá a referência estruturada** para C1, C2 e C3. Não captura nuance jurídica; respostas ideais em prosa ficaram de fora de propósito.
+
+Alternativas descartadas: resposta ideal em texto livre (o código não a lê, e dá muito trabalho para 100 casos) e nenhum gabarito (o "devia ou não devia" seria decidido na hora da anotação, o que reduz a reprodutibilidade e impede a checagem automática).
+
 ## Limites conhecidos
 
 - **Um único anotador.** As anotações são de uma pessoa; não há concordância entre anotadores. O TPR/TNR mede a concordância do juiz com **essa** pessoa, não com uma verdade objetiva. Casos em que a resposta correta é debatível ficam marcados e fora do cálculo do juiz.
@@ -210,7 +236,7 @@ Alternativas descartadas: só Markdown (o CI teria de interpretar texto, o que �
 
 ## Pendente antes do plano
 
-**Formato do caso e gabarito.** A spec fala em `case_id` e em 100 casos, mas não define o arquivo do caso (`cases/<id>.json`): pergunta, hipótese H, parte (desenvolvimento ou teste), marcas de subconjunto e, principalmente, o **gabarito mínimo**. C3 só pode ser anotado se se souber de antemão se a resposta existe no corpus, e C1 e C2 dependem do dispositivo e da data esperados. É a próxima decisão a tomar com o usuário; o plano depende dela.
+**Definição do C1 (decisão do usuário).** Hoje o C1 só pede que o dispositivo citado tenha sido **devolvido** pela ferramenta. Uma resposta que cita o dispositivo do tributo errado (H3, empate entre Imposto Seletivo e IBS) passa em C1, porque o dispositivo existe e foi devolvido. Com `expected_provisions` no gabarito (D13), C1 poderia também exigir que o esperado esteja entre os citados. Isso muda a definição do critério, que é do usuário; não foi alterada sem a decisão dele.
 
 ## Ainda em aberto (decisões adiadas, com o gatilho que as resolve)
 

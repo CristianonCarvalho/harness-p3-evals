@@ -1,6 +1,16 @@
-# Spec do P3: suíte de evals do MCP server de legislação (rascunho)
+# Spec do P3: suíte de evals do MCP server de legislação
 
-**Status: rascunho em construção.** Cada decisão entra aqui quando é tomada, uma por vez (ver `docs/decisoes-em-aberto.md` para o mapa completo). Ainda não é a spec final: falta decidir o resto e passar pela revisão.
+**Status: completa, aguardando a revisão do usuário.** Cada decisão entrou aqui quando foi tomada, uma por vez (ver `docs/decisoes-em-aberto.md` para o mapa de origem). Não há plano nem código: o plano só nasce depois da aprovação desta spec.
+
+## Como a spec cobre o critério de concluído
+
+| # | Critério (CLAUDE.md) | Onde está |
+|---|---|---|
+| 1 | Trocar de modelo ou prompt gera um relatório numérico | D10 (dois modelos), D12 (relatório) |
+| 2 | 100 traces anotados | D2 (formato), D6 (100 casos), D9 (condição principal) |
+| 3 | Juiz LLM calibrado (TPR e TNR) | D3, D6, D8 |
+| 4 | Toda mudança vem com antes/depois | D7, D12 |
+| 5 | A regressão roda em CI a cada mudança | D7 |
 
 ## Decisões tomadas
 
@@ -13,6 +23,8 @@ O núcleo, escrito pelo usuário (o Claude revisa, explica e pergunta), são **t
 3. o **juiz LLM**.
 
 Fica fora do núcleo, e o Claude implementa ou adapta do P1: cliente HTTP, ledger de custo, CI e o entorno das rodadas.
+
+**As checagens em código de D3** (extrair o `id` citado, extrair e comparar datas, detectar eco de CPF/CNPJ) também ficam no **entorno**: o Claude as implementa e o usuário revisa. O que é **do usuário** é a **definição de cada critério** (D2), isto é, o que significa aprovar. *Ponto a confirmar na revisão:* se o usuário preferir escrever também essas checagens, elas passam para o núcleo.
 
 ### D2. Formato da anotação: binário por critério
 
@@ -71,6 +83,11 @@ annotations/<id>.json         # escrita pelo usuário, versionada no git
   trace_id
   verdicts: {C1, C2, C3, C4}  # pass | fail | n/a
   note
+
+judgments/<id>.json           # gerado pelo juiz (D8), versionado no git
+  trace_id, judge (modelo e versão)
+  verdicts: {C2, C3, C4}      # só os critérios que o juiz decide
+  justification
 ```
 
 Regras:
@@ -78,7 +95,8 @@ Regras:
 - **A saída bruta das ferramentas é obrigatória** (`result_raw`). Um adaptador que não a obtenha é recusado, porque sem ela C1 e C2 não são checáveis por código.
 - **`conditions` separa o que não é comparável.** O relatório agrupa as rodadas por condição; C4 só vale onde o hook estava ligado ou onde se mede justamente a falta dele.
 - **Execução que falha também é dado:** o adaptador grava o arquivo ao final mesmo com erro, com `status` preenchido.
-- `traces/` fica no `.gitignore`; `annotations/` **não**, porque as anotações são o ativo mais valioso do projeto.
+- `traces/` fica no `.gitignore`; `annotations/` e `judgments/` **não**: as anotações são o ativo mais valioso do projeto, e os vereditos do juiz são o que o CI recalcula (D7).
+- **Nenhum número de CPF/CNPJ, nem sintético, entra em arquivo versionado.** Isso vale para `note` e `justification`, que são texto livre e poderiam citar o número que está no trace. Um teste do CI recusa qualquer sequência com formato de CPF ou CNPJ nesses arquivos e nas fixtures.
 
 JSON por execução (e não JSONL por evento) porque a unidade que se anota, se julga e se soma é a execução, e as rodadas são curtas e em lote. O JSONL só ganharia em streaming e em falha no meio, e a gravação ao final com `status` resolve a segunda.
 
@@ -95,6 +113,8 @@ Regras:
 - **Sorteada antes de anotar**, com a semente registrada, para a intuição de quem anota não decidir quem cai onde.
 - **Mínimo de reprovados no teste:** na casa de 10 a 15 por critério que o juiz decide. Com menos, o TNR é instável. Se faltar, move-se casos do desenvolvimento ou criam-se casos de propósito para essa classe.
 - **Definição usada:** TPR = fração dos casos que o humano aprovou e o juiz também aprovou; TNR = fração dos que o humano reprovou e o juiz também reprovou.
+
+- **Os subconjuntos de D9 herdam a divisão.** Com 70% dos casos no teste, o subconjunto "sem skill" (cerca de 20) deixa uns 14 casos no teste, e os casos de segurança deixam poucos. Nesses subconjuntos os intervalos são largos e o relatório deve dizê-lo; o C4 em especial pode não ter reprovados suficientes para calibrar o juiz, e nesse caso é declarado **"não calibrado"**, em vez de reportar um TNR sem lastro.
 
 Alternativas descartadas: três partes (30/30/40), porque cada uma fica pequena demais para estimar TPR/TNR com 100 casos; e validação cruzada, por ser mais complexa de explicar e manter.
 
@@ -152,7 +172,7 @@ Alternativas descartadas: matriz completa (até 400 traces, fora da escala) e s�
 
 **Variação entre execuções:** o Claude Code não expõe temperatura, então a mesma pergunta pode dar respostas diferentes. Na piloto, uns 5 dos 10 casos rodam 3 vezes para medir essa variação, antes de decidir se cada caso precisa de mais de uma execução.
 
-Alternativas descartadas: um só modelo (criterio 1 sem demonstração) e três modelos (mais rodadas e mais traces, sem necessidade na primeira versão).
+Alternativas descartadas: um só modelo (critério 1 sem demonstração) e três modelos (mais rodadas e mais traces, sem necessidade na primeira versão).
 
 ### D11. Método de execução: sem Meister, passo a passo, com Haiku 5.5 no desenvolvimento
 
@@ -181,6 +201,24 @@ Conteúdo do JSON:
 
 Alternativas descartadas: só Markdown (o CI teria de interpretar texto, o que é frágil) e só JSON (ninguém lê sem ferramenta).
 
-## Ainda em aberto
+## Limites conhecidos
 
-Como ligar e desligar a skill no Claude Code; valor do teto de custo (depois da piloto); onde mora o limiar de TPR/TNR e quem aprova baixá-lo; como calcular o intervalo de incerteza. Ver `docs/decisoes-em-aberto.md`.
+- **Um único anotador.** As anotações são de uma pessoa; não há concordância entre anotadores. O TPR/TNR mede a concordância do juiz com **essa** pessoa, não com uma verdade objetiva. Casos em que a resposta correta é debatível ficam marcados e fora do cálculo do juiz.
+- **Só modelos Claude avaliados** (D4, D10): o relatório não diz nada sobre outras famílias.
+- **O CI não vê traces reais** (D7): um relatório que não vem de uma rodada real só é barrado pela revisão.
+- **Execuções repetidas variam** (D10): sem temperatura controlável, a taxa de um critério tem ruído que a piloto mede.
+
+## Pendente antes do plano
+
+**Formato do caso e gabarito.** A spec fala em `case_id` e em 100 casos, mas não define o arquivo do caso (`cases/<id>.json`): pergunta, hipótese H, parte (desenvolvimento ou teste), marcas de subconjunto e, principalmente, o **gabarito mínimo**. C3 só pode ser anotado se se souber de antemão se a resposta existe no corpus, e C1 e C2 dependem do dispositivo e da data esperados. É a próxima decisão a tomar com o usuário; o plano depende dela.
+
+## Ainda em aberto (decisões adiadas, com o gatilho que as resolve)
+
+| Decisão | Gatilho |
+|---|---|
+| Como ligar e desligar a skill no Claude Code | Primeiro passo de implementação do runner |
+| Valor do teto de custo por rodada e por mês | Depois da rodada piloto (D10) |
+| Limiar mínimo de TPR/TNR e quem aprova baixá-lo | Depois da primeira medição no teste |
+| Como calcular o intervalo de incerteza | Passo que implementa o relatório (D12) |
+
+Ver também `docs/decisoes-em-aberto.md`.

@@ -123,6 +123,24 @@ Regras:
 
 Alternativas descartadas por ora: Claude de outro nível (mais simples, mas mesma família) e dois juízes com medida de concordância (boa extensão se o TPR/TNR do primeiro vier fraco).
 
+### D9. Matriz de condições: principal + subconjuntos
+
+| Condição | Casos | Hipótese |
+|---|---|---|
+| **Principal:** server local (stdio), **com skill** | os 100 casos | todas |
+| **Sem skill** | subconjunto de cerca de 20 casos, escolhidos de propósito (casos em que a skill poderia fazer diferença) | H11 |
+| **Server remoto (HTTP)** | os casos de segurança (por exemplo, CPF sintético no meio da pergunta) | H12 |
+
+Por quê: o hook do P2 usa o matcher `mcp__taxlaw__.*`, então cobre o server local e não o remoto. Comparar local e remoto nos casos de segurança é o que mede H12. A condição principal é determinística e sem limite de taxa (o remoto tem token e 429 no nginx), e o critério de 100 traces anotados fica satisfeito por ela.
+
+Regras:
+- Cada rodada registra a condição em `conditions` (D5): skill ligada ou não, hook ligado ou não, local ou remoto, tag do P2, `corpus.versao`.
+- **Por D6, todas as variantes do mesmo caso ficam na mesma parte** (desenvolvimento ou teste).
+- O relatório agrupa por condição. As variantes não se misturam em uma única taxa.
+- O token do remoto só entra por variável de ambiente (`TAXLAW_HTTP_TOKEN`).
+
+Alternativas descartadas: matriz completa (até 400 traces, fora da escala) e só a condição principal (deixaria H11 e H12 sem resposta, e eram a razão da D4).
+
 ## Ainda em aberto
 
-Com e sem skill (como ligar e desligar); modelos avaliados; teto de custo por rodada e por mês; onde mora o limiar de TPR/TNR e quem aprova baixá-lo; local ou remoto; Meister; relatório antes/depois. Ver `docs/decisoes-em-aberto.md`.
+Como ligar e desligar a skill no Claude Code; modelos avaliados; teto de custo por rodada e por mês; onde mora o limiar de TPR/TNR e quem aprova baixá-lo; Meister; relatório antes/depois. Ver `docs/decisoes-em-aberto.md`.

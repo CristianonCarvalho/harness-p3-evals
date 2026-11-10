@@ -164,6 +164,23 @@ O **núcleo** (formato de anotação, TPR/TNR e juiz) é **escrito pelo usuário
 
 Cuidados: o subagente começa sem contexto, então cada tarefa delegada leva um enunciado autossuficiente (arquivos, interface esperada, testes a passar). O resultado é conferido (testes rodando, diff lido) antes de entrar no commit, e nada que toque o núcleo é delegado.
 
+### D12. O relatório: JSON canônico + Markdown gerado
+
+O relatório é um **JSON versionado**, a fonte de verdade que o CI lê (D7). Um comando gera o **Markdown legível** a partir dele, para o README e para a leitura humana. Os dois nunca são editados à mão separadamente.
+
+Conteúdo do JSON:
+- **Cabeçalho de reprodução:** ID exato dos modelos avaliados, modelo e versão do juiz, tag do P2, `corpus.versao`, condições (D9), semente da divisão (D6), preços usados e data.
+- **Taxa de aprovação por critério e por condição**, sempre com o **n** e um **intervalo de incerteza**.
+- **Quem decidiu cada número:** código ou juiz (D3).
+- **TPR/TNR do juiz no conjunto de teste**, para o leitor saber quanto confiar nos números que vieram dele.
+- **Custo e tokens** da rodada.
+
+**Antes/depois:** a comparação de dois relatórios traz a diferença por critério e a marca **"dentro do ruído"** ou **"diferença real"**, conforme os intervalos. Com 70 casos de teste, uma diferença pequena costuma ser ruído, e o relatório deve dizê-lo em vez de sugerir melhora.
+
+**Conjuntos:** o número principal usa só o conjunto de **teste** (D6). O de desenvolvimento aparece em separado, só para diagnóstico, porque o juiz foi ajustado nele e os vereditos ali são otimistas.
+
+Alternativas descartadas: só Markdown (o CI teria de interpretar texto, o que é frágil) e só JSON (ninguém lê sem ferramenta).
+
 ## Ainda em aberto
 
-Como ligar e desligar a skill no Claude Code; valor do teto de custo (depois da piloto); onde mora o limiar de TPR/TNR e quem aprova baixá-lo; relatório antes/depois. Ver `docs/decisoes-em-aberto.md`.
+Como ligar e desligar a skill no Claude Code; valor do teto de custo (depois da piloto); onde mora o limiar de TPR/TNR e quem aprova baixá-lo; como calcular o intervalo de incerteza. Ver `docs/decisoes-em-aberto.md`.

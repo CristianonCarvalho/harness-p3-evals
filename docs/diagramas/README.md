@@ -13,6 +13,7 @@ Diagramas em [Mermaid](https://mermaid.js.org/): o GitHub os desenha direto no n
 | 07 | [CI e rodadas pagas](07-ci-e-rodadas-pagas.md) | O que roda a cada mudança e o que roda sob demanda? |
 | 08 | [Módulos](08-modulos.md) | Quem depende de quem no código, e quem escreve o quê? |
 | 09 | [Ordem das tarefas](09-ordem-das-tarefas.md) | O que já foi feito e o que bloqueia o resto? |
+| 10 | [A anotação](10-anotacao.md) | Quando um critério é `n/a`? O que o validador recusa? |
 
 Os conceitos que aparecem nos diagramas (trace, juiz, TPR, TNR, calibração, ruído…) estão explicados, com exemplos, em [Conceitos explicados](../../README.md#conceitos-explicados) no README.
 

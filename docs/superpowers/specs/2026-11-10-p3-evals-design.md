@@ -111,6 +111,18 @@ Fica sob demanda, na máquina do usuário, com ledger e teto de custo: gerar tra
 
 Limite conhecido: um PR pode trazer um relatório que não corresponde a uma rodada real; a proteção é a revisão humana. Rodada paga automática (um lote pequeno por PR) foi descartada por custar a cada mudança, exigir chave no CI e ficar intermitente; pode voltar depois como job manual separado.
 
+### D8. O juiz: outra família, via OpenRouter
+
+O juiz é um modelo **de família diferente** dos modelos avaliados (que, pela D4, são todos Claude), chamado pelo cliente HTTP do P1 via OpenRouter. Motivo: um LLM tende a preferir respostas parecidas com as que ele escreveria (autopreferência), e um juiz Claude poderia favorecer o estilo dos Claude avaliados. O TPR/TNR continua sendo a defesa final, mas escolher bem o juiz poupa retrabalho.
+
+Regras:
+- **Versão exata do modelo juiz fixada** e registrada em todo relatório (provedores mudam modelos sem aviso).
+- **Uma chamada por critério**, com a pergunta, a saída bruta das ferramentas, a resposta final e a definição do critério. O juiz devolve aprovado ou reprovado com uma justificativa curta, e **nunca vê o veredito humano**.
+- **O juiz só decide o que o código não decide** (D3), então o volume é de centenas de chamadas curtas por rodada. O custo não pesa na escolha.
+- **Chave e conta próprias do juiz**, só por variável de ambiente, com teto de custo por rodada. Nunca exibir a chave.
+
+Alternativas descartadas por ora: Claude de outro nível (mais simples, mas mesma família) e dois juízes com medida de concordância (boa extensão se o TPR/TNR do primeiro vier fraco).
+
 ## Ainda em aberto
 
-Com e sem skill (como ligar e desligar); modelos e juiz de família diferente; orçamento e teto de custo; onde mora o limiar de TPR/TNR e quem aprova baixá-lo; local ou remoto; Meister; relatório antes/depois. Ver `docs/decisoes-em-aberto.md`.
+Com e sem skill (como ligar e desligar); modelos avaliados; teto de custo por rodada e por mês; onde mora o limiar de TPR/TNR e quem aprova baixá-lo; local ou remoto; Meister; relatório antes/depois. Ver `docs/decisoes-em-aberto.md`.

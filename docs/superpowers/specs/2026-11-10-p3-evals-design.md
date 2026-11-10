@@ -48,10 +48,40 @@ Os traces vêm do **Claude Code em modo não interativo** (`claude -p --output-f
 
 Consequências:
 - "Trocar de modelo" significa, na primeira versão, trocar entre modelos Claude. Comparar famílias fica para depois.
-- O trace bruto do Claude Code é **normalizado para um formato próprio, independente da fonte**, que é o que o formato de anotação lê. Assim, uma segunda fonte (o laço do P1 via OpenRouter, por exemplo) pode entrar sem mexer na anotação. O desenho desse formato é a próxima decisão.
+- O trace bruto do Claude Code é **normalizado para um formato próprio, independente da fonte**, que é o que o formato de anotação lê. Assim, uma segunda fonte (o laço do P1 via OpenRouter, por exemplo) pode entrar sem mexer na anotação. O desenho desse formato está em D5.
 
 Alternativas descartadas por ora: Claude Agent SDK (mais controle, mais uma dependência, mesma limitação de modelos) e o laço do P1 (qualquer modelo, mas sem skill nem hook).
 
+### D5. Formato do trace: um JSON por execução, anotação separada
+
+Um **arquivo JSON por execução** (um caso, uma rodada), gerado por um **adaptador** por fonte (Claude Code agora; outro harness ou interface web depois). Tudo o que vem depois (anotação, checagens em código, juiz, relatório) lê só este formato, nunca o formato nativo da fonte.
+
+```
+traces/<id>.json              # imutável, gerado pelo adaptador, fora do git
+  trace_id, case_id, status   # ok | erro | estourou_limite
+  source                      # harness e versão
+  model
+  conditions                  # skill ligada?, hook ligado?, local ou remoto, tag do P2, corpus.versao
+  question
+  events: [ {tool_call, args, result_raw}, ... ]
+  final_answer
+  usage                       # tokens, custo, duração
+
+annotations/<id>.json         # escrita pelo usuário, versionada no git
+  trace_id
+  verdicts: {C1, C2, C3, C4}  # pass | fail | n/a
+  note
+```
+
+Regras:
+- **O trace é imutável.** Reanotar nunca altera o trace; humano e juiz avaliam exatamente o mesmo dado.
+- **A saída bruta das ferramentas é obrigatória** (`result_raw`). Um adaptador que não a obtenha é recusado, porque sem ela C1 e C2 não são checáveis por código.
+- **`conditions` separa o que não é comparável.** O relatório agrupa as rodadas por condição; C4 só vale onde o hook estava ligado ou onde se mede justamente a falta dele.
+- **Execução que falha também é dado:** o adaptador grava o arquivo ao final mesmo com erro, com `status` preenchido.
+- `traces/` fica no `.gitignore`; `annotations/` **não**, porque as anotações são o ativo mais valioso do projeto.
+
+JSON por execução (e não JSONL por evento) porque a unidade que se anota, se julga e se soma é a execução, e as rodadas são curtas e em lote. O JSONL só ganharia em streaming e em falha no meio, e a gravação ao final com `status` resolve a segunda.
+
 ## Ainda em aberto
 
-Formato do trace normalizado; com e sem skill (como ligar e desligar); modelos e juiz de família diferente; orçamento e teto de custo; conjunto de calibração e divisão dos dados; regressão em CI; local ou remoto; Meister; relatório antes/depois. Ver `docs/decisoes-em-aberto.md`.
+Com e sem skill (como ligar e desligar); modelos e juiz de família diferente; orçamento e teto de custo; conjunto de calibração e divisão dos dados; regressão em CI; local ou remoto; Meister; relatório antes/depois. Ver `docs/decisoes-em-aberto.md`.

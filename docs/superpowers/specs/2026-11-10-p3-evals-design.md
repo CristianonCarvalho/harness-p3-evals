@@ -98,6 +98,19 @@ Regras:
 
 Alternativas descartadas: três partes (30/30/40), porque cada uma fica pequena demais para estimar TPR/TNR com 100 casos; e validação cruzada, por ser mais complexa de explicar e manter.
 
+### D7. Regressão em CI: só offline
+
+O CI roda a cada mudança **sem chamar modelo, sem rede e sem segredo**. Ele protege o **avaliador** (o núcleo, a conta e a coerência dos arquivos), não faz a rodada que mede o P2.
+
+O que o CI faz:
+- Testa o núcleo (cálculo de TPR/TNR, validação do formato de anotação, checagens de código de C1, de parte de C2 e de C4) com **traces sintéticos pequenos**, escritos à mão e versionados como fixtures. Os traces reais ficam fora do git.
+- **Recalcula TPR/TNR** a partir de arquivos versionados: as anotações humanas (`annotations/`) e os vereditos do juiz já gravados (`judgments/`). Confere se a conta bate e se o TPR/TNR segue acima do limiar combinado.
+- **Exige antes/depois:** um PR que muda prompt, modelo ou a tag do P2 precisa trazer um relatório novo versionado, e o CI o compara com o relatório base.
+
+Fica sob demanda, na máquina do usuário, com ledger e teto de custo: gerar traces com o modelo, rodar o juiz e produzir o relatório. O resultado entra no PR como arquivos.
+
+Limite conhecido: um PR pode trazer um relatório que não corresponde a uma rodada real; a proteção é a revisão humana. Rodada paga automática (um lote pequeno por PR) foi descartada por custar a cada mudança, exigir chave no CI e ficar intermitente; pode voltar depois como job manual separado.
+
 ## Ainda em aberto
 
-Com e sem skill (como ligar e desligar); modelos e juiz de família diferente; orçamento e teto de custo; regressão em CI; local ou remoto; Meister; relatório antes/depois. Ver `docs/decisoes-em-aberto.md`.
+Com e sem skill (como ligar e desligar); modelos e juiz de família diferente; orçamento e teto de custo; onde mora o limiar de TPR/TNR e quem aprova baixá-lo; local ou remoto; Meister; relatório antes/depois. Ver `docs/decisoes-em-aberto.md`.

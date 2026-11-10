@@ -141,6 +141,19 @@ Regras:
 
 Alternativas descartadas: matriz completa (até 400 traces, fora da escala) e só a condição principal (deixaria H11 e H12 sem resposta, e eram a razão da D4).
 
+### D10. Modelos avaliados e teto de custo
+
+**Modelos:** dois, ambos Claude (D4): **Sonnet 5.5** (base) e **Haiku 5.5** (a troca). Dois modelos são o mínimo para demonstrar o critério "trocar de modelo gera um relatório numérico": com um só, o relatório existe, mas não prova que enxerga diferença. Opus pode entrar depois com uma rodada a mais, sem mudar o avaliador, porque o trace já registra o `model` (D5). O ID exato de cada modelo é fixado e registrado em todo relatório.
+
+**Teto de custo:** sem valor chutado. A regra é "protótipo no dado real antes de planejar":
+1. Uma **rodada piloto de 10 casos** mede o custo real por caso (o `stream-json` deve trazer custo e tokens; a nota do passo 02 manda conferir).
+2. O **teto por rodada** é cerca de 1,5 vez o custo extrapolado da piloto, e o ledger **interrompe a rodada** ao atingi-lo.
+3. O **teto mensal** soma as rodadas previstas com folga e é definido depois da piloto, com o número na mão.
+
+**Variação entre execuções:** o Claude Code não expõe temperatura, então a mesma pergunta pode dar respostas diferentes. Na piloto, uns 5 dos 10 casos rodam 3 vezes para medir essa variação, antes de decidir se cada caso precisa de mais de uma execução.
+
+Alternativas descartadas: um só modelo (criterio 1 sem demonstração) e três modelos (mais rodadas e mais traces, sem necessidade na primeira versão).
+
 ## Ainda em aberto
 
-Como ligar e desligar a skill no Claude Code; modelos avaliados; teto de custo por rodada e por mês; onde mora o limiar de TPR/TNR e quem aprova baixá-lo; Meister; relatório antes/depois. Ver `docs/decisoes-em-aberto.md`.
+Como ligar e desligar a skill no Claude Code; valor do teto de custo (depois da piloto); onde mora o limiar de TPR/TNR e quem aprova baixá-lo; Meister; relatório antes/depois. Ver `docs/decisoes-em-aberto.md`.

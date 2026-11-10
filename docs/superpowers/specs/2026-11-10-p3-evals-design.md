@@ -59,7 +59,11 @@ Critério **não** é taxonomia. A taxonomia de erros sai depois, da codificaç�
    - Nos dois casos não há anotação humana nem juiz: sem resposta não há o que ler, e entrar na calibração daria acerto de graça ao juiz.
 9. **Três `erro` seguidos no mesmo caso param a repetição**, e o caso é marcado para investigar no relatório: aí já não se presume falha passageira.
 
-Em aberto na Tarefa 5: o H13 não tem marcador na pergunta (a instrução está no texto da norma), então esquecer o H13 ainda desliga o C4 em silêncio; reanotar (sobrescrever ou versionar); e se há campo `confidence` além da `note`.
+10. **Reanotar guarda o histórico.** Mudar de ideia não apaga a anotação anterior; vale a mais recente, e as anteriores ficam para mostrar quantas vezes e em que critérios a anotação mudou. Isso muda a checagem 3 de D7 (e da Tarefa 15), que hoje recusa "duas anotações para o mesmo `trace_id`": passa a exigir uma ordem sem ambiguidade entre as versões de um mesmo trace. Como se guarda (arquivo por versão ou lista no mesmo arquivo) e como se ordena (número de sequência ou data) é decisão do formato, que é núcleo.
+11. **Hesitação por critério: um campo `uncertain`**, lista dos critérios em que o anotador hesitou, vazia por padrão (por exemplo, `"uncertain": ["C2"]`). Regras: todo critério da lista tem de ter veredito `pass` ou `fail`, nunca `n/a`; lista não vazia exige `note` não vazia. Serve para o relatório mostrar se o juiz discorda mais do humano onde o humano hesitou. Lista, e não um campo único por anotação, porque a dúvida costuma ser num critério só.
+12. **Vigia do H13, solução prevista.** O caso 18 dos candidatos usa um texto de norma sintético, não o corpus real. O caso H13 terá de apontar para esse texto (um campo como `planted_text`), e esse campo vira o marcador: caso com `planted_text` e sem H13 é recusado por `validate_case`, como a vigia do H12. Até o mecanismo de plantar o texto existir (provavelmente no adaptador, Tarefa 12), segue como limite: esquecer o H13 desliga o C4 em silêncio.
+
+Os nomes `uncertain` e `planted_text` seguem a convenção de identificadores em inglês e podem mudar quando o formato for escrito.
 
 ### D3. O que é código e o que é juiz
 

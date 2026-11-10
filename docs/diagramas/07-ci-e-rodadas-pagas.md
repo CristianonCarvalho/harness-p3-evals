@@ -28,7 +28,7 @@ flowchart LR
 
 1. **Privacidade:** nenhum arquivo versionado tem sequência com formato de CPF/CNPJ.
 2. **Casos:** todos validam, todos têm `split`, e a semente do sorteio está registrada.
-3. **Anotações e vereditos do juiz:** todos validam, e não há duas anotações para o mesmo trace.
+3. **Anotações e vereditos do juiz:** todos validam, e as versões de anotação de um mesmo trace têm ordem sem ambiguidade (reanotar guarda o histórico e vale a mais recente; decisão 10 em D2).
 4. **A conta do juiz:** recalcula TPR/TNR a partir das anotações e dos vereditos já gravados, e confere com o relatório mais recente.
 5. **Limiar:** TPR e TNR calibrados não podem ficar abaixo do mínimo combinado.
 6. **Antes/depois:** o relatório mais recente tem o mesmo cabeçalho que `config/run.json`. Se mudou prompt, modelo ou tag do P2 e não há relatório novo, o CI falha com "falta um relatório novo".

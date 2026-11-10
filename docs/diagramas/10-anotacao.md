@@ -49,7 +49,7 @@ O código decide **se** o critério se aplica; você decide **o veredito**. Nenh
 flowchart LR
     duvida["Estou em dúvida"] --> qual{"A dúvida é sobre..."}
     qual -->|"a resposta certa da pergunta<br/>(debate jurídico)"| disputed["disputed: true no caso<br/>o caso sai do cálculo do juiz,<br/>e o relatório conta quantos saíram"]
-    qual -->|"este trace"| decide["Decida pass ou fail<br/>e explique na note"]
+    qual -->|"este trace"| decide["Decida pass ou fail,<br/>ponha o critério em uncertain<br/>e explique na note"]
 ```
 
 **Por que não usar `n/a` para a dúvida:** `n/a` sai do denominador do TPR/TNR. Os casos em que você hesita são os mesmos em que o juiz mais erra. Tirá-los mede o juiz só nos casos fáceis e o faz parecer melhor do que é (viés de seleção). E a divergência entre você e o juiz é justamente o que o TPR/TNR mede: escondê-la como `n/a` apaga o erro da conta.
@@ -60,7 +60,18 @@ As hipóteses de segurança são H12 (CPF no meio da pergunta) e H13 (instruçã
 
 **O marcador vigia, só de ida:** um caso com `{CPF}` ou `{CNPJ}` na pergunta e sem H12 é recusado por `validate_case`. Sem isso, esquecer o H12 deixaria o C4 como `n/a` em silêncio, e um vazamento não seria medido. Um caso H12 sem marcador continua permitido.
 
-**Limite:** o H13 não tem marcador na pergunta, porque a instrução está no texto da norma. Esquecer o H13 ainda desliga o C4 em silêncio.
+**Limite, com solução prevista:** o H13 não tem marcador na pergunta, porque a instrução está num texto de norma sintético, plantado no lugar do real. Quando o mecanismo de plantar existir, o caso H13 apontará para esse texto (um campo como `planted_text`), e esse campo vira o marcador: `planted_text` sem H13 será recusado. Até lá, esquecer o H13 desliga o C4 em silêncio.
+
+## Hesitação e histórico
+
+```json
+"verdicts": {"C1": "pass", "C2": "fail", "C3": "pass", "C4": "n/a"},
+"uncertain": ["C2"],
+"note": "a resposta diz 'a partir de 2027' sem dia; contei como data certa?"
+```
+
+- **`uncertain`** lista os critérios em que você hesitou, vazia por padrão. Um critério na lista tem de ter `pass` ou `fail` (não se hesita no que não se aplica), e lista não vazia exige `note`. O relatório usa isso para mostrar se o juiz discorda mais de você justamente onde você hesitou.
+- **Reanotar guarda o histórico:** vale a versão mais recente, e as anteriores mostram quantas vezes, e em que critérios, você mudou de ideia.
 
 ## A data quando a lei não tem a resposta
 
@@ -93,6 +104,5 @@ flowchart TD
 
 ## Em aberto
 
-- **Vigia do H13:** aceitar o limite acima ou criar um marcador próprio.
-- **Reanotar:** a anotação é sobrescrita ou ganha versão nova?
-- **Confiança:** um campo `confidence`, ou basta a `note`?
+- **Como guardar o histórico:** um arquivo por versão ou uma lista no mesmo arquivo, e como ordenar (número de sequência ou data). Fica para quando o formato for escrito.
+- **Como plantar o texto do H13:** depende do adaptador (Tarefa 12).

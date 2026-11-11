@@ -54,7 +54,9 @@ def p2_tools(server: str) -> list[str]:
 
 
 def build_argv(model: str, *, server: str, max_budget_usd: float, mcp_config: Path) -> list[str]:
+    # --include-hook-events: o trace registra se o hook do P2 rodou, em vez de supor.
     return ["claude", "-p", "--output-format", "stream-json", "--verbose",
+            "--include-hook-events",
             "--model", model, "--max-budget-usd", str(max_budget_usd),
             "--no-session-persistence", "--setting-sources", "project",
             "--strict-mcp-config", "--mcp-config", str(mcp_config),

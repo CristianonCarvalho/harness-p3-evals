@@ -61,11 +61,25 @@ Três execuções reais pelo próprio runner, no Haiku 5.5, com o P2 na tag `ste
 
 **Achado novo:** o teto nativo **passa do limite**: com US$ 0,001, gastou US$ 0,0019. O Claude Code confere o teto entre um turno e outro. Por isso o `BudgetGuard` do P3, que soma o custo de cada trace e para a rodada, continua necessário, e o teto por caso deve ter folga.
 
-**Não confirmado:**
-- **A data de referência.** O modelo usou 2026-11-11 nas chamadas, mas essa era também a data do dia: não dá para saber se veio da pergunta ou do relógio. Descuido na escolha da data. Falta uma execução com uma data diferente da do dia.
-- **O hook.** Nada no trace mostra se ele rodou. A pasta `.venv` criada no diretório de trabalho não prova nada, porque o próprio server do P2 também roda com `uv run`. A opção `--include-hook-events` do `claude` põe os eventos do hook no stream: com ela, o runner deixaria de supor `hook: true` e passaria a registrar o que de fato aconteceu.
+**Ficaram sem confirmação nas três primeiras:**
+- **A data de referência.** O modelo usou 2026-11-11 nas chamadas, mas essa era também a data do dia: não dava para saber se veio da pergunta ou do relógio. Descuido na escolha da data.
+- **O hook.** Nada no trace mostrava se ele rodou. A pasta `.venv` criada no diretório de trabalho não prova nada, porque o próprio server do P2 também roda com `uv run`.
 
-Os traces estão em `traces/confirmacao/`, fora do git.
+### Quarta execução: o hook e a data (US$ 0,0057)
+
+O runner passou a usar `--include-hook-events`, e a pergunta levou a data **2030-01-01**. A saída bruta está em `traces/amostras/2026-11-11-stream-hook.jsonl`, fora do git, e virou a fixture `tests/fixtures/stream_hook.jsonl`.
+
+- **A data vem da pergunta:** as três chamadas ao P2 usaram `data_referencia: "2030-01-01"`.
+- **O hook roda:** cada chamada ao P2 gerou um `hook_started` e um `hook_response` (`hook_event: PreToolUse`, `hook_name: "PreToolUse:mcp__taxlaw__..."`, `outcome: "success"`, `exit_code: 0`). O evento não traz o id da chamada: chega entre o `tool_use` e o `tool_result`.
+
+**O que mudou no adaptador:**
+- Cada `hook_response` vai para `trace["hooks"]`. Os de `PreToolUse` são pareados, pela ordem e pelo nome da ferramenta, com a chamada ao P2 que cobriram: `event["hook"] = {"outcome", "exit_code"}`.
+- **Se as condições declaram `hook: true`, toda chamada ao P2 tem de ter o seu hook**; senão, o trace é `erro`, com "hook declarado mas não rodou em N chamada(s)". Antes, `hook: true` era uma suposição tirada da existência de `.claude/settings.json`; agora é conferido no que aconteceu.
+- Um hook `PostToolUse` não conta: o hook do P2 bloqueia CPF **antes** da chamada.
+
+**Efeito nos testes:** a fixture antiga (`stream_ok.jsonl`) foi capturada sem `--include-hook-events`, então os testes que a usam passaram a declarar `hook: false`. Os testes do runner passaram a usar `stream_hook.jsonl`. 8 testes novos; 181 verdes duas vezes. Teste de mutação da parte nova: 10 mutações; uma sobreviveu (um hook `PostToolUse` seria aceito como cobertura) e ganhou teste. Agora as 10 caem.
+
+**Custo total das quatro execuções de confirmação:** US$ 0,0182. Os traces estão em `traces/confirmacao/`, fora do git.
 
 ## Pergunta de previsão
 

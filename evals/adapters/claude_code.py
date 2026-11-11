@@ -8,6 +8,9 @@ Decisoes que vieram da amostra real de 2026-11-11 (achados na Tarefa 12 do plano
 - O init tem de mostrar so as ferramentas e os servers permitidos; senao o trace
   e `erro`. `--setting-sources project` nao isola a execucao.
 - `input_tokens` soma a entrada sem cache, a escrita e a leitura de cache.
+- Hook (com `--include-hook-events`): cada `hook_response` de PreToolUse e pareado,
+  pela ordem e pelo nome da ferramenta, com a chamada ao P2 que ele cobriu. Se as
+  condicoes declaram `hook: true`, toda chamada ao P2 tem de ter o seu; senao, `erro`.
 - Tipo de evento desconhecido e ignorado; linha ruim ou stream cortado viram `erro`,
   nunca excecao.
 """
@@ -74,6 +77,7 @@ def parse_stream(lines: Iterable[str], *, case_id: str, question: str,
     pendentes: dict[str, dict] = {}
     events: list[dict] = []
     other_tools: list[dict] = []
+    hooks: list[dict] = []
     final_answer = ""
     usage = _usage({})
     errors: list[str] = []
@@ -101,13 +105,24 @@ def parse_stream(lines: Iterable[str], *, case_id: str, question: str,
             source["tools"] = list(ev.get("tools", []))
             source["mcp_servers"] = [s.get("name") for s in ev.get("mcp_servers", [])]
             errors += _check_init(ev, allowed_tools, allowed_servers)
+        elif tipo == "system" and ev.get("subtype") == "hook_response":
+            nome = ev.get("hook_name", "")
+            hooks.append({"name": nome, "event": ev.get("hook_event"),
+                          "outcome": ev.get("outcome"), "exit_code": ev.get("exit_code")})
+            if ev.get("hook_event") == "PreToolUse":
+                ferramenta = nome.split(":", 1)[1] if ":" in nome else ""
+                alvo = next((e for e in events if e["tool"] == ferramenta and e["hook"] is None),
+                            None)
+                if alvo is not None:
+                    alvo["hook"] = {"outcome": ev.get("outcome"), "exit_code": ev.get("exit_code")}
         elif tipo == "assistant":
             for b in (ev.get("message") or {}).get("content") or []:
                 if not (isinstance(b, dict) and b.get("type") == "tool_use"):
                     continue
                 nome, args = b.get("name", ""), b.get("input") or {}
                 if nome.startswith(p2_prefixes):
-                    e = {"tool": nome, "args": args, "result_raw": None, "is_error": False}
+                    e = {"tool": nome, "args": args, "result_raw": None, "is_error": False,
+                         "hook": None}
                     pendentes[b.get("id", "")] = e
                     events.append(e)
                 else:
@@ -141,6 +156,10 @@ def parse_stream(lines: Iterable[str], *, case_id: str, question: str,
     if sem_resultado and not limit:
         errors.append(f"{sem_resultado} chamada(s) ao P2 sem resultado")
 
+    sem_hook = sum(e["hook"] is None for e in events)
+    if conditions.get("hook") is True and sem_hook:
+        errors.append(f"hook declarado mas nao rodou em {sem_hook} chamada(s) ao P2")
+
     if limit:
         status = "estourou_limite"
     else:
@@ -148,7 +167,8 @@ def parse_stream(lines: Iterable[str], *, case_id: str, question: str,
     trace = {
         "trace_id": trace_id, "case_id": case_id, "status": status,
         "source": source, "model": model, "conditions": conditions, "question": question,
-        "events": events, "other_tools": other_tools, "final_answer": final_answer,
+        "events": events, "other_tools": other_tools, "hooks": hooks,
+        "final_answer": final_answer,
         "usage": usage, "errors": errors,
     }
     if synthetic_ids:

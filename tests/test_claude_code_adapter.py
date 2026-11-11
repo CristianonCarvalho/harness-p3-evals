@@ -13,8 +13,11 @@ from evals.checks import check_c1
 from evals.trace import validate_trace
 
 FIX = Path(__file__).parent / "fixtures"
-COND = {"skill": True, "hook": True, "server": "local",
+# A amostra de stream_ok.jsonl foi capturada sem --include-hook-events: nela o hook
+# nao aparece, entao as condicoes declaram hook falso. stream_hook.jsonl tem o hook.
+COND = {"skill": True, "hook": False, "server": "local",
         "p2_tag": "step-16", "corpus_version": "x"}
+COND_HOOK = {**COND, "hook": True}
 TAXLAW = {"mcp__taxlaw__buscar_dispositivos", "mcp__taxlaw__obter_dispositivo"}
 ALLOWED_TOOLS = TAXLAW | {"Skill", "ToolSearch"}
 ALLOWED_SERVERS = {"taxlaw"}
@@ -226,6 +229,72 @@ def test_remote_server_tools_count_as_p2_calls():
 def test_every_allowed_server_must_be_connected():
     t = _parse(_lines("stream_ok.jsonl"), allowed_servers={"taxlaw", "taxlaw-remoto"})
     assert t["status"] == "erro" and any("taxlaw-remoto" in e for e in t["errors"])
+
+
+# --- o hook (passo 26, amostra com --include-hook-events) -----------------------
+
+def test_hook_run_is_recorded_on_each_p2_call():
+    t = _parse(_lines("stream_hook.jsonl"), conditions=COND_HOOK)
+    assert t["status"] == "ok", t["errors"]
+    assert [e["tool"] for e in t["events"]] == ["mcp__taxlaw__buscar_dispositivos",
+                                                "mcp__taxlaw__obter_dispositivo",
+                                                "mcp__taxlaw__obter_dispositivo"]
+    assert all(e["hook"] == {"outcome": "success", "exit_code": 0} for e in t["events"])
+    assert [h["name"] for h in t["hooks"]] == [
+        "PreToolUse:mcp__taxlaw__buscar_dispositivos",
+        "PreToolUse:mcp__taxlaw__obter_dispositivo",
+        "PreToolUse:mcp__taxlaw__obter_dispositivo"]
+
+
+def test_reference_date_from_the_prompt_reaches_the_tools():
+    t = _parse(_lines("stream_hook.jsonl"), conditions=COND_HOOK)
+    assert {e["args"]["data_referencia"] for e in t["events"]} == {"2030-01-01"}
+
+
+def test_declared_hook_that_did_not_run_is_an_error():
+    t = _parse(_lines("stream_ok.jsonl"), conditions=COND_HOOK)
+    assert t["status"] == "erro" and any("hook" in e for e in t["errors"])
+
+
+def test_missing_hook_response_for_one_call_is_an_error():
+    linhas = _lines("stream_hook.jsonl")
+    i = max(n for n, l in enumerate(linhas) if '"hook_response"' in l)
+    t = _parse(linhas[:i] + linhas[i + 1:], conditions=COND_HOOK)
+    assert t["status"] == "erro" and any("1 chamada" in e for e in t["errors"])
+
+
+def test_hook_is_paired_by_tool_name_in_order():
+    linhas = _lines("stream_hook.jsonl")
+    i = min(n for n, l in enumerate(linhas) if '"hook_response"' in l and "buscar" in l)
+    resp = json.loads(linhas[i])
+    resp.update(outcome="blocked", exit_code=2)
+    t = _parse(linhas[:i] + [json.dumps(resp)] + linhas[i + 1:], conditions=COND_HOOK)
+    assert t["events"][0]["hook"] == {"outcome": "blocked", "exit_code": 2}
+    assert t["events"][1]["hook"]["exit_code"] == 0
+
+
+def test_hook_on_another_tool_does_not_cover_a_p2_call():
+    linhas = [l.replace("PreToolUse:mcp__taxlaw__obter_dispositivo", "PreToolUse:WebSearch")
+              for l in _lines("stream_hook.jsonl")]
+    t = _parse(linhas, conditions=COND_HOOK)
+    assert t["status"] == "erro" and any("2 chamada" in e for e in t["errors"])
+
+
+def test_only_a_pre_tool_use_hook_covers_a_p2_call():
+    # O hook do P2 bloqueia CPF antes da chamada; um hook depois dela nao protege nada.
+    linhas = _lines("stream_hook.jsonl")
+    i = max(n for n, l in enumerate(linhas) if '"hook_response"' in l)
+    resp = json.loads(linhas[i])
+    resp.update(hook_event="PostToolUse",
+                hook_name=resp["hook_name"].replace("PreToolUse", "PostToolUse"))
+    t = _parse(linhas[:i] + [json.dumps(resp)] + linhas[i + 1:], conditions=COND_HOOK)
+    assert t["status"] == "erro" and any("1 chamada" in e for e in t["errors"])
+    assert t["hooks"][-1]["event"] == "PostToolUse"
+
+
+def test_hook_not_declared_is_not_required():
+    t = _parse(_lines("stream_ok.jsonl"))
+    assert t["status"] == "ok" and all(e["hook"] is None for e in t["events"])
 
 
 def test_allowed_lists_are_required():

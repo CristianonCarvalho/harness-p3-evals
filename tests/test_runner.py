@@ -14,7 +14,8 @@ from evals.runner import (RemoteNotConfigured, build_argv, build_prompt, prepare
                           run_case, run_with_retries, substitute_placeholders)
 
 FIX = Path(__file__).parent / "fixtures"
-STREAM_OK = (FIX / "stream_ok.jsonl").read_text(encoding="utf-8")
+# Amostra real com --include-hook-events: o hook do P2 roda em cada chamada (3 chamadas).
+STREAM_OK = (FIX / "stream_hook.jsonl").read_text(encoding="utf-8")
 
 
 def make_case(question="Qual o percentual do IBS?", **over):
@@ -78,7 +79,8 @@ def test_argv_isolates_the_execution(tmp_path):
                 ["--mcp-config", str(tmp_path / "m.json")], ["--tools", "Skill,ToolSearch"]):
         i = argv.index(par[0])
         assert argv[i:i + 2] == par
-    for flag in ("--verbose", "--no-session-persistence", "--strict-mcp-config"):
+    for flag in ("--verbose", "--no-session-persistence", "--strict-mcp-config",
+                 "--include-hook-events"):
         assert flag in argv
     i = argv.index("--allowedTools")
     assert argv[i + 1:] == ["mcp__taxlaw__buscar_dispositivos", "mcp__taxlaw__obter_dispositivo"]
@@ -169,7 +171,7 @@ def test_run_case_writes_a_valid_trace_and_charges_the_guard(tmp_path):
     assert t["conditions"] == {"skill": True, "hook": True, "server": "local",
                                "p2_tag": "step-16",
                                "corpus_version": runner.corpus_version(tmp_path / "wd")}
-    assert guard.spent == pytest.approx(0.00659552)
+    assert guard.spent == pytest.approx(0.00566555)
     argv, kw = run.calls[0]
     assert kw["cwd"] == tmp_path / "wd" and kw["timeout"] == runner.DEFAULT_TIMEOUT_S
     assert "Data de referência: 2026-11-11." in kw["input"]
@@ -226,19 +228,19 @@ def test_timeout_becomes_an_error_trace_with_what_was_read(tmp_path):
     corte = "\n".join(STREAM_OK.splitlines()[:-1])
     t = load_trace(_run(tmp_path, FakeRun(stdout=corte, raise_timeout=True)))
     assert t["status"] == "erro" and any("tempo" in e for e in t["errors"])
-    assert len(t["events"]) == 2
+    assert len(t["events"]) == 3
 
 
 def test_timeout_with_bytes_output_is_decoded(tmp_path):
     corte = "\n".join(STREAM_OK.splitlines()[:-1]).encode()
     t = load_trace(_run(tmp_path, FakeRun(stdout=corte, raise_timeout=True)))
-    assert t["status"] == "erro" and len(t["events"]) == 2
+    assert t["status"] == "erro" and len(t["events"]) == 3
 
 
 def test_timeout_with_invalid_utf8_bytes_is_an_error_not_a_crash(tmp_path):
     corte = b"\x80\x81 lixo\n" + "\n".join(STREAM_OK.splitlines()[:-1]).encode()
     t = load_trace(_run(tmp_path, FakeRun(stdout=corte, raise_timeout=True)))
-    assert t["status"] == "erro" and len(t["events"]) == 2
+    assert t["status"] == "erro" and len(t["events"]) == 3
 
 
 def test_remote_run_that_used_the_local_server_is_an_error(tmp_path, monkeypatch):

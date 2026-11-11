@@ -19,7 +19,7 @@ O sistema avaliado é o [P2](https://github.com/CristianonCarvalho/harness-p2-MC
 | **Código** | 11 de 16 tarefas feitas, mais dois passos fora do plano (30 e 31), **173 testes** passando, todos offline |
 | **Dados** | Ainda não há casos nem anotações: os 100 casos serão escritos antes de qualquer rodada |
 | **Anotação** | Desenho fechado: 12 decisões em D2 da spec e no [diagrama 10](docs/diagramas/10-anotacao.md); o código é seu (núcleo) |
-| **Amostra real** | Uma execução real do Claude Code com o P2 capturada (US$ 0,0066); o adaptador (passo 25) e o runner (passo 26) já incorporam os achados; falta confirmar o isolamento numa execução real (alguns centavos) |
+| **Amostra real** | Uma execução real do Claude Code com o P2 capturada (US$ 0,0066); o adaptador (passo 25) e o runner (passo 26) já incorporam os achados, e o isolamento foi confirmado em três execuções reais (US$ 0,0125); faltam confirmar o hook e a data de referência |
 | **Falta** | O núcleo (formato da anotação, TPR/TNR e o juiz), o adaptador e o runner, o CI e este README final |
 
 O andamento tarefa a tarefa está em [`docs/diagramas/09-ordem-das-tarefas.md`](docs/diagramas/09-ordem-das-tarefas.md). Cada passo tem commit, tag `step-NN` e uma nota em [`docs/steps/`](docs/steps/).

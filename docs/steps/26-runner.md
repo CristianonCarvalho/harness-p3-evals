@@ -42,16 +42,30 @@ uv run pytest tests/test_runner.py -v
   - uma era equivalente (minha checagem de diretório existente repetia a do `copytree`; removi a minha);
   - duas apontavam testes que faltavam: saída com byte inválido em UTF-8 depois de um timeout, que quebraria com exceção, e uma rodada "remota" que na verdade usou o server local, que passaria como `ok`. Escrevi os dois testes. Agora as 37 caem.
 
-## O que ainda não foi conferido na prática
+## Confirmação na prática (2026-11-11)
 
-O passo 5 do plano pede **uma execução real com skill e uma sem**, no Haiku, para conferir:
-1. que `--strict-mcp-config` e `--tools` de fato tiram o Google Drive e o `Bash` do init;
-2. que a ferramenta `Skill` aparece só na condição com skill;
-3. que o hook do P2 carrega com `--setting-sources project` (ele roda `uv run` no diretório copiado, sem `.venv`, então a primeira execução pode demorar);
-4. que `Skill` e `ToolSearch` existem com esses nomes em `--tools`;
-5. os nomes dos limites (`error_max_budget_usd`), estourando o teto de propósito.
+Três execuções reais pelo próprio runner, no Haiku 5.5, com o P2 na tag `step-16`, a pergunta "Qual o percentual do IBS?" e a data de referência 2026-11-11. Custo total: **US$ 0,0125**.
 
-Custo estimado: três execuções curtas, alguns centavos. Pede a sua aprovação.
+| Execução | Status | Ferramentas no init | Outras ferramentas usadas | Chamadas ao P2 | Custo |
+|---|---|---|---|---|---|
+| com skill | `ok` | `Skill`, `ToolSearch` e as 2 do taxlaw | `Skill`, `ToolSearch` | 4 | US$ 0,0065 |
+| sem skill | `ok` | as mesmas 4 | só `ToolSearch` | 2 | US$ 0,0041 |
+| teto de US$ 0,001 | `estourou_limite` | as mesmas 4 | `Skill` | 0 | US$ 0,0019 |
+
+**Confirmado:**
+1. **O isolamento funciona.** Nas três, o init mostrou só 4 ferramentas e só o server `taxlaw`. O Google Drive, o Claude Docs e o `Bash` da amostra do passo 25 sumiram.
+2. **A skill só aparece na condição com skill.** Sem `.claude/skills/`, o modelo não chamou `Skill`. Com ela, chamou sozinho, de novo.
+3. **`Skill` e `ToolSearch` são nomes aceitos por `--tools`.**
+4. **O nome do limite é `error_max_budget_usd`**, e o `claude` sai com código 1. O runner manteve `estourou_limite`, como o teste `test_nonzero_exit_does_not_hide_a_limit` previa.
+5. **As duas condições deram respostas da mesma natureza** ("não encontrei o percentual no corpus"), com a skill dobrando as chamadas ao P2. É só uma pergunta; não é medida.
+
+**Achado novo:** o teto nativo **passa do limite**: com US$ 0,001, gastou US$ 0,0019. O Claude Code confere o teto entre um turno e outro. Por isso o `BudgetGuard` do P3, que soma o custo de cada trace e para a rodada, continua necessário, e o teto por caso deve ter folga.
+
+**Não confirmado:**
+- **A data de referência.** O modelo usou 2026-11-11 nas chamadas, mas essa era também a data do dia: não dá para saber se veio da pergunta ou do relógio. Descuido na escolha da data. Falta uma execução com uma data diferente da do dia.
+- **O hook.** Nada no trace mostra se ele rodou. A pasta `.venv` criada no diretório de trabalho não prova nada, porque o próprio server do P2 também roda com `uv run`. A opção `--include-hook-events` do `claude` põe os eventos do hook no stream: com ela, o runner deixaria de supor `hook: true` e passaria a registrar o que de fato aconteceu.
+
+Os traces estão em `traces/confirmacao/`, fora do git.
 
 ## Pergunta de previsão
 

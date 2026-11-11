@@ -32,8 +32,8 @@ flowchart LR
     classDef falta fill:#fff3cd,stroke:#ffc107,color:#000
     classDef seu fill:#f8d7da,stroke:#dc3545,color:#000
 
-    class t1,t2,t3,t4,t7,t8,t9,t10,t14 feito
-    class t12,t13,t15,t16 falta
+    class t1,t2,t3,t4,t7,t8,t9,t10,t12,t14 feito
+    class t13,t15,t16 falta
     class t5,t6,t11 seu
 ```
 
@@ -48,7 +48,6 @@ flowchart LR
 | Tarefa | Espera por |
 |---|---|
 | 11 (juiz) | 5 (anotação), porque o juiz e a anotação precisam falar o mesmo formato de veredito |
-| 12 (adaptador) | Nada: a amostra real foi capturada em 2026-11-11. Os achados (isolar ferramentas e servers, filtrar `Skill` e `ToolSearch` do lastro, somar tokens de cache) estão no plano |
 | 13 (runner) | 12 |
 | 15 (CI) | 5 e 6, porque o CI valida anotações e recalcula TPR/TNR |
 

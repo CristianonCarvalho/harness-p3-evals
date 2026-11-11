@@ -54,8 +54,8 @@ flowchart TB
     classDef falta fill:#fff3cd,stroke:#ffc107,color:#000
     classDef seu fill:#f8d7da,stroke:#dc3545,color:#000
 
-    class privacy,trace,cases,checks,stats,gabarito,budget,client,ledger,report feito
-    class adapter,runner,consistency,cli falta
+    class privacy,trace,cases,checks,stats,gabarito,budget,client,ledger,report,adapter feito
+    class runner,consistency,cli falta
     class annotation,metrics,judge seu
 ```
 

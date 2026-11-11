@@ -285,6 +285,5 @@ Nada. As decisões de desenho (D1 a D13) estão tomadas; o que resta está na ta
 | Como calcular o intervalo de incerteza | Passo que implementa o relatório (D12) |
 | Modelo exato do rascunhador e do juiz (R4) | Conferir preço e contexto no OpenRouter, antes do passo do rascunhador |
 | Tamanho final da amostra cega (R3) | Depois de anotar os 30 primeiros e contar os reprovados |
-| Tempo de uma anotação cega | Teste com o dossiê de 1 trace, antes do sorteio da amostra |
 
 Ver também `docs/decisoes-em-aberto.md`.

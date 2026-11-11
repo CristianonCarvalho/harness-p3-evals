@@ -128,7 +128,10 @@ Um comando gera, por trace, uma página com a pergunta, o gabarito confirmado, a
 |---|---|
 | Modelo exato do rascunhador e do juiz | Conferir preço e contexto no OpenRouter, antes do passo do rascunhador |
 | Tamanho final da amostra cega | Depois de anotar os 30 primeiros e contar os reprovados |
-| Quanto tempo leva uma anotação cega | Teste com o dossiê de 1 trace, antes de sortear a amostra (previsão do passo 18) |
+
+## Teste de tempo (2026-11-11)
+
+Um dossiê cego descartável, do trace de confirmação com skill ("Qual o percentual do IBS?", 4 chamadas ao P2), levou **5 minutos** para anotar. Para 30 traces cegos, isso dá cerca de 2,5 horas. O que travou: **ler os dispositivos** devolvidos (muitos, a maioria irrelevante para a resposta) e **procurar as datas** de efeitos para comparar com as da resposta. Os dois pontos viram requisitos do dossiê (R6).
 
 ## Primeiro passo sugerido, se aprovado
 

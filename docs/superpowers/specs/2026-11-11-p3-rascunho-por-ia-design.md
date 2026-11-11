@@ -85,6 +85,8 @@ Um comando gera, por trace, uma página com a pergunta, o gabarito confirmado, a
 
 - **O dossiê cego não mostra veredito nenhum:** nem do rascunho, nem do juiz, nem das checagens em código. Só fatos.
 - O dossiê revisado mostra também o rascunho, marcado como tal.
+- **As tabelas de fatos vêm no topo** (pedido do teste de tempo): cada citação da resposta ao lado do que foi devolvido, e cada data da resposta ao lado de onde aparece (efeitos, data de referência, coleta do corpus). O texto completo fica num apêndice. As tabelas dizem só se algo foi devolvido; se o texto sustenta a afirmação, quem decide é o anotador.
+- **Citação sem a norma** ("art. 142") é resolvida pelo que foi devolvido, nunca por suposição. O protótipo supunha CF e escondeu o art. 142 da LC 214 na contagem de "não citados". Se houver mais de um candidato, a tabela mostra todos.
 - **O CPF/CNPJ sintético é mascarado no dossiê**, que pode ser aberto fora do terminal. A regra de D5 continua: nenhum número entra em arquivo versionado.
 
 ### R7. O que é núcleo e o que é entorno
@@ -92,6 +94,15 @@ Um comando gera, por trace, uma página com a pergunta, o gabarito confirmado, a
 - **Núcleo (continua do usuário):** o formato de anotação, incluindo como marcar o tipo (cega ou revisada) e onde guardar o rascunho; as métricas TPR/TNR, que passam a usar só as anotações cegas; e o juiz.
 - **Entorno (Claude implementa, usuário revisa):** o rascunhador do gabarito e da anotação, o sorteio da amostra cega e o dossiê.
 - **Ponto a confirmar:** o rascunhador de anotação é parecido com o juiz (lê o trace e devolve vereditos). Ele fica no entorno porque **não produz nenhum número que se reporta como medida**: quem sustenta o critério 3 é a amostra cega. O prompt dele usa as definições de critério de D2 sem reescrevê-las, e o usuário as revisa. Se o usuário preferir, o rascunhador passa para o núcleo.
+
+### R8. O erro do anotador (2026-11-11, depois do teste com o dossiê)
+
+O anotador pode errar. As regras abaixo não eliminam o erro; elas o mantêm visível e medido.
+
+1. **Ninguém comenta um trace cego antes de a anotação dele fechar.** Isso vale para o Claude: no teste, um comentário dele sobre o art. 14 fez o C1 mudar de aprovado para reprovado, e a anotação deixou de ser cega. Depois de fechada, qualquer revisão vira uma **nova versão** no histórico (decisão 10 de D2), e a primeira fica.
+2. **Reanotação de consistência.** Alguns dias depois, cerca de 10 traces da amostra cega são reanotados às cegas, sem ver a primeira anotação. O relatório mostra a **concordância do anotador consigo mesmo**, por critério. Ela é o teto realista para o juiz: não se exige do juiz mais concordância do que o anotador tem com ele mesmo. Custo: cerca de 50 minutos.
+3. **Correções no conjunto de teste ficam à vista.** Rever um trace porque o juiz discordou e corrigir só onde ele discordou puxa a anotação na direção do juiz e infla o TPR/TNR. No desenvolvimento, rever as discordâncias é o ajuste normal. No teste, toda correção fica no histórico, com o motivo, e o relatório mostra o TPR/TNR **antes e depois** das correções.
+4. **`note` obrigatória quando algum critério é `fail`.** No teste, um C1 reprovado sem nota perdeu o porquê, e a nota do `fail` é a matéria-prima da análise de erros (codificação aberta). Isto responde a pergunta que a Tarefa 5 deixava aberta. É regra do formato (núcleo): quem escreve o validador é o usuário.
 
 ## O que muda na spec principal, se aprovado
 
@@ -103,6 +114,7 @@ Um comando gera, por trace, uma página com a pergunta, o gabarito confirmado, a
 | D6 | TPR/TNR medidos só na amostra cega, dentro do teste; ela cresce se faltarem reprovados (R3) |
 | D8 | O juiz e o rascunhador são de famílias diferentes entre si (R4) |
 | D13 | O gabarito é rascunhado por IA a partir do corpus e confirmado pelo usuário, antes das rodadas (R2) |
+| D2 | Decisão 14: as quatro regras de R8 |
 | Limites conhecidos | "Um único anotador" passa a ser "um anotador leigo, com rascunho de IA"; entram os limites abaixo |
 | `docs/roadmap/p3-no-roadmap.md` | A frase "a anotação é de quem entende do assunto" ganha a ressalva de R2 |
 | README | Declara que a referência é a fidelidade ao corpus, não a correção jurídica |

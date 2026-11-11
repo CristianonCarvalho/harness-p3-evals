@@ -102,6 +102,12 @@ flowchart TD
 
 **Por que nem `n/a` nem `fail` para tudo:** com `n/a`, um modelo que trava nas perguntas difíceis seria medido só nas fáceis e pareceria melhor. Com `fail` para tudo, "a rede caiu" e "o modelo errou" virariam a mesma coisa, e o modelo seria punido por um problema do computador. **Por que o juiz fica de fora:** numa execução sem resposta, ele "acertaria" de graça e pareceria mais confiável do que é.
 
+## Decidido depois (2026-11-11)
+
+- **Nota obrigatória em todo `fail`** (decisão 14 de D2): o validador recusa `fail` sem `note`.
+- **Anotação cega ou revisada** (decisão 13 de D2, R3 da [spec do rascunho por IA](../superpowers/specs/2026-11-11-p3-rascunho-por-ia-design.md)): só a cega calibra o juiz.
+- **O erro do anotador** (R8): ninguém comenta trace cego antes de fechar; reanotação de consistência; correções no teste ficam à vista.
+
 ## Em aberto
 
 - **Como guardar o histórico:** um arquivo por versão ou uma lista no mesmo arquivo, e como ordenar (número de sequência ou data). Fica para quando o formato for escrito.

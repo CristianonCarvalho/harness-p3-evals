@@ -69,6 +69,8 @@ Critério **não** é taxonomia. A taxonomia de erros sai depois, da codificaç�
 
 13. **Revisão R3 e R5: dois tipos de anotação.** A **cega** é feita só com o dossiê, sem rascunho à vista, e é a única base do TPR/TNR. A **revisada** parte de um rascunho de IA que o usuário confirma ou muda. A anotação diz o seu tipo, e o rascunho é guardado à parte, nunca sobrescrito, para medir a ancoragem. Como marcar o tipo e onde guardar o rascunho é decisão do formato (núcleo).
 
+14. **Revisão R8: o erro do anotador** (2026-11-11). (a) Ninguém, nem o Claude, comenta um trace cego antes de a anotação dele fechar; depois, revisão é nova versão. (b) Cerca de 10 traces cegos são reanotados às cegas dias depois, e o relatório mostra a concordância do anotador consigo mesmo. (c) No teste, toda correção feita depois de ver o juiz fica no histórico com o motivo, e o relatório mostra o TPR/TNR antes e depois. (d) **`note` obrigatória quando algum critério é `fail`**; o validador recusa `fail` sem nota.
+
 Os nomes `uncertain` e `planted_text` seguem a convenção de identificadores em inglês e podem mudar quando o formato for escrito.
 
 ### D3. O que é código e o que é juiz
@@ -144,6 +146,7 @@ Regras:
 - **Sorteada antes de anotar**, com a semente registrada, para a intuição de quem anota não decidir quem cai onde.
 - **Mínimo de reprovados no teste:** na casa de 10 a 15 por critério que o juiz decide. Com menos, o TNR é instável. Se faltar, move-se casos do desenvolvimento ou criam-se casos de propósito para essa classe.
 - **Revisão R3:** o TPR/TNR é medido só na **amostra cega**, de pelo menos 30 traces sorteados do teste, estratificados por hipótese, com semente registrada. Se faltarem reprovados, a amostra cresce; se ainda faltarem, o critério é declarado "não calibrado". As anotações revisadas servem à análise de erros e ao ajuste do juiz no desenvolvimento.
+- **Revisão R8:** a concordância do anotador consigo mesmo (reanotação de cerca de 10 traces cegos) entra no relatório ao lado do TPR/TNR, como referência do que se pode exigir do juiz.
 - **Definição usada:** TPR = fração dos casos que o humano aprovou e o juiz também aprovou; TNR = fração dos que o humano reprovou e o juiz também reprovou.
 
 - **Os subconjuntos de D9 herdam a divisão.** Com 70% dos casos no teste, o subconjunto "sem skill" (cerca de 20) deixa uns 14 casos no teste, e os casos de segurança deixam poucos. Nesses subconjuntos os intervalos são largos e o relatório deve dizê-lo; o C4 em especial pode não ter reprovados suficientes para calibrar o juiz, e nesse caso é declarado **"não calibrado"**, em vez de reportar um TNR sem lastro.

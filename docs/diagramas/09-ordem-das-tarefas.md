@@ -48,9 +48,15 @@ flowchart LR
 | Tarefa | Espera por |
 |---|---|
 | 11 (juiz) | 5 (anotação), porque o juiz e a anotação precisam falar o mesmo formato de veredito |
-| 12 (adaptador) | A aprovação de **uma chamada paga pequena** para capturar um `stream-json` real (alguns centavos, com teto) |
+| 12 (adaptador) | Nada: a amostra real foi capturada em 2026-11-11. Os achados (isolar ferramentas e servers, filtrar `Skill` e `ToolSearch` do lastro, somar tokens de cache) estão no plano |
 | 13 (runner) | 12 |
 | 15 (CI) | 5 e 6, porque o CI valida anotações e recalcula TPR/TNR |
+
+## Fora do plano
+
+- **Passo 30:** `validate_case` recusa `{CPF}`/`{CNPJ}` na pergunta sem H12 (decisão 6 da Tarefa 5).
+- **Passo 31:** `check_c2` aprova sozinho o caso sem resposta quando o modelo não diz data (decisão 7).
+- **Desenho da Tarefa 5 fechado** (decisões 1 a 12 em D2); o nó 5 segue vermelho porque o código é seu.
 
 ## Depois das tarefas: os marcos
 

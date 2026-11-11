@@ -16,8 +16,10 @@ O sistema avaliado é o [P2](https://github.com/CristianonCarvalho/harness-p2-MC
 |---|---|
 | **Spec** | Completa e aprovada ([`docs/superpowers/specs/`](docs/superpowers/specs/2026-11-10-p3-evals-design.md), decisões D1 a D13) |
 | **Plano** | Aprovado, 16 tarefas ([`docs/superpowers/plans/`](docs/superpowers/plans/2026-11-10-p3-evals.md)) |
-| **Código** | 9 de 16 tarefas feitas, **105 testes** passando, todos offline |
+| **Código** | 9 de 16 tarefas feitas, mais dois passos fora do plano (30 e 31), **116 testes** passando, todos offline |
 | **Dados** | Ainda não há casos nem anotações: os 100 casos serão escritos antes de qualquer rodada |
+| **Anotação** | Desenho fechado: 12 decisões em D2 da spec e no [diagrama 10](docs/diagramas/10-anotacao.md); o código é seu (núcleo) |
+| **Amostra real** | Uma execução real do Claude Code com o P2 capturada (US$ 0,0066); os achados, que mudam o adaptador e o runner, estão na Tarefa 12 do plano |
 | **Falta** | O núcleo (formato da anotação, TPR/TNR e o juiz), o adaptador e o runner, o CI e este README final |
 
 O andamento tarefa a tarefa está em [`docs/diagramas/09-ordem-das-tarefas.md`](docs/diagramas/09-ordem-das-tarefas.md). Cada passo tem commit, tag `step-NN` e uma nota em [`docs/steps/`](docs/steps/).

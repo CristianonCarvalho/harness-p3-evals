@@ -2,13 +2,15 @@
 
 **Status: completa, aguardando a revisão do usuário.** Cada decisão entrou aqui quando foi tomada, uma por vez (ver `docs/decisoes-em-aberto.md` para o mapa de origem). Não há plano nem código: o plano só nasce depois da aprovação desta spec.
 
+**Revisão de 2026-11-11 (aprovada):** o usuário não conhece a legislação da reforma. O gabarito e a maior parte das anotações passam a ser rascunhados por IA e confirmados por ele, e só uma amostra anotada às cegas calibra o juiz. O desenho completo está em [rascunho por IA](2026-11-11-p3-rascunho-por-ia-design.md) (R1 a R7). As seções afetadas abaixo trazem uma nota **Revisão R**.
+
 ## Como a spec cobre o critério de concluído
 
 | # | Critério (CLAUDE.md) | Onde está |
 |---|---|---|
 | 1 | Trocar de modelo ou prompt gera um relatório numérico | D10 (dois modelos), D12 (relatório) |
 | 2 | 100 traces anotados | D2 (formato), D6 (100 casos), D9 (condição principal) |
-| 3 | Juiz LLM calibrado (TPR e TNR) | D3, D6, D8 |
+| 3 | Juiz LLM calibrado (TPR e TNR) | D3, D6, D8; amostra cega (R3) |
 | 4 | Toda mudança vem com antes/depois | D7, D12 |
 | 5 | A regressão roda em CI a cada mudança | D7 |
 
@@ -23,6 +25,8 @@ O núcleo, escrito pelo usuário (o Claude revisa, explica e pergunta), são **t
 3. o **juiz LLM**.
 
 Fica fora do núcleo, e o Claude implementa ou adapta do P1: cliente HTTP, ledger de custo, CI e o entorno das rodadas.
+
+**Revisão R7:** o rascunhador do gabarito e da anotação, o sorteio da amostra cega e o dossiê também são entorno. O formato de anotação (inclusive como marcar o tipo, cega ou revisada) e o TPR/TNR, agora só sobre as anotações cegas, continuam núcleo.
 
 **As checagens em código de D3** (extrair o `id` citado, extrair e comparar datas, detectar eco de CPF/CNPJ) também ficam no **entorno**: o Claude as implementa e o usuário revisa. O que é **do usuário** é a **definição de cada critério** (D2), isto é, o que significa aprovar. *Ponto a confirmar na revisão:* se o usuário preferir escrever também essas checagens, elas passam para o núcleo.
 
@@ -62,6 +66,8 @@ Critério **não** é taxonomia. A taxonomia de erros sai depois, da codificaç�
 10. **Reanotar guarda o histórico.** Mudar de ideia não apaga a anotação anterior; vale a mais recente, e as anteriores ficam para mostrar quantas vezes e em que critérios a anotação mudou. Isso muda a checagem 3 de D7 (e da Tarefa 15), que hoje recusa "duas anotações para o mesmo `trace_id`": passa a exigir uma ordem sem ambiguidade entre as versões de um mesmo trace. Como se guarda (arquivo por versão ou lista no mesmo arquivo) e como se ordena (número de sequência ou data) é decisão do formato, que é núcleo.
 11. **Hesitação por critério: um campo `uncertain`**, lista dos critérios em que o anotador hesitou, vazia por padrão (por exemplo, `"uncertain": ["C2"]`). Regras: todo critério da lista tem de ter veredito `pass` ou `fail`, nunca `n/a`; lista não vazia exige `note` não vazia. Serve para o relatório mostrar se o juiz discorda mais do humano onde o humano hesitou. Lista, e não um campo único por anotação, porque a dúvida costuma ser num critério só.
 12. **Vigia do H13, solução prevista.** O caso 18 dos candidatos usa um texto de norma sintético, não o corpus real. O caso H13 terá de apontar para esse texto (um campo como `planted_text`), e esse campo vira o marcador: caso com `planted_text` e sem H13 é recusado por `validate_case`, como a vigia do H12. Até o mecanismo de plantar o texto existir (provavelmente no adaptador, Tarefa 12), segue como limite: esquecer o H13 desliga o C4 em silêncio.
+
+13. **Revisão R3 e R5: dois tipos de anotação.** A **cega** é feita só com o dossiê, sem rascunho à vista, e é a única base do TPR/TNR. A **revisada** parte de um rascunho de IA que o usuário confirma ou muda. A anotação diz o seu tipo, e o rascunho é guardado à parte, nunca sobrescrito, para medir a ancoragem. Como marcar o tipo e onde guardar o rascunho é decisão do formato (núcleo).
 
 Os nomes `uncertain` e `planted_text` seguem a convenção de identificadores em inglês e podem mudar quando o formato for escrito.
 
@@ -120,6 +126,7 @@ Regras:
 - **`conditions` separa o que não é comparável.** O relatório agrupa as rodadas por condição; C4 só vale onde o hook estava ligado ou onde se mede justamente a falta dele.
 - **Execução que falha também é dado:** o adaptador grava o arquivo ao final mesmo com erro, com `status` preenchido.
 - `traces/` fica no `.gitignore`; `annotations/` e `judgments/` **não**: as anotações são o ativo mais valioso do projeto, e os vereditos do juiz são o que o CI recalcula (D7).
+- **Revisão R5:** os rascunhos de gabarito e de anotação ficam numa pasta versionada própria, separada de `annotations/`, com as mesmas regras de CPF/CNPJ.
 - **Nenhum número de CPF/CNPJ, nem sintético, entra em arquivo versionado.** Isso vale para `note` e `justification`, que são texto livre e poderiam citar o número que está no trace. Um teste do CI recusa qualquer sequência com formato de CPF ou CNPJ nesses arquivos e nas fixtures.
 
 JSON por execução (e não JSONL por evento) porque a unidade que se anota, se julga e se soma é a execução, e as rodadas são curtas e em lote. O JSONL só ganharia em streaming e em falha no meio, e a gravação ao final com `status` resolve a segunda.
@@ -136,6 +143,7 @@ Regras:
 - **Estratificada pelas hipóteses H1 a H14**, para que as duas partes cubram os mesmos tipos de caso.
 - **Sorteada antes de anotar**, com a semente registrada, para a intuição de quem anota não decidir quem cai onde.
 - **Mínimo de reprovados no teste:** na casa de 10 a 15 por critério que o juiz decide. Com menos, o TNR é instável. Se faltar, move-se casos do desenvolvimento ou criam-se casos de propósito para essa classe.
+- **Revisão R3:** o TPR/TNR é medido só na **amostra cega**, de pelo menos 30 traces sorteados do teste, estratificados por hipótese, com semente registrada. Se faltarem reprovados, a amostra cresce; se ainda faltarem, o critério é declarado "não calibrado". As anotações revisadas servem à análise de erros e ao ajuste do juiz no desenvolvimento.
 - **Definição usada:** TPR = fração dos casos que o humano aprovou e o juiz também aprovou; TNR = fração dos que o humano reprovou e o juiz também reprovou.
 
 - **Os subconjuntos de D9 herdam a divisão.** Com 70% dos casos no teste, o subconjunto "sem skill" (cerca de 20) deixa uns 14 casos no teste, e os casos de segurança deixam poucos. Nesses subconjuntos os intervalos são largos e o relatório deve dizê-lo; o C4 em especial pode não ter reprovados suficientes para calibrar o juiz, e nesse caso é declarado **"não calibrado"**, em vez de reportar um TNR sem lastro.
@@ -164,6 +172,8 @@ Regras:
 - **Uma chamada por critério**, com a pergunta, a saída bruta das ferramentas, a resposta final e a definição do critério. O juiz devolve aprovado ou reprovado com uma justificativa curta, e **nunca vê o veredito humano**.
 - **O juiz só decide o que o código não decide** (D3), então o volume é de centenas de chamadas curtas por rodada. O custo não pesa na escolha.
 - **Chave e conta próprias do juiz**, só por variável de ambiente, com teto de custo por rodada. Nunca exibir a chave.
+
+**Revisão R4:** o rascunhador do gabarito e da anotação é de uma **terceira família**, diferente da avaliada e da do juiz, para que nem o gabarito herde os vieses do Claude avaliado nem o juiz erre junto com o rascunho.
 
 Alternativas descartadas por ora: Claude de outro nível (mais simples, mas mesma família) e dois juízes com medida de concordância (boa extensão se o TPR/TNR do primeiro vier fraco).
 
@@ -244,7 +254,7 @@ cases/<id>.json
 ```
 
 Regras:
-- **O gabarito é escrito antes de ver qualquer resposta do modelo**, pelo usuário, que é quem entende do assunto.
+- **O gabarito é escrito antes de ver qualquer resposta do modelo.** **Revisão R2:** ele é rascunhado por IA a partir do corpus inteiro (sem as ferramentas de busca do P2), passa pela conferência abaixo e é confirmado pelo usuário com o texto de cada dispositivo ao lado. Na dúvida, `disputed: true`. As perguntas continuam do usuário (R1).
 - **Conferência offline, sem modelo:** uma checagem chama as ferramentas do P2 (stdio) e confirma que os `expected_provisions` existem no corpus e que o `efeitos.desde` do caso confere. Um gabarito que não passa nessa conferência é recusado.
 - **Só dados públicos:** o caso nunca contém CPF/CNPJ. Os casos de segurança descrevem o que fazer, e o número sintético é gerado em tempo de execução e nunca escrito (regra de D5).
 - **O gabarito dá a referência estruturada** para C1, C2 e C3. Não captura nuance jurídica; respostas ideais em prosa ficaram de fora de propósito.
@@ -253,7 +263,10 @@ Alternativas descartadas: resposta ideal em texto livre (o código não a lê, e
 
 ## Limites conhecidos
 
-- **Um único anotador.** As anotações são de uma pessoa; não há concordância entre anotadores. O TPR/TNR mede a concordância do juiz com **essa** pessoa, não com uma verdade objetiva. Casos em que a resposta correta é debatível ficam marcados e fora do cálculo do juiz.
+- **Um anotador leigo, com rascunho de IA** (revisão R). Não há concordância entre anotadores. O TPR/TNR mede a concordância do juiz com **essa** pessoa, na amostra cega, não com uma verdade objetiva. Casos em que a resposta correta é debatível ficam marcados e fora do cálculo do juiz.
+- **A referência é a fidelidade ao corpus, não a correção jurídica** (R2). Um gabarito juridicamente errado, mas coerente com o texto, passa.
+- **A amostra cega é pequena** (R3): intervalos largos, e critérios podem ficar "não calibrados".
+- **Ancoragem nas anotações revisadas:** medida (R5), não eliminada.
 - **Só modelos Claude avaliados** (D4, D10): o relatório não diz nada sobre outras famílias.
 - **O CI não vê traces reais** (D7): um relatório que não vem de uma rodada real só é barrado pela revisão.
 - **Execuções repetidas variam** (D10): sem temperatura controlável, a taxa de um critério tem ruído que a piloto mede.
@@ -270,5 +283,8 @@ Nada. As decisões de desenho (D1 a D13) estão tomadas; o que resta está na ta
 | Valor do teto de custo por rodada e por mês | Depois da rodada piloto (D10) |
 | Limiar mínimo de TPR/TNR e quem aprova baixá-lo | Depois da primeira medição no teste |
 | Como calcular o intervalo de incerteza | Passo que implementa o relatório (D12) |
+| Modelo exato do rascunhador e do juiz (R4) | Conferir preço e contexto no OpenRouter, antes do passo do rascunhador |
+| Tamanho final da amostra cega (R3) | Depois de anotar os 30 primeiros e contar os reprovados |
+| Tempo de uma anotação cega | Teste com o dossiê de 1 trace, antes do sorteio da amostra |
 
 Ver também `docs/decisoes-em-aberto.md`.

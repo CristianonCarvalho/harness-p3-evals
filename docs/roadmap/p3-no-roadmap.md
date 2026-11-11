@@ -30,6 +30,8 @@ Duas premissas do diagnóstico que pesam no P3:
 
 **Atenção ao campo "Dados":** o roadmap diz que as perguntas são **criadas por pessoas**. As perguntas candidatas em [`../p2/casos-candidatos.md`](../p2/casos-candidatos.md) foram escritas durante a construção do P2 e servem de ponto de partida, mas as 100 perguntas anotadas devem vir de pessoas reais, e a anotação (o que é uma boa resposta) é de quem entende do assunto.
 
+**Ressalva (2026-11-11):** quem anota no P3 não conhece a legislação. O gabarito e a maior parte das anotações são rascunhados por IA e confirmados pelo usuário, e só uma amostra anotada às cegas calibra o juiz. A referência passa a ser a fidelidade ao corpus, não a correção jurídica. Ver [`../superpowers/specs/2026-11-11-p3-rascunho-por-ia-design.md`](../superpowers/specs/2026-11-11-p3-rascunho-por-ia-design.md).
+
 **Regra para todos os projetos:** "repositório público (exceto P5), README com decisões e limites, e um texto curto explicando o que deu errado."
 
 ## Como o roadmap mede o P3

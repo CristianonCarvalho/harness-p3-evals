@@ -212,6 +212,22 @@ def test_tool_error_is_recorded_but_does_not_fail_the_trace():
     assert t["status"] == "ok" and t["events"][0]["is_error"] is True
 
 
+def test_remote_server_tools_count_as_p2_calls():
+    linhas = [l.replace("mcp__taxlaw__", "mcp__taxlaw-remoto__") for l in _single_call("{}")]
+    init = json.loads(linhas[0])
+    init["tools"] = ["Skill", "ToolSearch", "mcp__taxlaw-remoto__obter_dispositivo"]
+    init["mcp_servers"] = [{"name": "taxlaw-remoto", "status": "connected"}]
+    t = _parse([json.dumps(init)] + linhas[1:],
+               allowed_tools=set(init["tools"]), allowed_servers={"taxlaw-remoto"})
+    assert t["status"] == "ok", t["errors"]
+    assert [e["tool"] for e in t["events"]] == ["mcp__taxlaw-remoto__obter_dispositivo"]
+
+
+def test_every_allowed_server_must_be_connected():
+    t = _parse(_lines("stream_ok.jsonl"), allowed_servers={"taxlaw", "taxlaw-remoto"})
+    assert t["status"] == "erro" and any("taxlaw-remoto" in e for e in t["errors"])
+
+
 def test_allowed_lists_are_required():
     with pytest.raises(TypeError):
         parse_stream(_lines("stream_ok.jsonl"), case_id="c01", question="q",

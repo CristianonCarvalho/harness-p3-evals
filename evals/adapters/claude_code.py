@@ -1,7 +1,8 @@
 """Converte o stream-json do `claude -p` para o formato de trace do P3 (D5).
 
 Decisoes que vieram da amostra real de 2026-11-11 (achados na Tarefa 12 do plano):
-- `events` guarda so as chamadas ao P2 (`mcp__taxlaw__*`). `Skill` e `ToolSearch`
+- `events` guarda so as chamadas ao P2 (`mcp__<server>__*`, para cada server em
+  `allowed_servers`: `taxlaw` local ou `taxlaw-remoto`). `Skill` e `ToolSearch`
   vao para `other_tools`, sem resultado: o texto da skill traz ids e daria
   lastro falso ao C1.
 - O init tem de mostrar so as ferramentas e os servers permitidos; senao o trace
@@ -15,8 +16,6 @@ from __future__ import annotations
 import json
 from typing import Iterable
 
-P2_PREFIX = "mcp__taxlaw__"
-P2_SERVER = "taxlaw"
 # Subtipos do evento `result` que sao limite atingido (decisao 8 de D2), nao falha.
 LIMIT_SUBTYPES = {"error_max_budget_usd", "error_max_turns"}
 
@@ -58,8 +57,9 @@ def _check_init(ev: dict, allowed_tools: set[str], allowed_servers: set[str]) ->
     extras = sorted(set(servers) - allowed_servers)
     if extras:
         errors.append(f"execucao nao isolada: servers MCP fora da lista: {extras}")
-    if servers.get(P2_SERVER) != "connected":
-        errors.append(f"server {P2_SERVER} nao conectado: {servers.get(P2_SERVER)!r}")
+    for nome in sorted(allowed_servers):
+        if servers.get(nome) != "connected":
+            errors.append(f"server {nome} nao conectado: {servers.get(nome)!r}")
     return errors
 
 
@@ -68,6 +68,7 @@ def parse_stream(lines: Iterable[str], *, case_id: str, question: str,
                  allowed_tools: set[str], allowed_servers: set[str],
                  synthetic_ids: list[str] | None = None) -> dict:
     """Devolve um trace (D5). Nunca levanta por causa do conteudo do stream."""
+    p2_prefixes = tuple(f"mcp__{s}__" for s in sorted(allowed_servers))
     source = {"harness": "claude-code", "version": "", "tools": [], "mcp_servers": []}
     model = "desconhecido"
     pendentes: dict[str, dict] = {}
@@ -105,7 +106,7 @@ def parse_stream(lines: Iterable[str], *, case_id: str, question: str,
                 if not (isinstance(b, dict) and b.get("type") == "tool_use"):
                     continue
                 nome, args = b.get("name", ""), b.get("input") or {}
-                if nome.startswith(P2_PREFIX):
+                if nome.startswith(p2_prefixes):
                     e = {"tool": nome, "args": args, "result_raw": None, "is_error": False}
                     pendentes[b.get("id", "")] = e
                     events.append(e)

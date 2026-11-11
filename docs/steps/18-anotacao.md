@@ -15,7 +15,7 @@ Implementação do contrato de anotação humana em `evals/annotation.py` e sua 
   - Confere formato de data ISO `AAAA-MM-DD` com validação dupla (regex estrito + `date.fromisoformat`).
   - Valida o conteúdo antes de tocar no disco (não cria diretório se inválido).
   - Incrementa versão numericamente (`v10 -> v11`, nunca alfabética).
-  - Grava atomicamente com `open(path, "x")` sem sobrescrita.
+  - Grava com `open(path, "x")`, que nunca sobrescreve um arquivo existente. Não é gravação atômica: se o processo cair no meio, pode ficar um arquivo pela metade, e a leitura o recusa como JSON corrompido.
 - **`load_history(annotations_dir, trace_id)` e `load_annotation(annotations_dir, trace_id)`:**
   - Leitura ordenada por versão numérica.
   - Validação de integridade do arquivo lido: confere se tem `version`, se o número bate com o nome do arquivo (`.v<N>.json`) e se a data é válida.
@@ -30,7 +30,12 @@ uv run pytest tests/test_annotation.py -v
 
 ## O que observar
 
-- **Isolamento e dentes em cada teste:** todos os 29 casos de aceitação foram testados com mutações, provando que regras não mascaram outras (ex: `c09` vs `c02` para evitar falsos positivos com o prefixo de `trace_id`, e mensagens de draft diferenciadas por partes exatas com `PurePosixPath`).
+- **Suíte:** 76 testes em `tests/test_annotation.py`, 257 no total, verde duas vezes seguidas.
+- **Vermelho antes e dentes:** cada linha da tabela de aceitação foi escrita primeiro como teste. A revisão encontrou e fechou testes que passariam pelo motivo errado:
+  - teste 5: `"c01"` aparecia também no `trace_id`, então a mensagem podia omitir o `case_id` do caso; o caso passou a ser `c09`;
+  - teste 20: todos os caminhos ruins tinham também o nome de arquivo errado, e só a regra do nome era exercida; cada caminho passou a ter um defeito só, e a regra virou uma comparação das partes do caminho;
+  - mensagens localizadas pelo critério **e** por uma palavra própria da regra (`"desconhecido"`, `"inválido"`, `"nota"`), porque `"fail"` e `"se aplica"` aparecem em mensagens de outras regras.
+- **Teste de mutação sistemático (como nos passos 25 e 26): não rodado neste passo.** A prova de cada regra foi apagá-la e ver o teste dela falhar. Um resto conhecido: a checagem de versão duplicada em `load_history` (`seen_versions`) não dispara nunca, porque a regra do nome canônico já impede dois arquivos com a mesma versão.
 - **Segurança contra vazamento:** a validação de privacidade emite mensagem com contagem de documentos encontrados, sem jamais ecoar o número do documento na mensagem de erro.
 - **Duas conferências na data:** `date.fromisoformat("20261111")` do Python 3.11+ aceita datas sem hífen; a combinação com `_DATE_RE.fullmatch` garante estritamente `AAAA-MM-DD`.
 

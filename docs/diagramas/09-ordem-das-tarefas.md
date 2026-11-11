@@ -1,6 +1,6 @@
 # Ordem das tarefas e andamento
 
-As 21 tarefas do [plano de implementação](../superpowers/plans/2026-11-10-p3-evals.md), com as dependências entre elas e o que já foi feito. As tarefas 17 a 21 nasceram da [revisão do rascunho por IA](../superpowers/specs/2026-11-11-p3-rascunho-por-ia-design.md) (2026-11-11).
+As 22 tarefas do [plano de implementação](../superpowers/plans/2026-11-10-p3-evals.md), com as dependências entre elas e o que já foi feito. As tarefas 17 a 21 nasceram da [revisão do rascunho por IA](../superpowers/specs/2026-11-11-p3-rascunho-por-ia-design.md) (2026-11-11); a 22, da revisão da Tarefa 5.
 
 ```mermaid
 flowchart LR
@@ -40,14 +40,16 @@ flowchart LR
     t14 --> t21
     t20 --> t21
     t21 --> t15
+    t5 --> t22["22. Gravar anotação<br/>do dossiê"]
+    t17 --> t22
 
     classDef feito fill:#d4edda,stroke:#28a745,color:#000
     classDef falta fill:#fff3cd,stroke:#ffc107,color:#000
     classDef seu fill:#f8d7da,stroke:#dc3545,color:#000
 
-    class t1,t2,t3,t4,t7,t8,t9,t10,t12,t13,t14 feito
-    class t15,t16,t17,t18,t19,t20,t21 falta
-    class t5,t6,t11 seu
+    class t1,t2,t3,t4,t5,t7,t8,t9,t10,t12,t13,t14 feito
+    class t15,t16,t17,t18,t19,t20,t21,t22 falta
+    class t6,t11 seu
 ```
 
 ## Legenda
@@ -65,12 +67,13 @@ flowchart LR
 | 18 (rascunhador do gabarito) | escolher o modelo do rascunhador e o do juiz (famílias diferentes) |
 | 20 (rascunhador da anotação) | 5 (o validador), 17 e 19; e a confirmação de que fica no entorno (R7) |
 | 21 (relatório da revisão) | 6 e 20 |
+| 22 (gravar anotação do dossiê) | 17 (o dossiê); bloqueia a anotação cega (M7) |
 
 ## Fora do plano
 
 - **Passo 30:** `validate_case` recusa `{CPF}`/`{CNPJ}` na pergunta sem H12 (decisão 6 da Tarefa 5).
 - **Passo 31:** `check_c2` aprova sozinho o caso sem resposta quando o modelo não diz data (decisão 7).
-- **Desenho da Tarefa 5 fechado** (decisões 1 a 14 em D2, contrato reescrito no plano em 2026-11-11); o nó 5 segue vermelho porque o código é seu.
+- **Tarefa 5 feita** por você (passo 18, 2026-11-11), com as decisões 1 a 14 de D2.
 
 ## Depois das tarefas: os marcos
 

@@ -47,9 +47,9 @@ flowchart LR
     classDef falta fill:#fff3cd,stroke:#ffc107,color:#000
     classDef seu fill:#f8d7da,stroke:#dc3545,color:#000
 
-    class t1,t2,t3,t4,t5,t7,t8,t9,t10,t12,t13,t14 feito
+    class t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t12,t13,t14 feito
     class t15,t16,t17,t18,t19,t20,t21,t22 falta
-    class t6,t11 seu
+    class t11 seu
 ```
 
 ## Legenda
@@ -62,18 +62,19 @@ flowchart LR
 
 | Tarefa | Espera por |
 |---|---|
-| 11 (juiz) | 5 (anotação), porque o juiz e a anotação precisam falar o mesmo formato de veredito |
-| 15 (CI) | 5 e 6, porque o CI valida anotações e recalcula TPR/TNR; e 21, porque confere rascunhos e anotações cegas |
+| 11 (juiz) | escolher o modelo do juiz e o do rascunhador, de famílias diferentes (R4); a 5 e a 10 já estão feitas |
+| 15 (CI) | 21, porque confere rascunhos e anotações cegas (a 5 e a 6 já estão feitas) |
 | 18 (rascunhador do gabarito) | escolher o modelo do rascunhador e o do juiz (famílias diferentes) |
-| 20 (rascunhador da anotação) | 5 (o validador), 17 e 19; e a confirmação de que fica no entorno (R7) |
-| 21 (relatório da revisão) | 6 e 20 |
+| 20 (rascunhador da anotação) | 17 e 19; e a confirmação de que fica no entorno (R7) |
+| 21 (relatório da revisão) | 20 |
 | 22 (gravar anotação do dossiê) | 17 (o dossiê); bloqueia a anotação cega (M7) |
 
 ## Fora do plano
 
 - **Passo 30:** `validate_case` recusa `{CPF}`/`{CNPJ}` na pergunta sem H12 (decisão 6 da Tarefa 5).
 - **Passo 31:** `check_c2` aprova sozinho o caso sem resposta quando o modelo não diz data (decisão 7).
-- **Tarefa 5 feita** por você (passo 18, 2026-11-11), com as decisões 1 a 14 de D2.
+- **Tarefa 5 feita** (passo 18, 2026-11-11), com as decisões 1 a 14 de D2.
+- **Tarefa 6 feita** (passo 19, 2026-11-12): TPR/TNR só sobre anotações cegas e a concordância consigo mesmo (R8).
 
 ## Depois das tarefas: os marcos
 

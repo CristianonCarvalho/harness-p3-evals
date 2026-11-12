@@ -43,7 +43,28 @@ uv run pytest tests/test_drafter.py -v
   - `open(..., "w")` em vez de `"x"`: equivalente, porque o número é sempre novo; fica como defesa contra duas gravações simultâneas.
 
   Agora 17 de 18 caem; a que sobra é a equivalente.
-- **Execução real:** ainda não feita. Precisa de aprovação, de `OPENROUTER_API_KEY` no ambiente e de um teto de centavos.
+
+## Confirmação na prática (2026-11-12)
+
+Uma execução real, aprovada, com teto de US$ 0,05: a semente 4 de [`docs/p2/casos-candidatos.md`](../p2/casos-candidatos.md), "O que é cesta básica na reforma?", data de referência 2027-01-01, P2 na tag `step-16`. O caso e o rascunho ficaram fora do repositório (pasta temporária); o ledger, em `runs/`, fora do git.
+
+| Medida | Valor |
+|---|---|
+| Tokens de entrada | 54.902 (a estimativa era uns 45 mil) |
+| Tokens de saída | 2.788 |
+| Custo (medido pelo OpenRouter) | **US$ 0,0107** |
+| Tempo | 15 s |
+| Resultado | **aceito** em todas as conferências |
+
+**Confirmado:**
+1. **O formato serve.** O DeepSeek respondeu num JSON que o `parse_draft` aceitou de primeira, sem texto em volta.
+2. **Os trechos são literais.** Os 3 trechos citados passaram na comparação palavra por palavra com o texto do corpus, e o P2 confirmou que os 3 ids existem em 2027-01-01.
+3. **O rascunho foi além da semente.** A semente apontava só `LC214.art125`; o rascunho trouxe também `EC132.art8` e o parágrafo único, que criam a Cesta Básica e remetem à lei complementar. Se isso é o gabarito certo, quem decide é você, na confirmação: é exatamente o tipo de mudança que a pergunta de previsão conta.
+4. **A data veio igual**, e o registro traz `corpus_version` `c269388fb2bd` e `prompt_sha` `d2c9189eabee`.
+
+**Custo para os 100 casos:** cerca de US$ 1,10, uns 25 minutos em série.
+
+**Ficou sem confirmação:** um caso `nao` (sem resposta no corpus) e um caso com versões no tempo (semente 3). São os próximos a olhar quando as suas perguntas existirem.
 
 ## Pergunta de previsão
 

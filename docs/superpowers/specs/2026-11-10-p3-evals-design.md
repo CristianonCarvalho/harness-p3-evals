@@ -286,7 +286,7 @@ Nada. As decisões de desenho (D1 a D13) estão tomadas; o que resta está na ta
 | Valor do teto de custo por rodada e por mês | Depois da rodada piloto (D10) |
 | Limiar mínimo de TPR/TNR e quem aprova baixá-lo | Depois da primeira medição no teste |
 | Como calcular o intervalo de incerteza | Passo que implementa o relatório (D12) |
-| Modelo exato do rascunhador e do juiz (R4) | Conferir preço e contexto no OpenRouter, antes do passo do rascunhador |
+| Modelo exato do juiz (R4) | Decidido por medição: dois candidatos de famílias diferentes (nem Anthropic nem DeepSeek), comparados por TPR/TNR no conjunto de desenvolvimento. **Rascunhador: decidido em 2026-11-12**, `deepseek/deepseek-v4.1-flash-1017` (família DeepSeek, versão com data, contexto de 1M, US$ 0,30/1,20 por milhão) |
 | Tamanho final da amostra cega (R3) | Depois de anotar os 30 primeiros e contar os reprovados |
 
 Ver também `docs/decisoes-em-aberto.md`.

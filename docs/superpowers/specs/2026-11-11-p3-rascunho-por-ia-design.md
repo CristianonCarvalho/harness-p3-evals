@@ -93,7 +93,7 @@ Um comando gera, por trace, uma página com a pergunta, o gabarito confirmado, a
 
 - **Núcleo (continua do usuário):** o formato de anotação, incluindo como marcar o tipo (cega ou revisada) e onde guardar o rascunho; as métricas TPR/TNR, que passam a usar só as anotações cegas; e o juiz.
 - **Entorno (Claude implementa, usuário revisa):** o rascunhador do gabarito e da anotação, o sorteio da amostra cega e o dossiê.
-- **Ponto a confirmar:** o rascunhador de anotação é parecido com o juiz (lê o trace e devolve vereditos). Ele fica no entorno porque **não produz nenhum número que se reporta como medida**: quem sustenta o critério 3 é a amostra cega. O prompt dele usa as definições de critério de D2 sem reescrevê-las, e o usuário as revisa. Se o usuário preferir, o rascunhador passa para o núcleo.
+- **Ponto a confirmar:** o rascunhador de anotação é parecido com o juiz (lê o trace e devolve vereditos). Ele fica no entorno porque **não produz nenhum número que se reporta como medida**: quem sustenta o critério 3 é a amostra cega. O prompt dele usa as definições de critério de D2 sem reescrevê-las, e o usuário as revisa. Se o usuário preferir, o rascunhador passa para o núcleo. **Confirmado em 2026-11-13:** fica no entorno.
 
 ### R8. O erro do anotador (2026-11-11, depois do teste com o dossiê)
 

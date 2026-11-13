@@ -16,11 +16,11 @@ O sistema avaliado é o [P2](https://github.com/CristianonCarvalho/harness-p2-MC
 |---|---|
 | **Spec** | Completa e aprovada ([`docs/superpowers/specs/`](docs/superpowers/specs/2026-11-10-p3-evals-design.md), decisões D1 a D13), com a revisão do [rascunho por IA](docs/superpowers/specs/2026-11-11-p3-rascunho-por-ia-design.md) (R1 a R8) |
 | **Plano** | Aprovado, 22 tarefas (as 17 a 21 vêm da revisão do rascunho por IA; a 22, da revisão da Tarefa 5) ([`docs/superpowers/plans/`](docs/superpowers/plans/2026-11-10-p3-evals.md)) |
-| **Código** | 16 de 22 tarefas feitas (as 5 e 6, do núcleo; a 17, o dossiê; a 18, o rascunhador do gabarito com DeepSeek; a 22, gravar a anotação do dossiê), mais dois passos fora do plano (30 e 31), **420 testes** passando, todos offline |
+| **Código** | 17 de 22 tarefas feitas (as 5 e 6, do núcleo; a 17, o dossiê; a 18, o rascunhador do gabarito com DeepSeek; a 19, o sorteio da amostra cega; a 22, gravar a anotação do dossiê), mais dois passos fora do plano (30 e 31), **450 testes** passando, todos offline |
 | **Dados** | Ainda não há casos nem anotações. As perguntas são suas (R1); os gabaritos serão rascunhados por IA e confirmados por você, antes de qualquer rodada |
 | **Anotação** | Desenho fechado: 14 decisões em D2 da spec e no [diagrama 10](docs/diagramas/10-anotacao.md); o código é seu (núcleo). Gabarito e anotações rascunhados por IA, com uma amostra cega que calibra o juiz (R2, R3) |
 | **Amostra real** | Uma execução real do Claude Code com o P2 capturada (US$ 0,0066); o adaptador (passo 25) e o runner (passo 26) já incorporam os achados, e quatro execuções reais (US$ 0,0182) confirmaram o isolamento, a skill por condição, o hook e a data de referência |
-| **Falta** | O núcleo (o juiz); as perguntas; o entorno da revisão (rascunhador da anotação, amostra cega, relatório da revisão); o CI e este README final |
+| **Falta** | O núcleo (o juiz); as perguntas; o entorno da revisão (rascunhador da anotação, relatório da revisão); o CI e este README final |
 
 O andamento tarefa a tarefa está em [`docs/diagramas/09-ordem-das-tarefas.md`](docs/diagramas/09-ordem-das-tarefas.md). Cada passo tem commit, tag `step-NN` e uma nota em [`docs/steps/`](docs/steps/).
 

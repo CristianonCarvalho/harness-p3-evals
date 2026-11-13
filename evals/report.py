@@ -193,6 +193,9 @@ def render_markdown(report: dict) -> str:
     linhas += ["## Desenvolvimento (diagnóstico)", "",
                "Não entra nas taxas principais; serve só para diagnóstico.", ""]
     linhas += _tabela_taxas(report["dev_diagnostic"])
+    if report.get("review"):
+        from evals.review_report import render_review_markdown  # import tardio: evita ciclo
+        linhas += [""] + render_review_markdown(report["review"])
     return "\n".join(linhas)
 
 

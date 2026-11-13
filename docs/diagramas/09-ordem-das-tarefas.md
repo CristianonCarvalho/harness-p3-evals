@@ -47,10 +47,9 @@ flowchart LR
     classDef falta fill:#fff3cd,stroke:#ffc107,color:#000
     classDef seu fill:#f8d7da,stroke:#dc3545,color:#000
 
-    class t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t12,t13,t14,t15,t17,t18,t19,t20,t21,t22 feito
+    class t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13,t14,t15,t17,t18,t19,t20,t21,t22 feito
     class t16 falta
-    class t11 seu
-```
+    ```
 
 ## Legenda
 
@@ -62,7 +61,7 @@ flowchart LR
 
 | Tarefa | Espera por |
 |---|---|
-| 11 (juiz) | nada de código: o rascunhador é DeepSeek, e o modelo do juiz sai da medição no desenvolvimento (dois candidatos de outras famílias) |
+| 16 (README final) | as rodadas, a anotação e a calibração do juiz: os limites e o "o que deu errado" só têm conteúdo depois delas |
 
 ## Fora do plano
 
@@ -70,6 +69,7 @@ flowchart LR
 - **Passo 31:** `check_c2` aprova sozinho o caso sem resposta quando o modelo não diz data (decisão 7).
 - **Passo 38:** `validate_case` só aceita a data de referência em `AAAA-MM-DD` (o `fromisoformat` aceitava `20261111`).
 - **Tarefa 5 feita** (passo 18, 2026-11-11), com as decisões 1 a 14 de D2.
+- **Tarefa 11 feita** (passo 24, 2026-11-13): o juiz, escrito por você; o modelo sai da medição no desenvolvimento.
 - **Tarefa 15 feita** (passo 28, 2026-11-13): o CI offline no GitHub Actions e o `check-repo`.
 - **Tarefa 21 feita** (passo 36, 2026-11-13): o relatório da revisão; a reanotação de consistência fica em `annotations/consistency/`.
 - **Tarefa 20 feita** (passo 35, 2026-11-13): o rascunhador da anotação (R7 confirmado no entorno), conferido num trace real (US$ 0,0009).

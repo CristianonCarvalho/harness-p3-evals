@@ -68,6 +68,7 @@ flowchart LR
 
 - **Passo 30:** `validate_case` recusa `{CPF}`/`{CNPJ}` na pergunta sem H12 (decisão 6 da Tarefa 5).
 - **Passo 31:** `check_c2` aprova sozinho o caso sem resposta quando o modelo não diz data (decisão 7).
+- **Passo 38:** `validate_case` só aceita a data de referência em `AAAA-MM-DD` (o `fromisoformat` aceitava `20261111`).
 - **Tarefa 5 feita** (passo 18, 2026-11-11), com as decisões 1 a 14 de D2.
 - **Tarefa 15 feita** (passo 28, 2026-11-13): o CI offline no GitHub Actions e o `check-repo`.
 - **Tarefa 21 feita** (passo 36, 2026-11-13): o relatório da revisão; a reanotação de consistência fica em `annotations/consistency/`.

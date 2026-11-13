@@ -2,6 +2,8 @@ import json
 import random
 from pathlib import Path
 
+import pytest
+
 from evals.cases import extract_ids, validate_case, load_cases, assign_splits, apply_splits
 from evals.privacy import make_synthetic_cpf
 
@@ -47,6 +49,20 @@ def test_bad_id_hypothesis_date_are_rejected():
     assert validate_case(make_case(hypothesis=["H99"]))
     c = make_case(); c["gabarito"]["reference_date"] = "31/12/2027"
     assert validate_case(c)
+
+
+@pytest.mark.parametrize("valor", [
+    "20261111", "2026-1-1", "2026-13-01", "2026-02-30", "11/11/2026", "", 20261111,
+])
+def test_reference_date_must_be_aaaa_mm_dd_string(valor):
+    c = make_case(); c["gabarito"]["reference_date"] = valor
+    errors = validate_case(c)
+    assert len(errors) == 1 and "reference_date" in errors[0], errors
+
+
+def test_valid_reference_date_has_no_reference_date_error():
+    c = make_case(); c["gabarito"]["reference_date"] = "2026-11-11"
+    assert not [e for e in validate_case(c) if "reference_date" in e]
 
 
 def test_question_with_taxpayer_number_is_rejected_but_placeholder_is_ok():

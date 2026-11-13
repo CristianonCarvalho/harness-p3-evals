@@ -21,10 +21,22 @@ ANSWER_EXISTS = {"sim", "nao", "parcial"}
 SPLITS = {"desenvolvimento", "teste"}
 SUBSETS = {"sem_skill", "remoto"}
 PLACEHOLDERS = ("{CPF}", "{CNPJ}")
+DATE_RE = re.compile(r"\d{4}-\d{2}-\d{2}")
 
 
 def extract_ids(text: str) -> set[str]:
     return {m.group(0) for m in ID_RE.finditer(text)}
+
+
+def _data_valida(valor: object) -> bool:
+    # fromisoformat aceita formas sem hifen desde o Python 3.11; o formato do projeto e so AAAA-MM-DD.
+    if not isinstance(valor, str) or not DATE_RE.fullmatch(valor):
+        return False
+    try:
+        date.fromisoformat(valor)
+    except ValueError:
+        return False
+    return True
 
 
 def validate_case(d: dict) -> list[str]:
@@ -59,9 +71,7 @@ def validate_case(d: dict) -> list[str]:
         errors.append("answer_exists=nao exige expected_provisions vazio")
     if g.get("answer_exists") in ("sim", "parcial") and not esperados:
         errors.append("answer_exists=sim/parcial exige expected_provisions")
-    try:
-        date.fromisoformat(g.get("reference_date", ""))
-    except ValueError:
+    if not _data_valida(g.get("reference_date", "")):
         errors.append("gabarito.reference_date deve ser AAAA-MM-DD")
     if not isinstance(g.get("disputed"), bool):
         errors.append("gabarito.disputed deve ser booleano")

@@ -1,0 +1,24 @@
+# CI offline (decisão D7): a cada push e pull request, sem rede de modelo, sem segredo.
+# Protege o avaliador (código e dados versionados); a rodada que mede o P2 é paga e manual.
+name: ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  offline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      # Ações fixadas pelo hash do commit (o rótulo pode ser movido pelo dono; o hash, não).
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+      - uses: astral-sh/setup-uv@07a047e608db84b3d8c06cd9a7c7dcc9c355c18e  # v10.3.2
+      - run: uv sync --locked
+      # Duas vezes de propósito: teste intermitente é defeito.
+      - run: uv run pytest -q
+      - run: uv run pytest -q
+      - run: uv run python -m evals.cli check-repo

@@ -147,6 +147,17 @@ def test_subcomando_delegado_repassa_os_argumentos(tmp_path, capsys):
     assert "trace não encontrado" in capsys.readouterr().err
 
 
+def test_subcomando_judge_delegado(tmp_path, monkeypatch):
+    monkeypatch.setenv("OPENROUTER_API_KEY", "test-key")
+    rc = cli.main(["judge", "c01-00000000",
+                   "--model", "google/gemini-3.8-flash",
+                   "--budget-usd", "0.10",
+                   "--traces-dir", str(tmp_path / "traces"),
+                   "--cases-dir", str(tmp_path / "cases")])
+    assert rc == 1  # trace não encontrado
+
+
+
 def test_subcomando_desconhecido_e_erro_de_uso():
     with pytest.raises(SystemExit):
         cli.main(["nao-existe"])

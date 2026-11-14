@@ -1,0 +1,16 @@
+{
+  "trace_id": "c063-c30e7224",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "3146df45d9fa6f8a7503f55f214d0fd988dad78ae9ef4b01751aaec1b9782ad7"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "A resposta não cita o art. 126 do ADCT nem seu inciso II, ambos exigidos pelo gabarito. Além disso, menciona os arts. 124 a 137 do ADCT sem que todos tenham sido devolvidos pelas ferramentas.",
+    "C3": "O modelo informou a exclusão do IBS das bases indicadas até 2026 e reproduziu as versões devolvidas para 2027 e 2033. Também reconheceu que o corpus não demonstrava a inclusão do IBS na base do PIS/Cofins após a mudança, sem inventar uma resposta categórica."
+  }
+}

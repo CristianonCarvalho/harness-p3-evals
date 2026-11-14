@@ -1,0 +1,16 @@
+{
+  "trace_id": "c031-979046d9",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "3146df45d9fa6f8a7503f55f214d0fd988dad78ae9ef4b01751aaec1b9782ad7"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "A resposta cita o art. 125 do ADCT e seu § 4º, como esperado, ambos com lastro. Contudo, também cita a LC 214/2025, que não consta das saídas das ferramentas.",
+    "C3": "O art. 125 do ADCT devolvido pelas ferramentas prevê a cobrança do IBS à alíquota estadual de 0,1% em 2026, além da possibilidade de compensação e dispensa nas condições indicadas. O modelo respondeu de acordo com esse texto e não alegou indevidamente ausência de resposta."
+  }
+}

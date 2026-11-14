@@ -1,0 +1,16 @@
+{
+  "trace_id": "c019-73ba90fc",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "3146df45d9fa6f8a7503f55f214d0fd988dad78ae9ef4b01751aaec1b9782ad7"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "O art. 156-A da Constituição foi citado e possui lastro nas ferramentas. Contudo, o art. 129 do ADCT não foi devolvido nem citado individualmente; a referência genérica aos arts. 124 a 137 não supre essa ausência.",
+    "C3": "O modelo identificou o IBS conforme o art. 156-A e declarou que não conseguiu confirmar, nos textos retornados, quais impostos serão substituídos. A lista apresentada como conhecimento externo foi expressamente qualificada como hipótese não verificada."
+  }
+}

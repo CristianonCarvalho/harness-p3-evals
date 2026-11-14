@@ -1,0 +1,18 @@
+{
+  "trace_id": "c057-8b19d225",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "3146df45d9fa6f8a7503f55f214d0fd988dad78ae9ef4b01751aaec1b9782ad7"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "O art. 422, § 2º, da LC 214/2025 tem lastro nas ferramentas, mas a resposta não cita o dispositivo esperado, CF, art. 153, § 6º, VII. Além disso, menciona os arts. 419 a 423, embora os arts. 419, 420, 421 e 423 não constem dos retornos.",
+    "C2": "As datas citadas constam nas saídas das ferramentas. A resposta reconhece que a produção de efeitos na data de referência é indeterminada e não inventa um início de vigência ou de cobrança.",
+    "C3": "As ferramentas informaram o limite máximo de 0,25%, e o modelo respondeu de acordo. A ressalva sobre os efeitos na data de referência também é compatível com os campos indeterminados retornados."
+  }
+}

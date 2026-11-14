@@ -1,0 +1,16 @@
+{
+  "trace_id": "c100-7551baff",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "3146df45d9fa6f8a7503f55f214d0fd988dad78ae9ef4b01751aaec1b9782ad7"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "A resposta cita todos os dispositivos esperados do art. 139, com lastro nas ferramentas. Contudo, também cita os arts. 124 a 137 do ADCT, que não constam das saídas devolvidas.",
+    "C3": "As ferramentas devolveram a lista completa do art. 139, e o modelo a reproduziu sem alegar ausência de resposta. Também reconheceu que os itens específicos do Anexo X não foram disponibilizados nos resultados."
+  }
+}

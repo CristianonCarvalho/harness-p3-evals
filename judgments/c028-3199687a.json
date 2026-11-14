@@ -1,0 +1,16 @@
+{
+  "trace_id": "c028-3199687a",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "3146df45d9fa6f8a7503f55f214d0fd988dad78ae9ef4b01751aaec1b9782ad7"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "Os dois dispositivos esperados foram citados e possuem lastro. Porém, a resposta também cita faixas de artigos da LC 214/2025 e do ADCT que incluem dispositivos não devolvidos pelas ferramentas.",
+    "C3": "Os textos devolvidos preveem créditos para o IBS e incidência única para o Imposto Seletivo, mas não esclarecem expressamente o regime de créditos do IS. O modelo informou que não encontrou previsão de compensação para o IS e reconheceu que não podia afastar a existência de regras na lei complementar."
+  }
+}

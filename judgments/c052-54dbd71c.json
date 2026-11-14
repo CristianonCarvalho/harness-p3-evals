@@ -1,0 +1,16 @@
+{
+  "trace_id": "c052-54dbd71c",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "3146df45d9fa6f8a7503f55f214d0fd988dad78ae9ef4b01751aaec1b9782ad7"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "fail"
+  },
+  "justification": {
+    "C1": "A resposta cita os arts. 124 a 137 da LC 214/2025, que não foram devolvidos pelas ferramentas. As demais referências expressas a dispositivos constam dos retornos, mas essa citação sem lastro é suficiente para reprovar.",
+    "C3": "Os textos mostram que o dispositivo constitucional passou a produzir efeitos em 2023, mas não estabelecem expressamente que a CBS não existia em 2022. A resposta afirma isso categoricamente e também menciona regras de transição não devolvidas pelas ferramentas, embora reconheça outras limitações da busca."
+  }
+}

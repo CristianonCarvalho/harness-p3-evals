@@ -1,0 +1,16 @@
+{
+  "trace_id": "c070-b292e410",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "3146df45d9fa6f8a7503f55f214d0fd988dad78ae9ef4b01751aaec1b9782ad7"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "A resposta contempla os dispositivos esperados do ADCT, mas menciona a LC 214/2025, que não consta das saídas das ferramentas. Essa referência não possui o lastro exigido.",
+    "C3": "Os textos devolvidos estabelecem alíquota zero a partir de 2027, com exceção para produtos que tenham industrialização incentivada na Zona Franca de Manaus. O modelo respondeu à pergunta com base nessa regra e não afirmou indevidamente que faltava resposta."
+  }
+}

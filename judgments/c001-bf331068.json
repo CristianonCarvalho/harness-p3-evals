@@ -1,0 +1,16 @@
+{
+  "trace_id": "c001-bf331068",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "3146df45d9fa6f8a7503f55f214d0fd988dad78ae9ef4b01751aaec1b9782ad7"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "As citações à Constituição têm lastro nas ferramentas, mas a resposta também menciona os arts. 125 a 142 e 419 a 423 da LC 214/2025, que não foram devolvidos nas buscas. Embora não haja dispositivos esperados, essas citações carecem de lastro.",
+    "C3": "Os textos devolvidos não informam o momento do fato gerador na prestação de serviço, e o modelo reconheceu explicitamente que não encontrou o dispositivo. Embora faça afirmações adicionais sobre o corpus sem lastro nas saídas apresentadas, não inventa uma resposta para o momento perguntado."
+  }
+}

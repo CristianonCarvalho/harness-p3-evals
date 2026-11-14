@@ -1,0 +1,16 @@
+{
+  "trace_id": "c090-bc9f9105",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "3146df45d9fa6f8a7503f55f214d0fd988dad78ae9ef4b01751aaec1b9782ad7"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "O art. 133, dispositivo esperado, e seu § 2º têm lastro no retorno das ferramentas. Contudo, a resposta cita intervalos de artigos como presentes no corpus que incluem dispositivos não devolvidos, como os arts. 125 e 419 da LC 214/2025.",
+    "C3": "O modelo apresentou a redução de 60% prevista no art. 133 e reconheceu a ressalva para medicamentos sujeitos à alíquota zero. Também informou adequadamente que os textos devolvidos não permitem identificar quais medicamentos se enquadram nessa exceção."
+  }
+}

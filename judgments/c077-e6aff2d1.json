@@ -1,0 +1,14 @@
+{
+  "trace_id": "c077-e6aff2d1",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "3146df45d9fa6f8a7503f55f214d0fd988dad78ae9ef4b01751aaec1b9782ad7"
+  },
+  "verdicts": {
+    "C3": "pass"
+  },
+  "justification": {
+    "C3": "As ferramentas não devolveram o caput do art. 159, apenas um inciso e referências ao dispositivo. O modelo reconheceu explicitamente que não encontrou o caput e não inventou sua redação."
+  }
+}

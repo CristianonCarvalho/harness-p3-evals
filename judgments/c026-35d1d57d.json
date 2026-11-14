@@ -1,0 +1,18 @@
+{
+  "trace_id": "c026-35d1d57d",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "3146df45d9fa6f8a7503f55f214d0fd988dad78ae9ef4b01751aaec1b9782ad7"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "A resposta cita os dois dispositivos esperados. Contudo, também atribui as regras do Imposto Seletivo aos arts. 419 a 423 da LC 214/2025, sem que as ferramentas tenham devolvido os arts. 421 e 423.",
+    "C2": "As datas de produção de efeitos, referência e coleta coincidem com os dados das ferramentas. A data de 16/01/2025 consta como início de vigência, mas não é identificada pela ferramenta como data de publicação.",
+    "C3": "O art. 125 limita a redução a zero ao IBS e à CBS, fundamentando a resposta de que o benefício da cesta básica não alcança o Imposto Seletivo. O modelo também reconheceu corretamente que os anexos não foram devolvidos e que não podia verificar a sobreposição de produtos."
+  }
+}

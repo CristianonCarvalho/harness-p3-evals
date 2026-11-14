@@ -1,0 +1,16 @@
+{
+  "trace_id": "c082-33df0f85",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "3146df45d9fa6f8a7503f55f214d0fd988dad78ae9ef4b01751aaec1b9782ad7"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "A resposta não cita dispositivos esperados, incluindo o art. 158, IV, b, e § 2º, da CF e o art. 125, § 3º, do ADCT e seus incisos. Além disso, cita os arts. 124 a 137 do ADCT sem que todos constem do retorno das ferramentas.",
+    "C3": "O modelo identificou o Comitê Gestor e a distribuição ao ente de destino, com a retenção prevista nos textos devolvidos. Também reconheceu adequadamente que os trechos não detalham percentuais ou regras específicas de repartição entre estados e municípios."
+  }
+}

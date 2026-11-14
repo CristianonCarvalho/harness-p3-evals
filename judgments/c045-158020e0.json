@@ -1,0 +1,16 @@
+{
+  "trace_id": "c045-158020e0",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "3146df45d9fa6f8a7503f55f214d0fd988dad78ae9ef4b01751aaec1b9782ad7"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "A resposta cita os dispositivos esperados, art. 131 e § 1º da LC 214/2025, ambos com lastro. Contudo, menciona os arts. 124 a 137 do ADCT, que não foram devolvidos pelas ferramentas.",
+    "C3": "As ferramentas confirmaram a regra do art. 131 e a exigência de regularização na Anvisa, mas não retornaram a lista do Anexo IV. O modelo apresentou a regra e reconheceu que não podia identificar os dispositivos específicos com o material disponível."
+  }
+}

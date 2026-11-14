@@ -3,14 +3,14 @@
   "judge": {
     "model": "openai/gpt-6.1-terra",
     "version": "openai/gpt-6.1-terra",
-    "prompts_sha256": "3146df45d9fa6f8a7503f55f214d0fd988dad78ae9ef4b01751aaec1b9782ad7"
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
   },
   "verdicts": {
     "C1": "fail",
     "C3": "pass"
   },
   "justification": {
-    "C1": "A resposta não cita dispositivos esperados, incluindo o art. 158, IV, b, e § 2º, da CF e o art. 125, § 3º, do ADCT e seus incisos. Além disso, cita os arts. 124 a 137 do ADCT sem que todos constem do retorno das ferramentas.",
-    "C3": "O modelo identificou o Comitê Gestor e a distribuição ao ente de destino, com a retenção prevista nos textos devolvidos. Também reconheceu adequadamente que os trechos não detalham percentuais ou regras específicas de repartição entre estados e municípios."
+    "C1": "A resposta cita dispositivos sobre a administração e a distribuição do IBS que constam do retorno das ferramentas. Contudo, deixa de citar os dispositivos esperados da CF, art. 158, IV, b, e § 2º, e do ADCT, art. 125, incluindo seu § 3º, I e II.",
+    "C3": "O modelo identificou o Comitê Gestor como responsável pela administração e explicou a distribuição ao ente de destino após as retenções previstas. A ressalva sobre percentuais e regras específicas entre os níveis de governo não impede a resposta à pergunta com base nos dispositivos devolvidos."
   }
 }

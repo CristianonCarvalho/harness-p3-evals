@@ -3,16 +3,16 @@
   "judge": {
     "model": "openai/gpt-6.1-terra",
     "version": "openai/gpt-6.1-terra",
-    "prompts_sha256": "3146df45d9fa6f8a7503f55f214d0fd988dad78ae9ef4b01751aaec1b9782ad7"
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
   },
   "verdicts": {
     "C1": "fail",
     "C2": "pass",
-    "C3": "pass"
+    "C3": "fail"
   },
   "justification": {
-    "C1": "A resposta cita o art. 126 do ADCT e o art. 419 da LC 214/2025, ambos presentes nos retornos. Porém, não cita o art. 126, I, b, do ADCT, exigido pelo gabarito e não devolvido pelas ferramentas.",
-    "C2": "As datas mencionadas constam nas saídas das ferramentas. A resposta distingue corretamente as datas de vigência e efeitos dos dispositivos da data de início da cobrança, que o material retornado não determina.",
-    "C3": "Os textos devolvidos não estabelecem claramente a data de início da cobrança do Imposto Seletivo sobre veículos. O trecho do ADCT menciona 2027 sem identificar sua relação com o imposto, e o modelo reconheceu adequadamente que não encontrou a resposta."
+    "C1": "A resposta não cita o ADCT, art. 126, I, b, dispositivo esperado que também não foi devolvido pelas ferramentas. Os demais dispositivos esperados, ADCT, art. 126, e LC 214/2025, art. 419, foram mencionados.",
+    "C2": "As datas mencionadas constam nas saídas das ferramentas, e a referência a 2027 não é apresentada como início da cobrança. A resposta reconhece que os resultados não estabelecem a data de cobrança sobre veículos.",
+    "C3": "O campo de referência indica que o corpus responde à pergunta, mas o modelo afirmou que não era possível determinar a data de início da cobrança. Trata-se, portanto, de um falso não sei."
   }
 }

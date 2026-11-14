@@ -3,16 +3,16 @@
   "judge": {
     "model": "openai/gpt-6.1-terra",
     "version": "openai/gpt-6.1-terra",
-    "prompts_sha256": "3146df45d9fa6f8a7503f55f214d0fd988dad78ae9ef4b01751aaec1b9782ad7"
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
   },
   "verdicts": {
-    "C1": "fail",
+    "C1": "pass",
     "C2": "pass",
     "C3": "pass"
   },
   "justification": {
-    "C1": "A resposta cita os dois dispositivos esperados. Contudo, também atribui as regras do Imposto Seletivo aos arts. 419 a 423 da LC 214/2025, sem que as ferramentas tenham devolvido os arts. 421 e 423.",
-    "C2": "As datas de produção de efeitos, referência e coleta coincidem com os dados das ferramentas. A data de 16/01/2025 consta como início de vigência, mas não é identificada pela ferramenta como data de publicação.",
-    "C3": "O art. 125 limita a redução a zero ao IBS e à CBS, fundamentando a resposta de que o benefício da cesta básica não alcança o Imposto Seletivo. O modelo também reconheceu corretamente que os anexos não foram devolvidos e que não podia verificar a sobreposição de produtos."
+    "C1": "A resposta cita os dois dispositivos esperados, e as demais referências individuais constam das saídas brutas das ferramentas, inclusive nos campos de fundamento dos efeitos.",
+    "C2": "As datas de efeitos e de referência estão respaldadas pelas ferramentas. A data de 2025-01-16 consta como início de vigência, embora a ferramenta não a identifique explicitamente como data de publicação.",
+    "C3": "O corpus responde à pergunta, e o modelo respondeu que a alíquota zero da cesta básica se aplica ao IBS e à CBS, não ao Imposto Seletivo, com base nas normas retornadas. As ressalvas sobre os anexos não impedem a resposta ao mecanismo perguntado."
   }
 }

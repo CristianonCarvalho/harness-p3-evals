@@ -3,12 +3,12 @@
   "judge": {
     "model": "openai/gpt-6.1-terra",
     "version": "openai/gpt-6.1-terra",
-    "prompts_sha256": "3146df45d9fa6f8a7503f55f214d0fd988dad78ae9ef4b01751aaec1b9782ad7"
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
   },
   "verdicts": {
-    "C3": "pass"
+    "C3": "fail"
   },
   "justification": {
-    "C3": "Os trechos devolvidos tratam do IBS, mas não informam se ele substituirá o ISS. O modelo reconheceu essa ausência e não apresentou uma resposta categórica sem lastro."
+    "C3": "O campo de referência indica que o corpus responde à pergunta, mas o modelo afirmou que não era possível respondê-la e não confirmou a substituição do ISS pelo IBS. Trata-se, portanto, de falso não sei segundo o critério."
   }
 }

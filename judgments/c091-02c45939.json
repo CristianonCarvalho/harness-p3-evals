@@ -3,16 +3,16 @@
   "judge": {
     "model": "openai/gpt-6.1-terra",
     "version": "openai/gpt-6.1-terra",
-    "prompts_sha256": "3146df45d9fa6f8a7503f55f214d0fd988dad78ae9ef4b01751aaec1b9782ad7"
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
   },
   "verdicts": {
-    "C1": "fail",
+    "C1": "pass",
     "C2": "pass",
     "C3": "pass"
   },
   "justification": {
-    "C1": "O dispositivo esperado, CF, art. 156-A, § 6º, IV, foi citado e possui lastro. Contudo, a resposta também cita o art. 126 da LC 214/2025 e os arts. 124 a 137 do ADCT, que não constam dos retornos das ferramentas.",
-    "C2": "As datas de vigência e efeitos informadas para o dispositivo constitucional e para o art. 128 da LC 214/2025 coincidem com as saídas das ferramentas. As datas de referência e de coleta também conferem.",
-    "C3": "Os textos devolvidos não informam o percentual de redução específico para restaurantes. O modelo reconheceu essa lacuna e não afirmou categoricamente uma redução sem respaldo."
+    "C1": "A resposta cita o dispositivo constitucional esperado e os demais dispositivos mencionados possuem lastro nas saídas das ferramentas. O conteúdo específico associado à faixa sobre redução de 30% também está respaldado pelo art. 127 da LC 214/2025.",
+    "C2": "As datas de referência e de coleta coincidem com as saídas das ferramentas. As datas de vigência e efeitos atribuídas ao dispositivo constitucional e ao art. 128 da LC 214/2025 também estão respaldadas.",
+    "C3": "O modelo apresentou a parte disponível sobre restaurantes e a redução para alimentos, esclarecendo que não conseguiu confirmar uma redução específica para a operação do usuário. Essa postura é adequada à indicação de resposta parcial."
   }
 }

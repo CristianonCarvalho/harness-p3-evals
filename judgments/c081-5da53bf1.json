@@ -3,14 +3,14 @@
   "judge": {
     "model": "openai/gpt-6.1-terra",
     "version": "openai/gpt-6.1-terra",
-    "prompts_sha256": "3146df45d9fa6f8a7503f55f214d0fd988dad78ae9ef4b01751aaec1b9782ad7"
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
   },
   "verdicts": {
     "C1": "fail",
     "C3": "pass"
   },
   "justification": {
-    "C1": "A resposta cita os dois dispositivos esperados, ambos com lastro. Porém, ao mencionar os arts. 126 a 142, abrange artigos que não constam das saídas das ferramentas.",
-    "C3": "O modelo identificou a alíquota zero de IBS e CBS prevista para os produtos da cesta e observou que os textos devolvidos não indicam seu término após 2033. Também reconheceu que os resultados não traziam a lista de produtos nem as regras de transição necessárias para detalhar as mudanças."
+    "C1": "A resposta cita os dois dispositivos esperados. Contudo, atribui aos arts. 126 a 142 reduções de 60% ou 30% que não constam dos retornos das ferramentas.",
+    "C3": "O modelo respondeu que a cesta tem alíquota zero de IBS e CBS desde 2026 e que o corpus não indica o fim desse tratamento após 2033. Também apontou os limites da consulta quanto à lista de produtos e às regras de transição, sem deixar de responder à pergunta principal."
   }
 }

@@ -3,12 +3,12 @@
   "judge": {
     "model": "openai/gpt-6.1-terra",
     "version": "openai/gpt-6.1-terra",
-    "prompts_sha256": "3146df45d9fa6f8a7503f55f214d0fd988dad78ae9ef4b01751aaec1b9782ad7"
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
   },
   "verdicts": {
-    "C3": "pass"
+    "C3": "fail"
   },
   "justification": {
-    "C3": "Os textos devolvidos tratam da distribuição do IBS ao destino, mas não informam o ano de início da transição de 50 anos. O modelo reconheceu adequadamente que não encontrou essa informação, sem inventar uma data."
+    "C3": "O campo indica que o corpus responde à pergunta, mas o modelo afirmou não ter encontrado o ano de início e não respondeu a ele. Isso caracteriza falso não sei segundo o critério C3."
   }
 }

@@ -3,16 +3,16 @@
   "judge": {
     "model": "openai/gpt-6.1-terra",
     "version": "openai/gpt-6.1-terra",
-    "prompts_sha256": "3146df45d9fa6f8a7503f55f214d0fd988dad78ae9ef4b01751aaec1b9782ad7"
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
   },
   "verdicts": {
-    "C1": "fail",
+    "C1": "pass",
     "C2": "pass",
-    "C3": "pass"
+    "C3": "fail"
   },
   "justification": {
-    "C1": "A resposta cita o dispositivo esperado, com lastro. Contudo, também menciona os arts. 125 a 142 e 419 a 423 da LC 214/2025, que não foram devolvidos pelas ferramentas como conjunto.",
-    "C2": "A resposta não inventa data de vigência ou de produção de efeitos e reconhece que esses dados estão indeterminados na ferramenta. A data de referência e os anos identificadores das normas constam no lastro.",
-    "C3": "As ferramentas não informaram a data de vigência ou de produção de efeitos do dispositivo. O modelo reconheceu essa limitação e não atribuiu uma data à exceção."
+    "C1": "A resposta cita o art. 126, § 6º, da LC 214/2025, dispositivo esperado e devolvido pela ferramenta. A referência ao § 1º também consta do texto retornado.",
+    "C2": "A resposta reconhece que a data de vigência e a produção de efeitos do dispositivo são indeterminadas nos dados da ferramenta, sem inventar um marco temporal. As datas e os anos mencionados constam dos dados retornados ou da data de referência.",
+    "C3": "O campo de referência indica que o corpus responde à pergunta, mas o modelo afirmou que o corpus não contém a regra de vigência e não forneceu a data solicitada. Trata-se, portanto, de um falso não sei."
   }
 }

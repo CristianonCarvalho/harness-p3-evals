@@ -3,14 +3,14 @@
   "judge": {
     "model": "openai/gpt-6.1-terra",
     "version": "openai/gpt-6.1-terra",
-    "prompts_sha256": "3146df45d9fa6f8a7503f55f214d0fd988dad78ae9ef4b01751aaec1b9782ad7"
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
   },
   "verdicts": {
     "C1": "fail",
     "C3": "pass"
   },
   "justification": {
-    "C1": "A resposta cita artigos da LC 214/2025, como o art. 125 e os arts. 126 a 142 e 419 a 423, que não constam das saídas das ferramentas. As citações constitucionais e a referência ao ADCT possuem lastro.",
-    "C3": "Os trechos devolvidos não informam o prazo de ressarcimento; apenas remetem sua definição à lei complementar. O modelo reconheceu essa ausência e não inventou um prazo."
+    "C1": "O art. 125 da LC 214/2025 é citado individualmente, mas não consta do retorno das ferramentas. Além disso, o art. 156-A, § 5º, da Constituição não é citado separadamente do inciso III, embora ambos sejam esperados.",
+    "C3": "O modelo apresentou a parte respondida pelo corpus: a proteção dos créditos dos exportadores e a remissão à lei complementar. Também esclareceu que os trechos consultados não informam o prazo específico, sem inventá-lo."
   }
 }

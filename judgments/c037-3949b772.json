@@ -3,16 +3,16 @@
   "judge": {
     "model": "openai/gpt-6.1-terra",
     "version": "openai/gpt-6.1-terra",
-    "prompts_sha256": "3146df45d9fa6f8a7503f55f214d0fd988dad78ae9ef4b01751aaec1b9782ad7"
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
   },
   "verdicts": {
-    "C1": "fail",
+    "C1": "pass",
     "C2": "pass",
     "C3": "pass"
   },
   "justification": {
-    "C1": "A resposta cita os dois dispositivos esperados, com lastro no retorno das ferramentas. Porém, também cita os arts. 124 a 137 do ADCT como conjunto, embora nem todos esses artigos tenham sido devolvidos.",
-    "C2": "As proporções e os anos de 2029 a 2032, bem como a extinção a partir de 2033, constam dos dispositivos devolvidos. A data de efeitos de 2023-12-21 e as datas de referência e coleta também conferem com as saídas das ferramentas.",
-    "C3": "A ferramenta trouxe o art. 128, II, do ADCT, que fixa em 8/10 a proporção aplicável em 2030. O modelo respondeu corretamente que corresponde a 80%, sem alegar ausência da informação."
+    "C1": "A resposta cita o art. 128 do ADCT e seu inciso II, ambos esperados e devolvidos pela ferramenta. As demais citações também encontram lastro nos retornos.",
+    "C2": "As proporções e os anos de 2029 a 2032 constam no art. 128 do ADCT, e a extinção a partir de 2033 consta no art. 129. A data de início dos efeitos da regra e as datas de referência e coleta também conferem com as ferramentas.",
+    "C3": "O corpus responde à pergunta, e o modelo informou corretamente que 80% das alíquotas permanecem aplicáveis em 2030, com base no art. 128, II, do ADCT."
   }
 }

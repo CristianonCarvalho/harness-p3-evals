@@ -3,14 +3,14 @@
   "judge": {
     "model": "openai/gpt-6.1-terra",
     "version": "openai/gpt-6.1-terra",
-    "prompts_sha256": "3146df45d9fa6f8a7503f55f214d0fd988dad78ae9ef4b01751aaec1b9782ad7"
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
   },
   "verdicts": {
-    "C1": "fail",
+    "C1": "pass",
     "C3": "pass"
   },
   "justification": {
-    "C1": "A resposta cita os dois dispositivos constitucionais esperados, ambos com lastro. Contudo, também menciona os arts. 125 a 142 e 419 a 423 da LC 214/2025, que não constam dos retornos das ferramentas.",
-    "C3": "O modelo reconheceu corretamente que os textos devolvidos não informam o procedimento para receber a devolução e apresentou a previsão constitucional disponível. A possibilidade de pedido posterior e a descrição da cobertura do corpus não estão demonstradas pelas ferramentas, mas não substituem o reconhecimento da ausência de instruções."
+    "C1": "A resposta cita os dois dispositivos constitucionais esperados, ambos presentes no retorno das ferramentas. As referências à EC 132/2023 também constam nos metadados devolvidos.",
+    "C3": "O modelo apresentou a regra constitucional encontrada e esclareceu que o procedimento e os critérios específicos não constavam dos resultados consultados. Essa postura é adequada à indicação de resposta parcial."
   }
 }

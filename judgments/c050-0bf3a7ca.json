@@ -3,7 +3,7 @@
   "judge": {
     "model": "openai/gpt-6.1-terra",
     "version": "openai/gpt-6.1-terra",
-    "prompts_sha256": "3146df45d9fa6f8a7503f55f214d0fd988dad78ae9ef4b01751aaec1b9782ad7"
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
   },
   "verdicts": {
     "C1": "fail",
@@ -11,8 +11,8 @@
     "C3": "fail"
   },
   "justification": {
-    "C1": "Não houve retorno de ferramentas que dê lastro às citações da EC 132/2023 e do art. 156-A da Constituição. Além disso, a resposta não cita o art. 1º da EC 132/2023, dispositivo esperado.",
-    "C2": "A resposta afirma que o IBS entrou no texto constitucional em 20/12/2023, mas não houve chamada de ferramenta que respalde essa data.",
-    "C3": "Não houve chamada de ferramenta, portanto não há lastro admitido para a resposta categórica. Embora tenha informado que não consultou as ferramentas, o modelo não reconheceu a ausência de base para responder."
+    "C1": "O art. 156-A foi citado sem lastro, pois não houve chamada de ferramenta. Além disso, faltou citar o art. 1º da EC 132/2023, exigido pelo gabarito.",
+    "C2": "A resposta afirma que o IBS entrou na Constituição em 20/12/2023, mas nenhuma ferramenta foi consultada para respaldar essa data ou o marco de vigência.",
+    "C3": "Embora o corpus responda à pergunta, o modelo não consultou as ferramentas e apresentou a resposta sem lastro nas saídas admitidas."
   }
 }

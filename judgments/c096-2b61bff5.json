@@ -3,14 +3,14 @@
   "judge": {
     "model": "openai/gpt-6.1-terra",
     "version": "openai/gpt-6.1-terra",
-    "prompts_sha256": "3146df45d9fa6f8a7503f55f214d0fd988dad78ae9ef4b01751aaec1b9782ad7"
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
   },
   "verdicts": {
     "C1": "fail",
     "C3": "pass"
   },
   "justification": {
-    "C1": "A resposta cita os arts. 124 a 137 do ADCT, que não foram devolvidos pelas ferramentas. Além disso, lista as profissões, mas não identifica expressamente os incisos I a XVIII do art. 127 exigidos pelo gabarito, salvo o inciso X.",
-    "C3": "As ferramentas trouxeram a lista completa, e o modelo a reproduziu corretamente, sem alegar que não havia resposta. Embora acrescente uma afirmação sobre o § 1º que não está integralmente respaldada pelos trechos, ele reconhece que o texto desse parágrafo não foi consultado por inteiro."
+    "C1": "A resposta lista as profissões e cita o art. 127, mas não cita expressamente seus incisos I a XVIII, todos exigidos pelo gabarito. A numeração da lista de profissões não substitui a citação desses dispositivos.",
+    "C3": "O modelo respondeu à pergunta com a lista completa dos profissionais constantes do art. 127, conforme o conteúdo devolvido pelas ferramentas. Também apontou os limites dos trechos consultados sobre os parágrafos, sem afirmar indevidamente que não encontrou a resposta."
   }
 }

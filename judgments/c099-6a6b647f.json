@@ -1,0 +1,18 @@
+{
+  "trace_id": "c099-6a6b647f",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "A resposta contempla o art. 156-A, § 6º, e seus incisos I a VI, mas omite o art. 195, § 16, da Constituição, exigido pelo gabarito. Além disso, cita individualmente os arts. 125 e 127 da LC 214/2025, que não constam dos retornos das ferramentas.",
+    "C2": "As datas válidas mencionadas constam das saídas das ferramentas, e a avaliação quinquenal está prevista no texto devolvido. A resposta não afirma que dispositivos com efeitos indeterminados já produzem efeitos.",
+    "C3": "O modelo respondeu à pergunta com a lista de regimes específicos prevista na Constituição, conforme os trechos devolvidos pelas ferramentas. Também distinguiu os regimes diferenciados e apontou os limites do material consultado para detalhar a regulamentação."
+  }
+}

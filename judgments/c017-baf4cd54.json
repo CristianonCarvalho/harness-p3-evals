@@ -1,0 +1,16 @@
+{
+  "trace_id": "c017-baf4cd54",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "Os dispositivos citados possuem lastro nas saídas das ferramentas, mas a resposta não cita o art. 149-B da Constituição, exigido pelo gabarito.",
+    "C3": "O corpus responde à pergunta, e o modelo respondeu que a reforma não cria um imposto único, com base nos dispositivos devolvidos pelas ferramentas. A resposta não afirma indevidamente que a informação está ausente."
+  }
+}

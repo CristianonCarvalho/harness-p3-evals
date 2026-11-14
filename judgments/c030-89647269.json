@@ -1,0 +1,16 @@
+{
+  "trace_id": "c030-89647269",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "fail"
+  },
+  "justification": {
+    "C1": "A resposta cita dispositivos com lastro nas saídas das ferramentas, mas omite o art. 195, § 16, da Constituição, exigido pelo gabarito.",
+    "C3": "O corpus responde à pergunta, mas o modelo afirma que não consegue dizer se a devolução inclui IBS e CBS. Embora cite previsões constitucionais para ambos, deixa de responder afirmativamente e declara indevidamente que o corpus não traz a resposta."
+  }
+}

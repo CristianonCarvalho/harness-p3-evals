@@ -1,0 +1,16 @@
+{
+  "trace_id": "c016-4debeb57",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "pass",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "O dispositivo constitucional esperado foi citado e consta no retorno das ferramentas. A referência ao art. 1º da EC 132/2023 também está respaldada pela origem informada no resultado.",
+    "C3": "O modelo respondeu à pergunta e citou a previsão de recolhimento na liquidação financeira, identificando também a falta de detalhes operacionais no material consultado. Embora inclua detalhes do mecanismo não demonstrados no lastro, sua postura reconhece a limitação de uma resposta parcial."
+  }
+}

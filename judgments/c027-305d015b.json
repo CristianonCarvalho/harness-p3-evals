@@ -1,0 +1,16 @@
+{
+  "trace_id": "c027-305d015b",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "fail"
+  },
+  "justification": {
+    "C1": "A resposta cita os três dispositivos esperados, mas não há lastro para a identificação do art. 153, VIII, como dispositivo do Imposto Seletivo. O retorno do art. 153, § 6º, apenas remete ao inciso VIII, sem reproduzir seu texto nem identificar o imposto.",
+    "C3": "O corpus responde à pergunta, mas o modelo afirmou não ter encontrado dispositivo que estenda a imunidade ao Imposto Seletivo e concluiu que ela não se aplica a esse imposto. Assim, embora tenha respondido sobre o IBS, adotou indevidamente uma postura de ausência de resposta quanto ao IS."
+  }
+}

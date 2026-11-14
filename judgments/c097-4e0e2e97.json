@@ -1,0 +1,16 @@
+{
+  "trace_id": "c097-4e0e2e97",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "O art. 128 e os demais dispositivos citados individualmente possuem lastro nas ferramentas. Contudo, embora reproduza o conteúdo dos treze incisos em lista numerada, a resposta não cita os incisos I a XIII exigidos pelo gabarito.",
+    "C3": "O modelo respondeu à pergunta, listando os 13 itens do art. 128 conforme o texto devolvido pelas ferramentas. Também preservou a ressalva sobre as definições e demais disposições do capítulo."
+  }
+}

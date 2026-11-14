@@ -1,0 +1,16 @@
+{
+  "trace_id": "c038-ab72e325",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "A resposta não cita individualmente os arts. 128 e 129 do ADCT, exigidos pelo gabarito; a menção à faixa de artigos não supre essa exigência. Esses dispositivos também não foram retornados pelas ferramentas.",
+    "C3": "O modelo respondeu que os dispositivos encontrados não são compatíveis com a substituição total do ICMS em 2029, fundamentando essa conclusão nos resultados das ferramentas. Também esclareceu que não conseguiu verificar o cronograma detalhado de redução, sem afirmar que o corpus não trata da pergunta."
+  }
+}

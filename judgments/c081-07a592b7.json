@@ -1,0 +1,14 @@
+{
+  "trace_id": "c081-07a592b7",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C3": "pass"
+  },
+  "justification": {
+    "C3": "O modelo respondeu à questão com base no art. 125, indicando alíquota zero de IBS e CBS desde 2026 e a manutenção do mesmo texto em 2034. Também distinguiu os limites da consulta, sem afirmar que não havia resposta para o tema."
+  }
+}

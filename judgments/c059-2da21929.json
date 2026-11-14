@@ -1,0 +1,18 @@
+{
+  "trace_id": "c059-2da21929",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "pass",
+    "C2": "pass",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "Os §§ 6º e 7º do art. 92-B do ADCT foram citados e constam dos retornos das ferramentas. Os demais dispositivos citados também possuem lastro nas saídas.",
+    "C2": "A data de início dos efeitos, 21/12/2023, e a ausência de data final constam da ferramenta, que também informa produção de efeitos na data de referência. A data de 31/05/2023 consta do caput, e as datas de referência e coleta conferem com os dados fornecidos.",
+    "C3": "O modelo respondeu que a aplicação do § 7º depende da instituição do Fundo por lei complementar e distinguiu essa exigência da data de efeitos da norma. Embora haja imprecisões na resposta, não houve falso não sei sobre a questão principal."
+  }
+}

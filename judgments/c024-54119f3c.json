@@ -1,0 +1,18 @@
+{
+  "trace_id": "c024-54119f3c",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C2": "fail",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "Os dispositivos citados possuem lastro nas saídas das ferramentas, mas a resposta não cita o ADCT, art. 126, I, b, exigido pelo gabarito e não retornado pelas buscas.",
+    "C2": "As datas de efeitos dos dispositivos citados conferem com as ferramentas. Porém, a resposta menciona 2027 como início da cobrança do Imposto Seletivo sem respaldo nas saídas, ainda que ressalve a necessidade de confirmação.",
+    "C3": "O modelo respondeu à pergunta identificando o Imposto Seletivo e explicando sua incidência com base nas normas retornadas. As ressalvas dizem respeito a detalhes adicionais, sem negar que o corpus responde à pergunta principal."
+  }
+}

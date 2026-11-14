@@ -1,0 +1,16 @@
+{
+  "trace_id": "c086-7e32399c",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C2": "pass",
+    "C3": "fail"
+  },
+  "justification": {
+    "C2": "O período de 2029 a 2032 apenas reproduz a pergunta e a consulta, enquanto o intervalo de 2029 a 2033 consta no dispositivo retornado. A resposta reconhece que a data de efeitos desse dispositivo é indeterminada e não inventa uma data de vigência ou produção de efeitos.",
+    "C3": "O campo de referência indica que o corpus responde, mas o modelo afirmou que a regra não consta do corpus e não respondeu à pergunta. Trata-se de falso não sei segundo o critério C3."
+  }
+}

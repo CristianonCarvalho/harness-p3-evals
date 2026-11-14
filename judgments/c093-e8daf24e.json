@@ -1,0 +1,16 @@
+{
+  "trace_id": "c093-e8daf24e",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "A resposta cita os dois dispositivos esperados, ambos com lastro. Contudo, atribui conteúdo específico à faixa dos arts. 126 a 142 ao afirmar que suas reduções tratam de outros temas, sem respaldo nas ferramentas.",
+    "C3": "O modelo apresentou a parte encontrada: a locação integra as operações imobiliárias sujeitas a regime específico previsto na Constituição. Também esclareceu que os trechos consultados não permitem concluir se há incidência no caso concreto, postura adequada para uma resposta parcial."
+  }
+}

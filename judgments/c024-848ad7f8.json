@@ -1,0 +1,16 @@
+{
+  "trace_id": "c024-848ad7f8",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "A citação da CF, art. 153, VIII, tem lastro, mas a do art. 422 da LC 214/2025 não consta do retorno das ferramentas. Além disso, faltou citar o art. 126, I, b, do ADCT.",
+    "C3": "O modelo identificou o imposto como Imposto Seletivo e explicou sua incidência com base no dispositivo devolvido pela ferramenta, em consonância com a indicação de que o corpus responde à pergunta."
+  }
+}

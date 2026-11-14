@@ -1,0 +1,18 @@
+{
+  "trace_id": "c021-0ff1025c",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "fail"
+  },
+  "justification": {
+    "C1": "Os dispositivos citados têm lastro nas saídas das ferramentas, mas a resposta não cita o art. 128 do ADCT nem seus incisos I a IV, exigidos pelo gabarito.",
+    "C2": "As datas mencionadas constam da pergunta ou dos dados devolvidos pelas ferramentas. A resposta também reconhece que a produção de efeitos do art. 422, § 5º, é indeterminada e não extrapola o limite de efeitos registrado para o dispositivo constitucional.",
+    "C3": "O campo de referência indica que o corpus responde à pergunta, mas o modelo afirmou que o corpus não contém a regra de transição e não respondeu como o ICMS se reduz no período. Sua postura, portanto, configura falso não sei."
+  }
+}

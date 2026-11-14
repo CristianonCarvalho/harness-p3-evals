@@ -1,0 +1,16 @@
+{
+  "trace_id": "c085-81c21ab7",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "fail"
+  },
+  "justification": {
+    "C1": "A resposta cita o art. 419 da LC 214/2025, que consta do retorno das ferramentas, mas omite os dispositivos esperados do ADCT: art. 126 e art. 126, I, b.",
+    "C3": "Embora apresente a data indicada pelo corpus, o modelo não responde de forma conclusiva: afirma que a data precisa ser confirmada e contrapõe 2027 com base em uma leitura não respaldada pelas ferramentas. Isso é inadequado, pois o campo indica que o corpus responde à pergunta."
+  }
+}

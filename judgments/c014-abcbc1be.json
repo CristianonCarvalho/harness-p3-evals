@@ -1,0 +1,16 @@
+{
+  "trace_id": "c014-abcbc1be",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "A resposta cita três dos quatro dispositivos esperados, mas omite o art. 195, § 16, da Constituição Federal.",
+    "C3": "O modelo respondeu à parte coberta pelo corpus, incluindo a devolução obrigatória para energia elétrica e GLP, e esclareceu que não encontrou os detalhes operacionais. Essa postura é adequada à classificação de resposta parcial."
+  }
+}

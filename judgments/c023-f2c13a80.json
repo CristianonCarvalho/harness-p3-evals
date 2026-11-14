@@ -1,0 +1,18 @@
+{
+  "trace_id": "c023-f2c13a80",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C2": "fail",
+    "C3": "fail"
+  },
+  "justification": {
+    "C1": "O art. 136, IV, do ADCT citado na resposta consta do retorno das ferramentas. Contudo, a resposta não cita os dispositivos esperados: art. 126 e art. 126, II, do ADCT.",
+    "C2": "As datas de 31/12/2026 e 2027 para o fim da cobrança e a substituição de PIS e Cofins não estão respaldadas pelas ferramentas; o próprio modelo informa que as extraiu da memória. A data de 31/12/2043 consta no resultado, mas se refere a outra contribuição.",
+    "C3": "Embora forneça uma data, o modelo afirma que não encontrou no corpus o dispositivo pertinente e que respondeu com base na memória, sem lastro nas ferramentas. Isso contraria a indicação de que o corpus responde à pergunta."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "trace_id": "c010-9b2407f4",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "pass",
+    "C2": "pass",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "As citações têm lastro nas saídas das ferramentas, inclusive a referência ao art. 409, § 1º, III a V, reproduzida no texto do art. 422, § 5º, sem atribuição de conteúdo próprio. O gabarito não exige dispositivos adicionais.",
+    "C2": "As datas de vigência, efeitos e escalonamento mencionadas conferem com os dados das ferramentas. A resposta também reconhece a indeterminação dos efeitos dos §§ 2º e 5º do art. 422.",
+    "C3": "O modelo declarou explicitamente que não encontrou a lista completa de produtos no corpus e não a completou de memória. Também apresentou os produtos mencionados nos trechos devolvidos, distinguindo-os da lista completa solicitada."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "trace_id": "c083-5804a7ae",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "fail"
+  },
+  "justification": {
+    "C1": "A resposta cita os dispositivos esperados da EC 132/2023 e o art. 127 da LC 214/2025, mas omite o art. 128 da LC 214/2025. Além disso, o art. 544, VI, aparece apenas como fundamento nos metadados das ferramentas, sem texto próprio retornado.",
+    "C3": "O corpus responde à comparação, mas o modelo afirma categoricamente que a redução de 60% não se aplica a serviços profissionais. Essa conclusão não decorre dos trechos consultados, que incluem serviços de saúde e educação entre as categorias previstas para a redução de 60%."
+  }
+}

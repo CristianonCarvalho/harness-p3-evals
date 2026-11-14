@@ -1,0 +1,16 @@
+{
+  "trace_id": "c066-e1b90a6e",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "pass",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "A resposta cita o art. 159, § 3º, da CF, dispositivo esperado, e as demais referências constam dos textos ou metadados devolvidos pelas ferramentas. As informações sobre as versões e seus efeitos também têm lastro no retorno.",
+    "C3": "O modelo respondeu que o percentual de 25% permanece e identificou a mudança na remissão aos critérios de repartição a partir de 2033, com base nos textos devolvidos. Também delimitou a incerteza sobre os efeitos práticos sem afirmar que não havia resposta para a pergunta."
+  }
+}

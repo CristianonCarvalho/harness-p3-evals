@@ -1,0 +1,16 @@
+{
+  "trace_id": "c071-5a954950",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "fail"
+  },
+  "justification": {
+    "C1": "A resposta não cita o art. 126 do ADCT nem seu inciso II, ambos esperados pelo gabarito. Esses dispositivos também não constam dos retornos das ferramentas.",
+    "C3": "O campo de referência indica que o corpus responde, mas o modelo afirmou que não era possível responder e que não encontrou a regra pertinente. Trata-se de um falso não sei segundo o critério C3."
+  }
+}

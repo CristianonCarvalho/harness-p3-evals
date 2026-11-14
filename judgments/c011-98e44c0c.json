@@ -1,0 +1,16 @@
+{
+  "trace_id": "c011-98e44c0c",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "Os dispositivos constitucionais sobre alíquotas citados têm lastro nas ferramentas. Porém, falta a citação do art. 125 do ADCT, exigida pelo gabarito; a menção à faixa de artigos não a supre.",
+    "C3": "O modelo apresentou as regras disponíveis sobre a fixação e a composição das alíquotas e esclareceu que não dispunha dos percentuais de cada município. Sua postura foi adequada à resposta parcial do corpus."
+  }
+}

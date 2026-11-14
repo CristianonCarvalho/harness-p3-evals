@@ -1,0 +1,18 @@
+{
+  "trace_id": "c086-54506fab",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "A resposta cita o art. 128 do ADCT e os quatro incisos esperados, todos com lastro. Contudo, também menciona individualmente o art. 129 do ADCT, que não foi devolvido pelas ferramentas; sua inclusão na faixa de remissão do art. 124 não fornece o dispositivo.",
+    "C2": "Os anos e as proporções da transição constam do art. 128 do ADCT devolvido pela ferramenta. A data de efeitos de 21/12/2023 e o prazo de 31/12/2032 também estão respaldados pelos resultados.",
+    "C3": "O modelo respondeu à pergunta com as proporções anuais previstas no art. 128 do ADCT, conforme o corpus. Embora tenha feito uma afirmação não lastreada sobre o conteúdo da LC 214/2025, não deixou de apresentar a regra encontrada."
+  }
+}

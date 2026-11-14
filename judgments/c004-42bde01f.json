@@ -1,0 +1,16 @@
+{
+  "trace_id": "c004-42bde01f",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "pass",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "Todos os dispositivos citados constam das saídas das ferramentas, inclusive os indicados como origem e fundamento dos efeitos. Não há dispositivos esperados obrigatórios.",
+    "C3": "O modelo declarou explicitamente que o corpus não traz o percentual solicitado e não inventou uma alíquota. Também apresentou o dispositivo encontrado sobre a fixação de alíquotas de referência, distinguindo-o da informação ausente."
+  }
+}

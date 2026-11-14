@@ -1,0 +1,18 @@
+{
+  "trace_id": "c046-6407b311",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "pass",
+    "C2": "pass",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "A resposta cita o art. 133 e seus §§ 1º e 2º, todos devolvidos pelas ferramentas. As demais referências têm lastro no texto ou nos metadados retornados, inclusive a ressalva ao art. 146 e o fundamento dos efeitos.",
+    "C2": "A data de início dos efeitos do art. 133 e sua produção de efeitos na data de referência coincidem com os dados da ferramenta. A data de coleta do corpus também confere com a saída fornecida.",
+    "C3": "O modelo respondeu à pergunta com base no art. 133, identificando os medicamentos abrangidos, a ressalva da alíquota zero e a condição aplicável aos industrializados ou importados. A ausência de listas específicas foi apontada sem deixar de apresentar a regra encontrada."
+  }
+}

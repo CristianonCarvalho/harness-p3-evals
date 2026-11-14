@@ -1,0 +1,16 @@
+{
+  "trace_id": "c019-f5b12d42",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "fail"
+  },
+  "justification": {
+    "C1": "A citação do art. 156-A da Constituição possui lastro nas ferramentas, e há retorno de dispositivo com o número 156-B. Contudo, a resposta não cita o art. 129 do ADCT, exigido pelo gabarito e não devolvido pelas buscas.",
+    "C3": "Embora tenha definido o IBS, o modelo respondeu quais impostos ele substitui com base em conhecimento próprio, reconhecendo que essa informação não foi verificada nas ferramentas. Como o campo indica que o corpus responde e as saídas das ferramentas são o único lastro admitido, a postura não atende ao critério."
+  }
+}

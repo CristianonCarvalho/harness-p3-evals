@@ -1,0 +1,18 @@
+{
+  "trace_id": "c053-3aedb69f",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C2": "fail",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "Os dispositivos citados têm lastro nas saídas das ferramentas, mas a resposta não cita o art. 126 do ADCT nem seu inciso I, alínea b, ambos esperados.",
+    "C2": "As datas de efeitos do dispositivo conferem com as ferramentas. Porém, a resposta afirma que houve propostas de emenda em 2019–2020, informação temporal que não consta no lastro devolvido.",
+    "C3": "O corpus responde à pergunta, e o modelo respondeu que o Imposto Seletivo não existia em 2020, apoiando-se na origem e na data de efeitos do dispositivo constitucional. Também esclareceu a ausência da redação anterior no corpus, sem afirmar que não havia resposta."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "trace_id": "c051-6511a37f",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "pass",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "Os dispositivos mencionados na resposta têm lastro nas saídas das ferramentas, inclusive as versões associadas aos arts. 1º, 3º e 4º da EC 132/2023. Não há dispositivos esperados adicionais.",
+    "C3": "O corpus não responde à pergunta, e o modelo declarou explicitamente que não encontrou a redação anterior, sem inventá-la."
+  }
+}

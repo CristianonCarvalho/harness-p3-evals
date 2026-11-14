@@ -1,0 +1,16 @@
+{
+  "trace_id": "c034-be579f5b",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "A resposta cita o art. 125 do ADCT, que consta do retorno das ferramentas, mas omite o art. 128 da LC 214/2025 e seus incisos I e II, exigidos pelo gabarito.",
+    "C3": "O modelo respondeu que a redução já produz efeitos em 2026 e citou os dispositivos pertinentes devolvidos pelas ferramentas. Embora tenha apontado limitações sobre a aplicação prática e os serviços abrangidos, não deixou de responder à questão central."
+  }
+}

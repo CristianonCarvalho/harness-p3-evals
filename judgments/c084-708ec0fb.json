@@ -1,0 +1,16 @@
+{
+  "trace_id": "c084-708ec0fb",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "A resposta cita o art. 125 da LC 214/2025, que não consta nos retornos das ferramentas. Também menciona o caput do § 5º do art. 156-A da Constituição, cujo texto não foi devolvido, embora o inciso VIII tenha sido retornado.",
+    "C3": "O modelo respondeu quem define as regras: o Congresso Nacional, por lei, com base nos dispositivos constitucionais apresentados. A ressalva de que não encontrou limites e beneficiários concretos não impede a resposta à pergunta feita."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "trace_id": "c042-6e74b334",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "pass",
+    "C2": "pass",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "O art. 125 do ADCT, exigido pelo gabarito, foi citado e consta do retorno das ferramentas. As demais referências normativas também aparecem nas saídas brutas.",
+    "C2": "As datas de efeitos e de referência correspondem aos dados da ferramenta, e os períodos de 2026, 2027 e 2028 constam dos dispositivos devolvidos. A resposta é contraditória sobre a existência de alíquota municipal em 2026, mas não inventa uma data de vigência ou de efeitos.",
+    "C3": "O modelo respondeu que a alíquota de 0,1% em 2026 é estadual, conforme o art. 125 do ADCT devolvido pela ferramenta. Embora apresente uma ressalva contraditória sobre a existência de alíquota municipal, não deixou de responder à pergunta principal."
+  }
+}

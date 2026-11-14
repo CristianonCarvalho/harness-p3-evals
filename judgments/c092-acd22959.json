@@ -1,0 +1,18 @@
+{
+  "trace_id": "c092-acd22959",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "Os dispositivos citados possuem lastro nas ferramentas, mas a resposta omitiu os incisos I e II do parágrafo único do art. 129 da LC 214/2025, ambos esperados pelo gabarito e não retornados pelas ferramentas.",
+    "C2": "A data de início dos efeitos do art. 129, em 2026-01-01, e sua aplicação na data de referência estão respaldadas pela ferramenta. As datas de referência e de coleta do corpus também conferem com os dados fornecidos.",
+    "C3": "O modelo apresentou a redução prevista para serviços de educação, condicionando sua aplicação à verificação do Anexo II. Também esclareceu que não encontrou resposta sobre material escolar, sem concluir categoricamente que não há redução."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "trace_id": "c098-d2101dde",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "pass",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "A resposta cita o art. 156-B da Constituição e seus incisos I, II e III, todos retornados pela ferramenta. As demais citações também possuem lastro nas saídas apresentadas.",
+    "C3": "O corpus responde à pergunta, e o modelo apresentou corretamente as três competências administrativas previstas no art. 156-B da Constituição. A ressalva sobre o detalhamento por lei complementar não impede que a resposta principal esteja adequada."
+  }
+}

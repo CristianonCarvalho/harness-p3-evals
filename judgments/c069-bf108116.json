@@ -1,0 +1,18 @@
+{
+  "trace_id": "c069-bf108116",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "O art. 129 do ADCT e o art. 134, § 5º, têm lastro nas ferramentas. Contudo, a resposta não cita o dispositivo esperado da CF, art. 158, IV, a.",
+    "C2": "A extinção a partir de 2033 e a vigência desde 2023-12-21 constam das ferramentas; 2032 é o ano anterior à extinção. O trecho sobre atualização de saldos credores também menciona 2033, embora não especifique que se trata de saldos de ICMS.",
+    "C3": "O modelo respondeu corretamente que o ICMS é extinto a partir de 2033, com base no art. 129 do ADCT retornado pela ferramenta. Não alegou ausência de resposta no corpus."
+  }
+}

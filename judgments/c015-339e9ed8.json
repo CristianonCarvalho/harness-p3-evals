@@ -1,0 +1,16 @@
+{
+  "trace_id": "c015-339e9ed8",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "Faltam as citações ao art. 125, § 1º, e ao art. 126, caput e I, a, do ADCT, exigidas pelo gabarito. Além disso, a resposta cita individualmente os arts. 124 e 125 do ADCT, cujos textos não foram devolvidos pelas ferramentas.",
+    "C3": "O modelo respondeu à pergunta com base no dispositivo encontrado, explicando a extinção condicionada das contribuições. Também distinguiu as informações que não conseguiu confirmar, sem afirmar que o corpus não trata do tema."
+  }
+}

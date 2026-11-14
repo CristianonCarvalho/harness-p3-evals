@@ -1,0 +1,16 @@
+{
+  "trace_id": "c054-0684674a",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "fail"
+  },
+  "justification": {
+    "C1": "A resposta cita o art. 156 da Constituição, mas esse dispositivo não consta no retorno da ferramenta, que trouxe o art. 156-A. As demais citações têm lastro, e não há dispositivos esperados pelo gabarito.",
+    "C3": "O campo indica que o corpus não responde, mas o modelo afirmou categoricamente que o art. 156-A não existia em 2022, sem reconhecer a ausência de resposta no corpus consultado."
+  }
+}

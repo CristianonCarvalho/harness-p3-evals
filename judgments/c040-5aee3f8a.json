@@ -1,0 +1,16 @@
+{
+  "trace_id": "c040-5aee3f8a",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "pass",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "O art. 76-A do ADCT, dispositivo esperado, foi citado e consta do retorno das ferramentas. As demais referências também possuem lastro nas saídas brutas.",
+    "C3": "O corpus responde à pergunta, e o modelo informou corretamente que a desvinculação vale até 31 de dezembro de 2032, com base no art. 76-A do ADCT."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "trace_id": "c007-ef282272",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "A resposta cita individualmente o art. 125 da LC 214/2025, atribuindo-lhe o tema da cesta básica, mas esse dispositivo não consta dos retornos das ferramentas. Os demais dispositivos citados têm lastro, e não havia dispositivos esperados.",
+    "C3": "O corpus não responde à pergunta, e o modelo declarou explicitamente que não encontrou a informação e que não podia afirmar se a reforma muda a tabela. Também esclareceu que a ausência de resposta não confirma que a tabela permaneceu inalterada."
+  }
+}

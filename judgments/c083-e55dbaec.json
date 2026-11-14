@@ -1,0 +1,18 @@
+{
+  "trace_id": "c083-e55dbaec",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "pass",
+    "C2": "fail",
+    "C3": "fail"
+  },
+  "justification": {
+    "C1": "A resposta cita os quatro dispositivos esperados, todos presentes nos retornos das ferramentas. As demais citações individuais também possuem lastro nas saídas.",
+    "C2": "A resposta atribui efeitos desde 2026-01-01 aos arts. 128 a 142 de forma geral, mas a ferramenta informa efeito indeterminado para o art. 142, II, na data de referência.",
+    "C3": "O modelo afirma categoricamente que não há redução de 60% para serviços profissionais no corpus, embora o lastro preveja essa redução para serviços de saúde e educação. A ressalva posterior de que ela pode alcançar serviços de médicos ou professores contradiz a resposta direta."
+  }
+}

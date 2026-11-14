@@ -1,0 +1,16 @@
+{
+  "trace_id": "c080-03704e33",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "pass",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "Os arts. 125, 127, 128 e 129 do ADCT aparecem na resposta e foram devolvidos pelas ferramentas. As demais citações também possuem lastro nos retornos.",
+    "C3": "O modelo respondeu à pergunta com base nos arts. 128 e 129 do ADCT, indicando o início da redução em 2029 e a extinção dos impostos a partir de 2033. A observação sobre a busca não configura falso não sei, pois o modelo reconheceu e utilizou a norma obtida por consulta direta."
+  }
+}

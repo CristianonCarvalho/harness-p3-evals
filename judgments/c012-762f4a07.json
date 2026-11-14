@@ -1,0 +1,16 @@
+{
+  "trace_id": "c012-762f4a07",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "fail"
+  },
+  "justification": {
+    "C1": "A resposta cita o art. 153 da Constituição, mas nenhum dispositivo foi devolvido pelas ferramentas. Embora não haja dispositivos esperados, essa citação não possui lastro.",
+    "C3": "Embora declare que não encontrou a informação, o modelo conclui categoricamente que a reforma não criou o imposto no âmbito do corpus. As buscas sem resultados não sustentam essa conclusão, e o campo de referência indica que o corpus não responde à pergunta."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "trace_id": "c056-bdb4b337",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "pass",
+    "C2": "pass",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "Os dispositivos citados constam das saídas das ferramentas, inclusive o art. 544, VI, indicado como fundamento nos metadados de efeitos. Não há dispositivos esperados cuja citação seja obrigatória.",
+    "C2": "As datas mencionadas constam nas saídas das ferramentas. A resposta distingue corretamente os efeitos do caput e do inciso I da situação indeterminada do inciso II, sem afirmar que este já produz efeitos.",
+    "C3": "O modelo declarou explicitamente que o corpus não permite determinar a data de início da redução para o caso perguntado, em consonância com o campo de referência. Não apresentou uma data categórica como resposta."
+  }
+}

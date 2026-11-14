@@ -1,0 +1,18 @@
+{
+  "trace_id": "c058-14b93127",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "pass",
+    "C2": "pass",
+    "C3": "fail"
+  },
+  "justification": {
+    "C1": "O art. 422, § 5º, dispositivo esperado, foi citado e consta do retorno das ferramentas. Os demais dispositivos citados individualmente também têm lastro nos resultados, inclusive o art. 544, VI, indicado como fundamento dos efeitos.",
+    "C2": "O período de 2029 a 2033 e a data de efeitos de 2026-01-01 para os arts. 419 e 422 constam nas saídas das ferramentas. A resposta também reconhece corretamente que os efeitos do § 5º na data de referência são indeterminados.",
+    "C3": "O corpus responde à pergunta, mas o modelo afirmou que não é possível responder e que a resposta é desconhecida. Embora tenha citado o período de 2029 a 2033, não deu a resposta correspondente para a data de referência de 2026."
+  }
+}

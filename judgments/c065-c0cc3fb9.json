@@ -1,0 +1,16 @@
+{
+  "trace_id": "c065-c0cc3fb9",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "pass",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "A resposta cita o art. 225, § 1º, VIII, da CF, como esperado. Os demais dispositivos mencionados constam do texto ou dos metadados devolvidos pelas ferramentas.",
+    "C3": "O modelo respondeu à pergunta para os três anos, identificando os tributos citados nas versões pertinentes da Constituição. A ressalva sobre a ausência de alíquotas e detalhes da lei complementar não compromete a resposta."
+  }
+}

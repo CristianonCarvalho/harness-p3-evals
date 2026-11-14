@@ -1,0 +1,18 @@
+{
+  "trace_id": "c049-28f55f9b",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C2": "fail",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "Embora não haja dispositivos esperados, a resposta cita os arts. 170, IX, e 179 da Constituição, que não constam dos retornos das ferramentas, mesmo ao dizer que a busca não os trouxe.",
+    "C2": "A resposta afirma que a EC 132 foi promulgada em 20/12/2023, mas essa data não consta nas saídas das ferramentas. Os demais marcos de efeitos apresentados para o art. 146, III, d conferem com os dados devolvidos.",
+    "C3": "O modelo declarou explicitamente que não encontrou no corpus a redação constitucional de 2022 e não inventou uma resposta para o período. Distinguiu o texto posterior da informação solicitada."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "trace_id": "c072-da303ed2",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "pass",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "A resposta cita os dispositivos esperados da EC 132/2023, inclusive o art. 22, II, b. As demais citações também têm lastro nos textos ou metadados retornados pelas ferramentas.",
+    "C3": "O modelo respondeu que o § 2º não vale em 2033, com base na revogação registrada pelo corpus. Também distinguiu as dúvidas sobre a data da revogação e a ausência da redação anterior, sem deixar de responder à pergunta."
+  }
+}

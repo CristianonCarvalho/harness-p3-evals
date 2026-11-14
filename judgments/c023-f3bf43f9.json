@@ -1,0 +1,18 @@
+{
+  "trace_id": "c023-f3bf43f9",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "A resposta cita os dois dispositivos esperados, ADCT, art. 126, caput e inciso II. Contudo, cita também o art. 195, I, “a”, da Constituição, que não foi devolvido pelas ferramentas.",
+    "C2": "O marco de 2027 consta do art. 126 do ADCT retornado pela ferramenta, e a resposta reconhece a condição para a extinção das contribuições. As demais datas de efeitos e referências temporais também constam dos resultados; o modelo não afirma uma data de início de cobrança da CBS.",
+    "C3": "O modelo respondeu que PIS e Cofins deixam de ser cobrados a partir de 2027, com base no dispositivo devolvido, e indicou a condição prevista para a extinção. As ressalvas sobre a instituição da CBS não impedem que a pergunta principal tenha sido respondida."
+  }
+}

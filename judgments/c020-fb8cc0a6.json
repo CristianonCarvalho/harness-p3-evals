@@ -1,0 +1,16 @@
+{
+  "trace_id": "c020-fb8cc0a6",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "Os dispositivos ADCT, art. 126, e EC 132/2023, art. 22, I, constam do retorno das ferramentas. Contudo, a resposta não cita o dispositivo esperado, ADCT, art. 125.",
+    "C3": "O modelo respondeu que a CBS passa a ser cobrada em 2027 e indicou os limites da consulta quanto a eventual fase de teste anterior. Não afirmou indevidamente que faltava resposta à pergunta principal."
+  }
+}

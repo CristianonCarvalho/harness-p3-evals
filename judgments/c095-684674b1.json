@@ -1,0 +1,18 @@
+{
+  "trace_id": "c095-684674b1",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "A resposta cita o parágrafo único do art. 419 e reproduz os dez critérios, mas não identifica expressamente os incisos I a X, exigidos individualmente pelo gabarito. A citação do parágrafo não supre a dos incisos.",
+    "C2": "A data de início dos efeitos e as datas de referência e coleta conferem com as ferramentas. A data de 2025-01-16 consta como início de vigência, mas a ferramenta não a identifica como data de publicação.",
+    "C3": "O modelo respondeu à pergunta com todos os dez critérios devolvidos pela ferramenta, identificando a norma aplicável. A ressalva sobre pesos e alíquotas não nega a existência da resposta solicitada."
+  }
+}

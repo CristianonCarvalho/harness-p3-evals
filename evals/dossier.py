@@ -171,8 +171,13 @@ def citation_key(s: str) -> str:
 
 
 def _corpo_da_chave(chave: str) -> str:
-    """Parte da chave sem a norma ('lc 214/2025, art. 142' -> 'art. 142')."""
-    return chave if chave.startswith("art. ") else chave.split(", ", 1)[1]
+    """Parte da chave sem a norma ('lc 214/2025, art. 142' -> 'art. 142').
+
+    So a norma ('lc 214/2025', fundamento sem artigo) nao tem corpo: devolve ''."""
+    if chave.startswith("art. "):
+        return chave
+    partes = chave.split(", ", 1)
+    return partes[1] if len(partes) == 2 else ""
 
 
 def _casa_sem_norma(chave_bare: str, chave: str) -> bool:

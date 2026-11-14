@@ -339,6 +339,17 @@ def test_citation_only_as_fundamento_has_no_text():
     assert "completo" not in linha and "só trecho" not in linha
 
 
+def test_fundamento_with_only_the_law_name_does_not_break_the_dossier():
+    # Achado da amostra cega de 2026-11-14: o P2 devolve fundamento "LC 214/2025",
+    # sem artigo, e o dossie quebrava (IndexError) ao casar uma citacao sem norma.
+    trace = make_trace(
+        final_answer="Veja o art. 999.",
+        events=[get_event("ADCT.art130", "ADCT, art. 130", "Art. 130. texto",
+                          fundamento="LC 214/2025")])
+    linha = _row(build_dossier(trace, make_case(), mode="cega"), "art. 999")
+    assert "não aparece no que foi devolvido" in linha
+
+
 def test_citation_not_returned_says_so():
     trace = make_trace(final_answer="Veja LC 214/2025, art. 999.",
                        events=[search_event([snippet("CF, art. 1", "CF.art1")])])

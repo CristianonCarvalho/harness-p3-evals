@@ -174,6 +174,49 @@ def test_build_messages_c1_reads_expected_from_gabarito():
     assert "LC214.art14" in user_c1
 
 
+def test_build_messages_only_includes_answer_exists_for_c3():
+    from evals.judge import build_messages
+
+    trace = {"trace_id": "c01-aaaa1111", "events": [], "final_answer": "Resp."}
+    case = {
+        "case_id": "c01",
+        "answer_exists": "sim",
+        "reference_date": "2027-01-01",
+        "expected_provisions": ["LC214.art14"],
+    }
+
+    # C3 recebe answer_exists
+    msg_c3 = build_messages(trace, case, "C3", "Prompt C3")
+    user_c3 = msg_c3[1]["content"]
+    assert "## O corpus responde?\nsim" in user_c3
+    # C3 não recebe Dispositivos Esperados
+    assert "Dispositivos Esperados" not in user_c3
+
+    # C1 e C2 não recebem "O corpus responde?"
+    msg_c1 = build_messages(trace, case, "C1", "Prompt C1")
+    assert "O corpus responde?" not in msg_c1[1]["content"]
+
+    msg_c2 = build_messages(trace, case, "C2", "Prompt C2")
+    assert "O corpus responde?" not in msg_c2[1]["content"]
+
+
+def test_build_messages_c3_reads_answer_exists_from_gabarito():
+    from evals.judge import build_messages
+
+    trace = {"trace_id": "c01-aaaa1111", "events": [], "final_answer": "Resp."}
+    case = {
+        "case_id": "c01",
+        "gabarito": {
+            "answer_exists": "parcial",
+            "expected_provisions": ["LC214.art14"],
+        },
+    }
+
+    msg_c3 = build_messages(trace, case, "C3", "Prompt C3")
+    user_c3 = msg_c3[1]["content"]
+    assert "## O corpus responde?\nparcial" in user_c3
+
+
 def test_criteria_for_trace_includes_c1_when_citation_is_prose():
     from evals.judge import criteria_for_trace
 

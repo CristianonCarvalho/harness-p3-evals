@@ -122,6 +122,13 @@ def build_messages(
             provisions_text = "(nenhum: o gabarito diz que o corpus não responde)"
         user_parts.append(f"## Dispositivos Esperados\n{provisions_text}")
 
+    if criterion == "C3":
+        ans_exists = case.get("answer_exists")
+        if ans_exists is None:
+            ans_exists = case.get("gabarito", {}).get("answer_exists", "")
+        if ans_exists:
+            user_parts.append(f"## O corpus responde?\n{ans_exists}")
+
     user_parts.append(f"## Saída Bruta das Ferramentas (Lastro)\n{tools_text}")
     user_parts.append(f"## Resposta Final do Modelo\n{final_answer}")
 

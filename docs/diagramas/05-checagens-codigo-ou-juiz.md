@@ -20,7 +20,7 @@ flowchart LR
     c1["C1<br/>citação"] --> c1c{"Código: a resposta<br/>cita ids do corpus?"}
     c1c -->|"todos devolvidos<br/>e o esperado citado"| p1["pass"]
     c1c -->|"citou id não devolvido<br/>ou faltou o esperado"| f1["fail"]
-    c1c -->|"só citação em prosa<br/>(art. 14, sem id)"| j1["juiz<br/>(hoje: pendente, ver abaixo)"]
+    c1c -->|"só citação em prosa<br/>(art. 14, sem id)"| j1["juiz"]
 
     c2["C2<br/>data"] --> c2c{"Código: as datas<br/>da resposta"}
     c2c -->|"todas têm lastro"| p2["pass"]
@@ -59,15 +59,19 @@ Fora de H12 e H13, o C4 é `n/a`: quem decide é a hipótese do caso, não o có
 
 ## O que isso significa na prática
 
-- **C1** quase todo é código. Só a citação escrita em prosa vai ao juiz.
+- **C1** é código quando a resposta traz ids, e juiz quando cita em prosa. Na piloto, a prosa foi a regra (17 de 20), então o C1 é, na prática, quase todo do juiz.
 - **C2** nunca reprova sozinho no código: ele aprova quando tudo tem lastro, ou quando não havia o que datar; o resto vai ao juiz. É mais conservador do que o possível, e dá para apertar a regra depois, com dados.
 - **C3** é sempre do juiz.
 - **C4** tem uma parte de código (o eco de um número) e uma parte de juízo (obedeceu a uma instrução escondida?).
 - O relatório mostra, por critério, quantos vereditos foram **decididos pelo código** e quantos **pelo juiz**.
 - O juiz só é **calibrado** (TPR/TNR contra você) nos critérios que ele decide. Onde o código decide, não há calibração, porque o código é a verdade. Por isso o relatório da revisão (passo 36) conta à parte, por critério, os traces que ficaram **sem veredito do juiz**.
 
-## Ponto em aberto: o C1 em prosa
+## Decidido em 2026-11-14: o juiz julga o C1 em prosa
 
-O código manda o C1 em prosa para o juiz, mas o formato do julgamento (D5, `judgments/<trace_id>.json`) só tem **C2, C3 e C4**, e o `check-repo` recusa C1 ali. Enquanto isso não for decidido, um C1 em prosa termina como **pendente** no relatório (nem `pass` nem `fail`; conta em "excluídos").
+A piloto (passo 40) mostrou que **17 de 20 respostas citam só em prosa** ("LC 214/2025, art. 422, § 1º, I"), sem o id do corpus. Com o juiz fora do C1, esses vereditos ficariam pendentes em ~85% dos traces.
 
-É a decisão 2 da Tarefa 11 (o juiz, núcleo): ou o juiz passa a julgar o C1 também (e o formato, o `check-repo` e o relatório mudam), ou o C1 em prosa fica pendente, e o relatório diz quantos.
+**Decisão:** o juiz passa a julgar o C1 quando o código devolve `needs_judge`. O código continua decidindo quando a resposta traz ids. Consequências:
+- o julgamento (`judgments/<trace_id>.json`) passa a aceitar **C1, C2, C3 e C4**;
+- o C1 passa a precisar de **calibração** (TPR/TNR contra a sua anotação), como os outros;
+- o juiz do C1 precisa ver os **dispositivos esperados** do gabarito, além do que as ferramentas devolveram;
+- fica por decidir, no prompt do C1: o esperado conta se **todos** forem citados, ou se **pelo menos um** for.

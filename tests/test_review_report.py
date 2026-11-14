@@ -91,7 +91,7 @@ def test_juiz_usa_so_cegas_na_ultima_versao_sem_excecao():
     # b1: tp; b2: fp; b3 ficou revisada na ultima versao, sai da calibracao
     assert r["judge_blind"]["C3"] == {"tpr": 1.0, "tnr": 0.0, "n_pos": 1, "n_neg": 1,
                                       "n_sem_juiz": 0}
-    assert set(r["judge_blind"]) == {"C2", "C3", "C4"}
+    assert set(r["judge_blind"]) == {"C1", "C2", "C3", "C4"}
 
 
 def test_juiz_que_nao_julgou_um_criterio_nao_quebra_o_relatorio():
@@ -107,6 +107,7 @@ def test_juiz_que_nao_julgou_um_criterio_nao_quebra_o_relatorio():
                                       "n_sem_juiz": 2}
     assert r["judge_blind"]["C3"]["n_sem_juiz"] == 0
     assert r["judge_blind"]["C4"]["n_sem_juiz"] == 3
+    assert r["judge_blind"]["C1"]["n_sem_juiz"] == 3
     linhas = "\n".join(render_review_markdown(r))
     assert "sem veredito do juiz" in linhas
 
@@ -115,6 +116,47 @@ def test_juiz_none_deixa_as_partes_dependentes_vazias():
     r = review(histories=_hist(1, 0), blind={"b0"}, judge=None)
     assert r["judge_blind"] is None
     assert "judge_blind" in r["motivos"]
+
+
+# ---- 2b. juiz tambem julga C1 (citacao), quando o codigo deixa para ele
+def test_juiz_calcula_tpr_e_tnr_de_c1_quando_ha_veredito():
+    hist = {
+        "b1": [anotacao_cega("b1", V(c1="pass"))],
+        "b2": [anotacao_cega("b2", V(c1="fail"))],
+        "b3": [anotacao_cega("b3", V(c1="fail"))],
+    }
+    judge = {
+        "b1": {"C1": "pass"},
+        "b2": {"C1": "fail"},
+        "b3": {"C1": "pass"},
+    }
+    r = review(histories=hist, blind={"b1", "b2", "b3"}, judge=judge)
+    # b1: tp; b2: tn; b3: fp (humano fail, juiz pass)
+    assert r["judge_blind"]["C1"] == {"tpr": 1.0, "tnr": 0.5, "n_pos": 1, "n_neg": 2,
+                                      "n_sem_juiz": 0}
+
+
+def test_trace_sem_veredito_de_c1_conta_em_n_sem_juiz_e_fica_fora_da_conta():
+    hist = {
+        "b1": [anotacao_cega("b1", V(c1="pass"))],
+        "b2": [anotacao_cega("b2", V(c1="fail"))],
+        "b3": [anotacao_cega("b3", V(c1="pass"))],
+    }
+    # O juiz julgou C1 so em b1 e b2; b3 nao tem C1 (o codigo ja decidiu)
+    judge = {"b1": {"C1": "pass"}, "b2": {"C1": "fail"}, "b3": {"C2": "pass"}}
+    r = review(histories=hist, blind={"b1", "b2", "b3"}, judge=judge)
+    assert r["judge_blind"]["C1"] == {"tpr": 1.0, "tnr": 1.0, "n_pos": 1, "n_neg": 1,
+                                      "n_sem_juiz": 1}
+
+
+def test_tabela_do_juiz_mostra_a_linha_de_c1():
+    hist = {"b1": [anotacao_cega("b1", V(c1="pass"))]}
+    r = review(histories=hist, blind={"b1"}, judge={"b1": {"C1": "pass"}})
+    linhas = render_review_markdown(r)
+    inicio = linhas.index("### Juiz nas anotações cegas")
+    secao = linhas[inicio + 1:]
+    fim = next(i for i, linha in enumerate(secao) if linha.startswith("### "))
+    assert any(linha.startswith("| C1 |") for linha in secao[:fim])
 
 
 # ---- 3. acordo do redator, primeira versao

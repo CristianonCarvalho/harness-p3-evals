@@ -27,7 +27,7 @@ from evals.report import MIN_CLASSE_CALIBRACAO, _pct
 from evals.sampling import load_samples, load_traces
 
 ANCHORING_FACTOR = 0.5
-JUDGE_CRITERIA = ("C2", "C3", "C4")
+JUDGE_CRITERIA = ("C1", "C2", "C3", "C4")
 CRITERIA = ("C1", "C2", "C3", "C4")
 MIN_ANOTADAS = 100
 

@@ -92,6 +92,7 @@ def _repo_para_recontagem(root: Path, tpr_reportado: float = 1.0) -> None:
     _escreve(root / "judgments" / f"{TID}.json", {"trace_id": TID, "verdicts": {"C2": "pass"}})
     _escreve(root / "judgments" / f"{TID2}.json", {"trace_id": TID2, "verdicts": {"C2": "fail"}})
     _relatorio(root, "2026-01-15", {
+        "C1": _juiz_zerado(),
         "C2": {"tpr": tpr_reportado, "tnr": 1.0, "n_pos": 1, "n_neg": 1, "calibrated": False},
         "C3": _juiz_zerado(),
         "C4": _juiz_zerado(),
@@ -194,13 +195,34 @@ def test_anotacao_sem_caso_e_problema(tmp_path):
 
 @pytest.mark.parametrize("payload", [
     {"trace_id": TID, "verdicts": {"C2": "talvez"}},
-    {"trace_id": TID, "verdicts": {"C1": "pass"}},
+    {"trace_id": TID, "verdicts": {"C1": "talvez"}},
+    {"trace_id": TID, "verdicts": {"C5": "pass"}},
     {"trace_id": "outro-trace-00000000", "verdicts": {"C2": "pass"}},
 ])
 def test_juizo_invalido_e_problema(tmp_path, payload):
     _escreve(tmp_path / "judgments" / f"{TID}.json", payload)
     problemas = check_repo(tmp_path).problems
     assert any(f"judgments/{TID}.json" in p for p in problemas)
+
+
+def test_juizo_com_c1_pass_e_aceito(tmp_path):
+    # O juiz tambem julga C1 (citacao) quando o codigo deixa para ele.
+    _escreve(tmp_path / "judgments" / f"{TID}.json", {"trace_id": TID, "verdicts": {"C1": "pass"}})
+    problemas = check_repo(tmp_path).problems
+    assert not any(f"judgments/{TID}.json" in p for p in problemas)
+
+
+def test_juizo_com_c1_veredito_invalido_e_problema(tmp_path):
+    _escreve(tmp_path / "judgments" / f"{TID}.json", {"trace_id": TID, "verdicts": {"C1": "talvez"}})
+    problemas = check_repo(tmp_path).problems
+    assert any(f"judgments/{TID}.json" in p and "C1" in p and "inválido" in p for p in problemas)
+
+
+def test_juizo_com_c5_e_rejeitado_com_a_lista_atual_de_criterios(tmp_path):
+    _escreve(tmp_path / "judgments" / f"{TID}.json", {"trace_id": TID, "verdicts": {"C5": "pass"}})
+    problemas = check_repo(tmp_path).problems
+    assert any("C5" in p and "critério fora do juiz (use C1, C2, C3 ou C4)" in p
+               for p in problemas)
 
 
 # 6. Recontagem do juiz
@@ -223,6 +245,24 @@ def test_recontagem_ignora_trace_cego_cuja_ultima_versao_e_revisada(tmp_path):
     _escreve(tmp_path / "annotations" / "_samples.json",
              {"blind": {"seed": 1, "n": 3, "trace_ids": [TID, TID2, tid3]}})
     assert check_repo(tmp_path).problems == []
+
+
+def test_tpr_de_c1_divergente_nomeia_o_criterio_c1(tmp_path):
+    # Humano: C1 pass nos dois traces. Juiz: pass em TID e fail em TID2, logo TPR recontado 0.5.
+    _repo_para_recontagem(tmp_path)
+    _escreve(tmp_path / "judgments" / f"{TID}.json",
+             {"trace_id": TID, "verdicts": {"C1": "pass", "C2": "pass"}})
+    _escreve(tmp_path / "judgments" / f"{TID2}.json",
+             {"trace_id": TID2, "verdicts": {"C1": "fail", "C2": "fail"}})
+    _relatorio(tmp_path, "2026-01-15", {
+        "C1": {"tpr": 0.0, "tnr": None, "n_pos": 2, "n_neg": 0, "calibrated": False},
+        "C2": {"tpr": 1.0, "tnr": 1.0, "n_pos": 1, "n_neg": 1, "calibrated": False},
+        "C3": _juiz_zerado(),
+        "C4": _juiz_zerado(),
+    })
+    problemas = check_repo(tmp_path).problems
+    assert len(problemas) == 1
+    assert "juiz C1" in problemas[0] and "tpr" in problemas[0]
 
 
 def test_o_relatorio_mais_recente_e_o_de_nome_mais_alto(tmp_path):

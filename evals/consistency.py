@@ -226,7 +226,7 @@ def _check_juizos(root: Path, problemas: list[str]) -> dict[str, dict]:
                 erros.append("verdicts deve ser um objeto que liga critérios a vereditos")
             else:
                 for crit in sorted(set(veredictos) - set(JUDGE_CRITERIA)):
-                    erros.append(f"{crit}: critério fora do juiz (use C2, C3 ou C4)")
+                    erros.append(f"{crit}: critério fora do juiz (use C1, C2, C3 ou C4)")
                 for crit, valor in sorted(veredictos.items()):
                     if crit in JUDGE_CRITERIA and valor not in VALID_VERDICTS:
                         erros.append(f"{crit}: veredito inválido {valor!r}")

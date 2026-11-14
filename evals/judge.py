@@ -1,4 +1,4 @@
-"""Juiz LLM para avaliação de C2, C3 e C4 (Tarefa 11)."""
+"""Juiz LLM para avaliação de C1, C2, C3 e C4 (Tarefa 11)."""
 from __future__ import annotations
 
 import argparse
@@ -12,11 +12,11 @@ from pathlib import Path
 from typing import Any
 
 from evals.budget import BudgetExceeded, BudgetGuard
-from evals.checks import check_c2
+from evals.checks import check_c1, check_c2
 from evals.ledger import Ledger
 from evals.privacy import redact_taxpayer_ids
 
-JUDGE_CRITERIA = ("C2", "C3", "C4")
+JUDGE_CRITERIA = ("C1", "C2", "C3", "C4")
 
 _JSON_BLOCK_RE = re.compile(r"```(?:json)?\s*(\{.*?\})\s*```", re.DOTALL)
 _JSON_OBJECT_RE = re.compile(r"\{[^{}]*\"verdict\"[^{}]*\}", re.DOTALL)
@@ -112,6 +112,16 @@ def build_messages(
     if criterion == "C2" and ref_date:
         user_parts.append(f"## Data de Referência\n{ref_date}")
 
+    if criterion == "C1":
+        expected = case.get("expected_provisions")
+        if expected is None:
+            expected = case.get("gabarito", {}).get("expected_provisions", [])
+        if expected:
+            provisions_text = "\n".join(expected)
+        else:
+            provisions_text = "(nenhum: o gabarito diz que o corpus não responde)"
+        user_parts.append(f"## Dispositivos Esperados\n{provisions_text}")
+
     user_parts.append(f"## Saída Bruta das Ferramentas (Lastro)\n{tools_text}")
     user_parts.append(f"## Resposta Final do Modelo\n{final_answer}")
 
@@ -125,6 +135,7 @@ def criteria_for_trace(trace: dict[str, Any], case: dict[str, Any]) -> list[str]
     """Determina quais critérios o juiz LLM deve avaliar para este trace.
 
     - C3: sempre avaliado pelo juiz.
+    - C1: avaliado se check_c1 retornar 'needs_judge' (citação em prosa).
     - C2: avaliado se check_c2 retornar 'needs_judge'.
     - C4: avaliado se o caso for H13 (prompt injection).
     """
@@ -134,6 +145,14 @@ def criteria_for_trace(trace: dict[str, Any], case: dict[str, Any]) -> list[str]
     final_answer = trace.get("final_answer", "")
     ref_date = case.get("reference_date") or case.get("gabarito", {}).get("reference_date", "")
     ans_exists = case.get("answer_exists") or case.get("gabarito", {}).get("answer_exists", "sim")
+
+    expected = case.get("expected_provisions")
+    if expected is None:
+        expected = case.get("gabarito", {}).get("expected_provisions", [])
+
+    res_c1 = check_c1(final_answer, events, expected)
+    if res_c1.verdict == "needs_judge":
+        criteria.append("C1")
 
     if ref_date:
         res_c2 = check_c2(final_answer, events, ref_date, answer_exists=ans_exists)
@@ -296,7 +315,7 @@ def judge_batch(
 
 
 def main(argv: list[str] | None = None) -> int:
-    ap = argparse.ArgumentParser(description="Julga traces com um LLM nos critérios C2, C3 e C4.")
+    ap = argparse.ArgumentParser(description="Julga traces com um LLM nos critérios C1, C2, C3 e C4.")
     ap.add_argument("trace_ids", nargs="+")
     ap.add_argument("--model", required=True, help="ID exato e com versão do modelo juiz no OpenRouter")
     ap.add_argument("--budget-usd", required=True, type=float)

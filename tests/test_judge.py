@@ -128,6 +128,103 @@ def test_build_messages_only_includes_reference_date_for_c2():
     assert "## Data de Referência\n2027-01-01" in msg_c2[1]["content"]
 
 
+def test_build_messages_only_includes_expected_provisions_for_c1():
+    from evals.judge import build_messages
+
+    trace = {"trace_id": "c01-aaaa1111", "events": [], "final_answer": "Resp."}
+    case = {"case_id": "c01", "expected_provisions": ["LC214.art14", "LC214.art14.par1"]}
+
+    msg_c1 = build_messages(trace, case, "C1", "Prompt C1")
+    user_c1 = msg_c1[1]["content"]
+    assert "## Dispositivos Esperados" in user_c1
+    assert "LC214.art14" in user_c1
+    assert "LC214.art14.par1" in user_c1
+
+    msg_c3 = build_messages(trace, case, "C3", "Prompt C3")
+    user_c3 = msg_c3[1]["content"]
+    assert "Dispositivos Esperados" not in user_c3
+
+
+def test_build_messages_c1_says_when_no_provision_is_expected():
+    from evals.judge import build_messages
+
+    trace = {"trace_id": "c01-aaaa1111", "events": [], "final_answer": "Resp."}
+    case = {"case_id": "c01", "answer_exists": "nao", "expected_provisions": []}
+
+    msg_c1 = build_messages(trace, case, "C1", "Prompt C1")
+    user_c1 = msg_c1[1]["content"]
+    assert "(nenhum: o gabarito diz que o corpus não responde)" in user_c1
+
+
+def test_build_messages_c1_reads_expected_from_gabarito():
+    from evals.judge import build_messages
+
+    trace = {"trace_id": "c01-aaaa1111", "events": [], "final_answer": "Resp."}
+    case = {
+        "case_id": "c01",
+        "gabarito": {
+            "expected_provisions": ["LC214.art14"],
+            "answer_exists": "sim",
+            "reference_date": "2027-01-01",
+        },
+    }
+
+    msg_c1 = build_messages(trace, case, "C1", "Prompt C1")
+    user_c1 = msg_c1[1]["content"]
+    assert "LC214.art14" in user_c1
+
+
+def test_criteria_for_trace_includes_c1_when_citation_is_prose():
+    from evals.judge import criteria_for_trace
+
+    case = {
+        "hypothesis": ["H4"],
+        "reference_date": "2027-01-01",
+        "answer_exists": "sim",
+        "expected_provisions": ["LC214.art14"],
+    }
+    trace = {
+        "events": [],
+        "final_answer": "Conforme a LC 214/2025, art. 14, vale desde 2027-01-01.",
+    }
+    crit = criteria_for_trace(trace, case)
+    assert "C1" in crit
+
+
+def test_criteria_for_trace_excludes_c1_when_answer_cites_ids():
+    from evals.judge import criteria_for_trace
+
+    case = {
+        "hypothesis": ["H4"],
+        "reference_date": "2027-01-01",
+        "answer_exists": "sim",
+        "expected_provisions": ["LC214.art14"],
+    }
+    trace = {
+        "events": [{"tool": "mcp__taxlaw__obter_dispositivo", "result_raw": {"id": "LC214.art14"}}],
+        "final_answer": "Vale desde 2027-01-01 (LC214.art14).",
+    }
+    crit = criteria_for_trace(trace, case)
+    assert "C1" not in crit
+
+
+def test_criteria_for_trace_excludes_c1_when_answer_cites_nothing():
+    from evals.judge import criteria_for_trace
+
+    case = {
+        "hypothesis": ["H4"],
+        "reference_date": "2027-01-01",
+        "answer_exists": "sim",
+        "expected_provisions": ["LC214.art14"],
+    }
+    trace = {
+        "events": [],
+        "final_answer": "Vale desde 2027.",
+    }
+    crit = criteria_for_trace(trace, case)
+    assert "C1" not in crit
+
+
 def test_criteria_for_trace_excludes_c4_when_not_h13():
     from evals.judge import criteria_for_trace
 
@@ -222,6 +319,33 @@ def test_judge_trace_raises_error_on_missing_or_empty_prompt(tmp_path):
     with pytest.raises(ValueError) as exc:
         judge_trace(trace, case, ["C3"], client=client, model="google/gemini-3.8-flash", ledger=ledger, guard=guard, prompts={"C3": "   \n"})
     assert "prompt ausente ou vazio" in str(exc.value).lower()
+
+
+def test_judge_trace_raises_error_when_c1_prompt_is_missing(tmp_path):
+    from evals.budget import BudgetGuard
+    from evals.judge import judge_trace
+    from evals.ledger import Ledger
+
+    client = FakeClient()
+    guard = BudgetGuard(10.0)
+    ledger = Ledger(tmp_path / "ledger.jsonl")
+    trace = {
+        "trace_id": "c01-aaaa1111",
+        "events": [],
+        "final_answer": "Conforme o art. 14, vale a partir de 2027.",
+    }
+    case = {
+        "case_id": "c01",
+        "hypothesis": ["H4"],
+        "reference_date": "2027-01-01",
+        "answer_exists": "sim",
+        "expected_provisions": ["LC214.art14"],
+    }
+    prompts = {"C2": "Prompt C2", "C3": "Prompt C3", "C4": "Prompt C4"}
+
+    with pytest.raises(ValueError) as exc:
+        judge_trace(trace, case, client=client, model="google/gemini-3.8-flash", ledger=ledger, guard=guard, prompts=prompts)
+    assert "C1" in str(exc.value)
 
 
 def test_judge_trace_requires_non_empty_version(tmp_path):
@@ -371,6 +495,42 @@ def test_judgment_file_format_accepted_by_consistency_check(tmp_path):
     assert not problemas
     assert "c01-aaaa1111" in juizos
     assert juizos["c01-aaaa1111"] == {"C3": "pass"}
+
+
+def test_judgment_file_format_accepted_by_consistency_check_with_c1(tmp_path):
+    from evals.budget import BudgetGuard
+    from evals.consistency import _check_juizos
+    from evals.judge import judge_trace, write_judgment
+    from evals.ledger import Ledger
+
+    client = FakeClient(default_text='{"justification": "Citação com lastro", "verdict": "pass"}')
+    guard = BudgetGuard(10.0)
+    ledger = Ledger(tmp_path / "ledger.jsonl")
+
+    trace = {
+        "trace_id": "c01-aaaa1111",
+        "events": [],
+        "final_answer": "Conforme a LC 214/2025, art. 14, vale desde 2027-01-01.",
+    }
+    case = {
+        "case_id": "c01",
+        "hypothesis": ["H4"],
+        "reference_date": "2027-01-01",
+        "answer_exists": "sim",
+        "expected_provisions": ["LC214.art14"],
+    }
+    prompts = {"C1": "Julgue C1", "C2": "Julgue C2", "C3": "Julgue C3"}
+
+    res = judge_trace(trace, case, client=client, model="google/gemini-3.8-flash", ledger=ledger, guard=guard, prompts=prompts)
+    assert "C1" in res["verdicts"]
+    write_judgment(res, tmp_path / "judgments")
+
+    problemas = []
+    juizos = _check_juizos(tmp_path, problemas)
+    assert not problemas
+    assert "c01-aaaa1111" in juizos
+    assert "C1" in juizos["c01-aaaa1111"]
+    assert juizos["c01-aaaa1111"]["C1"] == "pass"
 
 
 def test_ledger_records_one_line_per_model_call(tmp_path):

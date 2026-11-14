@@ -131,13 +131,15 @@ def run_case(case: dict, *, model: str, server: str, workdir: Path, p2_tag: str,
     nome = _server_name(server)
     prompt, ids = build_prompt(case, rng)
     argv = build_argv(model, server=server, max_budget_usd=max_budget_usd,
-                      mcp_config=workdir / MCP_CONFIG_NAME)
+                      mcp_config=(workdir / MCP_CONFIG_NAME).resolve())
     extra_errors: list[str] = []
     try:
         proc = run(argv, input=prompt, capture_output=True, text=True, cwd=workdir,
                    timeout=timeout_s)
         saida, codigo = proc.stdout or "", proc.returncode
+        stderr = (proc.stderr or "").strip()
     except subprocess.TimeoutExpired as e:
+        stderr = ""
         saida = e.stdout or ""
         if isinstance(saida, bytes):
             saida = saida.decode("utf-8", errors="replace")
@@ -153,6 +155,9 @@ def run_case(case: dict, *, model: str, server: str, workdir: Path, p2_tag: str,
                          allowed_servers={nome}, synthetic_ids=ids or None)
     if codigo not in (0, None):
         extra_errors.append(f"claude terminou com codigo de saida {codigo}")
+        if stderr:
+            # So o fim: e o que diz o motivo, e o stderr do claude nao traz chaves.
+            extra_errors.append(f"stderr do claude: {stderr[-300:]}")
     if extra_errors:
         trace["errors"] += extra_errors
         if trace["status"] == "ok":

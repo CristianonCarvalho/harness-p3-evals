@@ -303,3 +303,55 @@ def test_limit_is_not_retried(tmp_path):
     run = Sequence(["\n".join(linhas[:-1] + [json.dumps(res)]), STREAM_OK])
     r = _retry(tmp_path, run)
     assert len(run.calls) == 1 and r.status == "estourou_limite" and not r.investigate
+
+
+def test_relative_workdir_still_gives_claude_an_absolute_mcp_config(tmp_path, monkeypatch):
+    # Achado da rodada de 2026-11-14: com workdir relativo, o --mcp-config relativo era
+    # lido a partir do cwd=workdir, nao existia, e o claude saia sem init em todos os casos.
+    from evals.runner import MCP_CONFIG_NAME, run_case
+    from evals.budget import BudgetGuard
+    import random as _random
+    import subprocess as _sp
+    p2 = tmp_path / "p2"
+    (p2 / ".claude" / "skills" / "s").mkdir(parents=True)
+    (p2 / ".claude" / "settings.json").write_text("{}")
+    (p2 / "corpus").mkdir()
+    (p2 / "corpus" / "dispositivos.json").write_text("{}")
+    (p2 / ".mcp.json").write_text('{"mcpServers": {"taxlaw": {"type": "stdio", "command": "uv"}}}')
+    from evals.runner import prepare_workdir
+    monkeypatch.chdir(tmp_path)
+    workdir = prepare_workdir(p2, Path("wd"), with_skill=True, server="local")
+    chamadas = []
+
+    def run(argv, **kw):
+        chamadas.append((argv, kw))
+        return _sp.CompletedProcess(argv, 1, "", "falhou")
+
+    case = {"case_id": "c01", "question": "q?", "gabarito": {"reference_date": "2026-11-11"}}
+    run_case(case, model="m", server="local", workdir=workdir, p2_tag="t",
+             traces_dir=tmp_path / "tr", guard=BudgetGuard(1), max_budget_usd=0.1,
+             rng=_random.Random(1), run=run)
+    argv, kw = chamadas[0]
+    cfg = Path(argv[argv.index("--mcp-config") + 1])
+    assert cfg.is_absolute() and cfg.name == MCP_CONFIG_NAME and cfg.exists()
+
+
+def test_stderr_of_a_failed_claude_goes_to_the_trace_errors(tmp_path):
+    import json as _json
+    import random as _random
+    import subprocess as _sp
+    from evals.budget import BudgetGuard
+    from evals.runner import prepare_workdir, run_case
+    p2 = tmp_path / "p2"
+    (p2 / ".claude").mkdir(parents=True)
+    (p2 / "corpus").mkdir()
+    (p2 / "corpus" / "dispositivos.json").write_text("{}")
+    (p2 / ".mcp.json").write_text('{"mcpServers": {"taxlaw": {"type": "stdio", "command": "uv"}}}')
+    wd = prepare_workdir(p2, tmp_path / "wd", with_skill=False, server="local")
+    run = lambda argv, **kw: _sp.CompletedProcess(argv, 1, "", "Error: arquivo de config nao encontrado\n")
+    case = {"case_id": "c01", "question": "q?", "gabarito": {"reference_date": "2026-11-11"}}
+    path = run_case(case, model="m", server="local", workdir=wd, p2_tag="t",
+                    traces_dir=tmp_path / "tr", guard=BudgetGuard(1), max_budget_usd=0.1,
+                    rng=_random.Random(1), run=run)
+    erros = _json.loads(path.read_text())["errors"]
+    assert any("arquivo de config nao encontrado" in e for e in erros)

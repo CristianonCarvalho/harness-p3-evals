@@ -169,7 +169,7 @@ def test_run_case_writes_a_valid_trace_and_charges_the_guard(tmp_path):
     t = load_trace(path)
     assert validate_trace(t) == [] and t["status"] == "ok", t["errors"]
     assert t["conditions"] == {"skill": True, "hook": True, "server": "local",
-                               "p2_tag": "step-16",
+                               "p2_tag": "step-16", "effort": None,
                                "corpus_version": runner.corpus_version(tmp_path / "wd")}
     assert guard.spent == pytest.approx(0.00566555)
     argv, kw = run.calls[0]
@@ -355,3 +355,19 @@ def test_stderr_of_a_failed_claude_goes_to_the_trace_errors(tmp_path):
                     rng=_random.Random(1), run=run)
     erros = _json.loads(path.read_text())["errors"]
     assert any("arquivo de config nao encontrado" in e for e in erros)
+
+
+def test_effort_goes_to_claude_only_when_given(tmp_path):
+    sem = build_argv("m", server="local", max_budget_usd=0.2, mcp_config=tmp_path / "m.json")
+    assert "--effort" not in sem
+    com = build_argv("m", server="local", max_budget_usd=0.2, mcp_config=tmp_path / "m.json",
+                     effort="low")
+    assert com[com.index("--effort") + 1] == "low"
+    # --effort antes de --allowedTools: o que vem depois dele e lista de ferramentas
+    assert com.index("--effort") < com.index("--allowedTools")
+
+
+def test_invalid_effort_is_refused(tmp_path):
+    with pytest.raises(ValueError, match="effort"):
+        build_argv("m", server="local", max_budget_usd=0.2, mcp_config=tmp_path / "m.json",
+                   effort="turbo")

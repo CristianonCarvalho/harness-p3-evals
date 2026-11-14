@@ -67,7 +67,8 @@ def run_round(cases: list[dict], *, conditions: list[str], model: str, p2_dir: P
               p2_tag: str, out_dir: Path, workdirs_dir: Path, budget_usd: float,
               per_case_usd: float, seed: int, run: Callable = subprocess.run,
               prepare: Callable = prepare_workdir, round_id: str | None = None,
-              progress: Callable[[str, str, str, float], None] | None = None) -> dict:
+              progress: Callable[[str, str, str, float], None] | None = None,
+              effort: str | None = None) -> dict:
     """Roda a rodada e grava `_round.json` em out_dir/<round_id>/. Devolve o mesmo dict."""
     _validar_condicoes(conditions)
     if "remoto" in conditions:
@@ -97,7 +98,7 @@ def run_round(cases: list[dict], *, conditions: list[str], model: str, p2_dir: P
             resultado = run_with_retries(
                 caso, model=model, server=CONDICOES[cond]["server"], workdir=workdirs[cond],
                 p2_tag=p2_tag, traces_dir=pasta, guard=guard, max_budget_usd=per_case_usd,
-                rng=rng, run=run)
+                rng=rng, run=run, effort=effort)
             status, investigate = resultado.status, resultado.investigate
         except BudgetExceeded as exc:
             # O trace do caso que estourou o teto e gravado antes da excecao.
@@ -115,6 +116,7 @@ def run_round(cases: list[dict], *, conditions: list[str], model: str, p2_dir: P
 
     resumo = {"round_id": rid, "model": model, "p2_tag": p2_tag, "conditions": list(conditions),
               "budget_usd": budget_usd, "per_case_usd": per_case_usd, "seed": seed,
+              "effort": effort,
               "spent_usd": round(guard.spent, 4), "stopped": stopped, "runs": runs}
     (pasta_rodada / "_round.json").write_text(
         json.dumps(resumo, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -134,6 +136,7 @@ def _montar_parser() -> ArgumentParser:
     p.add_argument("--out-dir", type=Path, default=Path("traces/rounds"))
     p.add_argument("--workdirs-dir", type=Path, default=Path("workdirs"))
     p.add_argument("--seed", type=int, default=SEED_PADRAO)
+    p.add_argument("--effort", choices=["low", "medium", "high", "xhigh", "max"], default=None)
     p.add_argument("--round-id")
     p.add_argument("--dry-run", action="store_true")
     return p
@@ -174,7 +177,7 @@ def main(argv: list[str] | None = None, *, run: Callable = subprocess.run,
         resumo = run_round(
             casos, conditions=condicoes, model=args.model, p2_dir=args.p2_dir,
             p2_tag=args.p2_tag, out_dir=args.out_dir, workdirs_dir=args.workdirs_dir,
-            budget_usd=args.budget_usd, per_case_usd=args.per_case_usd, seed=args.seed,
+            budget_usd=args.budget_usd, per_case_usd=args.per_case_usd, seed=args.seed, effort=args.effort,
             run=run, prepare=prepare, round_id=args.round_id, progress=imprimir)
     except RemoteNotConfigured as exc:
         print(f"erro: {exc}", file=sys.stderr)

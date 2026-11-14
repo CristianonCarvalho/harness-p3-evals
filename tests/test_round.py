@@ -203,7 +203,7 @@ def test_budget_exceeded_stops_and_the_summary_records_it(tmp_path):
 def test_summary_json_has_the_agreed_content(tmp_path):
     resumo = _rodada(tmp_path, CASOS[:2], budget_usd=1.0, per_case_usd=0.2, seed=7)
     assert set(resumo) == {"round_id", "model", "p2_tag", "conditions", "budget_usd",
-                           "per_case_usd", "seed", "spent_usd", "stopped", "runs"}
+                           "per_case_usd", "seed", "spent_usd", "stopped", "runs", "effort"}
     assert resumo["round_id"] == "r1" and resumo["model"] == "claude-haiku-5-5"
     assert resumo["p2_tag"] == "step-16" and resumo["conditions"] == ["com_skill"]
     assert resumo["budget_usd"] == 1.0 and resumo["per_case_usd"] == 0.2 and resumo["seed"] == 7
@@ -311,3 +311,19 @@ def test_same_seed_gives_the_same_synthetic_numbers(tmp_path):
     pergunta_a = run_a.calls[0][1]["input"]
     assert "{CPF}" not in pergunta_a
     assert pergunta_a == run_b.calls[0][1]["input"]
+
+
+def test_effort_reaches_claude_and_the_trace_and_the_summary(tmp_path):
+    run = FakeRun()
+    resumo = _rodada(tmp_path, [_caso("c01")], run=run, effort="low")
+    argv = run.calls[0][0]
+    assert argv[argv.index("--effort") + 1] == "low"
+    trace = json.loads(next((tmp_path / "rounds" / "r1" / "com_skill").glob("*.json")).read_text())
+    assert trace["conditions"]["effort"] == "low"
+    assert resumo["effort"] == "low"
+
+
+def test_without_effort_the_trace_says_default(tmp_path):
+    _rodada(tmp_path, [_caso("c01")])
+    trace = json.loads(next((tmp_path / "rounds" / "r1" / "com_skill").glob("*.json")).read_text())
+    assert trace["conditions"]["effort"] is None

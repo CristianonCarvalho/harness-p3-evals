@@ -53,7 +53,13 @@ def p2_tools(server: str) -> list[str]:
     return [f"mcp__{nome}__buscar_dispositivos", f"mcp__{nome}__obter_dispositivo"]
 
 
-def build_argv(model: str, *, server: str, max_budget_usd: float, mcp_config: Path) -> list[str]:
+EFFORTS = ("low", "medium", "high", "xhigh", "max")
+
+
+def build_argv(model: str, *, server: str, max_budget_usd: float, mcp_config: Path,
+               effort: str | None = None) -> list[str]:
+    if effort is not None and effort not in EFFORTS:
+        raise ValueError(f"effort invalido: {effort!r} (use {', '.join(EFFORTS)})")
     # --include-hook-events: o trace registra se o hook do P2 rodou, em vez de supor.
     return ["claude", "-p", "--output-format", "stream-json", "--verbose",
             "--include-hook-events",
@@ -61,6 +67,7 @@ def build_argv(model: str, *, server: str, max_budget_usd: float, mcp_config: Pa
             "--no-session-persistence", "--setting-sources", "project",
             "--strict-mcp-config", "--mcp-config", str(mcp_config),
             "--tools", ",".join(BUILTIN_TOOLS),
+            *(["--effort", effort] if effort else []),
             "--allowedTools", *p2_tools(server)]
 
 
@@ -125,13 +132,13 @@ def _check_remote_env(server: str) -> None:
 def run_case(case: dict, *, model: str, server: str, workdir: Path, p2_tag: str,
              traces_dir: Path, guard: BudgetGuard, max_budget_usd: float,
              rng: random.Random, run: Callable = subprocess.run,
-             timeout_s: int = DEFAULT_TIMEOUT_S) -> Path:
+             timeout_s: int = DEFAULT_TIMEOUT_S, effort: str | None = None) -> Path:
     """Roda um caso, grava o trace e cobra o custo. Levanta BudgetExceeded depois de gravar."""
     _check_remote_env(server)
     nome = _server_name(server)
     prompt, ids = build_prompt(case, rng)
     argv = build_argv(model, server=server, max_budget_usd=max_budget_usd,
-                      mcp_config=(workdir / MCP_CONFIG_NAME).resolve())
+                      mcp_config=(workdir / MCP_CONFIG_NAME).resolve(), effort=effort)
     extra_errors: list[str] = []
     try:
         proc = run(argv, input=prompt, capture_output=True, text=True, cwd=workdir,
@@ -147,7 +154,7 @@ def run_case(case: dict, *, model: str, server: str, workdir: Path, p2_tag: str,
         extra_errors.append(f"tempo maximo de {timeout_s} s atingido")
     conditions = {"skill": (workdir / ".claude" / "skills").exists(),
                   "hook": server == "local" and (workdir / ".claude" / "settings.json").exists(),
-                  "server": server, "p2_tag": p2_tag,
+                  "server": server, "p2_tag": p2_tag, "effort": effort,
                   "corpus_version": corpus_version(workdir)}
     trace = parse_stream(saida.splitlines(), case_id=case["case_id"], question=prompt,
                          conditions=conditions, trace_id=new_trace_id(case["case_id"]),

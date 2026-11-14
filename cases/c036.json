@@ -1,0 +1,25 @@
+{
+  "case_id": "c036",
+  "question": "Em qual ano começa a redução gradual do ICMS e do ISS para a entrada do IBS?",
+  "hypothesis": [
+    "H4"
+  ],
+  "split": "desenvolvimento",
+  "subsets": [],
+  "origin": "human_rewritten",
+  "source_n": "36",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "ADCT.art128",
+      "ADCT.art128.incI"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c036.v1.json",
+    "note": ""
+  }
+}

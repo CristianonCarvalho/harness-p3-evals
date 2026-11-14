@@ -1,0 +1,24 @@
+{
+  "case_id": "c043",
+  "question": "Quais produtos compõem a cesta básica nacional com alíquota zero?",
+  "hypothesis": [
+    "H5"
+  ],
+  "split": "desenvolvimento",
+  "subsets": [],
+  "origin": "ai_kept",
+  "source_n": "43",
+  "gabarito": {
+    "answer_exists": "parcial",
+    "expected_provisions": [
+      "LC214.art125"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c043.v1.json",
+    "note": ""
+  }
+}

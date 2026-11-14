@@ -1,0 +1,12 @@
+{
+  "case_id": "c054",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "nao",
+  "expected_provisions": [],
+  "reference_date": "2026-11-13",
+  "quotes": [],
+  "justification": "O corpus não contém uma versão do art. 156-A da Constituição com efeitos vigentes em 2022. Todos os dispositivos desse artigo aparecem com efeitos a partir de 2023-12-21, de modo que não respondem ao que constava no referido artigo no ano de 2022. Portanto, com base apenas no corpus, não é possível responder à pergunta.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

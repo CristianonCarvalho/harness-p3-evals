@@ -1,0 +1,12 @@
+{
+  "case_id": "c073",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "nao",
+  "expected_provisions": [],
+  "reference_date": "2026-11-13",
+  "quotes": [],
+  "justification": "O corpus não contém o art. 161, I, nem qualquer dispositivo que trate especificamente da regra sobre valor adicionado e de sua continuidade em 2033. Assim, não há base normativa no corpus para responder à pergunta.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

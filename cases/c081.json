@@ -1,0 +1,27 @@
+{
+  "case_id": "c081",
+  "question": "Como fica a cesta básica em 2026 e depois de 2033?",
+  "hypothesis": [
+    "H11"
+  ],
+  "split": "teste",
+  "subsets": [
+    "sem_skill"
+  ],
+  "origin": "ai_kept",
+  "source_n": "81",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "EC132.art8.parunico",
+      "LC214.art125"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c081.v1.json",
+    "note": ""
+  }
+}

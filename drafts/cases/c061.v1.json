@@ -1,0 +1,39 @@
+{
+  "case_id": "c061",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "parcial",
+  "expected_provisions": [
+    "CF.art146.incIII.alid",
+    "CF.art146.par2",
+    "CF.art146.par3",
+    "CF.art146.par3.incI",
+    "CF.art146.par3.incII"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "CF.art146.incIII.alid",
+      "text": "d) definição de tratamento diferenciado e favorecido para as microempresas e para as empresas de pequeno porte, inclusive regimes especiais ou simplificados no caso dos impostos previstos nos arts. 155, II, e 156-A, das contribuições sociais previstas no art. 195, I e V, e § 12 e da contribuição a que se refere o art. 239."
+    },
+    {
+      "id": "CF.art146.par2",
+      "text": "§ 2º É facultado ao optante pelo regime único de que trata o § 1º apurar e recolher os tributos previstos nos arts. 156-A e 195, V, nos termos estabelecidos nesses artigos, hipótese em que as parcelas a eles relativas não serão cobradas pelo regime único."
+    },
+    {
+      "id": "CF.art146.par3",
+      "text": "§ 3º Na hipótese de o recolhimento dos tributos previstos nos arts. 156-A e 195, V, ser realizado por meio do regime único de que trata o § 1º, enquanto perdurar a opção:"
+    },
+    {
+      "id": "CF.art146.par3.incI",
+      "text": "I - não será permitida a apropriação de créditos dos tributos previstos nos arts. 156-A e 195, V, pelo contribuinte optante pelo regime único; e"
+    },
+    {
+      "id": "CF.art146.par3.incII",
+      "text": "II - será permitida a apropriação de créditos dos tributos previstos nos arts. 156-A e 195, V, pelo adquirente não optante pelo regime único de que trata o § 1º de bens materiais ou imateriais, inclusive direitos, e de serviços do optante, em montante equivalente ao cobrado por meio do regime único."
+    }
+  ],
+  "justification": "Na data de referência, está vigente a redação do art. 146, III, d, com efeitos até 2026-12-31, que autoriza tratamento diferenciado e favorecido para microempresas e empresas de pequeno porte, inclusive regimes especiais ou simplificados para o IBS e a CBS. O § 2º faculta ao optante pelo regime único apurar e recolher IBS e CBS pelas regras gerais, caso em que tais parcelas não são cobradas pelo regime único. O § 3º, I e II, estabelece que, se o recolhimento for pelo regime único, o optante não apropria créditos, mas o adquirente não optante pode apropriar crédito equivalente ao cobrado no regime único. As versões do art. 146, III, d, com efeitos a partir de 2027 e de 2033, não alcançam a data de referência, de modo que o corpus só permite responder à parte relativa a 2026.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

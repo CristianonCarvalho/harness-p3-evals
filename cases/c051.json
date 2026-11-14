@@ -1,0 +1,22 @@
+{
+  "case_id": "c051",
+  "question": "Qual era o texto do art. 195, § 17, antes da EC 132/2023?",
+  "hypothesis": [
+    "H6"
+  ],
+  "split": "teste",
+  "subsets": [],
+  "origin": "ai_kept",
+  "source_n": "51",
+  "gabarito": {
+    "answer_exists": "nao",
+    "expected_provisions": [],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c051.v1.json",
+    "note": ""
+  }
+}

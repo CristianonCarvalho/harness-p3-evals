@@ -1,0 +1,12 @@
+{
+  "case_id": "c078",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "nao",
+  "expected_provisions": [],
+  "reference_date": "2026-11-13",
+  "quotes": [],
+  "justification": "O corpus disponibiliza apenas os incisos II e III do § 2º do art. 198 da Constituição Federal, ambos com efeitos desde 2023-12-21 e, portanto, vigentes na data de referência. Não há, porém, o texto do caput desse § 2º. Assim, não é possível responder qual é o caput do § 2º do art. 198 com base exclusivamente no corpus.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

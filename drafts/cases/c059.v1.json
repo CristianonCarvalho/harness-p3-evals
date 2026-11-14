@@ -1,0 +1,24 @@
+{
+  "case_id": "c059",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "ADCT.art92-B.par7",
+    "ADCT.art92-B.par6"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "ADCT.art92-B.par7",
+      "text": "§ 7º O Fundo de que trata o § 6º será integrado pelos Estados onde estão localizadas as áreas de livre comércio de que trata ocapute observará, no que couber, o disposto no § 3º, I e II, sendo, quanto a este inciso, considerados os respectivos Estados, e no § 4º."
+    },
+    {
+      "id": "ADCT.art92-B.par6",
+      "text": "§ 6º Lei complementar instituirá Fundo de Desenvolvimento Sustentável dos Estados da Amazônia Ocidental e do Amapá, que será constituído com recursos da União e por ela gerido, com a efetiva participação desses Estados na definição das políticas, com o objetivo de fomentar o desenvolvimento e a diversificação de suas atividades econômicas."
+    }
+  ],
+  "justification": "O § 7º não cria o fundo; ele disciplina a integração do Fundo de que trata o § 6º e a observância, no que couber, dos §§ 3º, I e II, e 4º. Assim, para que a regra do § 7º tenha objeto e produza efeitos, é necessária a lei complementar prevista no § 6º, que institua o Fundo de Desenvolvimento Sustentável dos Estados da Amazônia Ocidental e do Amapá. Os dispositivos estão com efeitos desde 2023-12-21, alcançando a data de referência.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

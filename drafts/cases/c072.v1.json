@@ -1,0 +1,29 @@
+{
+  "case_id": "c072",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "EC132.art22",
+    "EC132.art22.incII",
+    "EC132.art22.incII.alib"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "EC132.art22",
+      "text": "Art. 22. Revogam-se:"
+    },
+    {
+      "id": "EC132.art22.incII",
+      "text": "II - em 2033:"
+    },
+    {
+      "id": "EC132.art22.incII.alib",
+      "text": "b) os arts. 80, II, 82, § 2º, e 83 do Ato das Disposições Constitucionais Transitórias."
+    }
+  ],
+  "justification": "O art. 22 da EC 132/2023 determina que se revogam, em 2033, os dispositivos que indica. Entre eles, a alínea \"b\" do inciso II inclui expressamente o art. 82, § 2º, do ADCT. Portanto, segundo o corpus, o § 2º do art. 82 do ADCT não continuará valendo em 2033, pois será revogado nessa data.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

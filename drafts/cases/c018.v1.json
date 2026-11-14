@@ -1,0 +1,24 @@
+{
+  "case_id": "c018",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "CF.art156-A",
+    "CF.art195.incV"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "CF.art156-A",
+      "text": "Art. 156-A. Lei complementar instituirá imposto sobre bens e serviços de competência compartilhada entre Estados, Distrito Federal e Municípios."
+    },
+    {
+      "id": "CF.art195.incV",
+      "text": "V - sobre bens e serviços, nos termos de lei complementar."
+    }
+  ],
+  "justification": "O corpus identifica o imposto sobre bens e serviços, previsto no art. 156-A da Constituição Federal, e a contribuição sobre bens e serviços, prevista no art. 195, V. Esses são os dois tributos que compõem o sistema dual indicado na pergunta. A LC 214/2025 refere-se a eles como IBS e CBS.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

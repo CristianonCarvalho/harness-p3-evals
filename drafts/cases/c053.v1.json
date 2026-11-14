@@ -1,0 +1,29 @@
+{
+  "case_id": "c053",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "CF.art153.incVIII",
+    "ADCT.art126",
+    "ADCT.art126.incI.alib"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "CF.art153.incVIII",
+      "text": "VIII - produção, extração, comercialização ou importação de bens e serviços prejudiciais à saúde ou ao meio ambiente, nos termos de lei complementar."
+    },
+    {
+      "id": "ADCT.art126",
+      "text": "Art. 126. A partir de 2027:"
+    },
+    {
+      "id": "ADCT.art126.incI.alib",
+      "text": "b) o imposto previsto no art. 153, VIII, da Constituição Federal;"
+    }
+  ],
+  "justification": "O corpus indica que o imposto previsto no art. 153, VIII, da Constituição Federal só será cobrado a partir de 2027, conforme o art. 126 do ADCT. Além disso, o dispositivo constitucional que o prevê tem efeitos a partir de 21/12/2023. Portanto, em 2020 o Imposto Seletivo ainda não existia.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

@@ -1,0 +1,19 @@
+{
+  "case_id": "c068",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "parcial",
+  "expected_provisions": [
+    "ADCT.art104.incIV"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "ADCT.art104.incIV",
+      "text": "os Estados e o Comitê Gestor do Imposto sobre Bens e Serviços reterão os repasses previstos, respectivamente, nos §§ 1º e 2º do art. 158 da Constituição Federal e os depositarão na conta especial referida no art. 101 deste Ato das Disposições Constitucionais Transitórias, para utilização como nele previsto."
+    }
+  ],
+  "justification": "Na data de referência de 2026-11-13, está vigente a redação do art. 104, IV, cujos efeitos vão até 31/12/2032, que prevê a retenção pelos Estados e pelo Comitê Gestor dos repasses dos §§ 1º e 2º do art. 158. A redação que a partir de 2033 atribui a retenção apenas ao Comitê Gestor tem efeitos iniciados em 2033-01-01 e, pela regra temporal, não alcança a data de referência. Assim, o corpus confirma o regime atual, mas não permite responder integralmente sobre a mudança em 2033 nessa data.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

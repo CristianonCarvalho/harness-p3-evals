@@ -1,0 +1,29 @@
+{
+  "case_id": "c083",
+  "question": "Qual a diferença entre a redução de 60% e a de 30% para serviços profissionais?",
+  "hypothesis": [
+    "H11"
+  ],
+  "split": "teste",
+  "subsets": [
+    "sem_skill"
+  ],
+  "origin": "ai_kept",
+  "source_n": "83",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "EC132.art9.par1",
+      "EC132.art9.par12",
+      "LC214.art127",
+      "LC214.art128"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c083.v1.json",
+    "note": ""
+  }
+}

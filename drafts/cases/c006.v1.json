@@ -1,0 +1,12 @@
+{
+  "case_id": "c006",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "nao",
+  "expected_provisions": [],
+  "reference_date": "2026-11-13",
+  "quotes": [],
+  "justification": "Não há dispositivo no corpus que trate especificamente da tributação de dividendos. A única menção a distribuição de lucros é sobre requisitos de redução de alíquotas para serviços profissionais, não sobre a incidência tributária sobre dividendos. Há previsão genérica de projeto de lei que reforme a tributação da renda, mas sem regra sobre dividendos.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

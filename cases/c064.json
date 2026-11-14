@@ -1,0 +1,25 @@
+{
+  "case_id": "c064",
+  "question": "A CBS integra a base do PIS/Cofins até 2026 e depois de 2027?",
+  "hypothesis": [
+    "H8"
+  ],
+  "split": "teste",
+  "subsets": [],
+  "origin": "ai_kept",
+  "source_n": "64",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "CF.art195.par17",
+      "ADCT.art126.incII"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c064.v1.json",
+    "note": ""
+  }
+}

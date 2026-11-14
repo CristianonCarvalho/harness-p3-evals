@@ -1,0 +1,54 @@
+{
+  "case_id": "c099",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "CF.art156-A.par6",
+    "CF.art156-A.par6.incI",
+    "CF.art156-A.par6.incII",
+    "CF.art156-A.par6.incIII",
+    "CF.art156-A.par6.incIV",
+    "CF.art156-A.par6.incV",
+    "CF.art156-A.par6.incVI",
+    "CF.art195.par16"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "CF.art156-A.par6",
+      "text": "§ 6º Lei complementar disporá sobre regimes específicos de tributação para:"
+    },
+    {
+      "id": "CF.art156-A.par6.incI",
+      "text": "I - combustíveis e lubrificantes sobre os quais o imposto incidirá uma única vez, qualquer que seja a sua finalidade, hipótese em que:"
+    },
+    {
+      "id": "CF.art156-A.par6.incII",
+      "text": "II - serviços financeiros, operações com bens imóveis, planos de assistência à saúde e concursos de prognósticos, podendo prever:"
+    },
+    {
+      "id": "CF.art156-A.par6.incIII",
+      "text": "III - sociedades cooperativas, que será optativo, com vistas a assegurar sua competitividade, observados os princípios da livre concorrência e da isonomia tributária, definindo, inclusive:"
+    },
+    {
+      "id": "CF.art156-A.par6.incIV",
+      "text": "IV - serviços de hotelaria, parques de diversão e parques temáticos, agências de viagens e de turismo, bares e restaurantes, atividade esportiva desenvolvida por Sociedade Anônima do Futebol e aviação regional, podendo prever hipóteses de alterações nas alíquotas, nas bases de cálculo e nas regras de creditamento, admitida a não aplicação do disposto no § 1º, V a VIII;"
+    },
+    {
+      "id": "CF.art156-A.par6.incV",
+      "text": "V - operações alcançadas por tratado ou convenção internacional, inclusive referentes a missões diplomáticas, repartições consulares, representações de organismos internacionais e respectivos funcionários acreditados;"
+    },
+    {
+      "id": "CF.art156-A.par6.incVI",
+      "text": "VI - serviços de transporte coletivo de passageiros rodoviário intermunicipal e interestadual, ferroviário e hidroviário, podendo prever hipóteses de alterações nas alíquotas e nas regras de creditamento, admitida a não aplicação do disposto no § 1º, V a VIII."
+    },
+    {
+      "id": "CF.art195.par16",
+      "text": "§ 16. Aplica-se à contribuição prevista no inciso V do caput o disposto no art. 156-A, § 1º, I a VI, VIII, X a XIII, § 3º, § 5º, II a VI e IX, e §§ 6º a 11 e 13."
+    }
+  ],
+  "justification": "O art. 156-A, § 6º, da Constituição, com efeitos desde 2023, elenca os regimes específicos de tributação do IBS. Seus incisos I a VI indicam combustíveis e lubrificantes; serviços financeiros, operações com bens imóveis, planos de assistência à saúde e concursos de prognósticos; sociedades cooperativas; hotelaria, parques, turismo, bares e restaurantes, SAF e aviação regional; operações de tratados ou convenções internacionais; e transporte coletivo de passageiros. O art. 195, § 16, estende à CBS o disposto nos §§ 6º a 11 do art. 156-A, de modo que esses regimes específicos também se aplicam à CBS.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

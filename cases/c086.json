@@ -1,0 +1,30 @@
+{
+  "case_id": "c086",
+  "question": "Qual a regra de transição para as alíquotas do ICMS e do ISS de 2029 a 2032?",
+  "hypothesis": [
+    "H11"
+  ],
+  "split": "desenvolvimento",
+  "subsets": [
+    "sem_skill"
+  ],
+  "origin": "ai_kept",
+  "source_n": "86",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "ADCT.art128",
+      "ADCT.art128.incI",
+      "ADCT.art128.incII",
+      "ADCT.art128.incIII",
+      "ADCT.art128.incIV"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c086.v1.json",
+    "note": ""
+  }
+}

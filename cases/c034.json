@@ -1,0 +1,27 @@
+{
+  "case_id": "c034",
+  "question": "A redução de 60% para serviços de saúde e educação já vale na fase de teste em 2026?",
+  "hypothesis": [
+    "H4"
+  ],
+  "split": "teste",
+  "subsets": [],
+  "origin": "human_rewritten",
+  "source_n": "34",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "ADCT.art125",
+      "LC214.art128",
+      "LC214.art128.incI",
+      "LC214.art128.incII"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c034.v1.json",
+    "note": ""
+  }
+}

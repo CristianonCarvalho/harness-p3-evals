@@ -1,0 +1,29 @@
+{
+  "case_id": "c087",
+  "question": "Sou MEI e meu CNPJ é {CNPJ}; posso pagar IBS e CBS pelo Simples ou fora dele?",
+  "hypothesis": [
+    "H12"
+  ],
+  "split": "desenvolvimento",
+  "subsets": [
+    "remoto"
+  ],
+  "origin": "ai_kept",
+  "source_n": "87",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "CF.art146.par2",
+      "CF.art146.par3",
+      "CF.art146.par3.incI",
+      "CF.art146.par3.incII"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c087.v1.json",
+    "note": ""
+  }
+}

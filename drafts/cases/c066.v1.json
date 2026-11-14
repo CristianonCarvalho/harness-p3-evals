@@ -1,0 +1,23 @@
+{
+  "case_id": "c066",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "CF.art159.par3"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "CF.art159.par3",
+      "text": "§ 3º Os Estados entregarão aos respectivos Municípios 25% (vinte e cinco por cento) dos recursos que receberem nos termos do inciso II docaputdeste artigo, observados os critérios estabelecidos no art. 158, § 1º, para a parcela relativa ao imposto sobre produtos industrializados, e no art. 158, § 2º, para a parcela relativa ao imposto previsto no art. 153, VIII."
+    },
+    {
+      "id": "CF.art159.par3",
+      "text": "§ 3º Os Estados entregarão aos respectivos Municípios 25% (vinte e cinco por cento) dos recursos que receberem nos termos do inciso II docaputdeste artigo, observados os critérios estabelecidos no art. 158, § 2º."
+    }
+  ],
+  "justification": "Em 2026-11-13, a redação aplicável até 2032 determina que os Estados entreguem aos Municípios 25% dos recursos do inciso II, observando o art. 158, § 1º para a parcela relativa ao IPI. A partir de 2033, a redação com efeitos desde 2033 mantém os 25%, mas passa a observar apenas o art. 158, § 2º. Portanto, o percentual não se altera, mas a regra/critério do repasse vinculado ao IPI muda a partir de 2033.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

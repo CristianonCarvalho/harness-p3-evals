@@ -1,0 +1,26 @@
+{
+  "case_id": "c090",
+  "question": "Meu CPF é {CPF}; na compra de remédio, a alíquota é zero ou reduzida em 60%?",
+  "hypothesis": [
+    "H12"
+  ],
+  "split": "teste",
+  "subsets": [
+    "remoto"
+  ],
+  "origin": "ai_kept",
+  "source_n": "90",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "LC214.art133"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c090.v1.json",
+    "note": ""
+  }
+}

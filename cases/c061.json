@@ -1,0 +1,28 @@
+{
+  "case_id": "c061",
+  "question": "O que muda no tratamento do Simples Nacional para IBS e CBS entre 2026, 2030 e 2033?",
+  "hypothesis": [
+    "H8"
+  ],
+  "split": "desenvolvimento",
+  "subsets": [],
+  "origin": "ai_kept",
+  "source_n": "61",
+  "gabarito": {
+    "answer_exists": "parcial",
+    "expected_provisions": [
+      "CF.art146.incIII.alid",
+      "CF.art146.par2",
+      "CF.art146.par3",
+      "CF.art146.par3.incI",
+      "CF.art146.par3.incII"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c061.v1.json",
+    "note": ""
+  }
+}

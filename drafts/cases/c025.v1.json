@@ -1,0 +1,19 @@
+{
+  "case_id": "c025",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "LC214.art130"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "LC214.art130",
+      "text": "Ficam reduzidas em 60% (sessenta por cento) as alíquotas do IBS e da CBS incidentes sobre o fornecimento dos serviços de saúde relacionados no Anexo III desta Lei Complementar"
+    }
+  ],
+  "justification": "O dispositivo aplicável na data de referência reduz em 60% as alíquotas incidentes sobre o fornecimento dos serviços de saúde relacionados no Anexo III da LC 214/2025. Ele nomeia expressamente os tributos alcançados: IBS e CBS. Portanto, a redução de 60% para serviços de saúde vale para esses dois tributos.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

@@ -1,0 +1,12 @@
+{
+  "case_id": "c004",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "nao",
+  "expected_provisions": [],
+  "reference_date": "2026-11-13",
+  "quotes": [],
+  "justification": "O corpus não informa o valor numérico da alíquota padrão do IBS a partir de 2033. Há menções a alíquotas de referência a serem fixadas pelo Senado Federal (ADCT, art. 130) e a alíquotas-padrão fixadas na forma do art. 14 da LC 214/2025 (LC 214/2025, art. 126, § 4º), mas esse art. 14 não está no corpus e nenhum dispositivo traz o percentual aplicável. Portanto, a pergunta não pode ser respondida com base apenas no corpus.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

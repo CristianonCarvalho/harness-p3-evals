@@ -1,0 +1,24 @@
+{
+  "case_id": "c055",
+  "question": "A exceção do Regime de Tributação Simplificada para remessas internacionais já tem data para valer?",
+  "hypothesis": [
+    "H7"
+  ],
+  "split": "teste",
+  "subsets": [],
+  "origin": "ai_kept",
+  "source_n": "55",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "LC214.art126.par6"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c055.v1.json",
+    "note": ""
+  }
+}

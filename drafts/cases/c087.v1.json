@@ -1,0 +1,34 @@
+{
+  "case_id": "c087",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "CF.art146.par2",
+    "CF.art146.par3",
+    "CF.art146.par3.incI",
+    "CF.art146.par3.incII"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "CF.art146.par2",
+      "text": "§ 2º É facultado ao optante pelo regime único de que trata o § 1º apurar e recolher os tributos previstos nos arts. 156-A e 195, V, nos termos estabelecidos nesses artigos, hipótese em que as parcelas a eles relativas não serão cobradas pelo regime único."
+    },
+    {
+      "id": "CF.art146.par3",
+      "text": "§ 3º Na hipótese de o recolhimento dos tributos previstos nos arts. 156-A e 195, V, ser realizado por meio do regime único de que trata o § 1º, enquanto perdurar a opção:"
+    },
+    {
+      "id": "CF.art146.par3.incI",
+      "text": "I - não será permitida a apropriação de créditos dos tributos previstos nos arts. 156-A e 195, V, pelo contribuinte optante pelo regime único; e"
+    },
+    {
+      "id": "CF.art146.par3.incII",
+      "text": "II - será permitida a apropriação de créditos dos tributos previstos nos arts. 156-A e 195, V, pelo adquirente não optante pelo regime único de que trata o § 1º de bens materiais ou imateriais, inclusive direitos, e de serviços do optante, em montante equivalente ao cobrado por meio do regime único."
+    }
+  ],
+  "justification": "O corpus faculta ao optante pelo regime único apurar e recolher o IBS e a CBS nos termos dos arts. 156-A e 195, V, hipótese em que o Simples não cobra essas parcelas. Também prevê o recolhimento por meio do regime único; enquanto perdurar a opção, o optante não apropria créditos, mas o adquirente não optante pode apropriar créditos equivalentes ao cobrado pelo Simples. Portanto, a resposta é sim: há a faculdade de pagar fora do Simples, e o pagamento pelo Simples é a hipótese alternativa prevista.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

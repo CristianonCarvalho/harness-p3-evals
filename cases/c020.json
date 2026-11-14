@@ -1,0 +1,26 @@
+{
+  "case_id": "c020",
+  "question": "A partir de quando a CBS começa a ser cobrada?",
+  "hypothesis": [
+    "H2"
+  ],
+  "split": "desenvolvimento",
+  "subsets": [
+    "sem_skill"
+  ],
+  "origin": "human_rewritten",
+  "source_n": "20",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "ADCT.art125"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c020.v1.json",
+    "note": ""
+  }
+}

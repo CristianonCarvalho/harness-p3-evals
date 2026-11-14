@@ -1,0 +1,34 @@
+{
+  "case_id": "c095",
+  "question": "Quais são todos os critérios para graduar a alíquota do Imposto Seletivo sobre veículos?",
+  "hypothesis": [
+    "H14"
+  ],
+  "split": "teste",
+  "subsets": [],
+  "origin": "ai_kept",
+  "source_n": "95",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "LC214.art419.parunico",
+      "LC214.art419.parunico.incI",
+      "LC214.art419.parunico.incII",
+      "LC214.art419.parunico.incIII",
+      "LC214.art419.parunico.incIV",
+      "LC214.art419.parunico.incV",
+      "LC214.art419.parunico.incVI",
+      "LC214.art419.parunico.incVII",
+      "LC214.art419.parunico.incVIII",
+      "LC214.art419.parunico.incIX",
+      "LC214.art419.parunico.incX"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c095.v1.json",
+    "note": ""
+  }
+}

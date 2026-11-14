@@ -1,0 +1,25 @@
+{
+  "case_id": "c073",
+  "question": "A regra do art. 161, I, sobre valor adicionado continua em 2033?",
+  "hypothesis": [
+    "H9"
+  ],
+  "split": "teste",
+  "subsets": [],
+  "origin": "ai_kept",
+  "source_n": "73",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "CF.art161.incI",
+      "EC132.art22.incII.alia"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "mudar",
+    "draft": "drafts/cases/c073.v1.json",
+    "note": "answer_exists sim, dispositivos CF.art161.incI e EC132.art22.incII.alia (ambos constam do corpus; o art. 22, II, \"a\" da EC 132 revoga expressamente o art. 161, I a partir de 2033, respondendo que a regra não continua)"
+  }
+}

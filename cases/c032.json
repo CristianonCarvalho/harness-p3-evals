@@ -1,0 +1,29 @@
+{
+  "case_id": "c032",
+  "question": "A partir de que ano a CBS passa a ser cobrada integralmente?",
+  "hypothesis": [
+    "H4"
+  ],
+  "split": "teste",
+  "subsets": [],
+  "origin": "ai_kept",
+  "source_n": "32",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "ADCT.art125",
+      "ADCT.art126",
+      "ADCT.art126.incI",
+      "ADCT.art126.incI.alia",
+      "ADCT.art127",
+      "ADCT.art127.parunico"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c032.v1.json",
+    "note": ""
+  }
+}

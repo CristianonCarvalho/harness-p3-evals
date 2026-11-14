@@ -1,0 +1,26 @@
+{
+  "case_id": "c016",
+  "question": "O que é split payment?",
+  "hypothesis": [
+    "H2"
+  ],
+  "split": "teste",
+  "subsets": [
+    "sem_skill"
+  ],
+  "origin": "ai_kept",
+  "source_n": "16",
+  "gabarito": {
+    "answer_exists": "parcial",
+    "expected_provisions": [
+      "CF.art156-A.par5.incII.alib"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "mudar",
+    "draft": "drafts/cases/c016.v1.json",
+    "note": "answer_exists parcial, dispositivo CF.art156-A.par5.incII.alib (o teste de vocabulário de H2 exige mapear split payment para o recolhimento na liquidação financeira)"
+  }
+}

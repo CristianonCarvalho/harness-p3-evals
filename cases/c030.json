@@ -1,0 +1,27 @@
+{
+  "case_id": "c030",
+  "question": "O cashback de tributos para famílias de baixa renda devolve tanto o IBS quanto a CBS?",
+  "hypothesis": [
+    "H3"
+  ],
+  "split": "teste",
+  "subsets": [],
+  "origin": "human_rewritten",
+  "source_n": "30",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "CF.art156-A.par5.incVIII",
+      "CF.art195.par18",
+      "CF.art156-A.par13",
+      "CF.art195.par16"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c030.v1.json",
+    "note": ""
+  }
+}

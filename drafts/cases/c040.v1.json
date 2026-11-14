@@ -1,0 +1,19 @@
+{
+  "case_id": "c040",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "ADCT.art76-A"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "ADCT.art76-A",
+      "text": "Art. 76-A. São desvinculados de órgão, fundo ou despesa, até 31 de dezembro de 2032, 30% (trinta por cento) das receitas dos Estados e do Distrito Federal relativas a impostos, taxas e multas já instituídos ou que vierem a ser criados até a referida data, seus adicionais e respectivos acréscimos legais, e outras receitas correntes."
+    }
+  ],
+  "justification": "O dispositivo aplicável é o art. 76-A do ADCT, que trata da desvinculação de 30% das receitas dos Estados e do Distrito Federal. Ele fixa expressamente o termo final em 31 de dezembro de 2032. Como a data de referência é 2026-11-13, o dispositivo está vigente e responde à pergunta.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

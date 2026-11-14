@@ -1,0 +1,64 @@
+{
+  "case_id": "c082",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "CF.art156-B",
+    "CF.art156-B.incII",
+    "CF.art156-A.par4.incII",
+    "CF.art158.incIV",
+    "CF.art158.incIV.alib",
+    "CF.art158.par2",
+    "ADCT.art125",
+    "ADCT.art125.par3",
+    "ADCT.art125.par3.incI",
+    "ADCT.art125.par3.incII"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "CF.art156-B",
+      "text": "Os Estados, o Distrito Federal e os Municípios exercerão de forma integrada, exclusivamente por meio do Comitê Gestor do Imposto sobre Bens e Serviços"
+    },
+    {
+      "id": "CF.art156-B.incII",
+      "text": "II - arrecadar o imposto, efetuar as compensações e distribuir o produto da arrecadação entre Estados, Distrito Federal e Municípios;"
+    },
+    {
+      "id": "CF.art156-A.par4.incII",
+      "text": "II - distribuirá o produto da arrecadação do imposto, deduzida a retenção de que trata o inciso I deste parágrafo, ao ente federativo de destino das operações que não tenham gerado creditamento."
+    },
+    {
+      "id": "CF.art158.incIV",
+      "text": "IV - 25% (vinte e cinco por cento):"
+    },
+    {
+      "id": "CF.art158.incIV.alib",
+      "text": "b) do produto da arrecadação do imposto previsto no art. 156-A distribuída aos Estados."
+    },
+    {
+      "id": "CF.art158.par2",
+      "text": "§ 2º As parcelas de receita pertencentes aos Municípios mencionadas no inciso IV, \"b\", serão creditadas conforme os seguintes critérios:"
+    },
+    {
+      "id": "ADCT.art125",
+      "text": "Em 2026, o imposto previsto no art. 156-A será cobrado à alíquota estadual de 0,1% (um décimo por cento)"
+    },
+    {
+      "id": "ADCT.art125.par3",
+      "text": "§ 3º A arrecadação do imposto previsto no art. 156-A da Constituição Federal decorrente do disposto no caput deste artigo não observará as vinculações, repartições e destinações previstas na Constituição Federal, devendo ser aplicada, integral e sucessivamente, para:"
+    },
+    {
+      "id": "ADCT.art125.par3.incI",
+      "text": "I - o financiamento do Comitê Gestor do Imposto sobre Bens e Serviços, nos termos do art. 156-B, § 2º, III, da Constituição Federal;"
+    },
+    {
+      "id": "ADCT.art125.par3.incII",
+      "text": "II - compor o Fundo de Compensação de Benefícios Fiscais ou Financeiro-Fiscais do imposto de que trata o art. 155, II, da Constituição Federal."
+    }
+  ],
+  "justification": "O IBS é administrado exclusivamente pelo Comitê Gestor do IBS, que exerce de forma integrada as competências administrativas dos Estados, do Distrito Federal e dos Municípios (CF, art. 156-B) e, entre elas, arrecadar, compensar e distribuir o produto (CF, art. 156-B, II). Na sistemática permanente, o Comitê distribui o produto, deduzida a retenção, ao ente de destino das operações que não geraram creditamento (CF, art. 156-A, § 4º, II), e 25% da parcela distribuída aos Estados pertence aos Municípios, creditada conforme o § 2º do art. 158 (CF, art. 158, IV, b, e § 2º). Contudo, na data de referência, o IBS é cobrado em 2026 à alíquota estadual de 0,1% (ADCT, art. 125) e essa arrecadação não observa as repartições e destinações constitucionais, sendo aplicada ao financiamento do Comitê e ao Fundo de Compensação (ADCT, art. 125, § 3º, I e II).",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

@@ -1,0 +1,39 @@
+{
+  "case_id": "c015",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "ADCT.art125",
+    "ADCT.art125.par1",
+    "ADCT.art126",
+    "ADCT.art126.incI.alia",
+    "ADCT.art126.incII"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "ADCT.art125",
+      "text": "Em 2026, o imposto previsto no art. 156-A será cobrado à alíquota estadual de 0,1% (um décimo por cento), e a contribuição prevista no art. 195, V, ambos da Constituição Federal, será cobrada à alíquota de 0,9% (nove décimos por cento)."
+    },
+    {
+      "id": "ADCT.art125.par1",
+      "text": "§ 1º O montante recolhido na forma do caput será compensado com o valor devido das contribuições previstas no art. 195, I, \"b\", e IV, e da contribuição para o Programa de Integração Social a que se refere o art. 239, ambos da Constituição Federal."
+    },
+    {
+      "id": "ADCT.art126",
+      "text": "A partir de 2027:"
+    },
+    {
+      "id": "ADCT.art126.incI.alia",
+      "text": "a) a contribuição prevista no art. 195, V, da Constituição Federal;"
+    },
+    {
+      "id": "ADCT.art126.incII",
+      "text": "II - serão extintas as contribuições previstas no art. 195, I, \"b\", e IV, e a contribuição para o Programa de Integração Social de que trata o art. 239, todos da Constituição Federal, desde que instituída a contribuição referida na alínea \"a\" do inciso I;"
+    }
+  ],
+  "justification": "O art. 125 fixa que, em 2026, a contribuição do art. 195, V é cobrada à alíquota de 0,9%, e o § 1º determina que o valor recolhido seja compensado com as contribuições do art. 195, I, \"b\" e IV, e com o PIS do art. 239. O art. 126, II, prevê a extinção dessas contribuições a partir de 2027, condicionada à instituição da nova contribuição referida no inciso I, \"a\". Assim, em 2026 o PIS/Cofins ainda convive com o novo tributo, mas a partir de 2027 é extinto.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

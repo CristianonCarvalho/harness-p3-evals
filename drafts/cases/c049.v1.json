@@ -1,0 +1,12 @@
+{
+  "case_id": "c049",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "nao",
+  "expected_provisions": [],
+  "reference_date": "2026-11-13",
+  "quotes": [],
+  "justification": "O corpus só contém dispositivos com efeitos a partir de 2023-12-21, já na redação posterior à EC 132/2023. Não há, portanto, texto constitucional com efeitos em 2022 nem versão anterior do art. 146 sobre o Simples Nacional. Com base apenas no corpus, não é possível responder o que a Constituição previa em 2022 sobre o tema.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

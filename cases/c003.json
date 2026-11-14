@@ -1,0 +1,22 @@
+{
+  "case_id": "c003",
+  "question": "Quais alimentos compõem a lista do Anexo I da LC 214/2025 com alíquota zero?",
+  "hypothesis": [
+    "H1"
+  ],
+  "split": "teste",
+  "subsets": [],
+  "origin": "human_rewritten",
+  "source_n": "3",
+  "gabarito": {
+    "answer_exists": "nao",
+    "expected_provisions": [],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c003.v1.json",
+    "note": ""
+  }
+}

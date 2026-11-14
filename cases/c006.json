@@ -1,0 +1,22 @@
+{
+  "case_id": "c006",
+  "question": "Como fica a tributação de dividendos com a reforma?",
+  "hypothesis": [
+    "H1"
+  ],
+  "split": "desenvolvimento",
+  "subsets": [],
+  "origin": "ai_kept",
+  "source_n": "6",
+  "gabarito": {
+    "answer_exists": "nao",
+    "expected_provisions": [],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c006.v1.json",
+    "note": ""
+  }
+}

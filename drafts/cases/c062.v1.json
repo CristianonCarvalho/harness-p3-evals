@@ -1,0 +1,23 @@
+{
+  "case_id": "c062",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "CF.art153.par6.incIV"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "CF.art153.par6.incIV",
+      "text": "IV - integrará a base de cálculo dos tributos previstos nos arts. 155, II, 156, III, 156-A e 195, V;"
+    },
+    {
+      "id": "CF.art153.par6.incIV",
+      "text": "IV - integrará a base de cálculo dos tributos previstos nos arts. 156-A e 195, V;"
+    }
+  ],
+  "justification": "Até 31 de dezembro de 2032, o inciso IV prevê que o imposto do art. 153, VIII integra a base de cálculo dos tributos dos arts. 155, II (ICMS), 156, III (ISS), 156-A e 195, V. A partir de 2033, a redação com efeitos iniciados em 2033-01-01 passa a prever integração apenas dos tributos dos arts. 156-A e 195, V, excluindo o ICMS e o ISS. Na data de referência, vigora a primeira redação.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

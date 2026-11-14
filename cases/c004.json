@@ -1,0 +1,23 @@
+{
+  "case_id": "c004",
+  "question": "Qual é a alíquota padrão do IBS a partir de 2033?",
+  "hypothesis": [
+    "H1"
+  ],
+  "split": "teste",
+  "subsets": [],
+  "origin": "ai_kept",
+  "source_n": "4",
+  "doubt": "confirmar se o corpus traz a fixação da alíquota de referência pelo Senado",
+  "gabarito": {
+    "answer_exists": "nao",
+    "expected_provisions": [],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c004.v1.json",
+    "note": ""
+  }
+}

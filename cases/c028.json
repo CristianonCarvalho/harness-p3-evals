@@ -1,0 +1,25 @@
+{
+  "case_id": "c028",
+  "question": "O Imposto Seletivo dá direito a créditos tributários como acontece no IBS?",
+  "hypothesis": [
+    "H3"
+  ],
+  "split": "teste",
+  "subsets": [],
+  "origin": "human_rewritten",
+  "source_n": "28",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "CF.art153.par6.incII",
+      "CF.art156-A.par1.incVIII"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c028.v1.json",
+    "note": ""
+  }
+}

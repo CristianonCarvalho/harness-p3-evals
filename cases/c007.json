@@ -1,0 +1,22 @@
+{
+  "case_id": "c007",
+  "question": "A reforma tributária muda a tabela do Imposto de Renda da pessoa física?",
+  "hypothesis": [
+    "H1"
+  ],
+  "split": "teste",
+  "subsets": [],
+  "origin": "ai_kept",
+  "source_n": "7",
+  "gabarito": {
+    "answer_exists": "nao",
+    "expected_provisions": [],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "mudar",
+    "draft": "drafts/cases/c007.v1.json",
+    "note": "answer_exists nao, sem dispositivos esperados (o art. 18, I da EC 132 apenas prevê envio de projeto de lei sobre renda em 90 dias, sem alterar a tabela do IRPF; em H1 o modelo deve constatar a ausência no corpus)"
+  }
+}

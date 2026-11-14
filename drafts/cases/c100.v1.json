@@ -1,0 +1,59 @@
+{
+  "case_id": "c100",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "LC214.art139",
+    "LC214.art139.incI",
+    "LC214.art139.incII",
+    "LC214.art139.incIII",
+    "LC214.art139.incIV",
+    "LC214.art139.incV",
+    "LC214.art139.incVI",
+    "LC214.art139.incVII",
+    "LC214.art139.incVIII"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "LC214.art139",
+      "text": "Ficam reduzidas em 60% (sessenta por cento) as alíquotas do IBS e da CBS incidentes sobre o fornecimento dos bens e serviços listados no Anexo X desta Lei Complementar, com a especificação das respectivas classificações da NCM/SH e NBS, nos casos relacionados com as seguintes produções nacionais artísticas, culturais, de eventos, jornalísticas e audiovisuais:"
+    },
+    {
+      "id": "LC214.art139.incI",
+      "text": "I - espetáculos teatrais, circenses e de dança;"
+    },
+    {
+      "id": "LC214.art139.incII",
+      "text": "II - shows musicais;"
+    },
+    {
+      "id": "LC214.art139.incIII",
+      "text": "III - desfiles carnavalescos ou folclóricos;"
+    },
+    {
+      "id": "LC214.art139.incIV",
+      "text": "IV - eventos acadêmicos e científicos, como congressos, conferências e simpósios;"
+    },
+    {
+      "id": "LC214.art139.incV",
+      "text": "V - feiras de negócios;"
+    },
+    {
+      "id": "LC214.art139.incVI",
+      "text": "VI - exposições, feiras, galerias e mostras culturais, artísticas e literárias;"
+    },
+    {
+      "id": "LC214.art139.incVII",
+      "text": "VII - programas de auditório ou jornalísticos, filmes, documentários, séries, novelas, entrevistas e clipes musicais; e"
+    },
+    {
+      "id": "LC214.art139.incVIII",
+      "text": "VIII - obras de arte."
+    }
+  ],
+  "justification": "O art. 139 da LC 214/2025 reduz em 60% as alíquotas do IBS e da CBS sobre bens e serviços relacionados a produções nacionais artísticas, culturais, de eventos, jornalísticas e audiovisuais. Seus incisos listam as produções alcançadas: espetáculos teatrais, circenses e de dança; shows musicais; desfiles carnavalescos ou folclóricos; eventos acadêmicos e científicos; feiras de negócios; exposições, feiras, galerias e mostras culturais, artísticas e literárias; programas de auditório ou jornalísticos, filmes, documentários, séries, novelas, entrevistas e clipes musicais; e obras de arte. O dispositivo tem efeitos desde 2026-01-01, alcançando a data de referência.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

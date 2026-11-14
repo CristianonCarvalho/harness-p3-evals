@@ -1,0 +1,25 @@
+{
+  "case_id": "c039",
+  "question": "Até quando os estados podem cobrar o adicional de ICMS para os fundos de combate à pobreza?",
+  "hypothesis": [
+    "H4"
+  ],
+  "split": "desenvolvimento",
+  "subsets": [],
+  "origin": "human_rewritten",
+  "source_n": "39",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "EC132.art22.incII",
+      "EC132.art22.incII.alib"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c039.v1.json",
+    "note": ""
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "case_id": "c058",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "LC214.art422.par5"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "LC214.art422.par5",
+      "text": "As alíquotas do Imposto Seletivo incidentes sobre os produtos previstos nos incisos III a V do § 1º do art. 409 desta Lei Complementar serão fixadas de forma escalonada, de modo a incorporar, a partir de 2029 até 2033, progressivamente, o diferencial entre as alíquotas de ICMS incidentes sobre os produtos fumígenos, as bebidas alcoólicas e as bebidas açucaradas e as alíquotas modais desse imposto."
+    }
+  ],
+  "justification": "O dispositivo prevê que o escalonamento das alíquotas do Imposto Seletivo para fumígenos e bebidas ocorrerá de forma progressiva entre 2029 e 2033. Como a data de referência é 2026-11-13, esse período ainda não começou. Portanto, o escalonamento não está valendo nessa data.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

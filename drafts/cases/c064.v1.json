@@ -1,0 +1,24 @@
+{
+  "case_id": "c064",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "CF.art195.par17",
+    "ADCT.art126.incII"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "CF.art195.par17",
+      "text": "§ 17. A contribuição prevista no inciso V do caput não integrará sua própria base de cálculo nem a dos tributos previstos nos arts. 153, VIII, 156-A e 195, I, \"b\", e IV, e da contribuição para o Programa de Integração Social de que trata o art. 239."
+    },
+    {
+      "id": "ADCT.art126.incII",
+      "text": "II - serão extintas as contribuições previstas no art. 195, I, \"b\", e IV, e a contribuição para o Programa de Integração Social de que trata o art. 239, todos da Constituição Federal, desde que instituída a contribuição referida na alínea \"a\" do inciso I;"
+    }
+  ],
+  "justification": "Em 13/11/2026 está vigente a redação do § 17 do art. 195 da Constituição que expressamente afasta a CBS (contribuição do art. 195, V) da base de cálculo das contribuições do art. 195, I, \"b\" e IV e do PIS do art. 239, que correspondem ao PIS/Cofins. Portanto, até 2026 a CBS não integra a base do PIS/Cofins. A partir de 2027, o art. 126, II, do ADCT determina a extinção dessas mesmas contribuições, de modo que deixa de existir base de PIS/Cofins para a CBS integrar.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

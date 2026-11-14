@@ -1,0 +1,12 @@
+{
+  "case_id": "c056",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "nao",
+  "expected_provisions": [],
+  "reference_date": "2026-11-13",
+  "quotes": [],
+  "justification": "O único dispositivo do corpus que descreve exatamente a redução de 60% para serviços de segurança da informação prestados por sociedade com sócio brasileiro é o art. 142, II, da LC 214/2025. Esse dispositivo, porém, está registrado com efeitos 'None..', de modo que não alcança a data de referência. O caput do art. 142 tem efeitos desde 2026-01-01, mas não responde sozinho pela hipótese específica do inciso II. Assim, o corpus não fornece a data de início dessa redução específica.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

@@ -1,0 +1,29 @@
+{
+  "case_id": "c009",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "parcial",
+  "expected_provisions": [
+    "CF.art156-A.par1.incIII",
+    "CF.art156-A.par5",
+    "CF.art156-A.par5.incIII"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "CF.art156-A.par1.incIII",
+      "text": "III - não incidirá sobre as exportações, assegurados ao exportador a manutenção e o aproveitamento dos créditos relativos às operações nas quais seja adquirente de bem material ou imaterial, inclusive direitos, ou serviço, observado o disposto no § 5º, III;"
+    },
+    {
+      "id": "CF.art156-A.par5",
+      "text": "§ 5º Lei complementar disporá sobre:"
+    },
+    {
+      "id": "CF.art156-A.par5.incIII",
+      "text": "III - a forma e o prazo para ressarcimento de créditos acumulados pelo contribuinte;"
+    }
+  ],
+  "justification": "O corpus assegura ao exportador a manutenção e o aproveitamento dos créditos de IBS e remete ao § 5º, III, a disciplina do ressarcimento. Esse dispositivo determina que lei complementar disporá sobre a forma e o prazo para ressarcimento de créditos acumulados, mas não fixa um prazo numérico. Portanto, na data de referência, não há prazo específico no corpus para empresas exportadoras; apenas a previsão de que ele será definido em lei complementar.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

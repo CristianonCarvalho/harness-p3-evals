@@ -1,0 +1,25 @@
+{
+  "case_id": "c037",
+  "question": "Em 2030, qual percentual das alíquotas do ICMS e do ISS ainda se aplica?",
+  "hypothesis": [
+    "H4"
+  ],
+  "split": "teste",
+  "subsets": [],
+  "origin": "ai_kept",
+  "source_n": "37",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "ADCT.art128",
+      "ADCT.art128.incII"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c037.v1.json",
+    "note": ""
+  }
+}

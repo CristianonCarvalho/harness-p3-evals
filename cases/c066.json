@@ -1,0 +1,24 @@
+{
+  "case_id": "c066",
+  "question": "O repasse de 25% aos municípios da arrecadação do IPI muda a partir de 2033?",
+  "hypothesis": [
+    "H8"
+  ],
+  "split": "desenvolvimento",
+  "subsets": [],
+  "origin": "human_rewritten",
+  "source_n": "66",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "CF.art159.par3"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c066.v1.json",
+    "note": ""
+  }
+}

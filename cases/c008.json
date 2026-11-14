@@ -1,0 +1,22 @@
+{
+  "case_id": "c008",
+  "question": "Qual será a carga tributária total sobre o consumo depois da reforma?",
+  "hypothesis": [
+    "H1"
+  ],
+  "split": "teste",
+  "subsets": [],
+  "origin": "ai_kept",
+  "source_n": "8",
+  "gabarito": {
+    "answer_exists": "nao",
+    "expected_provisions": [],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c008.v1.json",
+    "note": ""
+  }
+}

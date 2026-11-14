@@ -1,0 +1,34 @@
+{
+  "case_id": "c094",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "LC214.art138",
+    "LC214.art138.par2",
+    "LC214.art138.par2.incI",
+    "LC214.art138.par2.incI.alia"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "LC214.art138",
+      "text": "Ficam reduzidas em 60% (sessenta por cento) as alíquotas do IBS e da CBS incidentes sobre o fornecimento dos insumos agropecuários e aquícolas relacionados no Anexo IX desta Lei Complementar"
+    },
+    {
+      "id": "LC214.art138.par2",
+      "text": "Fica diferido o recolhimento do IBS e da CBS incidentes nas seguintes operações com insumos agropecuários e aquícolas de que trata o caput"
+    },
+    {
+      "id": "LC214.art138.par2.incI",
+      "text": "I - fornecimento realizado por contribuinte sujeito ao regime regular do IBS e da CBS para:"
+    },
+    {
+      "id": "LC214.art138.par2.incI.alia",
+      "text": "a) contribuinte sujeito ao regime regular do IBS e da CBS; e"
+    }
+  ],
+  "justification": "O art. 138, § 2º, I, 'a', da LC 214/2025 prevê o diferimento do IBS e da CBS no fornecimento de insumos agropecuários e aquícolas relacionados no Anexo IX quando realizado por contribuinte sujeito ao regime regular para outro contribuinte do regime regular. Como a indústria adquirente é contribuinte do regime regular, a operação se enquadra, desde que o insumo esteja no Anexo IX e o fornecedor também seja contribuinte do regime regular. A data de referência (2026-11-13) está dentro do período de efeitos (a partir de 2026-01-01).",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

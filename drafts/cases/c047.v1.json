@@ -1,0 +1,24 @@
+{
+  "case_id": "c047",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "parcial",
+  "expected_provisions": [
+    "LC214.art128.incVII",
+    "LC214.art136"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "LC214.art128.incVII",
+      "text": "VII - produtos de higiene pessoal e limpeza majoritariamente consumidos por famílias de baixa renda;"
+    },
+    {
+      "id": "LC214.art136",
+      "text": "Art. 136. Ficam reduzidas em 60% (sessenta por cento) as alíquotas do IBS e da CBS incidentes sobre o fornecimento dos produtos de higiene pessoal e limpeza relacionados no Anexo VIII desta Lei Complementar, com a especificação das respectivas classificações da NCM/SH."
+    }
+  ],
+  "justification": "A LC 214/2025 prevê redução de 60% para produtos de higiene pessoal e limpeza majoritariamente consumidos por famílias de baixa renda. O art. 136 especifica que a redução alcança os produtos relacionados no Anexo VIII, com suas classificações NCM/SH. Como o corpus não reproduz o Anexo VIII, não é possível enumerar os produtos ou códigos específicos, mas o critério legal e a remissão ao anexo estão presentes. Ambos os dispositivos já produzem efeitos em 2026-11-13.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

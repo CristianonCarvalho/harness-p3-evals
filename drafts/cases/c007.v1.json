@@ -1,0 +1,19 @@
+{
+  "case_id": "c007",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "parcial",
+  "expected_provisions": [
+    "EC132.art18.incI"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "EC132.art18.incI",
+      "text": "I - em até 90 (noventa) dias após a promulgação desta Emenda Constitucional, projeto de lei que reforme a tributação da renda, acompanhado das correspondentes estimativas e estudos de impactos orçamentários e financeiros;"
+    }
+  ],
+  "justification": "O corpus não contém dispositivo que altere diretamente a tabela do Imposto de Renda da pessoa física. O dispositivo relacionado apenas determina o envio de projeto de lei para reformar a tributação da renda, sem fixar nova tabela ou especificar mudanças. Portanto, a resposta é apenas parcial: há previsão de reforma da renda, mas não de alteração da tabela do IRPF.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

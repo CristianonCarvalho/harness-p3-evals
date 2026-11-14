@@ -1,0 +1,19 @@
+{
+  "case_id": "c048",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "parcial",
+  "expected_provisions": [
+    "LC214.art138"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "LC214.art138",
+      "text": "Ficam reduzidas em 60% (sessenta por cento) as alíquotas do IBS e da CBS incidentes sobre o fornecimento dos insumos agropecuários e aquícolas relacionados no Anexo IX desta Lei Complementar"
+    }
+  ],
+  "justification": "O corpus reduz em 60% as alíquotas do IBS e da CBS sobre o fornecimento de insumos agropecuários e aquícolas, mas apenas os relacionados no Anexo IX da LC 214/2025. Como o Anexo IX não está reproduzido no corpus, não é possível enumerar os produtos específicos. A resposta fica, portanto, limitada à categoria legal e à remissão ao anexo.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

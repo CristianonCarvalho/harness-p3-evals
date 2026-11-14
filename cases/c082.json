@@ -1,0 +1,35 @@
+{
+  "case_id": "c082",
+  "question": "Quem administra o IBS e como ele é distribuído entre estados e municípios?",
+  "hypothesis": [
+    "H11"
+  ],
+  "split": "teste",
+  "subsets": [
+    "sem_skill"
+  ],
+  "origin": "ai_kept",
+  "source_n": "82",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "CF.art156-B",
+      "CF.art156-B.incII",
+      "CF.art156-A.par4.incII",
+      "CF.art158.incIV",
+      "CF.art158.incIV.alib",
+      "CF.art158.par2",
+      "ADCT.art125",
+      "ADCT.art125.par3",
+      "ADCT.art125.par3.incI",
+      "ADCT.art125.par3.incII"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c082.v1.json",
+    "note": ""
+  }
+}

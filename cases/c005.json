@@ -1,0 +1,26 @@
+{
+  "case_id": "c005",
+  "question": "Qual vai ser a alíquota do Imposto Seletivo cobrada sobre cigarros?",
+  "hypothesis": [
+    "H1"
+  ],
+  "split": "desenvolvimento",
+  "subsets": [],
+  "origin": "human_rewritten",
+  "source_n": "5",
+  "gabarito": {
+    "answer_exists": "parcial",
+    "expected_provisions": [
+      "LC214.art422",
+      "LC214.art422.par1",
+      "LC214.art422.par1.incI"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c005.v1.json",
+    "note": ""
+  }
+}

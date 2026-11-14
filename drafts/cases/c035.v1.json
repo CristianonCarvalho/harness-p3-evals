@@ -1,0 +1,19 @@
+{
+  "case_id": "c035",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "ADCT.art131"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "ADCT.art131",
+      "text": "De 2029 a 2077, o produto da arrecadação dos Estados, do Distrito Federal e dos Municípios com o imposto de que trata o art. 156-A da Constituição Federal será distribuído a esses entes federativos conforme o disposto neste artigo."
+    }
+  ],
+  "justification": "O corpus fixa expressamente que a distribuição do produto da arrecadação do IBS aos entes federativos ocorre de 2029 a 2077. Portanto, a transição começa a valer em 2029. Na data de referência, 13/11/2026, esse dispositivo já está em vigor, pois seus efeitos foram fixados desde 21/12/2023.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

@@ -1,0 +1,19 @@
+{
+  "case_id": "c044",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "parcial",
+  "expected_provisions": [
+    "LC214.art129"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "LC214.art129",
+      "text": "Art. 129. Ficam reduzidas em 60% (sessenta por cento) as alíquotas do IBS e da CBS incidentes sobre o fornecimento dos serviços de educação relacionados no Anexo II desta Lei Complementar, com a especificação das respectivas classificações da Nomenclatura Brasileira de Serviços, Intangíveis e Outras Operações que Produzam Variações no Patrimônio (NBS)."
+    }
+  ],
+  "justification": "O corpus reduz em 60% as alíquotas do IBS e da CBS incidentes sobre o fornecimento dos serviços de educação relacionados no Anexo II da LC 214/2025. Como o Anexo II não está reproduzido no corpus, não é possível identificar a lista concreta dos serviços de educação alcançados. O dispositivo produz efeitos desde 2026-01-01, portanto alcança a data de referência.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

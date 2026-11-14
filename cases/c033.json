@@ -1,0 +1,25 @@
+{
+  "case_id": "c033",
+  "question": "A partir de que ano o Imposto Seletivo começa a ser cobrado?",
+  "hypothesis": [
+    "H4"
+  ],
+  "split": "teste",
+  "subsets": [],
+  "origin": "human_rewritten",
+  "source_n": "33",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "ADCT.art126",
+      "ADCT.art126.incI.alib"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c033.v1.json",
+    "note": ""
+  }
+}

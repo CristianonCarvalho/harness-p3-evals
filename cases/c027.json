@@ -1,0 +1,26 @@
+{
+  "case_id": "c027",
+  "question": "A imunidade para templos religiosos vale para o IBS e para o Imposto Seletivo?",
+  "hypothesis": [
+    "H3"
+  ],
+  "split": "desenvolvimento",
+  "subsets": [],
+  "origin": "ai_kept",
+  "source_n": "27",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "CF.art149-B.parunico",
+      "CF.art150.incVI.alib",
+      "CF.art153.incVIII"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c027.v1.json",
+    "note": ""
+  }
+}

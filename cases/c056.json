@@ -1,0 +1,22 @@
+{
+  "case_id": "c056",
+  "question": "A partir de quando passa a valer a redução de 60% para serviços de segurança da informação prestados por empresa com sócio brasileiro?",
+  "hypothesis": [
+    "H7"
+  ],
+  "split": "teste",
+  "subsets": [],
+  "origin": "human_rewritten",
+  "source_n": "56",
+  "gabarito": {
+    "answer_exists": "nao",
+    "expected_provisions": [],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c056.v1.json",
+    "note": ""
+  }
+}

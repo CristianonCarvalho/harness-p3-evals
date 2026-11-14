@@ -1,0 +1,25 @@
+{
+  "case_id": "c045",
+  "question": "Quais dispositivos médicos têm redução de 60% no IBS e na CBS?",
+  "hypothesis": [
+    "H5"
+  ],
+  "split": "teste",
+  "subsets": [],
+  "origin": "human_rewritten",
+  "source_n": "45",
+  "gabarito": {
+    "answer_exists": "parcial",
+    "expected_provisions": [
+      "LC214.art131",
+      "LC214.art131.par1"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "mudar",
+    "draft": "drafts/cases/c045.v1.json",
+    "note": "answer_exists parcial (o art. 131 da LC 214 remete a lista específica de dispositivos médicos ao Anexo IV, que não consta no corpus; resposta é parcial, como em c043, c044, c047 e c048)"
+  }
+}

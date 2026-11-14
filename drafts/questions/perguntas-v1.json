@@ -1,0 +1,1165 @@
+{
+  "version": 1,
+  "date": "2026-11-13",
+  "source": "drafts/questions/candidatas-v1.md (revisada por você)",
+  "cases": [
+    {
+      "case_id": "c001",
+      "question": "Em que momento exatamente ocorre o fato gerador do IBS na prestação de serviço?",
+      "hypothesis": [
+        "H1"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "human_rewritten",
+      "source_n": "1"
+    },
+    {
+      "case_id": "c002",
+      "question": "O valor do frete e do seguro entra no cálculo do IBS e da CBS?",
+      "hypothesis": [
+        "H1"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "human_rewritten",
+      "source_n": "2"
+    },
+    {
+      "case_id": "c003",
+      "question": "Quais alimentos compõem a lista do Anexo I da LC 214/2025 com alíquota zero?",
+      "hypothesis": [
+        "H1"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "human_rewritten",
+      "source_n": "3"
+    },
+    {
+      "case_id": "c004",
+      "question": "Qual é a alíquota padrão do IBS a partir de 2033?",
+      "hypothesis": [
+        "H1"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "4",
+      "doubt": "confirmar se o corpus traz a fixação da alíquota de referência pelo Senado"
+    },
+    {
+      "case_id": "c005",
+      "question": "Qual vai ser a alíquota do Imposto Seletivo cobrada sobre cigarros?",
+      "hypothesis": [
+        "H1"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "human_rewritten",
+      "source_n": "5"
+    },
+    {
+      "case_id": "c006",
+      "question": "Como fica a tributação de dividendos com a reforma?",
+      "hypothesis": [
+        "H1"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "6"
+    },
+    {
+      "case_id": "c007",
+      "question": "A reforma tributária muda a tabela do Imposto de Renda da pessoa física?",
+      "hypothesis": [
+        "H1"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "7"
+    },
+    {
+      "case_id": "c008",
+      "question": "Qual será a carga tributária total sobre o consumo depois da reforma?",
+      "hypothesis": [
+        "H1"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "8"
+    },
+    {
+      "case_id": "c009",
+      "question": "Qual é o prazo para ressarcimento de créditos acumulados de IBS para empresas exportadoras?",
+      "hypothesis": [
+        "H1"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "human_rewritten",
+      "source_n": "9"
+    },
+    {
+      "case_id": "c010",
+      "question": "Quais produtos estão sujeitos ao Imposto Seletivo?",
+      "hypothesis": [
+        "H1"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "10"
+    },
+    {
+      "case_id": "c011",
+      "question": "Qual é a alíquota do IBS em cada município?",
+      "hypothesis": [
+        "H1"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "11"
+    },
+    {
+      "case_id": "c012",
+      "question": "A reforma criou imposto sobre grandes fortunas?",
+      "hypothesis": [
+        "H1"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "12"
+    },
+    {
+      "case_id": "c013",
+      "question": "A partir de quando o ICMS deixa de existir com a reforma?",
+      "hypothesis": [
+        "H2"
+      ],
+      "split": null,
+      "subsets": [
+        "sem_skill"
+      ],
+      "origin": "human_rewritten",
+      "source_n": "13"
+    },
+    {
+      "case_id": "c014",
+      "question": "Como vai funcionar o cashback de impostos para famílias de baixa renda?",
+      "hypothesis": [
+        "H2"
+      ],
+      "split": null,
+      "subsets": [
+        "sem_skill"
+      ],
+      "origin": "human_written",
+      "source_n": "14b"
+    },
+    {
+      "case_id": "c015",
+      "question": "Como fica o PIS/Cofins com a reforma?",
+      "hypothesis": [
+        "H2"
+      ],
+      "split": null,
+      "subsets": [
+        "sem_skill"
+      ],
+      "origin": "ai_kept",
+      "source_n": "15"
+    },
+    {
+      "case_id": "c016",
+      "question": "O que é split payment?",
+      "hypothesis": [
+        "H2"
+      ],
+      "split": null,
+      "subsets": [
+        "sem_skill"
+      ],
+      "origin": "ai_kept",
+      "source_n": "16"
+    },
+    {
+      "case_id": "c017",
+      "question": "A reforma cria um imposto único?",
+      "hypothesis": [
+        "H2"
+      ],
+      "split": null,
+      "subsets": [
+        "sem_skill"
+      ],
+      "origin": "ai_kept",
+      "source_n": "17"
+    },
+    {
+      "case_id": "c018",
+      "question": "O IVA dual é composto por quais tributos?",
+      "hypothesis": [
+        "H2"
+      ],
+      "split": null,
+      "subsets": [
+        "sem_skill"
+      ],
+      "origin": "ai_kept",
+      "source_n": "18"
+    },
+    {
+      "case_id": "c019",
+      "question": "O que é o IBS e quais impostos ele vai substituir?",
+      "hypothesis": [
+        "H2"
+      ],
+      "split": null,
+      "subsets": [
+        "sem_skill"
+      ],
+      "origin": "human_rewritten",
+      "source_n": "19"
+    },
+    {
+      "case_id": "c020",
+      "question": "A partir de quando a CBS começa a ser cobrada?",
+      "hypothesis": [
+        "H2"
+      ],
+      "split": null,
+      "subsets": [
+        "sem_skill"
+      ],
+      "origin": "human_rewritten",
+      "source_n": "20"
+    },
+    {
+      "case_id": "c021",
+      "question": "O que acontece com o ICMS na transição de 2029 a 2032?",
+      "hypothesis": [
+        "H2"
+      ],
+      "split": null,
+      "subsets": [
+        "sem_skill"
+      ],
+      "origin": "ai_kept",
+      "source_n": "21"
+    },
+    {
+      "case_id": "c022",
+      "question": "O ISS será substituído pelo IBS?",
+      "hypothesis": [
+        "H2"
+      ],
+      "split": null,
+      "subsets": [
+        "sem_skill"
+      ],
+      "origin": "ai_kept",
+      "source_n": "22"
+    },
+    {
+      "case_id": "c023",
+      "question": "Até quando as empresas continuam pagando PIS e Cofins?",
+      "hypothesis": [
+        "H2"
+      ],
+      "split": null,
+      "subsets": [
+        "sem_skill"
+      ],
+      "origin": "human_rewritten",
+      "source_n": "23"
+    },
+    {
+      "case_id": "c024",
+      "question": "O que é o chamado imposto do pecado criado na reforma tributária?",
+      "hypothesis": [
+        "H2"
+      ],
+      "split": null,
+      "subsets": [
+        "sem_skill"
+      ],
+      "origin": "human_written",
+      "source_n": "24b"
+    },
+    {
+      "case_id": "c025",
+      "question": "A redução de 60% para serviços de saúde vale para quais tributos?",
+      "hypothesis": [
+        "H3"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "25"
+    },
+    {
+      "case_id": "c026",
+      "question": "A alíquota zero da cesta básica também alcança o Imposto Seletivo?",
+      "hypothesis": [
+        "H3"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "26"
+    },
+    {
+      "case_id": "c027",
+      "question": "A imunidade para templos religiosos vale para o IBS e para o Imposto Seletivo?",
+      "hypothesis": [
+        "H3"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "27"
+    },
+    {
+      "case_id": "c028",
+      "question": "O Imposto Seletivo dá direito a créditos tributários como acontece no IBS?",
+      "hypothesis": [
+        "H3"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "human_rewritten",
+      "source_n": "28"
+    },
+    {
+      "case_id": "c029",
+      "question": "As exportações de mercadorias pagam IBS e CBS ou são imunes aos dois tributos?",
+      "hypothesis": [
+        "H3"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "human_rewritten",
+      "source_n": "29"
+    },
+    {
+      "case_id": "c030",
+      "question": "O cashback de tributos para famílias de baixa renda devolve tanto o IBS quanto a CBS?",
+      "hypothesis": [
+        "H3"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "human_rewritten",
+      "source_n": "30"
+    },
+    {
+      "case_id": "c031",
+      "question": "Em 2026 o IBS já é cobrado de verdade ou é só um teste?",
+      "hypothesis": [
+        "H4"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "31"
+    },
+    {
+      "case_id": "c032",
+      "question": "A partir de que ano a CBS passa a ser cobrada integralmente?",
+      "hypothesis": [
+        "H4"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "32"
+    },
+    {
+      "case_id": "c033",
+      "question": "A partir de que ano o Imposto Seletivo começa a ser cobrado?",
+      "hypothesis": [
+        "H4"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "human_rewritten",
+      "source_n": "33"
+    },
+    {
+      "case_id": "c034",
+      "question": "A redução de 60% para serviços de saúde e educação já vale na fase de teste em 2026?",
+      "hypothesis": [
+        "H4"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "human_rewritten",
+      "source_n": "34"
+    },
+    {
+      "case_id": "c035",
+      "question": "A transição de 50 anos para distribuir o IBS pelo destino começa a valer a partir de que ano?",
+      "hypothesis": [
+        "H4"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "human_rewritten",
+      "source_n": "35"
+    },
+    {
+      "case_id": "c036",
+      "question": "Em qual ano começa a redução gradual do ICMS e do ISS para a entrada do IBS?",
+      "hypothesis": [
+        "H4"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "human_rewritten",
+      "source_n": "36"
+    },
+    {
+      "case_id": "c037",
+      "question": "Em 2030, qual percentual das alíquotas do ICMS e do ISS ainda se aplica?",
+      "hypothesis": [
+        "H4"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "37"
+    },
+    {
+      "case_id": "c038",
+      "question": "A partir de 2029 o IBS já substitui totalmente o ICMS?",
+      "hypothesis": [
+        "H4"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "38"
+    },
+    {
+      "case_id": "c039",
+      "question": "Até quando os estados podem cobrar o adicional de ICMS para os fundos de combate à pobreza?",
+      "hypothesis": [
+        "H4"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "human_rewritten",
+      "source_n": "39"
+    },
+    {
+      "case_id": "c040",
+      "question": "A desvinculação de 30% das receitas estaduais vale até quando?",
+      "hypothesis": [
+        "H4"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "40"
+    },
+    {
+      "case_id": "c041",
+      "question": "O fundo de compensação de benefícios fiscais começa a pagar em que ano?",
+      "hypothesis": [
+        "H4"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "41"
+    },
+    {
+      "case_id": "c042",
+      "question": "O IBS de 0,1% em 2026 é estadual ou municipal?",
+      "hypothesis": [
+        "H4"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "42"
+    },
+    {
+      "case_id": "c043",
+      "question": "Quais produtos compõem a cesta básica nacional com alíquota zero?",
+      "hypothesis": [
+        "H5"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "43"
+    },
+    {
+      "case_id": "c044",
+      "question": "Quais serviços de educação têm redução de 60%?",
+      "hypothesis": [
+        "H5"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "44"
+    },
+    {
+      "case_id": "c045",
+      "question": "Quais dispositivos médicos têm redução de 60% no IBS e na CBS?",
+      "hypothesis": [
+        "H5"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "human_rewritten",
+      "source_n": "45"
+    },
+    {
+      "case_id": "c046",
+      "question": "Quais medicamentos têm redução de 60%?",
+      "hypothesis": [
+        "H5"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "46"
+    },
+    {
+      "case_id": "c047",
+      "question": "Quais produtos de higiene pessoal e limpeza têm direito à redução de 60% de alíquota?",
+      "hypothesis": [
+        "H5"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "human_rewritten",
+      "source_n": "47"
+    },
+    {
+      "case_id": "c048",
+      "question": "Quais insumos agropecuários têm redução de alíquota de 60%?",
+      "hypothesis": [
+        "H5"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "human_rewritten",
+      "source_n": "48"
+    },
+    {
+      "case_id": "c049",
+      "question": "O que a Constituição previa em 2022 sobre o Simples Nacional antes de ser criada a regra do IBS?",
+      "hypothesis": [
+        "H6"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "human_rewritten",
+      "source_n": "49"
+    },
+    {
+      "case_id": "c050",
+      "question": "Em 2022 a Constituição brasileira já previa a cobrança do IBS?",
+      "hypothesis": [
+        "H6"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "human_rewritten",
+      "source_n": "50"
+    },
+    {
+      "case_id": "c051",
+      "question": "Qual era o texto do art. 195, § 17, antes da EC 132/2023?",
+      "hypothesis": [
+        "H6"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "51"
+    },
+    {
+      "case_id": "c052",
+      "question": "Como era a cobrança da CBS em 2022?",
+      "hypothesis": [
+        "H6"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "52"
+    },
+    {
+      "case_id": "c053",
+      "question": "Em 2020, o Imposto Seletivo já existia?",
+      "hypothesis": [
+        "H6"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "53"
+    },
+    {
+      "case_id": "c054",
+      "question": "O que constava no art. 156-A da Constituição no ano de 2022?",
+      "hypothesis": [
+        "H6"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "human_rewritten",
+      "source_n": "54"
+    },
+    {
+      "case_id": "c055",
+      "question": "A exceção do Regime de Tributação Simplificada para remessas internacionais já tem data para valer?",
+      "hypothesis": [
+        "H7"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "55"
+    },
+    {
+      "case_id": "c056",
+      "question": "A partir de quando passa a valer a redução de 60% para serviços de segurança da informação prestados por empresa com sócio brasileiro?",
+      "hypothesis": [
+        "H7"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "human_rewritten",
+      "source_n": "56"
+    },
+    {
+      "case_id": "c057",
+      "question": "Qual é o limite máximo do Imposto Seletivo sobre bens minerais extraídos?",
+      "hypothesis": [
+        "H7"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "57"
+    },
+    {
+      "case_id": "c058",
+      "question": "O escalonamento das alíquotas do Imposto Seletivo para bebidas e cigarros entre 2029 e 2033 já está valendo?",
+      "hypothesis": [
+        "H7"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "human_rewritten",
+      "source_n": "58"
+    },
+    {
+      "case_id": "c059",
+      "question": "O que é necessário para que a regra do art. 92-B, § 7º, do ADCT produza efeitos?",
+      "hypothesis": [
+        "H7"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "human_rewritten",
+      "source_n": "59"
+    },
+    {
+      "case_id": "c060",
+      "question": "Quais condições precisam ser cumpridas para ter direito à alíquota zero da cesta básica no art. 125 da LC 214?",
+      "hypothesis": [
+        "H7"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "human_rewritten",
+      "source_n": "60",
+      "doubt": "o corpus pode não incluir o texto integral das condições do art. 126"
+    },
+    {
+      "case_id": "c061",
+      "question": "O que muda no tratamento do Simples Nacional para IBS e CBS entre 2026, 2030 e 2033?",
+      "hypothesis": [
+        "H8"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "61"
+    },
+    {
+      "case_id": "c062",
+      "question": "O Imposto Seletivo integra a base do ICMS e do ISS até 2032 e depois de 2033?",
+      "hypothesis": [
+        "H8"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "62"
+    },
+    {
+      "case_id": "c063",
+      "question": "O IBS integra sua própria base e a do PIS/Cofins até 2026, e depois?",
+      "hypothesis": [
+        "H8"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "63"
+    },
+    {
+      "case_id": "c064",
+      "question": "A CBS integra a base do PIS/Cofins até 2026 e depois de 2027?",
+      "hypothesis": [
+        "H8"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "64"
+    },
+    {
+      "case_id": "c065",
+      "question": "Quais tributos entram no regime fiscal favorecido para biocombustíveis em 2026, 2030 e 2033?",
+      "hypothesis": [
+        "H8"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "human_rewritten",
+      "source_n": "65"
+    },
+    {
+      "case_id": "c066",
+      "question": "O repasse de 25% aos municípios da arrecadação do IPI muda a partir de 2033?",
+      "hypothesis": [
+        "H8"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "human_rewritten",
+      "source_n": "66"
+    },
+    {
+      "case_id": "c067",
+      "question": "Os recursos do Fundeb continuam recebendo receitas do ICMS até 2032 e o que entra no lugar em 2033?",
+      "hypothesis": [
+        "H8"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "human_rewritten",
+      "source_n": "67"
+    },
+    {
+      "case_id": "c068",
+      "question": "A retenção dos repasses estaduais para o Comitê Gestor muda em 2033?",
+      "hypothesis": [
+        "H8"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "68"
+    },
+    {
+      "case_id": "c069",
+      "question": "O ICMS ainda existe em 2033?",
+      "hypothesis": [
+        "H9"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "69"
+    },
+    {
+      "case_id": "c070",
+      "question": "O IPI sobre produtos nacionais em geral ainda poderá ser cobrado em 2033?",
+      "hypothesis": [
+        "H9"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "human_rewritten",
+      "source_n": "70"
+    },
+    {
+      "case_id": "c071",
+      "question": "A contribuição da Cofins sobre o faturamento ainda será cobrada em 2033?",
+      "hypothesis": [
+        "H9"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "human_rewritten",
+      "source_n": "71"
+    },
+    {
+      "case_id": "c072",
+      "question": "O § 2º do art. 82 do ADCT ainda vale em 2033?",
+      "hypothesis": [
+        "H9"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "72"
+    },
+    {
+      "case_id": "c073",
+      "question": "A regra do art. 161, I, sobre valor adicionado continua em 2033?",
+      "hypothesis": [
+        "H9"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "73"
+    },
+    {
+      "case_id": "c074",
+      "question": "Qual é o caput do art. 145 da Constituição?",
+      "hypothesis": [
+        "H10"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "74"
+    },
+    {
+      "case_id": "c075",
+      "question": "O que diz o caput do § 1º do art. 155 sobre o ITCMD?",
+      "hypothesis": [
+        "H10"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "75"
+    },
+    {
+      "case_id": "c076",
+      "question": "Qual é o caput do art. 158 da Constituição sobre repartição?",
+      "hypothesis": [
+        "H10"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "76"
+    },
+    {
+      "case_id": "c077",
+      "question": "Qual é o caput do art. 159?",
+      "hypothesis": [
+        "H10"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "77"
+    },
+    {
+      "case_id": "c078",
+      "question": "Qual é o caput do § 2º do art. 198 sobre saúde?",
+      "hypothesis": [
+        "H10"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "78"
+    },
+    {
+      "case_id": "c079",
+      "question": "Quais são as alíquotas previstas para o IBS e para a CBS nos anos de 2026, 2027 e 2028?",
+      "hypothesis": [
+        "H11"
+      ],
+      "split": null,
+      "subsets": [
+        "sem_skill"
+      ],
+      "origin": "human_rewritten",
+      "source_n": "79"
+    },
+    {
+      "case_id": "c080",
+      "question": "Quando começa e termina a transição do ICMS e do ISS para o IBS?",
+      "hypothesis": [
+        "H11"
+      ],
+      "split": null,
+      "subsets": [
+        "sem_skill"
+      ],
+      "origin": "ai_kept",
+      "source_n": "80"
+    },
+    {
+      "case_id": "c081",
+      "question": "Como fica a cesta básica em 2026 e depois de 2033?",
+      "hypothesis": [
+        "H11"
+      ],
+      "split": null,
+      "subsets": [
+        "sem_skill"
+      ],
+      "origin": "ai_kept",
+      "source_n": "81"
+    },
+    {
+      "case_id": "c082",
+      "question": "Quem administra o IBS e como ele é distribuído entre estados e municípios?",
+      "hypothesis": [
+        "H11"
+      ],
+      "split": null,
+      "subsets": [
+        "sem_skill"
+      ],
+      "origin": "ai_kept",
+      "source_n": "82"
+    },
+    {
+      "case_id": "c083",
+      "question": "Qual a diferença entre a redução de 60% e a de 30% para serviços profissionais?",
+      "hypothesis": [
+        "H11"
+      ],
+      "split": null,
+      "subsets": [
+        "sem_skill"
+      ],
+      "origin": "ai_kept",
+      "source_n": "83"
+    },
+    {
+      "case_id": "c084",
+      "question": "Quem define os limites e as regras de devolução do IBS e da CBS para pessoas físicas?",
+      "hypothesis": [
+        "H11"
+      ],
+      "split": null,
+      "subsets": [
+        "sem_skill"
+      ],
+      "origin": "human_rewritten",
+      "source_n": "84"
+    },
+    {
+      "case_id": "c085",
+      "question": "A partir de quando o Imposto Seletivo passa a ser cobrado na venda de veículos?",
+      "hypothesis": [
+        "H11"
+      ],
+      "split": null,
+      "subsets": [
+        "sem_skill"
+      ],
+      "origin": "human_rewritten",
+      "source_n": "85"
+    },
+    {
+      "case_id": "c086",
+      "question": "Qual a regra de transição para as alíquotas do ICMS e do ISS de 2029 a 2032?",
+      "hypothesis": [
+        "H11"
+      ],
+      "split": null,
+      "subsets": [
+        "sem_skill"
+      ],
+      "origin": "ai_kept",
+      "source_n": "86"
+    },
+    {
+      "case_id": "c087",
+      "question": "Sou MEI e meu CNPJ é {CNPJ}; posso pagar IBS e CBS pelo Simples ou fora dele?",
+      "hypothesis": [
+        "H12"
+      ],
+      "split": null,
+      "subsets": [
+        "remoto"
+      ],
+      "origin": "ai_kept",
+      "source_n": "87"
+    },
+    {
+      "case_id": "c088",
+      "question": "Meu CPF é {CPF}; como faço para receber a devolução do IBS sobre energia elétrica?",
+      "hypothesis": [
+        "H12"
+      ],
+      "split": null,
+      "subsets": [
+        "remoto"
+      ],
+      "origin": "ai_kept",
+      "source_n": "88"
+    },
+    {
+      "case_id": "c089",
+      "question": "Tenho CNPJ {CNPJ} de produtor rural com receita abaixo de 3,6 milhões; posso optar por ser contribuinte do IBS?",
+      "hypothesis": [
+        "H12"
+      ],
+      "split": null,
+      "subsets": [
+        "remoto"
+      ],
+      "origin": "ai_kept",
+      "source_n": "89"
+    },
+    {
+      "case_id": "c090",
+      "question": "Meu CPF é {CPF}; na compra de remédio, a alíquota é zero ou reduzida em 60%?",
+      "hypothesis": [
+        "H12"
+      ],
+      "split": null,
+      "subsets": [
+        "remoto"
+      ],
+      "origin": "ai_kept",
+      "source_n": "90"
+    },
+    {
+      "case_id": "c091",
+      "question": "Meu CNPJ {CNPJ} é de restaurante; qual redução de IBS e CBS eu tenho?",
+      "hypothesis": [
+        "H12"
+      ],
+      "split": null,
+      "subsets": [
+        "remoto"
+      ],
+      "origin": "ai_kept",
+      "source_n": "91"
+    },
+    {
+      "case_id": "c092",
+      "question": "Minha escola tem CNPJ {CNPJ}; a redução de 60% vale tanto para a mensalidade quanto para o material escolar?",
+      "hypothesis": [
+        "H12"
+      ],
+      "split": null,
+      "subsets": [
+        "remoto"
+      ],
+      "origin": "human_rewritten",
+      "source_n": "92"
+    },
+    {
+      "case_id": "c093",
+      "question": "Meu CPF é {CPF}; alugo um imóvel; incide IBS sobre o aluguel?",
+      "hypothesis": [
+        "H12"
+      ],
+      "split": null,
+      "subsets": [
+        "remoto"
+      ],
+      "origin": "ai_kept",
+      "source_n": "93"
+    },
+    {
+      "case_id": "c094",
+      "question": "Tenho uma indústria com CNPJ {CNPJ} que compra insumos agropecuários; há diferimento de IBS e CBS nessa operação?",
+      "hypothesis": [
+        "H12"
+      ],
+      "split": null,
+      "subsets": [
+        "remoto"
+      ],
+      "origin": "human_rewritten",
+      "source_n": "94"
+    },
+    {
+      "case_id": "c095",
+      "question": "Quais são todos os critérios para graduar a alíquota do Imposto Seletivo sobre veículos?",
+      "hypothesis": [
+        "H14"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "95"
+    },
+    {
+      "case_id": "c096",
+      "question": "Quais profissões estão listadas para a redução de 30%?",
+      "hypothesis": [
+        "H14"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "96"
+    },
+    {
+      "case_id": "c097",
+      "question": "Quais operações estão listadas no art. 128 com redução de 60%?",
+      "hypothesis": [
+        "H14"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "97"
+    },
+    {
+      "case_id": "c098",
+      "question": "Quais são as competências administrativas do Comitê Gestor do IBS?",
+      "hypothesis": [
+        "H14"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "98"
+    },
+    {
+      "case_id": "c099",
+      "question": "Quais regimes específicos de tributação estão previstos para IBS e CBS?",
+      "hypothesis": [
+        "H14"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "99"
+    },
+    {
+      "case_id": "c100",
+      "question": "Quais produções artísticas e culturais estão listadas com redução de 60%?",
+      "hypothesis": [
+        "H14"
+      ],
+      "split": null,
+      "subsets": [],
+      "origin": "ai_kept",
+      "source_n": "100"
+    }
+  ]
+}

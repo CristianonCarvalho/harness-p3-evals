@@ -1,0 +1,25 @@
+{
+  "case_id": "c041",
+  "question": "O fundo de compensação de benefícios fiscais começa a pagar em que ano?",
+  "hypothesis": [
+    "H4"
+  ],
+  "split": "teste",
+  "subsets": [],
+  "origin": "ai_kept",
+  "source_n": "41",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "EC132.art12",
+      "EC132.art12.par1"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "mudar",
+    "draft": "drafts/cases/c041.v1.json",
+    "note": "answer_exists sim, dispositivos EC132.art12 e EC132.art12.par1 (o art. 12 da EC 132 fixa expressamente que o Fundo compensará beneficiários entre 1º de janeiro de 2029 e 31 de dezembro de 2032, portanto os pagamentos começam em 2029)"
+  }
+}

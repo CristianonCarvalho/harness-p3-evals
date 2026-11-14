@@ -1,0 +1,12 @@
+{
+  "case_id": "c016",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "nao",
+  "expected_provisions": [],
+  "reference_date": "2026-11-13",
+  "quotes": [],
+  "justification": "O corpus não contém a expressão 'split payment' nem apresenta uma definição do instituto. Há dispositivos sobre recolhimento do imposto e liquidação financeira, mas eles não definem o termo nem permitem, sem conhecimento externo, afirmar que se trata do split payment. Portanto, com base exclusivamente no corpus, a pergunta não é respondida.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

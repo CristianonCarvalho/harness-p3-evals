@@ -1,0 +1,12 @@
+{
+  "case_id": "c075",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "nao",
+  "expected_provisions": [],
+  "reference_date": "2026-11-13",
+  "quotes": [],
+  "justification": "O corpus não contém o caput do § 1º do art. 155 da Constituição Federal. Ele traz apenas dispositivos relacionados a incisos desse parágrafo, como o inciso II, o inciso VI e o inciso VII, mas não o texto do caput. Portanto, com base exclusivamente no corpus, não é possível responder o que o caput diz sobre o ITCMD.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

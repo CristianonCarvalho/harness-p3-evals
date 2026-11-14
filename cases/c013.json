@@ -1,0 +1,26 @@
+{
+  "case_id": "c013",
+  "question": "A partir de quando o ICMS deixa de existir com a reforma?",
+  "hypothesis": [
+    "H2"
+  ],
+  "split": "teste",
+  "subsets": [
+    "sem_skill"
+  ],
+  "origin": "human_rewritten",
+  "source_n": "13",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "ADCT.art129"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c013.v1.json",
+    "note": ""
+  }
+}

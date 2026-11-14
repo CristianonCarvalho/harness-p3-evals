@@ -1,0 +1,25 @@
+{
+  "case_id": "c069",
+  "question": "O ICMS ainda existe em 2033?",
+  "hypothesis": [
+    "H9"
+  ],
+  "split": "desenvolvimento",
+  "subsets": [],
+  "origin": "ai_kept",
+  "source_n": "69",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "ADCT.art129",
+      "CF.art158.incIV.alia"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c069.v1.json",
+    "note": ""
+  }
+}

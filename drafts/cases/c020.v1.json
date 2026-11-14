@@ -1,0 +1,19 @@
+{
+  "case_id": "c020",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "ADCT.art125"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "ADCT.art125",
+      "text": "Em 2026, o imposto previsto no art. 156-A será cobrado à alíquota estadual de 0,1% (um décimo por cento), e a contribuição prevista no art. 195, V, ambos da Constituição Federal, será cobrada à alíquota de 0,9% (nove décimos por cento)."
+    }
+  ],
+  "justification": "O dispositivo fixa expressamente a cobrança, em 2026, da contribuição prevista no art. 195, V, à alíquota de 0,9%. A data de referência está dentro do período de efeitos dessa regra, iniciado em 2023-12-21. Assim, segundo o corpus, a CBS começa a ser cobrada em 2026.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

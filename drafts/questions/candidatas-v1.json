@@ -1,0 +1,1004 @@
+{
+  "questions": [
+    {
+      "n": 1,
+      "question": "Qual é o fato gerador detalhado do IBS?",
+      "hypothesis": [
+        "H1"
+      ],
+      "answer_expected": "nao",
+      "where": "",
+      "why": "Pede detalhamento que o corpus não traz."
+    },
+    {
+      "n": 2,
+      "question": "Qual é a base de cálculo exata da CBS e do IBS?",
+      "hypothesis": [
+        "H1"
+      ],
+      "answer_expected": "nao",
+      "where": "",
+      "why": "A base de cálculo detalhada não está no corpus."
+    },
+    {
+      "n": 3,
+      "question": "O que consta no Anexo I da LC 214/2025?",
+      "hypothesis": [
+        "H1"
+      ],
+      "answer_expected": "nao",
+      "where": "",
+      "why": "O corpus cita o Anexo, mas não reproduz seu conteúdo."
+    },
+    {
+      "n": 4,
+      "question": "Qual é a alíquota padrão do IBS a partir de 2033?",
+      "hypothesis": [
+        "H1"
+      ],
+      "answer_expected": "nao",
+      "where": "",
+      "why": "O corpus fala em alíquota de referência, mas não informa o percentual exato."
+    },
+    {
+      "n": 5,
+      "question": "Qual é a alíquota exata do Imposto Seletivo para cigarros?",
+      "hypothesis": [
+        "H1"
+      ],
+      "answer_expected": "nao",
+      "where": "",
+      "why": "O corpus remete a lei ordinária e não traz o percentual."
+    },
+    {
+      "n": 6,
+      "question": "Como fica a tributação de dividendos com a reforma?",
+      "hypothesis": [
+        "H1"
+      ],
+      "answer_expected": "nao",
+      "where": "",
+      "why": "Tema fora do recorte do corpus."
+    },
+    {
+      "n": 7,
+      "question": "A reforma tributária muda a tabela do Imposto de Renda da pessoa física?",
+      "hypothesis": [
+        "H1"
+      ],
+      "answer_expected": "nao",
+      "where": "",
+      "why": "O corpus não trata da tabela do IRPF."
+    },
+    {
+      "n": 8,
+      "question": "Qual será a carga tributária total sobre o consumo depois da reforma?",
+      "hypothesis": [
+        "H1"
+      ],
+      "answer_expected": "nao",
+      "where": "",
+      "why": "O corpus não traz cálculo de carga tributária total."
+    },
+    {
+      "n": 9,
+      "question": "Qual é o prazo específico para ressarcimento de créditos de IBS ao exportador?",
+      "hypothesis": [
+        "H1"
+      ],
+      "answer_expected": "nao",
+      "where": "",
+      "why": "O corpus remete à lei complementar, sem fixar prazo."
+    },
+    {
+      "n": 10,
+      "question": "Quais produtos estão sujeitos ao Imposto Seletivo?",
+      "hypothesis": [
+        "H1"
+      ],
+      "answer_expected": "nao",
+      "where": "",
+      "why": "O corpus não traz a lista completa do Anexo XVII."
+    },
+    {
+      "n": 11,
+      "question": "Qual é a alíquota do IBS em cada município?",
+      "hypothesis": [
+        "H1"
+      ],
+      "answer_expected": "nao",
+      "where": "",
+      "why": "O corpus não traz alíquotas municipais individualizadas."
+    },
+    {
+      "n": 12,
+      "question": "A reforma criou imposto sobre grandes fortunas?",
+      "hypothesis": [
+        "H1"
+      ],
+      "answer_expected": "nao",
+      "where": "",
+      "why": "O corpus não trata desse imposto."
+    },
+    {
+      "n": 13,
+      "question": "O ICMS vai acabar? A partir de quando?",
+      "hypothesis": [
+        "H2"
+      ],
+      "answer_expected": "sim",
+      "where": "ADCT.art129, EC132.art22.incII.alia",
+      "why": "Usa a sigla antiga ICMS para chegar à extinção prevista no ADCT."
+    },
+    {
+      "n": 14,
+      "question": "E o ISS, continua existindo depois de 2033?",
+      "hypothesis": [
+        "H2"
+      ],
+      "answer_expected": "sim",
+      "where": "ADCT.art129, EC132.art22.incII.alia",
+      "why": "Usa a sigla ISS, que a norma substitui pela referência ao imposto municipal."
+    },
+    {
+      "n": 15,
+      "question": "Como fica o PIS/Cofins com a reforma?",
+      "hypothesis": [
+        "H2"
+      ],
+      "answer_expected": "parcial",
+      "where": "ADCT.art126.incII, EC132.art22.incI, ADCT.art125.par1",
+      "why": "Usa PIS/Cofins, enquanto o corpus fala das contribuições do art. 195 e do PIS."
+    },
+    {
+      "n": 16,
+      "question": "O que é split payment?",
+      "hypothesis": [
+        "H2"
+      ],
+      "answer_expected": "parcial",
+      "where": "CF.art156-A.par5.incII.alib",
+      "why": "Termo não usado no corpus, que menciona recolhimento na liquidação financeira."
+    },
+    {
+      "n": 17,
+      "question": "A reforma cria um imposto único?",
+      "hypothesis": [
+        "H2"
+      ],
+      "answer_expected": "parcial",
+      "where": "CF.art156-A, CF.art195.incV, CF.art153.incVIII",
+      "why": "Termo imposto único não aparece, mas o corpus mostra IBS, CBS e Imposto Seletivo."
+    },
+    {
+      "n": 18,
+      "question": "O IVA dual é composto por quais tributos?",
+      "hypothesis": [
+        "H2"
+      ],
+      "answer_expected": "sim",
+      "where": "CF.art156-A, CF.art195.incV",
+      "why": "Expressão IVA dual não é usada, mas corresponde a IBS e CBS."
+    },
+    {
+      "n": 19,
+      "question": "Só me diga o que muda no IBS.",
+      "hypothesis": [
+        "H2"
+      ],
+      "answer_expected": "sim",
+      "where": "CF.art156-A, ADCT.art125, ADCT.art127",
+      "why": "Usa apenas a sigla IBS."
+    },
+    {
+      "n": 20,
+      "question": "E a CBS, quando começa a ser cobrada?",
+      "hypothesis": [
+        "H2"
+      ],
+      "answer_expected": "sim",
+      "where": "ADCT.art125, ADCT.art126.incI.alia",
+      "why": "Usa apenas a sigla CBS."
+    },
+    {
+      "n": 21,
+      "question": "O que acontece com o ICMS na transição de 2029 a 2032?",
+      "hypothesis": [
+        "H2"
+      ],
+      "answer_expected": "sim",
+      "where": "ADCT.art128, ADCT.art128.incI, ADCT.art128.incII, ADCT.art128.incIII, ADCT.art128.incIV",
+      "why": "Pergunta por ICMS, que o corpus trata como imposto estadual do art. 155, II."
+    },
+    {
+      "n": 22,
+      "question": "O ISS será substituído pelo IBS?",
+      "hypothesis": [
+        "H2"
+      ],
+      "answer_expected": "sim",
+      "where": "ADCT.art129, CF.art156-A",
+      "why": "Usa ISS, que o corpus chama de imposto municipal do art. 156, III."
+    },
+    {
+      "n": 23,
+      "question": "PIS e Cofins saem em 2027?",
+      "hypothesis": [
+        "H2"
+      ],
+      "answer_expected": "sim",
+      "where": "ADCT.art126.incII, EC132.art22.incI",
+      "why": "Usa PIS e Cofins, que o corpus menciona por meio de dispositivos constitucionais."
+    },
+    {
+      "n": 24,
+      "question": "O que é o imposto único sobre consumo?",
+      "hypothesis": [
+        "H2"
+      ],
+      "answer_expected": "parcial",
+      "where": "CF.art156-A, CF.art195.incV",
+      "why": "Expressão não aparece no corpus, que prevê IBS e CBS."
+    },
+    {
+      "n": 25,
+      "question": "A redução de 60% para serviços de saúde vale para quais tributos?",
+      "hypothesis": [
+        "H3"
+      ],
+      "answer_expected": "sim",
+      "where": "EC132.art9.par1.incII, LC214.art128.incII, LC214.art130",
+      "why": "Frase ambígua que pode levar a citar apenas IBS ou apenas CBS."
+    },
+    {
+      "n": 26,
+      "question": "A alíquota zero da cesta básica também alcança o Imposto Seletivo?",
+      "hypothesis": [
+        "H3"
+      ],
+      "answer_expected": "parcial",
+      "where": "EC132.art8.parunico, EC132.art9.par9, LC214.art125",
+      "why": "Mistura cesta básica, IBS/CBS e Imposto Seletivo."
+    },
+    {
+      "n": 27,
+      "question": "A imunidade para templos religiosos vale para o IBS e para o Imposto Seletivo?",
+      "hypothesis": [
+        "H3"
+      ],
+      "answer_expected": "parcial",
+      "where": "CF.art149-B.parunico, CF.art150.incVI.alib",
+      "why": "A pergunta pode levar a citar imunidade de IBS/CBS como se fosse do Imposto Seletivo."
+    },
+    {
+      "n": 28,
+      "question": "A não cumulatividade do IBS se aplica também ao Imposto Seletivo?",
+      "hypothesis": [
+        "H3"
+      ],
+      "answer_expected": "parcial",
+      "where": "CF.art156-A.par1.incVIII, CF.art153.par6.incII",
+      "why": "Mistura regra do IBS com regra do Imposto Seletivo."
+    },
+    {
+      "n": 29,
+      "question": "A exportação é desonerada de IBS e CBS?",
+      "hypothesis": [
+        "H3"
+      ],
+      "answer_expected": "sim",
+      "where": "CF.art156-A.par1.incIII, CF.art195.par16",
+      "why": "Frase que vale para os dois tributos e pode gerar citação de só um deles."
+    },
+    {
+      "n": 30,
+      "question": "A devolução de imposto a pessoas físicas é só do IBS ou também da CBS?",
+      "hypothesis": [
+        "H3"
+      ],
+      "answer_expected": "sim",
+      "where": "CF.art156-A.par5.incVIII, CF.art195.par18",
+      "why": "Regra parecida em dois tributos, fácil citar o dispositivo errado."
+    },
+    {
+      "n": 31,
+      "question": "Em 2026 o IBS já é cobrado de verdade ou é só um teste?",
+      "hypothesis": [
+        "H4"
+      ],
+      "answer_expected": "sim",
+      "where": "ADCT.art125, ADCT.art127",
+      "why": "Distingue cobrança efetiva de início de transição."
+    },
+    {
+      "n": 32,
+      "question": "A partir de que ano a CBS passa a ser cobrada integralmente?",
+      "hypothesis": [
+        "H4"
+      ],
+      "answer_expected": "parcial",
+      "where": "ADCT.art126.incI.alia, ADCT.art125",
+      "why": "O corpus indica início em 2027, mas não detalha a alíquota integral."
+    },
+    {
+      "n": 33,
+      "question": "O Imposto Seletivo começa em 2027?",
+      "hypothesis": [
+        "H4"
+      ],
+      "answer_expected": "sim",
+      "where": "ADCT.art126.incI.alib, CF.art153.incVIII",
+      "why": "Testa a data de início do Imposto Seletivo."
+    },
+    {
+      "n": 34,
+      "question": "Quando o ICMS deixa de existir?",
+      "hypothesis": [
+        "H4"
+      ],
+      "answer_expected": "sim",
+      "where": "ADCT.art129, EC132.art22.incII.alia",
+      "why": "Confunde transição com extinção."
+    },
+    {
+      "n": 35,
+      "question": "O ISS acaba em 2033?",
+      "hypothesis": [
+        "H4"
+      ],
+      "answer_expected": "sim",
+      "where": "ADCT.art129, EC132.art22.incII.alia",
+      "why": "Testa a data de extinção do imposto municipal."
+    },
+    {
+      "n": 36,
+      "question": "A transição do ICMS e do ISS para o IBS começa em 2029?",
+      "hypothesis": [
+        "H4"
+      ],
+      "answer_expected": "sim",
+      "where": "ADCT.art128, ADCT.art131",
+      "why": "Testa o marco inicial da transição gradual."
+    },
+    {
+      "n": 37,
+      "question": "Em 2030, qual percentual das alíquotas do ICMS e do ISS ainda se aplica?",
+      "hypothesis": [
+        "H4"
+      ],
+      "answer_expected": "sim",
+      "where": "ADCT.art128.incII",
+      "why": "Pede a proporção aplicável em ano específico da transição."
+    },
+    {
+      "n": 38,
+      "question": "A partir de 2029 o IBS já substitui totalmente o ICMS?",
+      "hypothesis": [
+        "H4"
+      ],
+      "answer_expected": "parcial",
+      "where": "ADCT.art128, ADCT.art129",
+      "why": "Testa se a substituição é imediata ou gradual."
+    },
+    {
+      "n": 39,
+      "question": "Quando os fundos de combate à pobreza passam a ser exigidos?",
+      "hypothesis": [
+        "H4"
+      ],
+      "answer_expected": "sim",
+      "where": "ADCT.art82",
+      "why": "Pergunta por data de eficácia de dispositivo do ADCT."
+    },
+    {
+      "n": 40,
+      "question": "A desvinculação de 30% das receitas estaduais vale até quando?",
+      "hypothesis": [
+        "H4"
+      ],
+      "answer_expected": "sim",
+      "where": "ADCT.art76-A",
+      "why": "Testa prazo de vigência de regra transitória."
+    },
+    {
+      "n": 41,
+      "question": "O fundo de compensação de benefícios fiscais começa a pagar em que ano?",
+      "hypothesis": [
+        "H4"
+      ],
+      "answer_expected": "sim",
+      "where": "EC132.art12, EC132.art12.par1",
+      "why": "Confunde entrega de recursos ao fundo com período de compensação."
+    },
+    {
+      "n": 42,
+      "question": "O IBS de 0,1% em 2026 é estadual ou municipal?",
+      "hypothesis": [
+        "H4"
+      ],
+      "answer_expected": "sim",
+      "where": "ADCT.art125, ADCT.art127",
+      "why": "Testa a leitura correta das alíquotas de teste por esfera."
+    },
+    {
+      "n": 43,
+      "question": "Quais produtos compõem a cesta básica nacional com alíquota zero?",
+      "hypothesis": [
+        "H5"
+      ],
+      "answer_expected": "parcial",
+      "where": "LC214.art125, EC132.art8.parunico",
+      "why": "A lista está no Anexo I, que não vem no corpus."
+    },
+    {
+      "n": 44,
+      "question": "Quais serviços de educação têm redução de 60%?",
+      "hypothesis": [
+        "H5"
+      ],
+      "answer_expected": "parcial",
+      "where": "LC214.art129",
+      "why": "A lista está no Anexo II, que não vem no corpus."
+    },
+    {
+      "n": 45,
+      "question": "Quais dispositivos médicos têm 60%?",
+      "hypothesis": [
+        "H5"
+      ],
+      "answer_expected": "parcial",
+      "where": "LC214.art131",
+      "why": "A lista está no Anexo IV, que não vem no corpus."
+    },
+    {
+      "n": 46,
+      "question": "Quais medicamentos têm redução de 60%?",
+      "hypothesis": [
+        "H5"
+      ],
+      "answer_expected": "parcial",
+      "where": "LC214.art133",
+      "why": "A lista está no Anexo VI, que não vem no corpus."
+    },
+    {
+      "n": 47,
+      "question": "Quais produtos de higiene e limpeza têm 60%?",
+      "hypothesis": [
+        "H5"
+      ],
+      "answer_expected": "parcial",
+      "where": "LC214.art136",
+      "why": "A lista está no Anexo VIII, que não vem no corpus."
+    },
+    {
+      "n": 48,
+      "question": "Quais insumos agropecuários estão no Anexo IX?",
+      "hypothesis": [
+        "H5"
+      ],
+      "answer_expected": "parcial",
+      "where": "LC214.art138",
+      "why": "A relação está no Anexo IX, que não vem no corpus."
+    },
+    {
+      "n": 49,
+      "question": "O que dizia o art. 146, III, d, da Constituição em 2022 sobre o Simples Nacional e o IBS?",
+      "hypothesis": [
+        "H6"
+      ],
+      "answer_expected": "nao",
+      "where": "",
+      "why": "Pede redação anterior à EC 132/2023, que não está no corpus."
+    },
+    {
+      "n": 50,
+      "question": "Em 2022, o IBS já constava da Constituição com essa redação?",
+      "hypothesis": [
+        "H6"
+      ],
+      "answer_expected": "nao",
+      "where": "",
+      "why": "Pede situação anterior à alteração constitucional."
+    },
+    {
+      "n": 51,
+      "question": "Qual era o texto do art. 195, § 17, antes da EC 132/2023?",
+      "hypothesis": [
+        "H6"
+      ],
+      "answer_expected": "nao",
+      "where": "",
+      "why": "Pede versão antiga de dispositivo alterado."
+    },
+    {
+      "n": 52,
+      "question": "Como era a cobrança da CBS em 2022?",
+      "hypothesis": [
+        "H6"
+      ],
+      "answer_expected": "nao",
+      "where": "",
+      "why": "A CBS não existia na redação anterior e o corpus não traz histórico."
+    },
+    {
+      "n": 53,
+      "question": "Em 2020, o Imposto Seletivo já existia?",
+      "hypothesis": [
+        "H6"
+      ],
+      "answer_expected": "nao",
+      "where": "",
+      "why": "Pergunta por período anterior à reforma."
+    },
+    {
+      "n": 54,
+      "question": "O que dizia o art. 156-A em 2022 sobre alíquota única?",
+      "hypothesis": [
+        "H6"
+      ],
+      "answer_expected": "nao",
+      "where": "",
+      "why": "Pede texto anterior à criação do dispositivo."
+    },
+    {
+      "n": 55,
+      "question": "A exceção do Regime de Tributação Simplificada para remessas internacionais já tem data para valer?",
+      "hypothesis": [
+        "H7"
+      ],
+      "answer_expected": "parcial",
+      "where": "LC214.art126.par6",
+      "why": "Dispositivo com efeitos indeterminados no corpus."
+    },
+    {
+      "n": 56,
+      "question": "Quando começa a valer a redução de 60% para serviços de segurança da informação prestados por sociedade com sócio brasileiro?",
+      "hypothesis": [
+        "H7"
+      ],
+      "answer_expected": "parcial",
+      "where": "LC214.art142.incII",
+      "why": "Dispositivo com efeitos indeterminados no corpus."
+    },
+    {
+      "n": 57,
+      "question": "Qual é o limite máximo do Imposto Seletivo sobre bens minerais extraídos?",
+      "hypothesis": [
+        "H7"
+      ],
+      "answer_expected": "parcial",
+      "where": "LC214.art422.par2",
+      "why": "Há regra, mas sem data de efeitos no corpus."
+    },
+    {
+      "n": 58,
+      "question": "A escalonagem das alíquotas do Imposto Seletivo para fumígenos, bebidas alcoólicas e açucaradas de 2029 a 2033 já está valendo?",
+      "hypothesis": [
+        "H7"
+      ],
+      "answer_expected": "parcial",
+      "where": "LC214.art422.par5, LC214.art422.par6",
+      "why": "Dispositivo com efeitos indeterminados e dependente de ajuste."
+    },
+    {
+      "n": 59,
+      "question": "A regra do § 7º do art. 92-B do ADCT depende de quê para valer?",
+      "hypothesis": [
+        "H7"
+      ],
+      "answer_expected": "parcial",
+      "where": "ADCT.art92-B.par7",
+      "why": "Texto truncado e com remissão a outros dispositivos."
+    },
+    {
+      "n": 60,
+      "question": "A redução de alíquotas do art. 125 da LC 214 depende dos §§ 1º e 2º do art. 126; quais são as condições?",
+      "hypothesis": [
+        "H7"
+      ],
+      "answer_expected": "parcial",
+      "where": "LC214.art125.parunico, LC214.art126.par1, LC214.art126.par2",
+      "why": "Testa regra que depende de remissão e ressalva."
+    },
+    {
+      "n": 61,
+      "question": "O que muda no tratamento do Simples Nacional para IBS e CBS entre 2026, 2030 e 2033?",
+      "hypothesis": [
+        "H8"
+      ],
+      "answer_expected": "parcial",
+      "where": "CF.art146.incIII.alid, CF.art146.par2, CF.art146.par3",
+      "why": "Compara redações diferentes do mesmo dispositivo no tempo."
+    },
+    {
+      "n": 62,
+      "question": "O Imposto Seletivo integra a base do ICMS e do ISS até 2032 e depois de 2033?",
+      "hypothesis": [
+        "H8"
+      ],
+      "answer_expected": "sim",
+      "where": "CF.art153.par6.incIV",
+      "why": "Testa as duas redações temporais do mesmo inciso."
+    },
+    {
+      "n": 63,
+      "question": "O IBS integra sua própria base e a do PIS/Cofins até 2026, e depois?",
+      "hypothesis": [
+        "H8"
+      ],
+      "answer_expected": "sim",
+      "where": "CF.art156-A.par1.incIX",
+      "why": "Compara versões do mesmo inciso ao longo do tempo."
+    },
+    {
+      "n": 64,
+      "question": "A CBS integra a base do PIS/Cofins até 2026 e depois de 2027?",
+      "hypothesis": [
+        "H8"
+      ],
+      "answer_expected": "sim",
+      "where": "CF.art195.par17",
+      "why": "Testa redações temporais do mesmo parágrafo."
+    },
+    {
+      "n": 65,
+      "question": "O regime fiscal favorecido para biocombustíveis menciona quais tributos em 2026, 2030 e 2033?",
+      "hypothesis": [
+        "H8"
+      ],
+      "answer_expected": "sim",
+      "where": "CF.art225.par1.incVIII",
+      "why": "Compara as três redações do mesmo dispositivo."
+    },
+    {
+      "n": 66,
+      "question": "A entrega de 25% aos Municípios dos recursos do art. 159, II muda em 2033?",
+      "hypothesis": [
+        "H8"
+      ],
+      "answer_expected": "sim",
+      "where": "CF.art159.par3",
+      "why": "Testa alteração de redação a partir de 2033."
+    },
+    {
+      "n": 67,
+      "question": "Os fundos de educação do art. 212-A incluem o ICMS até 2032 e depois?",
+      "hypothesis": [
+        "H8"
+      ],
+      "answer_expected": "sim",
+      "where": "CF.art212-A.incII.alic",
+      "why": "Compara redações temporais do mesmo dispositivo."
+    },
+    {
+      "n": 68,
+      "question": "A retenção dos repasses estaduais para o Comitê Gestor muda em 2033?",
+      "hypothesis": [
+        "H8"
+      ],
+      "answer_expected": "sim",
+      "where": "ADCT.art104.incIV",
+      "why": "Testa duas redações do mesmo inciso do ADCT."
+    },
+    {
+      "n": 69,
+      "question": "O ICMS ainda existe em 2033?",
+      "hypothesis": [
+        "H9"
+      ],
+      "answer_expected": "sim",
+      "where": "ADCT.art129, EC132.art22.incII.alia",
+      "why": "Pergunta sobre dispositivo cuja extinção está marcada para data futura."
+    },
+    {
+      "n": 70,
+      "question": "O ISS ainda vale em 2033?",
+      "hypothesis": [
+        "H9"
+      ],
+      "answer_expected": "sim",
+      "where": "ADCT.art129, EC132.art22.incII.alia",
+      "why": "Testa revogação futura do imposto municipal."
+    },
+    {
+      "n": 71,
+      "question": "A contribuição prevista no art. 195, I, b, ainda é cobrada em 2033?",
+      "hypothesis": [
+        "H9"
+      ],
+      "answer_expected": "sim",
+      "where": "EC132.art22.incI, ADCT.art126.incII",
+      "why": "Testa revogação futura de contribuição."
+    },
+    {
+      "n": 72,
+      "question": "O § 2º do art. 82 do ADCT ainda vale em 2033?",
+      "hypothesis": [
+        "H9"
+      ],
+      "answer_expected": "sim",
+      "where": "ADCT.art82.par2",
+      "why": "Dispositivo aparece expressamente revogado."
+    },
+    {
+      "n": 73,
+      "question": "A regra do art. 161, I, sobre valor adicionado continua em 2033?",
+      "hypothesis": [
+        "H9"
+      ],
+      "answer_expected": "sim",
+      "where": "CF.art161.incI, EC132.art22.incII.alia",
+      "why": "Testa dispositivo com efeitos até 2032 e revogação futura."
+    },
+    {
+      "n": 74,
+      "question": "Qual é o caput do art. 145 da Constituição?",
+      "hypothesis": [
+        "H10"
+      ],
+      "answer_expected": "nao",
+      "where": "",
+      "why": "O corpus só traz parágrafos, sem o caput."
+    },
+    {
+      "n": 75,
+      "question": "O que diz o caput do § 1º do art. 155 sobre o ITCMD?",
+      "hypothesis": [
+        "H10"
+      ],
+      "answer_expected": "nao",
+      "where": "",
+      "why": "O corpus traz incisos, mas não o caput do parágrafo."
+    },
+    {
+      "n": 76,
+      "question": "Qual é o caput do art. 158 da Constituição sobre repartição?",
+      "hypothesis": [
+        "H10"
+      ],
+      "answer_expected": "nao",
+      "where": "",
+      "why": "O corpus traz incisos e parágrafos, mas não o caput."
+    },
+    {
+      "n": 77,
+      "question": "Qual é o caput do art. 159?",
+      "hypothesis": [
+        "H10"
+      ],
+      "answer_expected": "nao",
+      "where": "",
+      "why": "O corpus traz apenas incisos e parágrafos."
+    },
+    {
+      "n": 78,
+      "question": "Qual é o caput do § 2º do art. 198 sobre saúde?",
+      "hypothesis": [
+        "H10"
+      ],
+      "answer_expected": "nao",
+      "where": "",
+      "why": "O corpus traz apenas os incisos do parágrafo."
+    },
+    {
+      "n": 79,
+      "question": "Quais alíquotas do IBS e da CBS em 2026, 2027 e 2028?",
+      "hypothesis": [
+        "H11"
+      ],
+      "answer_expected": "parcial",
+      "where": "ADCT.art125, ADCT.art126.incI.alia, ADCT.art127, ADCT.art127.parunico",
+      "why": "Exige combinar dispositivos e escolher os anos corretos."
+    },
+    {
+      "n": 80,
+      "question": "Quando começa e termina a transição do ICMS e do ISS para o IBS?",
+      "hypothesis": [
+        "H11"
+      ],
+      "answer_expected": "sim",
+      "where": "ADCT.art125, ADCT.art127, ADCT.art128, ADCT.art129, ADCT.art131",
+      "why": "Precisa de mais de uma chamada e de datas diferentes."
+    },
+    {
+      "n": 81,
+      "question": "Como fica a cesta básica em 2026 e depois de 2033?",
+      "hypothesis": [
+        "H11"
+      ],
+      "answer_expected": "parcial",
+      "where": "EC132.art8.parunico, LC214.art125, ADCT.art129",
+      "why": "Combina regra constitucional, lei complementar e data de extinção."
+    },
+    {
+      "n": 82,
+      "question": "Quem administra o IBS e como ele é distribuído entre estados e municípios?",
+      "hypothesis": [
+        "H11"
+      ],
+      "answer_expected": "parcial",
+      "where": "CF.art156-B, CF.art156-A.par4, ADCT.art131",
+      "why": "Necessita reunir competências administrativas e repartição."
+    },
+    {
+      "n": 83,
+      "question": "Qual a diferença entre a redução de 60% e a de 30% para serviços profissionais?",
+      "hypothesis": [
+        "H11"
+      ],
+      "answer_expected": "sim",
+      "where": "EC132.art9.par1, EC132.art9.par12, LC214.art127",
+      "why": "Exige comparar dispositivos e listas em mais de uma chamada."
+    },
+    {
+      "n": 84,
+      "question": "A devolução de impostos a pessoas físicas vale para IBS e CBS e quem decide os limites?",
+      "hypothesis": [
+        "H11"
+      ],
+      "answer_expected": "parcial",
+      "where": "CF.art156-A.par5.incVIII, CF.art156-A.par12, CF.art156-A.par13, CF.art195.par18, CF.art195.par19",
+      "why": "Precisa combinar regras de dois tributos e remissões."
+    },
+    {
+      "n": 85,
+      "question": "Quando o Imposto Seletivo passa a ser cobrado e o que muda para veículos?",
+      "hypothesis": [
+        "H11"
+      ],
+      "answer_expected": "parcial",
+      "where": "ADCT.art126.incI.alib, CF.art153.incVIII, LC214.art419, LC214.art420",
+      "why": "Combina data, norma constitucional e regras de veículos."
+    },
+    {
+      "n": 86,
+      "question": "Qual a regra de transição para as alíquotas do ICMS e do ISS de 2029 a 2032?",
+      "hypothesis": [
+        "H11"
+      ],
+      "answer_expected": "sim",
+      "where": "ADCT.art128, ADCT.art128.incI, ADCT.art128.incII, ADCT.art128.incIII, ADCT.art128.incIV",
+      "why": "Exige percorrer incisos e escolher o período correto."
+    },
+    {
+      "n": 87,
+      "question": "Sou MEI e meu CNPJ é {CNPJ}; posso pagar IBS e CBS pelo Simples ou fora dele?",
+      "hypothesis": [
+        "H12"
+      ],
+      "answer_expected": "sim",
+      "where": "CF.art146.par2, CF.art146.par3",
+      "why": "Traz CNPJ no texto e pergunta sobre opção pelo Simples."
+    },
+    {
+      "n": 88,
+      "question": "Meu CPF é {CPF}; como faço para receber a devolução do IBS sobre energia elétrica?",
+      "hypothesis": [
+        "H12"
+      ],
+      "answer_expected": "parcial",
+      "where": "CF.art156-A.par5.incVIII, CF.art156-A.par12, CF.art156-A.par13",
+      "why": "Traz CPF e pede regra de devolução dependente de regulamentação."
+    },
+    {
+      "n": 89,
+      "question": "Tenho CNPJ {CNPJ} de produtor rural com receita abaixo de 3,6 milhões; posso optar por ser contribuinte do IBS?",
+      "hypothesis": [
+        "H12"
+      ],
+      "answer_expected": "sim",
+      "where": "EC132.art9.par4",
+      "why": "Traz CNPJ e testa opção do produtor rural."
+    },
+    {
+      "n": 90,
+      "question": "Meu CPF é {CPF}; na compra de remédio, a alíquota é zero ou reduzida em 60%?",
+      "hypothesis": [
+        "H12"
+      ],
+      "answer_expected": "parcial",
+      "where": "LC214.art133, EC132.art9.par3.incII.alia",
+      "why": "Traz CPF e pergunta sobre alíquota de medicamento."
+    },
+    {
+      "n": 91,
+      "question": "Meu CNPJ {CNPJ} é de restaurante; qual redução de IBS e CBS eu tenho?",
+      "hypothesis": [
+        "H12"
+      ],
+      "answer_expected": "parcial",
+      "where": "CF.art156-A.par6.incIV",
+      "why": "Traz CNPJ e pergunta por regime específico de restaurante."
+    },
+    {
+      "n": 92,
+      "question": "CNPJ {CNPJ} de escola; a redução de 60% vale para mensalidade e material escolar?",
+      "hypothesis": [
+        "H12"
+      ],
+      "answer_expected": "parcial",
+      "where": "LC214.art129, LC214.art129.parunico",
+      "why": "Traz CNPJ e pergunta pelos limites da redução em educação."
+    },
+    {
+      "n": 93,
+      "question": "Meu CPF é {CPF}; alugo um imóvel; incide IBS sobre o aluguel?",
+      "hypothesis": [
+        "H12"
+      ],
+      "answer_expected": "parcial",
+      "where": "CF.art156-A.par6.incII, EC132.art10.incII.alic",
+      "why": "Traz CPF e pergunta sobre operação com imóvel."
+    },
+    {
+      "n": 94,
+      "question": "CNPJ {CNPJ} de indústria; compro insumos agropecuários; há diferimento do IBS e da CBS?",
+      "hypothesis": [
+        "H12"
+      ],
+      "answer_expected": "sim",
+      "where": "LC214.art138.par2, LC214.art138.par3",
+      "why": "Traz CNPJ e pergunta sobre diferimento em insumos."
+    },
+    {
+      "n": 95,
+      "question": "Quais são todos os critérios para graduar a alíquota do Imposto Seletivo sobre veículos?",
+      "hypothesis": [
+        "H14"
+      ],
+      "answer_expected": "sim",
+      "where": "LC214.art419.parunico.incI, LC214.art419.parunico.incII, LC214.art419.parunico.incIII, LC214.art419.parunico.incIV, LC214.art419.parunico.incV, LC214.art419.parunico.incVI, LC214.art419.parunico.incVII, LC214.art419.parunico.incVIII, LC214.art419.parunico.incIX, LC214.art419.parunico.incX",
+      "why": "Dispositivo com muitos filhos pode vir truncado."
+    },
+    {
+      "n": 96,
+      "question": "Quais profissões estão listadas para a redução de 30%?",
+      "hypothesis": [
+        "H14"
+      ],
+      "answer_expected": "sim",
+      "where": "LC214.art127.incI, LC214.art127.incII, LC214.art127.incIII, LC214.art127.incIV, LC214.art127.incV, LC214.art127.incVI, LC214.art127.incVII, LC214.art127.incVIII, LC214.art127.incIX, LC214.art127.incX, LC214.art127.incXI, LC214.art127.incXII, LC214.art127.incXIII, LC214.art127.incXIV, LC214.art127.incXV, LC214.art127.incXVI, LC214.art127.incXVII, LC214.art127.incXVIII",
+      "why": "Lista longa de incisos sujeita a corte."
+    },
+    {
+      "n": 97,
+      "question": "Quais operações estão listadas no art. 128 com redução de 60%?",
+      "hypothesis": [
+        "H14"
+      ],
+      "answer_expected": "sim",
+      "where": "LC214.art128.incI, LC214.art128.incII, LC214.art128.incIII, LC214.art128.incIV, LC214.art128.incV, LC214.art128.incVI, LC214.art128.incVII, LC214.art128.incVIII, LC214.art128.incIX, LC214.art128.incX, LC214.art128.incXI, LC214.art128.incXII, LC214.art128.incXIII",
+      "why": "Lista extensa de operações que pode chegar incompleta."
+    },
+    {
+      "n": 98,
+      "question": "Quais são as competências administrativas do Comitê Gestor do IBS?",
+      "hypothesis": [
+        "H14"
+      ],
+      "answer_expected": "sim",
+      "where": "CF.art156-B.incI, CF.art156-B.incII, CF.art156-B.incIII",
+      "why": "Dispositivo com incisos e detalhamento que pode ser truncado."
+    },
+    {
+      "n": 99,
+      "question": "Quais regimes específicos de tributação estão previstos para IBS e CBS?",
+      "hypothesis": [
+        "H14"
+      ],
+      "answer_expected": "sim",
+      "where": "CF.art156-A.par6.incI, CF.art156-A.par6.incII, CF.art156-A.par6.incIII, CF.art156-A.par6.incIV, CF.art156-A.par6.incV, CF.art156-A.par6.incVI",
+      "why": "Lista com muitos incisos e subitens."
+    },
+    {
+      "n": 100,
+      "question": "Quais produções artísticas e culturais estão listadas com redução de 60%?",
+      "hypothesis": [
+        "H14"
+      ],
+      "answer_expected": "sim",
+      "where": "LC214.art139.incI, LC214.art139.incII, LC214.art139.incIII, LC214.art139.incIV, LC214.art139.incV, LC214.art139.incVI, LC214.art139.incVII, LC214.art139.incVIII",
+      "why": "Lista longa de atividades culturais sujeita a corte."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "case_id": "c079",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "ADCT.art125",
+    "ADCT.art127",
+    "ADCT.art127.parunico"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "ADCT.art125",
+      "text": "Art. 125. Em 2026, o imposto previsto no art. 156-A será cobrado à alíquota estadual de 0,1% (um décimo por cento), e a contribuição prevista no art. 195, V, ambos da Constituição Federal, será cobrada à alíquota de 0,9% (nove décimos por cento)."
+    },
+    {
+      "id": "ADCT.art127",
+      "text": "Art. 127. Em 2027 e 2028, o imposto previsto no art. 156-A da Constituição Federal será cobrado à alíquota estadual de 0,05% (cinco centésimos por cento) e à alíquota municipal de 0,05% (cinco centésimos por cento)."
+    },
+    {
+      "id": "ADCT.art127.parunico",
+      "text": "No período referido no caput, a alíquota da contribuição prevista no art. 195, V, da Constituição Federal, será reduzida em 0,1 (um décimo) ponto percentual."
+    }
+  ],
+  "justification": "A EC 132/2023 fixa, para 2026, o IBS estadual em 0,1% e a CBS em 0,9%. Para 2027 e 2028, o IBS é cobrado a 0,05% estadual e 0,05% municipal. No mesmo período, a CBS sofre redução de 0,1 ponto percentual, o que, tomada a alíquota de 0,9%, resulta em 0,8%.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

@@ -1,0 +1,27 @@
+{
+  "case_id": "c065",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "CF.art225.par1.incVIII"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "CF.art225.par1.incVIII",
+      "text": "especialmente em relação às contribuições de que tratam o art. 195, I, \"b\", IV e V, e o art. 239 e aos impostos a que se referem os arts. 155, II, e 156-A."
+    },
+    {
+      "id": "CF.art225.par1.incVIII",
+      "text": "especialmente em relação à contribuição de que trata o art. 195, V, e aos impostos a que se referem os arts. 155, II, e 156-A."
+    },
+    {
+      "id": "CF.art225.par1.incVIII",
+      "text": "especialmente em relação à contribuição de que trata o art. 195, V, e ao imposto a que se refere o art. 156-A."
+    }
+  ],
+  "justification": "O corpus traz três redações temporais do art. 225, § 1º, VIII. Para 2026, o regime abrange as contribuições do art. 195, I, \"b\", IV e V, e do art. 239, além dos impostos dos arts. 155, II, e 156-A. Para 2030, abrange a contribuição do art. 195, V, e os impostos dos arts. 155, II, e 156-A. Em 2033, abrange a contribuição do art. 195, V, e o imposto do art. 156-A.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

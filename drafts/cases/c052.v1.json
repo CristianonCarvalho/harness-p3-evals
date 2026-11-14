@@ -1,0 +1,12 @@
+{
+  "case_id": "c052",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "nao",
+  "expected_provisions": [],
+  "reference_date": "2026-11-13",
+  "quotes": [],
+  "justification": "O corpus não contém dispositivo com efeitos que alcancem 2022 e que descreva a cobrança da CBS naquele ano. Os dispositivos sobre a CBS tratam da transição a partir de 2026 e 2027, sem retroagir para 2022. Assim, não há base no corpus para responder como era a cobrança da CBS em 2022.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

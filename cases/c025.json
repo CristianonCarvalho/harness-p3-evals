@@ -1,0 +1,24 @@
+{
+  "case_id": "c025",
+  "question": "A redução de 60% para serviços de saúde vale para quais tributos?",
+  "hypothesis": [
+    "H3"
+  ],
+  "split": "desenvolvimento",
+  "subsets": [],
+  "origin": "ai_kept",
+  "source_n": "25",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "LC214.art130"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c025.v1.json",
+    "note": ""
+  }
+}

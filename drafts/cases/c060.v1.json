@@ -1,0 +1,29 @@
+{
+  "case_id": "c060",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "LC214.art125",
+    "LC214.art125.parunico",
+    "LC214.art126.par1"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "LC214.art125",
+      "text": "Ficam reduzidas a zero as alíquotas do IBS e da CBS incidentes sobre as vendas de produtos destinados à alimentação humana relacionados no Anexo I desta Lei Complementar, com a especificação das respectivas classificações da NCM/SH, que compõem a Cesta Básica Nacional de Alimentos, criada nos termos do art. 8º da Emenda Constitucional nº 132, de 20 de dezembro de 2023."
+    },
+    {
+      "id": "LC214.art125.parunico",
+      "text": "Aplica-se o disposto nos §§ 1º e 2º do art. 126 desta Lei Complementar às reduções de alíquotas de que trata o caput deste artigo."
+    },
+    {
+      "id": "LC214.art126.par1",
+      "text": "Atendidos os requisitos próprios, os regimes diferenciados de que trata este Capítulo aplicam-se, no que couber, à importação dos bens e serviços nele previstos."
+    }
+  ],
+  "justification": "O art. 125 condiciona a alíquota zero à venda de produtos destinados à alimentação humana que estejam relacionados no Anexo I da LC 214, com a respectiva classificação NCM/SH, e que componham a Cesta Básica Nacional de Alimentos. O parágrafo único estende a essas reduções o disposto nos §§ 1º e 2º do art. 126; para a importação, o § 1º exige que sejam atendidos os requisitos próprios do regime, no que couber. O corpus não reproduz o Anexo I, de modo que não permite listar os produtos concretos.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

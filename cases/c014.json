@@ -1,0 +1,29 @@
+{
+  "case_id": "c014",
+  "question": "Como vai funcionar o cashback de impostos para famílias de baixa renda?",
+  "hypothesis": [
+    "H2"
+  ],
+  "split": "teste",
+  "subsets": [
+    "sem_skill"
+  ],
+  "origin": "human_written",
+  "source_n": "14b",
+  "gabarito": {
+    "answer_exists": "parcial",
+    "expected_provisions": [
+      "CF.art156-A.par5.incVIII",
+      "CF.art156-A.par13",
+      "CF.art195.par18",
+      "CF.art195.par16"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c014.v1.json",
+    "note": ""
+  }
+}

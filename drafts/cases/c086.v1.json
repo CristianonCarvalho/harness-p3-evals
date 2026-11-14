@@ -1,0 +1,39 @@
+{
+  "case_id": "c086",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "ADCT.art128",
+    "ADCT.art128.incI",
+    "ADCT.art128.incII",
+    "ADCT.art128.incIII",
+    "ADCT.art128.incIV"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "ADCT.art128",
+      "text": "Art. 128. De 2029 a 2032, as alíquotas dos impostos previstos nos arts. 155, II, e 156, III, da Constituição Federal, serão fixadas nas seguintes proporções das alíquotas fixadas nas respectivas legislações:"
+    },
+    {
+      "id": "ADCT.art128.incI",
+      "text": "I - 9/10 (nove décimos), em 2029;"
+    },
+    {
+      "id": "ADCT.art128.incII",
+      "text": "II - 8/10 (oito décimos), em 2030;"
+    },
+    {
+      "id": "ADCT.art128.incIII",
+      "text": "III - 7/10 (sete décimos), em 2031;"
+    },
+    {
+      "id": "ADCT.art128.incIV",
+      "text": "IV - 6/10 (seis décimos), em 2032."
+    }
+  ],
+  "justification": "O ADCT, art. 128, determina que, de 2029 a 2032, as alíquotas do ICMS (art. 155, II) e do ISS (art. 156, III) sejam fixadas em proporções decrescentes das alíquotas previstas nas respectivas legislações. Os incisos I a IV fixam 9/10 em 2029, 8/10 em 2030, 7/10 em 2031 e 6/10 em 2032. Como o dispositivo tem efeitos desde 2023-12-21, ele já integra o ordenamento na data de referência e responde à regra de transição perguntada.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

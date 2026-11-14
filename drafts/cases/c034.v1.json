@@ -1,0 +1,34 @@
+{
+  "case_id": "c034",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "ADCT.art125",
+    "LC214.art128",
+    "LC214.art128.incI",
+    "LC214.art128.incII"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "ADCT.art125",
+      "text": "Em 2026, o imposto previsto no art. 156-A será cobrado à alíquota estadual de 0,1% (um décimo por cento), e a contribuição prevista no art. 195, V, ambos da Constituição Federal, será cobrada à alíquota de 0,9% (nove décimos por cento)."
+    },
+    {
+      "id": "LC214.art128",
+      "text": "ficam reduzidas em 60% (sessenta por cento) as alíquotas do IBS e da CBS incidentes sobre operações com:"
+    },
+    {
+      "id": "LC214.art128.incI",
+      "text": "I - serviços de educação;"
+    },
+    {
+      "id": "LC214.art128.incII",
+      "text": "II - serviços de saúde;"
+    }
+  ],
+  "justification": "O corpus indica que 2026 é o período de cobrança em alíquotas reduzidas de teste, com IBS a 0,1% e CBS a 0,9%. A LC 214/2025 estabelece redução de 60% das alíquotas do IBS e da CBS para operações com serviços de educação e de saúde. Como os efeitos desses dispositivos começam em 2026-01-01, a redução já alcança a data de referência de 2026-11-13.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

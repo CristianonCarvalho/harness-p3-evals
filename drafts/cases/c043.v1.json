@@ -1,0 +1,19 @@
+{
+  "case_id": "c043",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "parcial",
+  "expected_provisions": [
+    "LC214.art125"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "LC214.art125",
+      "text": "Ficam reduzidas a zero as alíquotas do IBS e da CBS incidentes sobre as vendas de produtos destinados à alimentação humana relacionados no Anexo I desta Lei Complementar, com a especificação das respectivas classificações da NCM/SH, que compõem a Cesta Básica Nacional de Alimentos"
+    }
+  ],
+  "justification": "O dispositivo aplicável na data de referência é o art. 125 da LC 214/2025, que reduz a zero as alíquotas do IBS e da CBS sobre produtos destinados à alimentação humana. Ele indica que os produtos são os relacionados no Anexo I da própria lei complementar, com suas classificações NCM/SH, e que compõem a Cesta Básica Nacional de Alimentos. Contudo, o corpus não reproduz o Anexo I, de modo que não é possível enumerar os produtos específicos.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

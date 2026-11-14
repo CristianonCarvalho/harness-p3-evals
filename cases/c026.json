@@ -1,0 +1,25 @@
+{
+  "case_id": "c026",
+  "question": "A alíquota zero da cesta básica também alcança o Imposto Seletivo?",
+  "hypothesis": [
+    "H3"
+  ],
+  "split": "teste",
+  "subsets": [],
+  "origin": "ai_kept",
+  "source_n": "26",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "EC132.art8.parunico",
+      "LC214.art125"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c026.v1.json",
+    "note": ""
+  }
+}

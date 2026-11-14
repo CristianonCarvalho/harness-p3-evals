@@ -1,0 +1,25 @@
+{
+  "case_id": "c059",
+  "question": "O que é necessário para que a regra do art. 92-B, § 7º, do ADCT produza efeitos?",
+  "hypothesis": [
+    "H7"
+  ],
+  "split": "desenvolvimento",
+  "subsets": [],
+  "origin": "human_rewritten",
+  "source_n": "59",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "ADCT.art92-B.par7",
+      "ADCT.art92-B.par6"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c059.v1.json",
+    "note": ""
+  }
+}

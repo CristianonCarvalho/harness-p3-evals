@@ -1,0 +1,24 @@
+{
+  "case_id": "c068",
+  "question": "A retenção dos repasses estaduais para o Comitê Gestor muda em 2033?",
+  "hypothesis": [
+    "H8"
+  ],
+  "split": "teste",
+  "subsets": [],
+  "origin": "ai_kept",
+  "source_n": "68",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "ADCT.art104.incIV"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "mudar",
+    "draft": "drafts/cases/c068.v1.json",
+    "note": "answer_exists sim (o corpus contém a versão futura do ADCT.art104.incIV a partir de 2033, que responde integralmente que a retenção muda, conforme a hipótese H8 de várias versões no tempo)"
+  }
+}

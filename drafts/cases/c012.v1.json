@@ -1,0 +1,12 @@
+{
+  "case_id": "c012",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "nao",
+  "expected_provisions": [],
+  "reference_date": "2026-11-13",
+  "quotes": [],
+  "justification": "Não há, no corpus, dispositivo que institua ou discipline imposto sobre grandes fortunas. Os dispositivos apresentados tratam do IBS, da CBS, do Imposto Seletivo e de outras matérias da reforma, sem previsão de tributação sobre grandes fortunas. Portanto, o corpus não responde afirmativamente à pergunta.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

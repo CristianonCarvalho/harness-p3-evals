@@ -1,0 +1,24 @@
+{
+  "case_id": "c062",
+  "question": "O Imposto Seletivo integra a base do ICMS e do ISS até 2032 e depois de 2033?",
+  "hypothesis": [
+    "H8"
+  ],
+  "split": "teste",
+  "subsets": [],
+  "origin": "ai_kept",
+  "source_n": "62",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "CF.art153.par6.incIV"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c062.v1.json",
+    "note": ""
+  }
+}

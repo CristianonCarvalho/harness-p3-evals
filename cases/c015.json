@@ -1,0 +1,30 @@
+{
+  "case_id": "c015",
+  "question": "Como fica o PIS/Cofins com a reforma?",
+  "hypothesis": [
+    "H2"
+  ],
+  "split": "teste",
+  "subsets": [
+    "sem_skill"
+  ],
+  "origin": "ai_kept",
+  "source_n": "15",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "ADCT.art125",
+      "ADCT.art125.par1",
+      "ADCT.art126",
+      "ADCT.art126.incI.alia",
+      "ADCT.art126.incII"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c015.v1.json",
+    "note": ""
+  }
+}

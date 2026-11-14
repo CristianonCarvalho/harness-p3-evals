@@ -1,0 +1,29 @@
+{
+  "case_id": "c085",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "ADCT.art126",
+    "ADCT.art126.incI.alib",
+    "LC214.art419"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "ADCT.art126",
+      "text": "Art. 126. A partir de 2027:"
+    },
+    {
+      "id": "ADCT.art126.incI.alib",
+      "text": "b) o imposto previsto no art. 153, VIII, da Constituição Federal;"
+    },
+    {
+      "id": "LC214.art419",
+      "text": "Art. 419. As alíquotas do Imposto Seletivo aplicáveis aos veículos classificados nos códigos da NCM/SH relacionados no Anexo XVII serão estabelecidas em lei ordinária."
+    }
+  ],
+  "justification": "O ADCT, art. 126, estabelece que a partir de 2027 serão cobrados tributos, e a alínea b do inciso I inclui o imposto previsto no art. 153, VIII, da Constituição Federal. A LC 214/2025, art. 419, trata especificamente das alíquotas do Imposto Seletivo aplicáveis a veículos. Na data de referência, 2026-11-13, essa cobrança ainda não começou, pois seu início está fixado para 2027.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

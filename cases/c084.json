@@ -1,0 +1,28 @@
+{
+  "case_id": "c084",
+  "question": "Quem define os limites e as regras de devolução do IBS e da CBS para pessoas físicas?",
+  "hypothesis": [
+    "H11"
+  ],
+  "split": "teste",
+  "subsets": [
+    "sem_skill"
+  ],
+  "origin": "human_rewritten",
+  "source_n": "84",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "CF.art156-A.par5",
+      "CF.art156-A.par5.incVIII",
+      "CF.art195.par18"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c084.v1.json",
+    "note": ""
+  }
+}

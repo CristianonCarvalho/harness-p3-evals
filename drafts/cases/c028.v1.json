@@ -1,0 +1,24 @@
+{
+  "case_id": "c028",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "CF.art153.par6.incII",
+    "CF.art156-A.par1.incVIII"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "CF.art153.par6.incII",
+      "text": "incidirá uma única vez sobre o bem ou serviço"
+    },
+    {
+      "id": "CF.art156-A.par1.incVIII",
+      "text": "será não cumulativo, compensando-se o imposto devido pelo contribuinte com o montante cobrado sobre todas as operações nas quais seja adquirente de bem material ou imaterial, inclusive direito, ou de serviço"
+    }
+  ],
+  "justification": "O art. 156-A, § 1º, VIII, assegura ao IBS a não cumulatividade, com compensação do imposto devido pelo montante cobrado nas operações anteriores. Já o regime constitucional do Imposto Seletivo, no art. 153, § 6º, II, prevê incidência única sobre o bem ou serviço, sem regra de creditamento equivalente no corpus. Por isso, o Imposto Seletivo não dá direito a créditos como acontece no IBS.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

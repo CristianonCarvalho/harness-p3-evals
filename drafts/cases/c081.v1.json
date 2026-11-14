@@ -1,0 +1,24 @@
+{
+  "case_id": "c081",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "EC132.art8.parunico",
+    "LC214.art125"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "EC132.art8.parunico",
+      "text": "Lei complementar definirá os produtos destinados à alimentação humana que comporão a Cesta Básica Nacional de Alimentos, sobre os quais as alíquotas dos tributos previstos nos arts. 156-A e 195, V, da Constituição Federal serão reduzidas a zero."
+    },
+    {
+      "id": "LC214.art125",
+      "text": "Ficam reduzidas a zero as alíquotas do IBS e da CBS incidentes sobre as vendas de produtos destinados à alimentação humana relacionados no Anexo I desta Lei Complementar, com a especificação das respectivas classificações da NCM/SH, que compõem a Cesta Básica Nacional de Alimentos"
+    }
+  ],
+  "justification": "Na data de referência, já produzem efeitos o art. 8º, parágrafo único, da EC 132/2023 e o art. 125 da LC 214/2025, que reduzem a zero as alíquotas do IBS e da CBS incidentes sobre os produtos destinados à alimentação humana que compõem a Cesta Básica Nacional de Alimentos, listados no Anexo I. O art. 125 da LC 214/2025 tem efeitos desde 2026-01-01 e não traz termo final; assim, o mesmo tratamento de alíquota zero permanece depois de 2033. O corpus não indica alteração posterior específica para a cesta básica.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

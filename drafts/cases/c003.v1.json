@@ -1,0 +1,12 @@
+{
+  "case_id": "c003",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "nao",
+  "expected_provisions": [],
+  "reference_date": "2026-11-13",
+  "quotes": [],
+  "justification": "O corpus contém o art. 125 da LC 214/2025, que reduz a zero as alíquotas do IBS e da CBS sobre produtos destinados à alimentação humana relacionados no Anexo I. Porém, o corpus não reproduz nem especifica os alimentos constantes desse Anexo I. Assim, não é possível responder quais alimentos compõem a lista com base apenas no corpus.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

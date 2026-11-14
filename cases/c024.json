@@ -1,0 +1,28 @@
+{
+  "case_id": "c024",
+  "question": "O que é o chamado imposto do pecado criado na reforma tributária?",
+  "hypothesis": [
+    "H2"
+  ],
+  "split": "desenvolvimento",
+  "subsets": [
+    "sem_skill"
+  ],
+  "origin": "human_written",
+  "source_n": "24b",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "CF.art153.incVIII",
+      "LC214.art422",
+      "ADCT.art126.incI.alib"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c024.v1.json",
+    "note": ""
+  }
+}

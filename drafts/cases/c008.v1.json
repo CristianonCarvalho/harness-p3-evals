@@ -1,0 +1,12 @@
+{
+  "case_id": "c008",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "nao",
+  "expected_provisions": [],
+  "reference_date": "2026-11-13",
+  "quotes": [],
+  "justification": "O corpus não traz dispositivo que fixe a carga tributária total sobre o consumo após a reforma. Ele institui o IBS e a CBS, prevê alíquotas transitórias e determina que o Senado fixe alíquotas de referência para assegurar equivalência de receita, mas não estabelece um percentual agregado final. Portanto, com a data de referência indicada, a pergunta não é respondida de forma completa.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

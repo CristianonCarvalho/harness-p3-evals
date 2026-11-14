@@ -1,0 +1,19 @@
+{
+  "case_id": "c055",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "LC214.art126.par6"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "LC214.art126.par6",
+      "text": "O disposto no § 1º deste artigo não se aplica às remessas internacionais sujeitas ao Regime de Tributação Simplificada (RTS), exceto na hipótese de produtos acabados pertencentes a classes de medicamentos importados por pessoa física para uso próprio ou individual."
+    }
+  ],
+  "justification": "O corpus registra a exceção no art. 126, § 6º, da LC 214/2025, afastando a aplicação do § 1º às remessas internacionais sujeitas ao RTS. Contudo, esse dispositivo aparece com 'efeitos None..', isto é, sem data de início de efeitos indicada. Na data de referência de 2026-11-13, não há data de vigência prevista para a exceção.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

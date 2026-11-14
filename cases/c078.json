@@ -1,0 +1,22 @@
+{
+  "case_id": "c078",
+  "question": "Qual é o caput do § 2º do art. 198 sobre saúde?",
+  "hypothesis": [
+    "H10"
+  ],
+  "split": "desenvolvimento",
+  "subsets": [],
+  "origin": "ai_kept",
+  "source_n": "78",
+  "gabarito": {
+    "answer_exists": "nao",
+    "expected_provisions": [],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c078.v1.json",
+    "note": ""
+  }
+}

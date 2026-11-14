@@ -1,0 +1,25 @@
+{
+  "case_id": "c038",
+  "question": "A partir de 2029 o IBS já substitui totalmente o ICMS?",
+  "hypothesis": [
+    "H4"
+  ],
+  "split": "desenvolvimento",
+  "subsets": [],
+  "origin": "ai_kept",
+  "source_n": "38",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "ADCT.art128",
+      "ADCT.art129"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c038.v1.json",
+    "note": ""
+  }
+}

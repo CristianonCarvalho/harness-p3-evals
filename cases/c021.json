@@ -1,0 +1,30 @@
+{
+  "case_id": "c021",
+  "question": "O que acontece com o ICMS na transição de 2029 a 2032?",
+  "hypothesis": [
+    "H2"
+  ],
+  "split": "teste",
+  "subsets": [
+    "sem_skill"
+  ],
+  "origin": "ai_kept",
+  "source_n": "21",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "ADCT.art128",
+      "ADCT.art128.incI",
+      "ADCT.art128.incII",
+      "ADCT.art128.incIII",
+      "ADCT.art128.incIV"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c021.v1.json",
+    "note": ""
+  }
+}

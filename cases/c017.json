@@ -1,0 +1,28 @@
+{
+  "case_id": "c017",
+  "question": "A reforma cria um imposto único?",
+  "hypothesis": [
+    "H2"
+  ],
+  "split": "desenvolvimento",
+  "subsets": [
+    "sem_skill"
+  ],
+  "origin": "ai_kept",
+  "source_n": "17",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "CF.art156-A",
+      "CF.art195.incV",
+      "CF.art149-B"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c017.v1.json",
+    "note": ""
+  }
+}

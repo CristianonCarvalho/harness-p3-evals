@@ -1,0 +1,24 @@
+{
+  "case_id": "c044",
+  "question": "Quais serviços de educação têm redução de 60%?",
+  "hypothesis": [
+    "H5"
+  ],
+  "split": "teste",
+  "subsets": [],
+  "origin": "ai_kept",
+  "source_n": "44",
+  "gabarito": {
+    "answer_exists": "parcial",
+    "expected_provisions": [
+      "LC214.art129"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c044.v1.json",
+    "note": ""
+  }
+}

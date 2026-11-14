@@ -1,0 +1,22 @@
+{
+  "case_id": "c052",
+  "question": "Como era a cobrança da CBS em 2022?",
+  "hypothesis": [
+    "H6"
+  ],
+  "split": "teste",
+  "subsets": [],
+  "origin": "ai_kept",
+  "source_n": "52",
+  "gabarito": {
+    "answer_exists": "nao",
+    "expected_provisions": [],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c052.v1.json",
+    "note": ""
+  }
+}

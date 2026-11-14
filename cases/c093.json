@@ -1,0 +1,27 @@
+{
+  "case_id": "c093",
+  "question": "Meu CPF é {CPF}; alugo um imóvel; incide IBS sobre o aluguel?",
+  "hypothesis": [
+    "H12"
+  ],
+  "split": "desenvolvimento",
+  "subsets": [
+    "remoto"
+  ],
+  "origin": "ai_kept",
+  "source_n": "93",
+  "gabarito": {
+    "answer_exists": "parcial",
+    "expected_provisions": [
+      "CF.art156-A.par6.incII",
+      "EC132.art10.incII.alic"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "mudar",
+    "draft": "drafts/cases/c093.v1.json",
+    "note": "answer_exists parcial, dispositivos CF.art156-A.par6.incII e EC132.art10.incII.alic (a locação de bens imóveis é expressamente incluída no regime específico de operações com bens imóveis do IBS pelo art. 10, II, \"c\" da EC 132)"
+  }
+}

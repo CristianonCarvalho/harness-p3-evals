@@ -1,0 +1,24 @@
+{
+  "case_id": "c088",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "parcial",
+  "expected_provisions": [
+    "CF.art156-A.par5.incVIII",
+    "CF.art156-A.par13"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "CF.art156-A.par5.incVIII",
+      "text": "VIII - as hipóteses de devolução do imposto a pessoas físicas, inclusive os limites e os beneficiários, com o objetivo de reduzir as desigualdades de renda;"
+    },
+    {
+      "id": "CF.art156-A.par13",
+      "text": "§ 13. A devolução de que trata o § 5º, VIII, será obrigatória nas operações de fornecimento de energia elétrica e de gás liquefeito de petróleo ao consumidor de baixa renda, podendo a lei complementar determinar que seja calculada e concedida no momento da cobrança da operação."
+    }
+  ],
+  "justification": "O corpus prevê que a devolução do IBS a pessoas físicas deve ser disciplinada por lei complementar, que definirá limites e beneficiários. Para energia elétrica, a devolução é obrigatória apenas ao consumidor de baixa renda, podendo a lei complementar determinar o cálculo e a concessão no momento da cobrança. Não há no corpus procedimento operacional para requerer a devolução com CPF, nem regra específica sobre como fazer.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

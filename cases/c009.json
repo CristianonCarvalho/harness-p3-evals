@@ -1,0 +1,26 @@
+{
+  "case_id": "c009",
+  "question": "Qual é o prazo para ressarcimento de créditos acumulados de IBS para empresas exportadoras?",
+  "hypothesis": [
+    "H1"
+  ],
+  "split": "teste",
+  "subsets": [],
+  "origin": "human_rewritten",
+  "source_n": "9",
+  "gabarito": {
+    "answer_exists": "parcial",
+    "expected_provisions": [
+      "CF.art156-A.par1.incIII",
+      "CF.art156-A.par5",
+      "CF.art156-A.par5.incIII"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c009.v1.json",
+    "note": ""
+  }
+}

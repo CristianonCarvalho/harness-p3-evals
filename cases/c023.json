@@ -1,0 +1,27 @@
+{
+  "case_id": "c023",
+  "question": "Até quando as empresas continuam pagando PIS e Cofins?",
+  "hypothesis": [
+    "H2"
+  ],
+  "split": "teste",
+  "subsets": [
+    "sem_skill"
+  ],
+  "origin": "human_rewritten",
+  "source_n": "23",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "ADCT.art126",
+      "ADCT.art126.incII"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c023.v1.json",
+    "note": ""
+  }
+}

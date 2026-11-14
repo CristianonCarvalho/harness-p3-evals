@@ -1,0 +1,24 @@
+{
+  "case_id": "c045",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "LC214.art131",
+    "LC214.art131.par1"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "LC214.art131",
+      "text": "Art. 131. Ficam reduzidas em 60% (sessenta por cento) as alíquotas do IBS e da CBS incidentes sobre o fornecimento dos dispositivos médicos relacionados no Anexo IV desta Lei Complementar, com a especificação das respectivas classificações da NCM/SH."
+    },
+    {
+      "id": "LC214.art131.par1",
+      "text": "§ 1º A redução de alíquotas prevista no caput deste artigo somente se aplica aos dispositivos listados no Anexo IV desta Lei Complementar regularizados perante a Agência Nacional de Vigilância Sanitária (Anvisa)."
+    }
+  ],
+  "justification": "A LC 214/2025 reduz em 60% as alíquotas do IBS e da CBS incidentes sobre o fornecimento de dispositivos médicos relacionados no Anexo IV. A redução é condicionada aos dispositivos listados nesse Anexo que estejam regularizados perante a Anvisa. Como os efeitos do art. 131 começam em 2026-01-01, a regra já alcança a data de referência.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

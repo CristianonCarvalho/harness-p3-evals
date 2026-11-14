@@ -1,0 +1,28 @@
+{
+  "case_id": "c022",
+  "question": "O ISS será substituído pelo IBS?",
+  "hypothesis": [
+    "H2"
+  ],
+  "split": "teste",
+  "subsets": [
+    "sem_skill"
+  ],
+  "origin": "ai_kept",
+  "source_n": "22",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "ADCT.art129",
+      "CF.art156-A",
+      "ADCT.art128"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c022.v1.json",
+    "note": ""
+  }
+}

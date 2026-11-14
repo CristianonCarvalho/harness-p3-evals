@@ -1,0 +1,25 @@
+{
+  "case_id": "c047",
+  "question": "Quais produtos de higiene pessoal e limpeza têm direito à redução de 60% de alíquota?",
+  "hypothesis": [
+    "H5"
+  ],
+  "split": "teste",
+  "subsets": [],
+  "origin": "human_rewritten",
+  "source_n": "47",
+  "gabarito": {
+    "answer_exists": "parcial",
+    "expected_provisions": [
+      "LC214.art128.incVII",
+      "LC214.art136"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c047.v1.json",
+    "note": ""
+  }
+}

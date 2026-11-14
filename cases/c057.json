@@ -1,0 +1,24 @@
+{
+  "case_id": "c057",
+  "question": "Qual é o limite máximo do Imposto Seletivo sobre bens minerais extraídos?",
+  "hypothesis": [
+    "H7"
+  ],
+  "split": "teste",
+  "subsets": [],
+  "origin": "ai_kept",
+  "source_n": "57",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "CF.art153.par6.incVII"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c057.v1.json",
+    "note": ""
+  }
+}

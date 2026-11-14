@@ -1,0 +1,27 @@
+{
+  "case_id": "c089",
+  "question": "Tenho CNPJ {CNPJ} de produtor rural com receita abaixo de 3,6 milhões; posso optar por ser contribuinte do IBS?",
+  "hypothesis": [
+    "H12"
+  ],
+  "split": "teste",
+  "subsets": [
+    "remoto"
+  ],
+  "origin": "ai_kept",
+  "source_n": "89",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "EC132.art9.par4",
+      "EC132.art9"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c089.v1.json",
+    "note": ""
+  }
+}

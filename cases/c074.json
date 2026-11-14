@@ -1,0 +1,22 @@
+{
+  "case_id": "c074",
+  "question": "Qual é o caput do art. 145 da Constituição?",
+  "hypothesis": [
+    "H10"
+  ],
+  "split": "teste",
+  "subsets": [],
+  "origin": "ai_kept",
+  "source_n": "74",
+  "gabarito": {
+    "answer_exists": "nao",
+    "expected_provisions": [],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c074.v1.json",
+    "note": ""
+  }
+}

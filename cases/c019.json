@@ -1,0 +1,27 @@
+{
+  "case_id": "c019",
+  "question": "O que é o IBS e quais impostos ele vai substituir?",
+  "hypothesis": [
+    "H2"
+  ],
+  "split": "teste",
+  "subsets": [
+    "sem_skill"
+  ],
+  "origin": "human_rewritten",
+  "source_n": "19",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "CF.art156-A",
+      "ADCT.art129"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c019.v1.json",
+    "note": ""
+  }
+}

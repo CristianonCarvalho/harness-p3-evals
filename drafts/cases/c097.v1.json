@@ -1,0 +1,84 @@
+{
+  "case_id": "c097",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "LC214.art128",
+    "LC214.art128.incI",
+    "LC214.art128.incII",
+    "LC214.art128.incIII",
+    "LC214.art128.incIV",
+    "LC214.art128.incV",
+    "LC214.art128.incVI",
+    "LC214.art128.incVII",
+    "LC214.art128.incVIII",
+    "LC214.art128.incIX",
+    "LC214.art128.incX",
+    "LC214.art128.incXI",
+    "LC214.art128.incXII",
+    "LC214.art128.incXIII"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "LC214.art128",
+      "text": "Art. 128. Desde que observadas as definições e demais disposições deste Capítulo, ficam reduzidas em 60% (sessenta por cento) as alíquotas do IBS e da CBS incidentes sobre operações com:"
+    },
+    {
+      "id": "LC214.art128.incI",
+      "text": "I - serviços de educação;"
+    },
+    {
+      "id": "LC214.art128.incII",
+      "text": "II - serviços de saúde;"
+    },
+    {
+      "id": "LC214.art128.incIII",
+      "text": "III - dispositivos médicos;"
+    },
+    {
+      "id": "LC214.art128.incIV",
+      "text": "IV - dispositivos de acessibilidade próprios para pessoas com deficiência;"
+    },
+    {
+      "id": "LC214.art128.incV",
+      "text": "V - medicamentos;"
+    },
+    {
+      "id": "LC214.art128.incVI",
+      "text": "VI - alimentos destinados ao consumo humano;"
+    },
+    {
+      "id": "LC214.art128.incVII",
+      "text": "VII - produtos de higiene pessoal e limpeza majoritariamente consumidos por famílias de baixa renda;"
+    },
+    {
+      "id": "LC214.art128.incVIII",
+      "text": "VIII - produtos agropecuários, aquícolas, pesqueiros, florestais e extrativistas vegetais in natura;"
+    },
+    {
+      "id": "LC214.art128.incIX",
+      "text": "IX - insumos agropecuários e aquícolas;"
+    },
+    {
+      "id": "LC214.art128.incX",
+      "text": "X - produções nacionais artísticas, culturais, de eventos, jornalísticas e audiovisuais;"
+    },
+    {
+      "id": "LC214.art128.incXI",
+      "text": "XI - comunicação institucional;"
+    },
+    {
+      "id": "LC214.art128.incXII",
+      "text": "XII - atividades desportivas; e"
+    },
+    {
+      "id": "LC214.art128.incXIII",
+      "text": "XIII - bens e serviços relacionados à soberania e à segurança nacional, à segurança da informação e à segurança cibernética."
+    }
+  ],
+  "justification": "O art. 128 da LC 214/2025 reduz em 60% as alíquotas do IBS e da CBS incidentes sobre operações com os bens e serviços listados em seus incisos. Na data de referência, o dispositivo está vigente, pois seus efeitos se iniciam em 2026-01-01. A lista inclui educação, saúde, dispositivos médicos, acessibilidade, medicamentos, alimentos, higiene e limpeza, produtos agropecuários in natura, insumos agropecuários, produções artísticas e culturais, comunicação institucional, atividades desportivas e bens e serviços de soberania e segurança.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

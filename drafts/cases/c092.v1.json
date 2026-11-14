@@ -1,0 +1,29 @@
+{
+  "case_id": "c092",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "parcial",
+  "expected_provisions": [
+    "LC214.art129",
+    "LC214.art129.parunico.incI",
+    "LC214.art129.parunico.incII"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "LC214.art129",
+      "text": "Ficam reduzidas em 60% (sessenta por cento) as alíquotas do IBS e da CBS incidentes sobre o fornecimento dos serviços de educação relacionados no Anexo II desta Lei Complementar"
+    },
+    {
+      "id": "LC214.art129.parunico.incI",
+      "text": "somente se aplica sobre os valores devidos pela contraprestação dos serviços listados no Anexo II desta Lei Complementar"
+    },
+    {
+      "id": "LC214.art129.parunico.incII",
+      "text": "não se aplica a outras operações eventualmente ocorridas no âmbito das escolas, das instituições ou dos estabelecimentos do fornecedor de serviços."
+    }
+  ],
+  "justification": "A redução de 60% do IBS/CBS para educação é limitada ao fornecimento dos serviços de educação relacionados no Anexo II da LC 214/2025. O parágrafo único do art. 129 esclarece que o benefício incide apenas sobre a contraprestação desses serviços listados e não alcança outras operações realizadas no âmbito da escola. Por isso, o material escolar não está abrangido; quanto à mensalidade, só é possível confirmar a incidência se o serviço correspondente estiver no Anexo II, lista que não consta do corpus. O CNPJ informado não permite verificação no corpus.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

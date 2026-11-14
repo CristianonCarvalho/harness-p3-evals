@@ -1,0 +1,25 @@
+{
+  "case_id": "c031",
+  "question": "Em 2026 o IBS já é cobrado de verdade ou é só um teste?",
+  "hypothesis": [
+    "H4"
+  ],
+  "split": "teste",
+  "subsets": [],
+  "origin": "ai_kept",
+  "source_n": "31",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "ADCT.art125",
+      "ADCT.art125.par4"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c031.v1.json",
+    "note": ""
+  }
+}

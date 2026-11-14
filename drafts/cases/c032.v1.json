@@ -1,0 +1,44 @@
+{
+  "case_id": "c032",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "ADCT.art125",
+    "ADCT.art126",
+    "ADCT.art126.incI",
+    "ADCT.art126.incI.alia",
+    "ADCT.art127",
+    "ADCT.art127.parunico"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "ADCT.art125",
+      "text": "Art. 125. Em 2026, o imposto previsto no art. 156-A será cobrado à alíquota estadual de 0,1% (um décimo por cento), e a contribuição prevista no art. 195, V, ambos da Constituição Federal, será cobrada à alíquota de 0,9% (nove décimos por cento)."
+    },
+    {
+      "id": "ADCT.art126",
+      "text": "Art. 126. A partir de 2027:"
+    },
+    {
+      "id": "ADCT.art126.incI",
+      "text": "I - serão cobrados:"
+    },
+    {
+      "id": "ADCT.art126.incI.alia",
+      "text": "a) a contribuição prevista no art. 195, V, da Constituição Federal;"
+    },
+    {
+      "id": "ADCT.art127",
+      "text": "Art. 127. Em 2027 e 2028, o imposto previsto no art. 156-A da Constituição Federal será cobrado à alíquota estadual de 0,05% (cinco centésimos por cento) e à alíquota municipal de 0,05% (cinco centésimos por cento)."
+    },
+    {
+      "id": "ADCT.art127.parunico",
+      "text": "Parágrafo único. No período referido no caput, a alíquota da contribuição prevista no art. 195, V, da Constituição Federal, será reduzida em 0,1 (um décimo) ponto percentual."
+    }
+  ],
+  "justification": "O art. 125 fixa a CBS em 0,9% em 2026. O art. 126 determina que a contribuição do art. 195, V seja cobrada a partir de 2027, mas o art. 127, parágrafo único, reduz sua alíquota em 0,1 ponto percentual em 2027 e 2028. Assim, após esse período de redução, a CBS passa a ser cobrada integralmente a partir de 2029.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

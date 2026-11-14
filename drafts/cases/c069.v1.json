@@ -1,0 +1,24 @@
+{
+  "case_id": "c069",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "ADCT.art129",
+    "CF.art158.incIV.alia"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "ADCT.art129",
+      "text": "Ficam extintos, a partir de 2033, os impostos previstos nos arts. 155, II, e 156, III, da Constituição Federal."
+    },
+    {
+      "id": "CF.art158.incIV.alia",
+      "text": "a) do produto da arrecadação do imposto do Estado sobre operações relativas à circulação de mercadorias e sobre prestações de serviços de transporte interestadual e intermunicipal e de comunicação;"
+    }
+  ],
+  "justification": "O corpus descreve o imposto estadual sobre operações relativas à circulação de mercadorias e sobre prestações de transporte interestadual e intermunicipal e de comunicação no art. 158, IV, “a”. O ADCT determina que os impostos previstos no art. 155, II, e no art. 156, III, ficam extintos a partir de 2033. Assim, na data de referência, a resposta é que o ICMS não existirá em 2033.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

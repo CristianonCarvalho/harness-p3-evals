@@ -1,0 +1,27 @@
+{
+  "case_id": "c098",
+  "question": "Quais são as competências administrativas do Comitê Gestor do IBS?",
+  "hypothesis": [
+    "H14"
+  ],
+  "split": "desenvolvimento",
+  "subsets": [],
+  "origin": "ai_kept",
+  "source_n": "98",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "CF.art156-B",
+      "CF.art156-B.incI",
+      "CF.art156-B.incII",
+      "CF.art156-B.incIII"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c098.v1.json",
+    "note": ""
+  }
+}

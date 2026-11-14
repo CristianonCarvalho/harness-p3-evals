@@ -1,0 +1,22 @@
+{
+  "case_id": "c049",
+  "question": "O que a Constituição previa em 2022 sobre o Simples Nacional antes de ser criada a regra do IBS?",
+  "hypothesis": [
+    "H6"
+  ],
+  "split": "desenvolvimento",
+  "subsets": [],
+  "origin": "human_rewritten",
+  "source_n": "49",
+  "gabarito": {
+    "answer_exists": "nao",
+    "expected_provisions": [],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c049.v1.json",
+    "note": ""
+  }
+}

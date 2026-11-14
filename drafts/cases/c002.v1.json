@@ -1,0 +1,12 @@
+{
+  "case_id": "c002",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "nao",
+  "expected_provisions": [],
+  "reference_date": "2026-11-13",
+  "quotes": [],
+  "justification": "O corpus não contém dispositivo que trate especificamente da inclusão do valor do frete e do seguro na base de cálculo do IBS e da CBS. As menções a “seguro” no corpus referem-se a serviços financeiros ou a operações de seguros em contexto diverso, não à composição da base de cálculo dos tributos sobre bens e serviços. Portanto, não há elementos suficientes para responder à pergunta com base apenas no corpus.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

@@ -1,0 +1,19 @@
+{
+  "case_id": "c057",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "CF.art153.par6.incVII"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "CF.art153.par6.incVII",
+      "text": "na extração, o imposto será cobrado independentemente da destinação, caso em que a alíquota máxima corresponderá a 1% (um por cento) do valor de mercado do produto."
+    }
+  ],
+  "justification": "A CF, art. 153, § 6º, VII, fixa que, na extração, a alíquota máxima do Imposto Seletivo corresponde a 1% do valor de mercado do produto. Esse dispositivo está com efeitos desde 2023-12-21, alcançando a data de referência. A previsão específica de 0,25% para bens minerais extraídos não foi considerada porque o corpus registra seus efeitos como “None..”, fora da data de referência.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

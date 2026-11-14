@@ -1,0 +1,29 @@
+{
+  "case_id": "c070",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "ADCT.art126",
+    "ADCT.art126.incIII",
+    "ADCT.art126.incIII.alia"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "ADCT.art126",
+      "text": "Art. 126. A partir de 2027:"
+    },
+    {
+      "id": "ADCT.art126.incIII",
+      "text": "III - o imposto previsto no art. 153, IV, da Constituição Federal:"
+    },
+    {
+      "id": "ADCT.art126.incIII.alia",
+      "text": "a) terá suas alíquotas reduzidas a zero, exceto em relação aos produtos que tenham industrialização incentivada na Zona Franca de Manaus, conforme critérios estabelecidos em lei complementar; e"
+    }
+  ],
+  "justification": "O art. 126 fixa que a regra passa a valer a partir de 2027. O inciso III trata do imposto previsto no art. 153, IV, da Constituição Federal. A alínea \"a\" determina que esse imposto terá alíquotas reduzidas a zero, ressalvados apenas os produtos com industrialização incentivada na Zona Franca de Manaus. Assim, em 2033 o IPI sobre produtos nacionais em geral não poderá ser cobrado, sem prejuízo dessa exceção.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

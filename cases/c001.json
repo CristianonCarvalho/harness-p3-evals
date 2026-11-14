@@ -1,0 +1,22 @@
+{
+  "case_id": "c001",
+  "question": "Em que momento exatamente ocorre o fato gerador do IBS na prestação de serviço?",
+  "hypothesis": [
+    "H1"
+  ],
+  "split": "teste",
+  "subsets": [],
+  "origin": "human_rewritten",
+  "source_n": "1",
+  "gabarito": {
+    "answer_exists": "nao",
+    "expected_provisions": [],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c001.v1.json",
+    "note": ""
+  }
+}

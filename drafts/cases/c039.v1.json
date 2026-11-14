@@ -1,0 +1,24 @@
+{
+  "case_id": "c039",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "EC132.art22.incII",
+    "EC132.art22.incII.alib"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "EC132.art22.incII",
+      "text": "II - em 2033:"
+    },
+    {
+      "id": "EC132.art22.incII.alib",
+      "text": "b) os arts. 80, II, 82, § 2º, e 83 do Ato das Disposições Constitucionais Transitórias."
+    }
+  ],
+  "justification": "A EC 132/2023 determina que, em 2033, serão revogados os arts. 80, II, 82, § 2º, e 83 do ADCT. Como o dispositivo tem efeitos desde 2023, essa previsão já pode ser considerada na data de referência. Portanto, a cobrança do adicional vinculado ao art. 82, § 2º, do ADCT pode ocorrer até 2032, pois a partir de 2033 o dispositivo é revogado.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

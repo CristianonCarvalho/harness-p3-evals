@@ -1,0 +1,28 @@
+{
+  "case_id": "c079",
+  "question": "Quais são as alíquotas previstas para o IBS e para a CBS nos anos de 2026, 2027 e 2028?",
+  "hypothesis": [
+    "H11"
+  ],
+  "split": "desenvolvimento",
+  "subsets": [
+    "sem_skill"
+  ],
+  "origin": "human_rewritten",
+  "source_n": "79",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "ADCT.art125",
+      "ADCT.art127",
+      "ADCT.art127.parunico"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c079.v1.json",
+    "note": ""
+  }
+}

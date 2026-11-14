@@ -1,0 +1,24 @@
+{
+  "case_id": "c037",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "ADCT.art128",
+    "ADCT.art128.incII"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "ADCT.art128",
+      "text": "De 2029 a 2032, as alíquotas dos impostos previstos nos arts. 155, II, e 156, III, da Constituição Federal, serão fixadas nas seguintes proporções das alíquotas fixadas nas respectivas legislações:"
+    },
+    {
+      "id": "ADCT.art128.incII",
+      "text": "II - 8/10 (oito décimos), em 2030;"
+    }
+  ],
+  "justification": "O art. 128 do ADCT estabelece, de 2029 a 2032, proporções das alíquotas dos impostos previstos nos arts. 155, II, e 156, III, da Constituição Federal. Para 2030, o inciso II fixa a proporção em 8/10 (oito décimos). Portanto, em 2030 aplica-se o equivalente a 80% das alíquotas desses impostos.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

@@ -1,0 +1,24 @@
+{
+  "case_id": "c029",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "CF.art156-A.par1.incIII",
+    "CF.art195.par16"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "CF.art156-A.par1.incIII",
+      "text": "III - não incidirá sobre as exportações, assegurados ao exportador a manutenção e o aproveitamento dos créditos relativos às operações nas quais seja adquirente de bem material ou imaterial, inclusive direitos, ou serviço, observado o disposto no § 5º, III;"
+    },
+    {
+      "id": "CF.art195.par16",
+      "text": "§ 16. Aplica-se à contribuição prevista no inciso V do caput o disposto no art. 156-A, § 1º, I a VI, VIII, X a XIII, § 3º, § 5º, II a VI e IX, e §§ 6º a 11 e 13."
+    }
+  ],
+  "justification": "O corpus prevê que o IBS não incidirá sobre as exportações, assegurados ao exportador a manutenção e o aproveitamento dos créditos. O art. 195, § 16, determina que esse mesmo conjunto de regras do art. 156-A, § 1º, inclui o inciso III, aplicando-se também à CBS. Assim, na data de referência, as exportações de mercadorias não pagam IBS nem CBS; trata-se de não incidência, não de imunidade.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

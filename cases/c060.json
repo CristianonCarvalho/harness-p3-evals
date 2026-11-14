@@ -1,0 +1,27 @@
+{
+  "case_id": "c060",
+  "question": "Quais condições precisam ser cumpridas para ter direito à alíquota zero da cesta básica no art. 125 da LC 214?",
+  "hypothesis": [
+    "H7"
+  ],
+  "split": "desenvolvimento",
+  "subsets": [],
+  "origin": "human_rewritten",
+  "source_n": "60",
+  "doubt": "o corpus pode não incluir o texto integral das condições do art. 126",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "LC214.art125",
+      "LC214.art125.parunico",
+      "LC214.art126.par1"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c060.v1.json",
+    "note": ""
+  }
+}

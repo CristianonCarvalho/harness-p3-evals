@@ -1,0 +1,25 @@
+{
+  "case_id": "c071",
+  "question": "A contribuição da Cofins sobre o faturamento ainda será cobrada em 2033?",
+  "hypothesis": [
+    "H9"
+  ],
+  "split": "desenvolvimento",
+  "subsets": [],
+  "origin": "human_rewritten",
+  "source_n": "71",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "ADCT.art126",
+      "ADCT.art126.incII"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c071.v1.json",
+    "note": ""
+  }
+}

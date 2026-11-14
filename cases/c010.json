@@ -1,0 +1,22 @@
+{
+  "case_id": "c010",
+  "question": "Quais produtos estão sujeitos ao Imposto Seletivo?",
+  "hypothesis": [
+    "H1"
+  ],
+  "split": "desenvolvimento",
+  "subsets": [],
+  "origin": "ai_kept",
+  "source_n": "10",
+  "gabarito": {
+    "answer_exists": "nao",
+    "expected_provisions": [],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "mudar",
+    "draft": "drafts/cases/c010.v1.json",
+    "note": "answer_exists nao, sem dispositivos esperados (a lista de produtos do Anexo XVII não consta do corpus; o gabarito utilizou sofisma temporal com o ADCT art. 126)"
+  }
+}

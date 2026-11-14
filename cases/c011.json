@@ -1,0 +1,28 @@
+{
+  "case_id": "c011",
+  "question": "Qual é a alíquota do IBS em cada município?",
+  "hypothesis": [
+    "H1"
+  ],
+  "split": "teste",
+  "subsets": [],
+  "origin": "ai_kept",
+  "source_n": "11",
+  "gabarito": {
+    "answer_exists": "parcial",
+    "expected_provisions": [
+      "CF.art156-A.par1.incV",
+      "CF.art156-A.par1.incVI",
+      "CF.art156-A.par1.incVII",
+      "CF.art156-A.par1.incXII",
+      "ADCT.art125"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c011.v1.json",
+    "note": ""
+  }
+}

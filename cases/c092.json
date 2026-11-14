@@ -1,0 +1,28 @@
+{
+  "case_id": "c092",
+  "question": "Minha escola tem CNPJ {CNPJ}; a redução de 60% vale tanto para a mensalidade quanto para o material escolar?",
+  "hypothesis": [
+    "H12"
+  ],
+  "split": "teste",
+  "subsets": [
+    "remoto"
+  ],
+  "origin": "human_rewritten",
+  "source_n": "92",
+  "gabarito": {
+    "answer_exists": "parcial",
+    "expected_provisions": [
+      "LC214.art129",
+      "LC214.art129.parunico.incI",
+      "LC214.art129.parunico.incII"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c092.v1.json",
+    "note": ""
+  }
+}

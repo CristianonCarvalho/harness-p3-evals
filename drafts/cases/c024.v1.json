@@ -1,0 +1,29 @@
+{
+  "case_id": "c024",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "CF.art153.incVIII",
+    "LC214.art422",
+    "ADCT.art126.incI.alib"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "CF.art153.incVIII",
+      "text": "VIII - produção, extração, comercialização ou importação de bens e serviços prejudiciais à saúde ou ao meio ambiente, nos termos de lei complementar."
+    },
+    {
+      "id": "LC214.art422",
+      "text": "as alíquotas do Imposto Seletivo aplicáveis nas operações com os bens e os serviços referidos no Anexo XVII são aquelas previstas em lei ordinária."
+    },
+    {
+      "id": "ADCT.art126.incI.alib",
+      "text": "b) o imposto previsto no art. 153, VIII, da Constituição Federal;"
+    }
+  ],
+  "justification": "O corpus não registra a expressão 'imposto do pecado', mas define o tributo correspondente como o imposto sobre produção, extração, comercialização ou importação de bens e serviços prejudiciais à saúde ou ao meio ambiente. A LC 214/2025 usa a denominação 'Imposto Seletivo' ao tratar de suas alíquotas. O ADCT prevê que o imposto do art. 153, VIII, será cobrado a partir de 2027; por isso, em 13/11/2026, ele já está criado, mas ainda não é cobrado.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

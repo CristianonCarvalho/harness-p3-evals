@@ -1,0 +1,29 @@
+{
+  "case_id": "c041",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "parcial",
+  "expected_provisions": [
+    "ADCT.art125",
+    "ADCT.art125.par3",
+    "ADCT.art125.par3.incII"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "ADCT.art125",
+      "text": "Em 2026, o imposto previsto no art. 156-A será cobrado à alíquota estadual de 0,1% (um décimo por cento), e a contribuição prevista no art. 195, V, ambos da Constituição Federal, será cobrada à alíquota de 0,9% (nove décimos por cento)."
+    },
+    {
+      "id": "ADCT.art125.par3",
+      "text": "A arrecadação do imposto previsto no art. 156-A da Constituição Federal decorrente do disposto no caput deste artigo não observará as vinculações, repartições e destinações previstas na Constituição Federal, devendo ser aplicada, integral e sucessivamente, para:"
+    },
+    {
+      "id": "ADCT.art125.par3.incII",
+      "text": "II - compor o Fundo de Compensação de Benefícios Fiscais ou Financeiro-Fiscais do imposto de que trata o art. 155, II, da Constituição Federal."
+    }
+  ],
+  "justification": "O art. 125 fixa que em 2026 o IBS será cobrado à alíquota estadual de 0,1%. O § 3º, II, determina que essa arrecadação seja aplicada para compor o Fundo de Compensação de Benefícios Fiscais ou Financeiro-Fiscais. O corpus, portanto, indica 2026 como ano de composição do fundo, mas não menciona expressamente o início dos pagamentos.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

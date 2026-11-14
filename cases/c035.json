@@ -1,0 +1,24 @@
+{
+  "case_id": "c035",
+  "question": "A transição de 50 anos para distribuir o IBS pelo destino começa a valer a partir de que ano?",
+  "hypothesis": [
+    "H4"
+  ],
+  "split": "teste",
+  "subsets": [],
+  "origin": "human_rewritten",
+  "source_n": "35",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "ADCT.art131"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c035.v1.json",
+    "note": ""
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "case_id": "c083",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "EC132.art9.par1",
+    "EC132.art9.par12",
+    "LC214.art127",
+    "LC214.art128"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "EC132.art9.par1",
+      "text": "§ 1º A lei complementar definirá as operações beneficiadas com redução de 60% (sessenta por cento) das alíquotas dos tributos de que trata o caput entre as relativas aos seguintes bens e serviços:"
+    },
+    {
+      "id": "EC132.art9.par12",
+      "text": "§ 12. A lei complementar estabelecerá as operações beneficiadas com redução de 30% (trinta por cento) das alíquotas dos tributos de que trata o caput relativas à prestação de serviços de profissão intelectual, de natureza científica, literária ou artística, desde que sejam submetidas a fiscalização por conselho profissional."
+    },
+    {
+      "id": "LC214.art127",
+      "text": "Art. 127. Ficam reduzidas em 30% (trinta por cento) as alíquotas do IBS e da CBS incidentes sobre a prestação de serviços pelos seguintes profissionais, que exercerem atividades intelectuais de natureza científica, literária ou artística, submetidas à fiscalização por conselho profissional:"
+    },
+    {
+      "id": "LC214.art128",
+      "text": "Art. 128. Desde que observadas as definições e demais disposições deste Capítulo, ficam reduzidas em 60% (sessenta por cento) as alíquotas do IBS e da CBS incidentes sobre operações com:"
+    }
+  ],
+  "justification": "A redução de 60% é dirigida a operações com os bens e serviços elencados pela lei complementar, conforme autoriza a EC 132/2023 e implementa a LC 214/2025. Já a redução de 30% é específica para a prestação de serviços de profissão intelectual de natureza científica, literária ou artística, sujeitos à fiscalização por conselho profissional. A LC 214/2025 repete essa distinção: o art. 127 fixa 30% para os profissionais listados, enquanto o art. 128 fixa 60% para as operações com os bens e serviços ali elencados.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

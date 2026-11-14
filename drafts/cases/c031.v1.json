@@ -1,0 +1,24 @@
+{
+  "case_id": "c031",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "ADCT.art125",
+    "ADCT.art125.par4"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "ADCT.art125",
+      "text": "Em 2026, o imposto previsto no art. 156-A será cobrado à alíquota estadual de 0,1% (um décimo por cento)"
+    },
+    {
+      "id": "ADCT.art125.par4",
+      "text": "Durante o período de que trata o caput, os sujeitos passivos que cumprirem as obrigações acessórias relativas aos tributos referidos no caput poderão ser dispensados do seu recolhimento, nos termos de lei complementar."
+    }
+  ],
+  "justification": "O corpus prevê expressamente que, em 2026, o IBS (imposto previsto no art. 156-A) será cobrado à alíquota estadual de 0,1%. Contudo, no mesmo período, o § 4º permite que os sujeitos passivos que cumprirem as obrigações acessórias sejam dispensados do recolhimento, nos termos de lei complementar. Assim, há previsão de cobrança em 2026, mas em formato de teste, com alíquota reduzida e possibilidade de dispensa do efetivo recolhimento.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

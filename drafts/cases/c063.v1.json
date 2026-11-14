@@ -1,0 +1,33 @@
+{
+  "case_id": "c063",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "CF.art156-A.par1.incIX",
+    "ADCT.art126",
+    "ADCT.art126.incII"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "CF.art156-A.par1.incIX",
+      "text": "IX - não integrará sua própria base de cálculo nem a dos tributos previstos nos arts. 153, VIII, e 195, I, \"b\", IV e V, e da contribuição para o Programa de Integração Social de que trata o art. 239;"
+    },
+    {
+      "id": "CF.art156-A.par1.incIX",
+      "text": "IX - não integrará sua própria base de cálculo nem a dos tributos previstos nos arts. 153, VIII, e 195, V;"
+    },
+    {
+      "id": "ADCT.art126",
+      "text": "Art. 126. A partir de 2027:"
+    },
+    {
+      "id": "ADCT.art126.incII",
+      "text": "II - serão extintas as contribuições previstas no art. 195, I, \"b\", e IV, e a contribuição para o Programa de Integração Social de que trata o art. 239, todos da Constituição Federal, desde que instituída a contribuição referida na alínea \"a\" do inciso I;"
+    }
+  ],
+  "justification": "Na data de referência, aplica-se a redação do art. 156-A, § 1º, IX, com efeitos até 31/12/2026: o IBS não integra sua própria base de cálculo nem a dos tributos ali listados, incluindo as contribuições de PIS/Cofins. A partir de 2027, a nova redação mantém a não integração da base do próprio IBS e passa a mencionar apenas o IS e a CBS. Além disso, o art. 126 do ADCT estabelece que, a partir de 2027, serão extintas as contribuições do art. 195, I, \"b\", e IV, e a contribuição para o PIS, desde que instituída a CBS. Assim, depois de 2026 não se fala mais em integrar a base do PIS/Cofins porque tais contribuições são extintas, permanecendo a regra de não integração da própria base do IBS e das bases do IS e da CBS.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

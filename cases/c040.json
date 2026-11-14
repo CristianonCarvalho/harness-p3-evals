@@ -1,0 +1,24 @@
+{
+  "case_id": "c040",
+  "question": "A desvinculação de 30% das receitas estaduais vale até quando?",
+  "hypothesis": [
+    "H4"
+  ],
+  "split": "desenvolvimento",
+  "subsets": [],
+  "origin": "ai_kept",
+  "source_n": "40",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "ADCT.art76-A"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c040.v1.json",
+    "note": ""
+  }
+}

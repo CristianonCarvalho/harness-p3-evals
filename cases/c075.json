@@ -1,0 +1,22 @@
+{
+  "case_id": "c075",
+  "question": "O que diz o caput do § 1º do art. 155 sobre o ITCMD?",
+  "hypothesis": [
+    "H10"
+  ],
+  "split": "desenvolvimento",
+  "subsets": [],
+  "origin": "ai_kept",
+  "source_n": "75",
+  "gabarito": {
+    "answer_exists": "nao",
+    "expected_provisions": [],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c075.v1.json",
+    "note": ""
+  }
+}

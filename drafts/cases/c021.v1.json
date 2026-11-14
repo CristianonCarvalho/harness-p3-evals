@@ -1,0 +1,39 @@
+{
+  "case_id": "c021",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "ADCT.art128",
+    "ADCT.art128.incI",
+    "ADCT.art128.incII",
+    "ADCT.art128.incIII",
+    "ADCT.art128.incIV"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "ADCT.art128",
+      "text": "Art. 128. De 2029 a 2032, as alíquotas dos impostos previstos nos arts. 155, II, e 156, III, da Constituição Federal, serão fixadas nas seguintes proporções das alíquotas fixadas nas respectivas legislações:"
+    },
+    {
+      "id": "ADCT.art128.incI",
+      "text": "I - 9/10 (nove décimos), em 2029;"
+    },
+    {
+      "id": "ADCT.art128.incII",
+      "text": "II - 8/10 (oito décimos), em 2030;"
+    },
+    {
+      "id": "ADCT.art128.incIII",
+      "text": "III - 7/10 (sete décimos), em 2031;"
+    },
+    {
+      "id": "ADCT.art128.incIV",
+      "text": "IV - 6/10 (seis décimos), em 2032."
+    }
+  ],
+  "justification": "O art. 128 do ADCT determina que, de 2029 a 2032, as alíquotas do ICMS, previsto no art. 155, II, da Constituição Federal, sejam fixadas em proporções das alíquotas previstas nas respectivas legislações. Os incisos escalonam essa proporção: 9/10 em 2029, 8/10 em 2030, 7/10 em 2031 e 6/10 em 2032. Portanto, no período, o ICMS não é extinto, mas tem suas alíquotas reduzidas anualmente até 6/10 em 2032.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

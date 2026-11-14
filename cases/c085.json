@@ -1,0 +1,28 @@
+{
+  "case_id": "c085",
+  "question": "A partir de quando o Imposto Seletivo passa a ser cobrado na venda de veículos?",
+  "hypothesis": [
+    "H11"
+  ],
+  "split": "teste",
+  "subsets": [
+    "sem_skill"
+  ],
+  "origin": "human_rewritten",
+  "source_n": "85",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "ADCT.art126",
+      "ADCT.art126.incI.alib",
+      "LC214.art419"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c085.v1.json",
+    "note": ""
+  }
+}

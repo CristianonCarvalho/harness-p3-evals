@@ -1,0 +1,26 @@
+{
+  "case_id": "c046",
+  "question": "Quais medicamentos têm redução de 60%?",
+  "hypothesis": [
+    "H5"
+  ],
+  "split": "teste",
+  "subsets": [],
+  "origin": "ai_kept",
+  "source_n": "46",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "LC214.art133",
+      "LC214.art133.par1",
+      "LC214.art133.par2"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c046.v1.json",
+    "note": ""
+  }
+}

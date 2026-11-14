@@ -1,0 +1,12 @@
+{
+  "case_id": "c076",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "nao",
+  "expected_provisions": [],
+  "reference_date": "2026-11-13",
+  "quotes": [],
+  "justification": "O corpus não contém o caput do art. 158 da Constituição Federal. Ele traz apenas dispositivos derivados desse artigo, como os incisos III e IV e os §§ 1º e 2º, mas não o texto introdutório do caput sobre repartição. Portanto, não há como responder integralmente à pergunta com base exclusivamente no corpus fornecido.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

@@ -1,0 +1,24 @@
+{
+  "case_id": "c050",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "CF.art156-A",
+    "EC132.art1"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "CF.art156-A",
+      "text": "Art. 156-A. Lei complementar instituirá imposto sobre bens e serviços de competência compartilhada entre Estados, Distrito Federal e Municípios."
+    },
+    {
+      "id": "EC132.art1",
+      "text": "Art. 1º A Constituição Federal passa a vigorar com as seguintes alterações:"
+    }
+  ],
+  "justification": "A resposta é não. O corpus identifica o IBS como o imposto do art. 156-A da Constituição, dispositivo cujos efeitos começam em 2023-12-21. A EC 132/2023, que promoveu as alterações constitucionais, também tem efeitos a partir de 2023-12-21, de modo que em 2022 essa previsão não estava vigente.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

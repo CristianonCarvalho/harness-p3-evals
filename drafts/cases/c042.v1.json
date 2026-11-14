@@ -1,0 +1,19 @@
+{
+  "case_id": "c042",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "ADCT.art125"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "ADCT.art125",
+      "text": "Em 2026, o imposto previsto no art. 156-A será cobrado à alíquota estadual de 0,1% (um décimo por cento)"
+    }
+  ],
+  "justification": "O ADCT, art. 125, está com efeitos desde 2023-12-21 e, portanto, alcança a data de referência de 2026-11-13. Ele determina expressamente que, em 2026, o imposto previsto no art. 156-A será cobrado à alíquota estadual de 0,1%. Logo, o IBS de 0,1% em 2026 é estadual, não municipal.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

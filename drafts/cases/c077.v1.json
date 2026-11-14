@@ -1,0 +1,12 @@
+{
+  "case_id": "c077",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "nao",
+  "expected_provisions": [],
+  "reference_date": "2026-11-13",
+  "quotes": [],
+  "justification": "O corpus não contém o texto do caput do art. 159 da Constituição Federal. Ele traz apenas dispositivos relacionados, como os incisos I, II e III e o § 3º do art. 159, mas não o enunciado do caput. Portanto, não é possível responder integralmente à pergunta com base exclusivamente no corpus.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

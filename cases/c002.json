@@ -1,0 +1,22 @@
+{
+  "case_id": "c002",
+  "question": "O valor do frete e do seguro entra no cálculo do IBS e da CBS?",
+  "hypothesis": [
+    "H1"
+  ],
+  "split": "teste",
+  "subsets": [],
+  "origin": "human_rewritten",
+  "source_n": "2",
+  "gabarito": {
+    "answer_exists": "nao",
+    "expected_provisions": [],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c002.v1.json",
+    "note": ""
+  }
+}

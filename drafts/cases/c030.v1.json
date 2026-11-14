@@ -1,0 +1,34 @@
+{
+  "case_id": "c030",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "CF.art156-A.par5.incVIII",
+    "CF.art195.par18",
+    "CF.art156-A.par13",
+    "CF.art195.par16"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "CF.art156-A.par5.incVIII",
+      "text": "VIII - as hipóteses de devolução do imposto a pessoas físicas, inclusive os limites e os beneficiários, com o objetivo de reduzir as desigualdades de renda;"
+    },
+    {
+      "id": "CF.art195.par18",
+      "text": "§ 18. Lei estabelecerá as hipóteses de devolução da contribuição prevista no inciso V do caput a pessoas físicas, inclusive em relação a limites e beneficiários, com o objetivo de reduzir as desigualdades de renda."
+    },
+    {
+      "id": "CF.art156-A.par13",
+      "text": "§ 13. A devolução de que trata o § 5º, VIII, será obrigatória nas operações de fornecimento de energia elétrica e de gás liquefeito de petróleo ao consumidor de baixa renda, podendo a lei complementar determinar que seja calculada e concedida no momento da cobrança da operação."
+    },
+    {
+      "id": "CF.art195.par16",
+      "text": "§ 16. Aplica-se à contribuição prevista no inciso V do caput o disposto no art. 156-A, § 1º, I a VI, VIII, X a XIII, § 3º, § 5º, II a VI e IX, e §§ 6º a 11 e 13."
+    }
+  ],
+  "justification": "O corpus prevê expressamente a devolução do imposto (IBS) a pessoas físicas, com limites e beneficiários, para reduzir desigualdades de renda, e disposição equivalente para a contribuição do art. 195, V (CBS). Além disso, a devolução do IBS é obrigatória para energia elétrica e GLP ao consumidor de baixa renda, e o art. 195, § 16, estende à CBS o disposto no art. 156-A, § 13. Todos esses dispositivos já produzem efeitos em 13/11/2026. Portanto, o cashback alcança tanto o IBS quanto a CBS.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

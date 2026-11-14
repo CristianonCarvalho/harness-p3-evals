@@ -1,0 +1,29 @@
+{
+  "case_id": "c022",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "ADCT.art129",
+    "CF.art156-A",
+    "ADCT.art128"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "ADCT.art129",
+      "text": "Art. 129. Ficam extintos, a partir de 2033, os impostos previstos nos arts. 155, II, e 156, III, da Constituição Federal."
+    },
+    {
+      "id": "CF.art156-A",
+      "text": "Art. 156-A. Lei complementar instituirá imposto sobre bens e serviços de competência compartilhada entre Estados, Distrito Federal e Municípios."
+    },
+    {
+      "id": "ADCT.art128",
+      "text": "Art. 128. De 2029 a 2032, as alíquotas dos impostos previstos nos arts. 155, II, e 156, III, da Constituição Federal, serão fixadas nas seguintes proporções das alíquotas fixadas nas respectivas legislações:"
+    }
+  ],
+  "justification": "O corpus não usa a sigla ISS, mas prevê a extinção, a partir de 2033, do imposto indicado no art. 156, III, que é o tributo municipal em questão. O art. 156-A institui o IBS, de competência compartilhada entre Estados, Distrito Federal e Municípios. Na data de referência, 2026-11-13, essa extinção ainda não ocorreu; de 2029 a 2032 há apenas a fixação gradual das alíquotas do imposto do art. 156, III. Portanto, a substituição está prevista para 2033, não para a data consultada.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

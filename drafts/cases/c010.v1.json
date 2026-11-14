@@ -1,0 +1,29 @@
+{
+  "case_id": "c010",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "ADCT.art126",
+    "ADCT.art126.incI",
+    "ADCT.art126.incI.alib"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "ADCT.art126",
+      "text": "Art. 126. A partir de 2027:"
+    },
+    {
+      "id": "ADCT.art126.incI",
+      "text": "I - serão cobrados:"
+    },
+    {
+      "id": "ADCT.art126.incI.alib",
+      "text": "b) o imposto previsto no art. 153, VIII, da Constituição Federal;"
+    }
+  ],
+  "justification": "Na data de referência, ainda não há produtos sujeitos ao Imposto Seletivo, pois o art. 126 do ADCT determina que a cobrança começa a partir de 2027. O inciso I indica os tributos que serão cobrados, e a alínea \"b\" inclui o imposto previsto no art. 153, VIII, da Constituição Federal. Como 13/11/2026 é anterior a 2027, nenhum produto está sujeito ao Imposto Seletivo nessa data.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

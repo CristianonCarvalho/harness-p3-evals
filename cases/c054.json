@@ -1,0 +1,22 @@
+{
+  "case_id": "c054",
+  "question": "O que constava no art. 156-A da Constituição no ano de 2022?",
+  "hypothesis": [
+    "H6"
+  ],
+  "split": "desenvolvimento",
+  "subsets": [],
+  "origin": "human_rewritten",
+  "source_n": "54",
+  "gabarito": {
+    "answer_exists": "nao",
+    "expected_provisions": [],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c054.v1.json",
+    "note": ""
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "case_id": "c058",
+  "question": "O escalonamento das alíquotas do Imposto Seletivo para bebidas e cigarros entre 2029 e 2033 já está valendo?",
+  "hypothesis": [
+    "H7"
+  ],
+  "split": "teste",
+  "subsets": [],
+  "origin": "human_rewritten",
+  "source_n": "58",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "LC214.art422.par5"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c058.v1.json",
+    "note": ""
+  }
+}

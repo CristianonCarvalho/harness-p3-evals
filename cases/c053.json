@@ -1,0 +1,26 @@
+{
+  "case_id": "c053",
+  "question": "Em 2020, o Imposto Seletivo já existia?",
+  "hypothesis": [
+    "H6"
+  ],
+  "split": "teste",
+  "subsets": [],
+  "origin": "ai_kept",
+  "source_n": "53",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "CF.art153.incVIII",
+      "ADCT.art126",
+      "ADCT.art126.incI.alib"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c053.v1.json",
+    "note": ""
+  }
+}

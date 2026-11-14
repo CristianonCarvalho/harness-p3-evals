@@ -1,0 +1,24 @@
+{
+  "case_id": "c019",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "CF.art156-A",
+    "ADCT.art129"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "CF.art156-A",
+      "text": "Lei complementar instituirá imposto sobre bens e serviços de competência compartilhada entre Estados, Distrito Federal e Municípios."
+    },
+    {
+      "id": "ADCT.art129",
+      "text": "Ficam extintos, a partir de 2033, os impostos previstos nos arts. 155, II, e 156, III, da Constituição Federal."
+    }
+  ],
+  "justification": "O IBS é definido pelo art. 156-A como o imposto sobre bens e serviços de competência compartilhada entre Estados, Distrito Federal e Municípios. O art. 129 do ADCT determina a extinção, a partir de 2033, dos impostos previstos nos arts. 155, II, e 156, III, da Constituição Federal, que são os tributos substituídos pelo IBS.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

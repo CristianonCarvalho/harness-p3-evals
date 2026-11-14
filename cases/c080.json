@@ -1,0 +1,29 @@
+{
+  "case_id": "c080",
+  "question": "Quando começa e termina a transição do ICMS e do ISS para o IBS?",
+  "hypothesis": [
+    "H11"
+  ],
+  "split": "teste",
+  "subsets": [
+    "sem_skill"
+  ],
+  "origin": "ai_kept",
+  "source_n": "80",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "ADCT.art125",
+      "ADCT.art127",
+      "ADCT.art128",
+      "ADCT.art129"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c080.v1.json",
+    "note": ""
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "case_id": "c098",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "CF.art156-B",
+    "CF.art156-B.incI",
+    "CF.art156-B.incII",
+    "CF.art156-B.incIII"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "CF.art156-B",
+      "text": "Art. 156-B. Os Estados, o Distrito Federal e os Municípios exercerão de forma integrada, exclusivamente por meio do Comitê Gestor do Imposto sobre Bens e Serviços, nos termos e limites estabelecidos nesta Constituição e em lei complementar, as seguintes competências administrativas relativas ao imposto de que trata o art. 156-A:"
+    },
+    {
+      "id": "CF.art156-B.incI",
+      "text": "I - editar regulamento único e uniformizar a interpretação e a aplicação da legislação do imposto;"
+    },
+    {
+      "id": "CF.art156-B.incII",
+      "text": "II - arrecadar o imposto, efetuar as compensações e distribuir o produto da arrecadação entre Estados, Distrito Federal e Municípios;"
+    },
+    {
+      "id": "CF.art156-B.incIII",
+      "text": "III - decidir o contencioso administrativo."
+    }
+  ],
+  "justification": "O art. 156-B da Constituição atribui aos Estados, ao Distrito Federal e aos Municípios o exercício integrado, exclusivamente por meio do Comitê Gestor do IBS, das competências administrativas relativas ao imposto. Os incisos I a III especificam essas competências: editar regulamento único e uniformizar a interpretação e a aplicação da legislação; arrecadar, efetuar compensações e distribuir o produto da arrecadação; e decidir o contencioso administrativo. O dispositivo tem efeitos desde 2023-12-21 e alcança a data de referência de 2026-11-13.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

@@ -1,0 +1,39 @@
+{
+  "case_id": "c011",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "parcial",
+  "expected_provisions": [
+    "CF.art156-A.par1.incV",
+    "CF.art156-A.par1.incVI",
+    "CF.art156-A.par1.incVII",
+    "CF.art156-A.par1.incXII",
+    "ADCT.art125"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "CF.art156-A.par1.incV",
+      "text": "V - cada ente federativo fixará sua alíquota própria por lei específica;"
+    },
+    {
+      "id": "CF.art156-A.par1.incVI",
+      "text": "VI - a alíquota fixada pelo ente federativo na forma do inciso V será a mesma para todas as operações com bens materiais ou imateriais, inclusive direitos, ou com serviços, ressalvadas as hipóteses previstas nesta Constituição;"
+    },
+    {
+      "id": "CF.art156-A.par1.incVII",
+      "text": "VII - será cobrado pelo somatório das alíquotas do Estado e do Município de destino da operação;"
+    },
+    {
+      "id": "CF.art156-A.par1.incXII",
+      "text": "XII - resolução do Senado Federal fixará alíquota de referência do imposto para cada esfera federativa, nos termos de lei complementar, que será aplicada se outra não houver sido estabelecida pelo próprio ente federativo;"
+    },
+    {
+      "id": "ADCT.art125",
+      "text": "Art. 125. Em 2026, o imposto previsto no art. 156-A será cobrado à alíquota estadual de 0,1% (um décimo por cento), e a contribuição prevista no art. 195, V, ambos da Constituição Federal, será cobrada à alíquota de 0,9% (nove décimos por cento)."
+    }
+  ],
+  "justification": "O corpus não traz uma lista com a alíquota própria de cada município. Ele estabelece que cada ente federativo fixa sua alíquota própria por lei específica, uniforme para as operações, e que o IBS é cobrado pelo somatório das alíquotas do Estado e do Município de destino. Também prevê alíquota de referência fixada pelo Senado para cada esfera federativa, aplicável se o ente não estabelecer a sua. Para a data de referência, o ADCT indica apenas a alíquota estadual de 0,1% em 2026, sem informar alíquotas municipais individualizadas.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

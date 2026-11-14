@@ -1,0 +1,29 @@
+{
+  "case_id": "c017",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "CF.art156-A",
+    "CF.art195.incV",
+    "CF.art149-B"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "CF.art156-A",
+      "text": "Lei complementar instituirá imposto sobre bens e serviços de competência compartilhada entre Estados, Distrito Federal e Municípios."
+    },
+    {
+      "id": "CF.art195.incV",
+      "text": "V - sobre bens e serviços, nos termos de lei complementar."
+    },
+    {
+      "id": "CF.art149-B",
+      "text": "Art. 149-B. Os tributos previstos nos arts. 156-A e 195, V, observarão as mesmas regras em relação a:"
+    }
+  ],
+  "justification": "O corpus mostra que a reforma institui um imposto sobre bens e serviços de competência compartilhada entre Estados, Distrito Federal e Municípios (art. 156-A) e, separadamente, uma contribuição sobre bens e serviços (art. 195, V). O art. 149-B refere-se expressamente a “tributos” previstos nesses dois dispositivos, ainda que sujeitos às mesmas regras. Portanto, não se trata de um imposto único, mas de tributos distintos.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

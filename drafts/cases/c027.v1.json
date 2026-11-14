@@ -1,0 +1,29 @@
+{
+  "case_id": "c027",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "CF.art149-B.parunico",
+    "CF.art150.incVI.alib",
+    "CF.art153.incVIII"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "CF.art149-B.parunico",
+      "text": "Parágrafo único. Os tributos de que trata o caput observarão as imunidades previstas no art. 150, VI, não se aplicando a ambos os tributos o disposto no art. 195, § 7º."
+    },
+    {
+      "id": "CF.art150.incVI.alib",
+      "text": "b) entidades religiosas e templos de qualquer culto, inclusive suas organizações assistenciais e beneficentes;"
+    },
+    {
+      "id": "CF.art153.incVIII",
+      "text": "VIII - produção, extração, comercialização ou importação de bens e serviços prejudiciais à saúde ou ao meio ambiente, nos termos de lei complementar."
+    }
+  ],
+  "justification": "O art. 150, VI, b, da Constituição prevê a imunidade para entidades religiosas e templos de qualquer culto. O art. 149-B, parágrafo único, determina que os tributos de que trata o caput — entre eles o IBS — observem as imunidades do art. 150, VI. O Imposto Seletivo é o imposto previsto no art. 153, VIII, e, como a imunidade do art. 150, VI, b é dirigida a impostos e o corpus não traz exceção para o IS, ela também o alcança.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

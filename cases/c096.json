@@ -1,0 +1,42 @@
+{
+  "case_id": "c096",
+  "question": "Quais profissões estão listadas para a redução de 30%?",
+  "hypothesis": [
+    "H14"
+  ],
+  "split": "teste",
+  "subsets": [],
+  "origin": "ai_kept",
+  "source_n": "96",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "LC214.art127",
+      "LC214.art127.incI",
+      "LC214.art127.incII",
+      "LC214.art127.incIII",
+      "LC214.art127.incIV",
+      "LC214.art127.incV",
+      "LC214.art127.incVI",
+      "LC214.art127.incVII",
+      "LC214.art127.incVIII",
+      "LC214.art127.incIX",
+      "LC214.art127.incX",
+      "LC214.art127.incXI",
+      "LC214.art127.incXII",
+      "LC214.art127.incXIII",
+      "LC214.art127.incXIV",
+      "LC214.art127.incXV",
+      "LC214.art127.incXVI",
+      "LC214.art127.incXVII",
+      "LC214.art127.incXVIII"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c096.v1.json",
+    "note": ""
+  }
+}

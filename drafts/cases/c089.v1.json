@@ -1,0 +1,24 @@
+{
+  "case_id": "c089",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "EC132.art9.par4",
+    "EC132.art9"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "EC132.art9.par4",
+      "text": "O produtor rural pessoa física ou jurídica que obtiver receita anual inferior a R$ 3.600.000,00 (três milhões e seiscentos mil reais), atualizada anualmente pelo Índice Nacional de Preços ao Consumidor Amplo (IPCA), e o produtor integrado de que trata o art. 2º, II, da Lei nº 13.288, de 16 de maio de 2016, com a redação vigente em 31 de maio de 2023, poderão optar por ser contribuintes dos tributos de que trata o caput."
+    },
+    {
+      "id": "EC132.art9",
+      "text": "A lei complementar que instituir o imposto de que trata o art. 156-A e a contribuição de que trata o art. 195, V, ambos da Constituição Federal, poderá prever os regimes diferenciados de tributação de que trata este artigo"
+    }
+  ],
+  "justification": "O § 4º do art. 9º da EC 132/2023 permite que o produtor rural pessoa jurídica com receita anual inferior a R$ 3.600.000,00, atualizada pelo IPCA, opte por ser contribuinte dos tributos de que trata o caput. O caput do mesmo artigo refere-se ao imposto do art. 156-A e à contribuição do art. 195, V, de modo que a opção alcança o IBS. Na data de referência, o dispositivo já produzia efeitos. A resposta é positiva, observado o limite atualizado e o exercício da opção.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

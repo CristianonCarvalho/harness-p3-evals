@@ -1,0 +1,29 @@
+{
+  "case_id": "c005",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "parcial",
+  "expected_provisions": [
+    "LC214.art422",
+    "LC214.art422.par1",
+    "LC214.art422.par1.incI"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "LC214.art422",
+      "text": "as alíquotas do Imposto Seletivo aplicáveis nas operações com os bens e os serviços referidos no Anexo XVII são aquelas previstas em lei ordinária."
+    },
+    {
+      "id": "LC214.art422.par1",
+      "text": "Serão aplicadas alíquotas ad valorem cumuladas com alíquotas específicas para:"
+    },
+    {
+      "id": "LC214.art422.par1.incI",
+      "text": "I - produtos fumígenos classificados na posição 24.02 da NCM/SH; e"
+    }
+  ],
+  "justification": "O corpus não traz um percentual numérico para cigarros. Para a data de referência, o art. 422 da LC 214/2025 remete as alíquotas do Imposto Seletivo sobre os bens do Anexo XVII à lei ordinária. O § 1º e seu inciso I apenas determinam que, para produtos fumígenos da posição 24.02 da NCM/SH, serão aplicadas alíquotas ad valorem cumuladas com alíquotas específicas. Portanto, a resposta é apenas parcial: há a estrutura de cobrança, mas não o valor da alíquota.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

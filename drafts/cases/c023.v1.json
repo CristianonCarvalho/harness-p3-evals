@@ -1,0 +1,24 @@
+{
+  "case_id": "c023",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "ADCT.art126",
+    "ADCT.art126.incII"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "ADCT.art126",
+      "text": "Art. 126. A partir de 2027:"
+    },
+    {
+      "id": "ADCT.art126.incII",
+      "text": "II - serão extintas as contribuições previstas no art. 195, I, \"b\", e IV, e a contribuição para o Programa de Integração Social de que trata o art. 239, todos da Constituição Federal, desde que instituída a contribuição referida na alínea \"a\" do inciso I;"
+    }
+  ],
+  "justification": "O caput do art. 126 do ADCT fixa o marco temporal: \"A partir de 2027\". O inciso II determina que serão extintas as contribuições do art. 195, I, \"b\", e IV, e a contribuição para o PIS do art. 239, desde que instituída a CBS. Como a data de referência é 13/11/2026, as empresas ainda estão no período anterior a essa extinção, que passa a valer no início de 2027.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

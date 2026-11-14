@@ -1,0 +1,28 @@
+{
+  "case_id": "c067",
+  "question": "Os recursos do Fundeb continuam recebendo receitas do ICMS até 2032 e o que entra no lugar em 2033?",
+  "hypothesis": [
+    "H8"
+  ],
+  "split": "teste",
+  "subsets": [],
+  "origin": "human_rewritten",
+  "source_n": "67",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "CF.art212-A.incII",
+      "CF.art212-A.incII.alia",
+      "CF.art212-A.incII.alib",
+      "CF.art212-A.incII.alic",
+      "ADCT.art129"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c067.v1.json",
+    "note": ""
+  }
+}

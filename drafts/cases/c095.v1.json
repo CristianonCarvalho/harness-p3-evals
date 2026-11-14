@@ -1,0 +1,69 @@
+{
+  "case_id": "c095",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "answer_exists": "sim",
+  "expected_provisions": [
+    "LC214.art419.parunico",
+    "LC214.art419.parunico.incI",
+    "LC214.art419.parunico.incII",
+    "LC214.art419.parunico.incIII",
+    "LC214.art419.parunico.incIV",
+    "LC214.art419.parunico.incV",
+    "LC214.art419.parunico.incVI",
+    "LC214.art419.parunico.incVII",
+    "LC214.art419.parunico.incVIII",
+    "LC214.art419.parunico.incIX",
+    "LC214.art419.parunico.incX"
+  ],
+  "reference_date": "2026-11-13",
+  "quotes": [
+    {
+      "id": "LC214.art419.parunico",
+      "text": "Parágrafo único. As alíquotas referidas no caput deste artigo serão graduadas em relação a cada veículo conforme enquadramento nos seguintes critérios, nos termos de lei ordinária:"
+    },
+    {
+      "id": "LC214.art419.parunico.incI",
+      "text": "I - potência do veículo;"
+    },
+    {
+      "id": "LC214.art419.parunico.incII",
+      "text": "II - eficiência energética;"
+    },
+    {
+      "id": "LC214.art419.parunico.incIII",
+      "text": "III - desempenho estrutural e tecnologias assistivas à direção;"
+    },
+    {
+      "id": "LC214.art419.parunico.incIV",
+      "text": "IV - reciclabilidade de materiais;"
+    },
+    {
+      "id": "LC214.art419.parunico.incV",
+      "text": "V - pegada de carbono;"
+    },
+    {
+      "id": "LC214.art419.parunico.incVI",
+      "text": "VI - densidade tecnológica;"
+    },
+    {
+      "id": "LC214.art419.parunico.incVII",
+      "text": "VII - emissão de dióxido de carbono (eficiência energético-ambiental), considerado o ciclo do poço à roda;"
+    },
+    {
+      "id": "LC214.art419.parunico.incVIII",
+      "text": "VIII - reciclabilidade veicular;"
+    },
+    {
+      "id": "LC214.art419.parunico.incIX",
+      "text": "IX - realização de etapas fabris no País; e"
+    },
+    {
+      "id": "LC214.art419.parunico.incX",
+      "text": "X - categoria do veículo."
+    }
+  ],
+  "justification": "O parágrafo único do art. 419 da LC 214/2025 determina que as alíquotas do Imposto Seletivo aplicáveis a veículos sejam graduadas, em relação a cada veículo, conforme enquadramento nos critérios ali indicados, nos termos de lei ordinária. Os incisos relacionam potência, eficiência energética, desempenho estrutural e tecnologias assistivas à direção, reciclabilidade de materiais, pegada de carbono, densidade tecnológica, emissão de CO2 no ciclo do poço à roda, reciclabilidade veicular, realização de etapas fabris no País e categoria do veículo. Como esses dispositivos têm efeitos desde 2026-01-01, alcançam a data de referência de 2026-11-13.",
+  "disputed": false,
+  "corpus_version": "c269388fb2bd",
+  "prompt_sha": "d2c9189eabee"
+}

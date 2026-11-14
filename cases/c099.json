@@ -1,0 +1,31 @@
+{
+  "case_id": "c099",
+  "question": "Quais regimes específicos de tributação estão previstos para IBS e CBS?",
+  "hypothesis": [
+    "H14"
+  ],
+  "split": "desenvolvimento",
+  "subsets": [],
+  "origin": "ai_kept",
+  "source_n": "99",
+  "gabarito": {
+    "answer_exists": "sim",
+    "expected_provisions": [
+      "CF.art156-A.par6",
+      "CF.art156-A.par6.incI",
+      "CF.art156-A.par6.incII",
+      "CF.art156-A.par6.incIII",
+      "CF.art156-A.par6.incIV",
+      "CF.art156-A.par6.incV",
+      "CF.art156-A.par6.incVI",
+      "CF.art195.par16"
+    ],
+    "reference_date": "2026-11-13",
+    "disputed": false
+  },
+  "gabarito_review": {
+    "decision": "confirmar",
+    "draft": "drafts/cases/c099.v1.json",
+    "note": ""
+  }
+}

@@ -6,7 +6,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-from evals import annotation_drafter, annotate, dossier, drafter, judge, round as rodadas, sampling
+from evals import annotation_drafter, annotate, dossier, drafter, judge, make_report, round as rodadas, sampling
 from evals.cases import apply_splits, load_cases
 from evals.consistency import check_repo, hash_prompts, scan_privacy
 from evals.gabarito import make_p2_caller, verify_case
@@ -20,6 +20,7 @@ DELEGADOS = {
     "draft-annotation": annotation_drafter.main,
     "judge": judge.main,
     "run-round": rodadas.main,
+    "make-report": make_report.main,
 }
 
 

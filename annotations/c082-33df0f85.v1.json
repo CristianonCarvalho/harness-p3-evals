@@ -1,0 +1,17 @@
+{
+  "trace_id": "c082-33df0f85",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "fail",
+    "C4": "n/a"
+  },
+  "note": "C1: faltou citar os esperados CF art. 158 e ADCT art. 125; C3: afirmou que a partilha entre estados e municípios não consta do corpus",
+  "uncertain": [
+    "C3"
+  ],
+  "kind": "blind",
+  "draft": null,
+  "version": 1,
+  "date": "2026-11-14"
+}

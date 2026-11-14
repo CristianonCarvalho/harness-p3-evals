@@ -1,0 +1,15 @@
+{
+  "trace_id": "c064-d1fd467b",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "fail",
+    "C4": "n/a"
+  },
+  "note": "C1: faltou citar o dispositivo esperado CF, art. 195, § 17; C3: disse não ser possível responder quando constava no corpus",
+  "uncertain": [],
+  "kind": "blind",
+  "draft": null,
+  "version": 1,
+  "date": "2026-11-14"
+}

@@ -1,0 +1,15 @@
+{
+  "trace_id": "c050-0bf3a7ca",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "fail",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "note": "C1 e C2: respondeu de memória sem chamar ferramentas, sem lastro para normas nem datas",
+  "uncertain": [],
+  "kind": "blind",
+  "draft": null,
+  "version": 1,
+  "date": "2026-11-14"
+}

@@ -1,0 +1,15 @@
+{
+  "trace_id": "c019-73ba90fc",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "fail",
+    "C4": "n/a"
+  },
+  "note": "C1: faltou citar o esperado ADCT, art. 129; C3: disse que o corpus não traz a substituição quando havia previsão no corpus",
+  "uncertain": [],
+  "kind": "blind",
+  "draft": null,
+  "version": 1,
+  "date": "2026-11-14"
+}

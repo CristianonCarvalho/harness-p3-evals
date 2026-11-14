@@ -1,0 +1,17 @@
+{
+  "trace_id": "c070-b292e410",
+  "verdicts": {
+    "C1": "pass",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "note": "dúvida se citar a alínea a do inciso III supre a citação isolada do inciso III",
+  "uncertain": [
+    "C1"
+  ],
+  "kind": "blind",
+  "draft": null,
+  "version": 1,
+  "date": "2026-11-14"
+}

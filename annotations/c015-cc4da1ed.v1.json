@@ -1,0 +1,15 @@
+{
+  "trace_id": "c015-cc4da1ed",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "note": "deixou de citar o esperado ADCT, art. 126, I, a e citou referências sem lastro direto",
+  "uncertain": [],
+  "kind": "blind",
+  "draft": null,
+  "version": 1,
+  "date": "2026-11-14"
+}

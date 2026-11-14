@@ -1,0 +1,15 @@
+{
+  "trace_id": "c035-c0fe93e3",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "fail",
+    "C4": "n/a"
+  },
+  "note": "C1: faltou citar o esperado ADCT, art. 131; C3: disse que não encontrou no corpus quando a previsão existia no corpus",
+  "uncertain": [],
+  "kind": "blind",
+  "draft": null,
+  "version": 1,
+  "date": "2026-11-14"
+}

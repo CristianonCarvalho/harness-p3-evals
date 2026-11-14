@@ -1,0 +1,17 @@
+{
+  "trace_id": "c009-76f5c74e",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "note": "citou art. 125 sem constar das saídas das ferramentas e faltou citar o § 5º esperado",
+  "uncertain": [
+    "C1"
+  ],
+  "kind": "blind",
+  "draft": null,
+  "version": 1,
+  "date": "2026-11-14"
+}

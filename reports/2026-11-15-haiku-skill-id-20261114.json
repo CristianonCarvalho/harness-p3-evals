@@ -131,25 +131,25 @@
   },
   "judge": {
     "C1": {
-      "calibrated": false,
-      "n_neg": 9,
-      "n_pos": 18,
+      "calibrated": true,
+      "n_neg": 11,
+      "n_pos": 25,
       "tnr": 1.0,
-      "tpr": 0.7777777777777778
+      "tpr": 0.76
     },
     "C2": {
       "calibrated": false,
       "n_neg": 1,
-      "n_pos": 6,
+      "n_pos": 11,
       "tnr": 1.0,
-      "tpr": 1.0
+      "tpr": 0.9090909090909091
     },
     "C3": {
       "calibrated": false,
-      "n_neg": 6,
-      "n_pos": 24,
-      "tnr": 0.8333333333333334,
-      "tpr": 0.875
+      "n_neg": 9,
+      "n_pos": 40,
+      "tnr": 0.8888888888888888,
+      "tpr": 0.9
     },
     "C4": {
       "calibrated": false,
@@ -268,28 +268,28 @@
       "C1": {
         "change_rate": 0.12857142857142856,
         "changed": 9,
-        "drafter_error_rate": null,
-        "flag": false,
+        "drafter_error_rate": 0.4,
+        "flag": true,
         "total": 70
       },
       "C2": {
         "change_rate": 0.18571428571428572,
         "changed": 13,
-        "drafter_error_rate": null,
+        "drafter_error_rate": 0.2666666666666667,
         "flag": false,
         "total": 70
       },
       "C3": {
         "change_rate": 0.0,
         "changed": 0,
-        "drafter_error_rate": null,
+        "drafter_error_rate": 0.0,
         "flag": false,
         "total": 70
       },
       "C4": {
         "change_rate": 0.0,
         "changed": 0,
-        "drafter_error_rate": null,
+        "drafter_error_rate": 0.0,
         "flag": false,
         "total": 4
       }
@@ -297,60 +297,60 @@
     "corrections": {
       "judge_first": {
         "C1": {
-          "n_neg": 9,
-          "n_pos": 18,
-          "n_sem_juiz": 3,
+          "n_neg": 11,
+          "n_pos": 25,
+          "n_sem_juiz": 13,
           "tnr": 1.0,
-          "tpr": 0.7777777777777778
+          "tpr": 0.76
         },
         "C2": {
           "n_neg": 1,
-          "n_pos": 6,
-          "n_sem_juiz": 23,
+          "n_pos": 11,
+          "n_sem_juiz": 37,
           "tnr": 1.0,
-          "tpr": 1.0
+          "tpr": 0.9090909090909091
         },
         "C3": {
-          "n_neg": 6,
-          "n_pos": 24,
+          "n_neg": 9,
+          "n_pos": 40,
           "n_sem_juiz": 0,
-          "tnr": 0.8333333333333334,
-          "tpr": 0.875
+          "tnr": 0.8888888888888888,
+          "tpr": 0.9
         },
         "C4": {
           "n_neg": 0,
           "n_pos": 0,
-          "n_sem_juiz": 30,
+          "n_sem_juiz": 49,
           "tnr": null,
           "tpr": null
         }
       },
       "judge_latest": {
         "C1": {
-          "n_neg": 9,
-          "n_pos": 18,
-          "n_sem_juiz": 3,
+          "n_neg": 11,
+          "n_pos": 25,
+          "n_sem_juiz": 13,
           "tnr": 1.0,
-          "tpr": 0.7777777777777778
+          "tpr": 0.76
         },
         "C2": {
           "n_neg": 1,
-          "n_pos": 6,
-          "n_sem_juiz": 23,
+          "n_pos": 11,
+          "n_sem_juiz": 37,
           "tnr": 1.0,
-          "tpr": 1.0
+          "tpr": 0.9090909090909091
         },
         "C3": {
-          "n_neg": 6,
-          "n_pos": 24,
+          "n_neg": 9,
+          "n_pos": 40,
           "n_sem_juiz": 0,
-          "tnr": 0.8333333333333334,
-          "tpr": 0.875
+          "tnr": 0.8888888888888888,
+          "tpr": 0.9
         },
         "C4": {
           "n_neg": 0,
           "n_pos": 0,
-          "n_sem_juiz": 30,
+          "n_sem_juiz": 49,
           "tnr": null,
           "tpr": null
         }
@@ -359,31 +359,31 @@
       "traces": []
     },
     "counts": {
-      "blind": 30,
+      "blind": 49,
       "criterion_2_met": true,
       "revised": 70,
-      "total": 100
+      "total": 119
     },
     "drafter_accuracy": {
       "C1": {
-        "agree": 0,
-        "error_rate": null,
-        "total": 0
+        "agree": 18,
+        "error_rate": 0.4,
+        "total": 30
       },
       "C2": {
-        "agree": 0,
-        "error_rate": null,
-        "total": 0
+        "agree": 22,
+        "error_rate": 0.2666666666666667,
+        "total": 30
       },
       "C3": {
-        "agree": 0,
-        "error_rate": null,
-        "total": 0
+        "agree": 30,
+        "error_rate": 0.0,
+        "total": 30
       },
       "C4": {
-        "agree": 0,
-        "error_rate": null,
-        "total": 0
+        "agree": 3,
+        "error_rate": 0.0,
+        "total": 3
       }
     },
     "gabaritos": {
@@ -393,30 +393,30 @@
     },
     "judge_blind": {
       "C1": {
-        "n_neg": 9,
-        "n_pos": 18,
-        "n_sem_juiz": 3,
+        "n_neg": 11,
+        "n_pos": 25,
+        "n_sem_juiz": 13,
         "tnr": 1.0,
-        "tpr": 0.7777777777777778
+        "tpr": 0.76
       },
       "C2": {
         "n_neg": 1,
-        "n_pos": 6,
-        "n_sem_juiz": 23,
+        "n_pos": 11,
+        "n_sem_juiz": 37,
         "tnr": 1.0,
-        "tpr": 1.0
+        "tpr": 0.9090909090909091
       },
       "C3": {
-        "n_neg": 6,
-        "n_pos": 24,
+        "n_neg": 9,
+        "n_pos": 40,
         "n_sem_juiz": 0,
-        "tnr": 0.8333333333333334,
-        "tpr": 0.875
+        "tnr": 0.8888888888888888,
+        "tpr": 0.9
       },
       "C4": {
         "n_neg": 0,
         "n_pos": 0,
-        "n_sem_juiz": 30,
+        "n_sem_juiz": 49,
         "tnr": null,
         "tpr": null
       }

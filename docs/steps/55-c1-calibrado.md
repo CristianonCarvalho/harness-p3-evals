@@ -30,6 +30,19 @@ Você anotou às cegas os 19 traces da extensão (passo 54). A amostra cega tem 
 
 Mais 5 traces da rodada `haiku-skill-id-20261114`, sorteados entre os 19 casos de teste ainda livres, só com skill: `c008-406ca69f`, `c013-91ced274`, `c033-8489277a`, `c072-86e05ebf`, `c074-67da112f`. Dossiês em `traces/dossies/cega-ext2/`, fora do git, sem leitura pelo Claude. Os 5 já tinham julgamento: custo zero.
 
+## Resultado: o C3 calibrado
+
+Com os 5 anotados (54 cegos), o relatório foi regerado no mesmo nome:
+
+| Critério | TPR | TNR | Aprovados / reprovados | Situação |
+|---|---|---|---|---|
+| C1 | 0,76 | 1,00 | 25 / 11 | calibrado, acima do limiar |
+| C3 | **0,91** | **0,91** | 43 / **11** | **calibrado**, acima do limiar |
+| C2 | 0,92 | 1,00 | 13 / 1 | não calibrado (limite) |
+| C4 | — | — | 0 / 0 | não medido (limite) |
+
+O `check-repo` cobra o limiar do C1 e do C3, e os dois passam. **Critério de concluído 3 atendido** nos critérios em que o juiz decide com frequência; o C2 e o C4 ficam como limites declarados.
+
 ## Pergunta de previsão
 
 Em 5 traces novos da fonte B, quantos você vai reprovar no C3?

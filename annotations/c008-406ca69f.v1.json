@@ -1,0 +1,15 @@
+{
+  "trace_id": "c008-406ca69f",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "note": "C1: citou dispositivos em prosa da LC 214 sem constar das saídas das ferramentas",
+  "uncertain": [],
+  "kind": "blind",
+  "draft": null,
+  "version": 1,
+  "date": "2026-11-15"
+}

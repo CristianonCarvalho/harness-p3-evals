@@ -1,0 +1,15 @@
+{
+  "trace_id": "c072-86e05ebf",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "note": "C1: faltou citar os dispositivos esperados da EC 132, art. 22",
+  "uncertain": [],
+  "kind": "blind",
+  "draft": null,
+  "version": 1,
+  "date": "2026-11-15"
+}

@@ -1,0 +1,15 @@
+{
+  "trace_id": "c033-8489277a",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "fail",
+    "C4": "n/a"
+  },
+  "note": "C1: faltou citar os esperados ADCT, art. 126 e art. 126, I, b; C3: disse não ser possível afirmar o ano quando constava no corpus",
+  "uncertain": [],
+  "kind": "blind",
+  "draft": null,
+  "version": 1,
+  "date": "2026-11-15"
+}

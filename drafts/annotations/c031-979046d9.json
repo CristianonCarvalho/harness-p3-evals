@@ -1,0 +1,16 @@
+{
+  "trace_id": "c031-979046d9",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [
+    "C1"
+  ],
+  "note": "Os dispositivos esperados (ADCT art. 125 e § 4º) foram citados e as datas conferem, mas a resposta cita também art. 195, V, art. 195, I e art. 239 como dispositivos sem que tenham sido devolvidos (aparecem só como remissão dentro do texto devolvido do art. 125 e §§ 1º-2º). Fica a dúvida sobre se remissão interna a dispositivo devolvido conta como lastro próprio; optei por reprovar pela leitura literal de que todo dispositivo citado precisa ter sido devolvido.",
+  "prompt_sha": "11e7f1222408",
+  "blind": true
+}

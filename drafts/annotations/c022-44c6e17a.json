@@ -1,0 +1,14 @@
+{
+  "trace_id": "c022-44c6e17a",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "fail",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1 falha: faltam os dispositivos esperados ADCT art. 128 e ADCT art. 129, e o \"art. 3º\" atribuído à EC 132/2023 não consta do que foi devolvido (além de CF art. 156, que a tabela marca como não devolvido). C3 falha porque o gabarito registra resposta existente (sim) e o modelo afirmou que não era possível responder a partir do corpus.",
+  "prompt_sha": "11e7f1222408",
+  "blind": true
+}

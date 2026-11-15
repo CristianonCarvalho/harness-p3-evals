@@ -1,0 +1,16 @@
+{
+  "trace_id": "c090-bc9f9105",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "fail",
+    "C3": "pass",
+    "C4": "pass"
+  },
+  "uncertain": [
+    "C2"
+  ],
+  "note": "C1: cita art. 146 e art. 544, VI, que não foram devolvidos como dispositivos. C2: a data 2026-01-01 confere, mas a resposta afirma `produz_efeitos_na_data: true` sem esse campo no apêndice; há dúvida se isso conta como invenção de efeito.",
+  "prompt_sha": "11e7f1222408",
+  "blind": true
+}

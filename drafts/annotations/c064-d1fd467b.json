@@ -1,0 +1,14 @@
+{
+  "trace_id": "c064-d1fd467b",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "fail",
+    "C3": "fail",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1: falta o dispositivo esperado CF, art. 195, § 17, e a resposta cita art. 195, I, art. 239 e art. 4º sem que tenham sido devolvidos. C2: a data 2033-01-01 atribuída ao art. 4º da EC 132 não aparece no que foi devolvido. C3: o gabarito indica answer_exists=sim, mas a resposta afirmou não conseguir afirmar nada com o corpus.",
+  "prompt_sha": "11e7f1222408",
+  "blind": true
+}

@@ -1,0 +1,14 @@
+{
+  "trace_id": "c050-0bf3a7ca",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "fail",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1: o art. 156-A é citado sem ter sido devolvido (nenhuma chamada ao server registrada) e o dispositivo esperado EC132.art1 não é citado. C2: a data 20/12/2023 não consta de nenhum retorno de ferramenta, logo não tem lastro. C3 está adequado: o modelo respondeu de forma categórica e correta à pergunta (o corpus tem resposta).",
+  "prompt_sha": "11e7f1222408",
+  "blind": true
+}

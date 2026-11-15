@@ -1,0 +1,16 @@
+{
+  "trace_id": "c100-7551baff",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [
+    "C1"
+  ],
+  "note": "C1 falha apenas na citação de 'LC 214/2025, art. 544, VI': esse dispositivo não foi devolvido por nenhuma chamada (aparece somente como fundamento de efeitos/origem), ainda que a data de 2026-01-01 esteja confirmada pelos efeitos devolvidos do art. 139 e do art. 128, X. O caput e os incisos I a VIII do art. 139, esperados pelo gabarito, estão todos citados e lastreados pela chamada 3. Fica a dúvida sobre se o registro de origem de efeitos conta como lastro para o art. 544, VI.",
+  "prompt_sha": "11e7f1222408",
+  "blind": true
+}

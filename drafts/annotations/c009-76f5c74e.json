@@ -1,0 +1,16 @@
+{
+  "trace_id": "c009-76f5c74e",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [
+    "C1"
+  ],
+  "note": "C1 reprova: a resposta cita o 'art. 125' (LC 214/2025) como integrante do corpus, mas esse dispositivo não aparece em nenhuma devolução — a tabela de citações o registra como citação sem lastro, e o apêndice só traz dispositivos constitucionais, da EC 132/2023 e do ADCT. Os demais dispositivos citados (CF, art. 156-A, § 5º, III e § 1º, III) foram devolvidos e o § 5º está abrangido pela citação ao seu inciso III; fica a dúvida se a menção ao art. 125 é descrição de escopo do corpus (que a regra 2 dispensa de lastro) ou citação de dispositivo. Datas conferem: 2023-12-21 é o 'efeitos desde' devolvido. C3 aprovado: o gabarito é parcial e a resposta entregou a parte existente (CF remete à lei complementar, sem fixar prazo) e apontou explicitamente o que falta (regime da LC 214/2025 fora do corpus).",
+  "prompt_sha": "11e7f1222408",
+  "blind": true
+}

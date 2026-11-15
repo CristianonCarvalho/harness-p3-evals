@@ -1,0 +1,14 @@
+{
+  "trace_id": "c085-4bab1a29",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "fail",
+    "C3": "fail",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1 reprova: falta o dispositivo esperado ADCT, art. 126, I, alínea, que não foi citado (o art. 126 foi devolvido apenas como trecho truncado). C2 reprova: a data \"vigor desde 2025-01-16\" atribuída à LC 214/2025, art. 419 não aparece em nada devolvido. C3 reprova: o gabarito indica que o corpus responde (a transição do IS no ADCT, art. 126, a partir de 2027), mas a resposta afirma que não é possível responder.",
+  "prompt_sha": "11e7f1222408",
+  "blind": true
+}

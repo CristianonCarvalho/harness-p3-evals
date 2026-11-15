@@ -1,0 +1,14 @@
+{
+  "trace_id": "c063-c30e7224",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1 falha porque a resposta não cita o ADCT, art. 126 nem o ADCT, art. 126, II, ambos esperados pelo gabarito; além disso, a tabela aponta citações sem lastro devolvido (arts. 239, 153, VIII e 195, V).",
+  "prompt_sha": "11e7f1222408",
+  "blind": true
+}

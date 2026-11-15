@@ -1,0 +1,14 @@
+{
+  "trace_id": "c003-89d28016",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "fail",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1 falha: a resposta cita o art. 126 e o art. 544, VI da LC 214/2025, que não foram devolvidos como dispositivos (o art. 126 só aparece mencionado dentro do parágrafo único do art. 125). C2 falha: a data de publicação 2025-01-16 não aparece no que foi devolvido, embora a data de efeitos 2026-01-01 confira.",
+  "prompt_sha": "11e7f1222408",
+  "blind": true
+}

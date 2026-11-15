@@ -1,0 +1,14 @@
+{
+  "trace_id": "c015-cc4da1ed",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1 falha: falta o dispositivo esperado ADCT, art. 126, I, \"a\" (a resposta só cita o inciso II), e a resposta cita CF, art. 195, V e art. 195, I sem que tenham sido devolvidos como dispositivos. As datas (2023-12-21 e a referência 2026-11-13) conferem com o que foi devolvido.",
+  "prompt_sha": "11e7f1222408",
+  "blind": true
+}

@@ -1,0 +1,14 @@
+{
+  "trace_id": "c035-c0fe93e3",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "fail",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1 reprova porque o dispositivo esperado do gabarito (ADCT, art. 131) não está entre os citados, ainda que as demais citações tenham lastro nas chamadas. C3 reprova porque o gabarito indica answer_exists: sim (o corpus responde), mas a resposta afirma não ter encontrado dispositivo sobre o início da transição de 50 anos. As datas ditas conferem com as devolvidas.",
+  "prompt_sha": "11e7f1222408",
+  "blind": true
+}

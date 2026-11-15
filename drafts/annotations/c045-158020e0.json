@@ -1,0 +1,14 @@
+{
+  "trace_id": "c045-158020e0",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1 falha: a resposta cita o art. 544, VI da LC 214/2025 para justificar a data de efeitos, mas esse dispositivo não foi devolvido pelas ferramentas; no apêndice ele não aparece, e a tabela o registra apenas como fundamento/origem de outros dispositivos. Os dispositivos esperados (art. 131 e § 1º) foram citados e devolvidos, e as datas de efeitos conferem.",
+  "prompt_sha": "11e7f1222408",
+  "blind": true
+}

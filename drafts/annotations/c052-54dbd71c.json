@@ -1,0 +1,16 @@
+{
+  "trace_id": "c052-54dbd71c",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "pass",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [
+    "C3"
+  ],
+  "note": "C3: o modelo afirma categoricamente que 'em 2022 não havia CBS', mas também declara que não consegue descrever, com base nas ferramentas, como o tributo era cobrado naquele ano; a dúvida é se a afirmação categórica sobre a inexistência conta como resposta categórica diante de answer_exists: nao. C1 e C2 conferem: CF, art. 195, V foi devolvido com efeitos desde 2023-12-21, e as EC 132/2023 citadas aparecem como origem/fundamento de efeitos.",
+  "prompt_sha": "11e7f1222408",
+  "blind": true
+}

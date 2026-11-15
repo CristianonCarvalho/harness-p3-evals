@@ -1,0 +1,14 @@
+{
+  "trace_id": "c096-2b61bff5",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "fail",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1: o gabarito espera os incisos I a XVIII do art. 127, mas a resposta só cita o art. 127 (a lista numerada não conta como citação dos incisos); além disso, cita o art. 544, VI sem que seu texto tenha sido devolvido. C2: a data de publicação 16/01/2025 não aparece no que foi devolvido.",
+  "prompt_sha": "11e7f1222408",
+  "blind": true
+}

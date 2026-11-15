@@ -1,0 +1,14 @@
+{
+  "trace_id": "c070-b292e410",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1 falha: a resposta cita CF, art. 153, IV e art. 153, VIII, que não foram devolvidos pelas ferramentas; além disso, chama o art. 153, VIII de Imposto Seletivo sem que essa denominação apareça no texto devolvido. Os dispositivos esperados do ADCT (art. 126, III e III, a) estão entre os citados, mas as citações extras sem lastro reprovam o critério.",
+  "prompt_sha": "11e7f1222408",
+  "blind": true
+}

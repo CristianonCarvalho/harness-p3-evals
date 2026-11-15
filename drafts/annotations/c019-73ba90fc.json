@@ -1,0 +1,14 @@
+{
+  "trace_id": "c019-73ba90fc",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "fail",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1: falta o ADCT, art. 129, esperado pelo gabarito; além disso a resposta cita CF, art. 156-B (só o § 4º foi devolvido), CF, art. 158, IV (só a alínea 'a' foi devolvida) e EC 132/2023, art. 22, II, que não aparece no que foi devolvido. C3: o gabarito tem resposta (answer_exists sim), mas o modelo afirmou não ter encontrado os impostos substituídos.",
+  "prompt_sha": "11e7f1222408",
+  "blind": true
+}

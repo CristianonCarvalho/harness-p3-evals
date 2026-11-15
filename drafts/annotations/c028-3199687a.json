@@ -1,0 +1,14 @@
+{
+  "trace_id": "c028-3199687a",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "fail",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1: a resposta cita o \"art. 4º\" (da EC 132/2023) como fonte de uma versão de efeitos, mas esse dispositivo não aparece em nenhuma saída das ferramentas. C2: a data 2033-01-01, atribuída a esse art. 4º, também não foi devolvida por nenhuma chamada (só 2023-12-21 e 2032-12-31 constam como efeitos).",
+  "prompt_sha": "11e7f1222408",
+  "blind": true
+}

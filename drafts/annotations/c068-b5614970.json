@@ -1,0 +1,14 @@
+{
+  "trace_id": "c068-b5614970",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1 falha: a resposta cita CF, art. 158 e art. 101, que não foram devolvidos, e EC 132/2023, arts. 2º, 5º e 23, II/III, que só aparecem como origem/fundamento. O dispositivo esperado (ADCT, art. 104, IV) foi devolvido, mas não há lastro para todos os dispositivos citados.",
+  "prompt_sha": "11e7f1222408",
+  "blind": true
+}

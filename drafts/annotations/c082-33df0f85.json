@@ -1,0 +1,14 @@
+{
+  "trace_id": "c082-33df0f85",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "fail",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "Faltam no C1 dispositivos esperados do gabarito: CF, art. 158, IV e sua alínea, CF, art. 158, § 2º, e ADCT, art. 125, § 3º e incisos (o inciso I chegou a ser devolvido, mas não foi citado). No C3, a resposta afirma que a divisão entre estados e municípios não está no corpus, quando o gabarito indica que o corpus responde (answer_exists: sim), deixando de entregar a parte existente.",
+  "prompt_sha": "11e7f1222408",
+  "blind": true
+}

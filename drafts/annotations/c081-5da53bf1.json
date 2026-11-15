@@ -1,0 +1,14 @@
+{
+  "trace_id": "c081-5da53bf1",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "fail",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1: cita LC 214/2025, art. 544, VI como fundamento das datas de efeito, mas esse dispositivo não foi devolvido (a chamada por LC214.art544 retornou 'id inexistente no corpus'), e a própria resposta admite encontrado=false. C2: a data 'vigor desde 2025-01-16' não aparece em nada do que foi devolvido, sendo inventada; as demais (2023-12-21 e 2026-01-01) conferem.",
+  "prompt_sha": "11e7f1222408",
+  "blind": true
+}

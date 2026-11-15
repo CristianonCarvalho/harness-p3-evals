@@ -1,0 +1,14 @@
+{
+  "trace_id": "c044-0cb20400",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1 falha: a resposta cita o art. 544, VI da LC 214/2025 como fundamento dos efeitos, mas esse dispositivo não foi devolvido pelas ferramentas; os demais dispositivos citados e o art. 129 esperado foram devolvidos.",
+  "prompt_sha": "11e7f1222408",
+  "blind": true
+}

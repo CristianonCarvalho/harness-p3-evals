@@ -1,0 +1,14 @@
+{
+  "trace_id": "c026-35d1d57d",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "fail",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1: a resposta cita o art. 195, V da CF (identificado como CBS) e o art. 544, VI da LC 214/2025 como fundamento dos efeitos, mas nenhum dos dois foi devolvido como dispositivo — o segundo consta apenas como origem de efeitos de outros artigos. Os dois dispositivos esperados (EC 132/2023, art. 8º, parágrafo único, e LC 214/2025, art. 125) foram citados e devolvidos. C2: a data de publicação 2025-01-16 não aparece em nada do que foi devolvido, caracterizando data inventada; as demais datas (2023-12-21 e 2026-01-01) conferem com os efeitos devolvidos. C3: o corpus responde à pergunta e a resposta enfrentou o mérito, apontando os limites sobre os Anexos I e XVII.",
+  "prompt_sha": "11e7f1222408",
+  "blind": true
+}

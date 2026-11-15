@@ -1,0 +1,14 @@
+{
+  "trace_id": "c057-8b19d225",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1 reprova: a resposta cita apenas a LC 214/2025, art. 422, § 2º (que foi devolvido), mas omite o dispositivo esperado do gabarito, CF, art. 153, § 6º, VII. C2 e C3 aprovam: o modelo não inventou data de efeitos (o corpus traz 'desde não informado'/null) e, havendo resposta no corpus, deu resposta categórica ao valor de 0,25%.",
+  "prompt_sha": "11e7f1222408",
+  "blind": true
+}

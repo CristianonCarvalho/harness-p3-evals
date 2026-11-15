@@ -26,6 +26,10 @@ Você anotou às cegas os 19 traces da extensão (passo 54). A amostra cega tem 
 
 **Critério de concluído 3 (juiz calibrado contra a anotação humana):** atendido no C1; no C3, por um trace; no C2 e no C4, não atingível com estes dados, o que vai para os limites conhecidos.
 
+## Extensão para o C3 (semente 20261116)
+
+Mais 5 traces da rodada `haiku-skill-id-20261114`, sorteados entre os 19 casos de teste ainda livres, só com skill: `c008-406ca69f`, `c013-91ced274`, `c033-8489277a`, `c072-86e05ebf`, `c074-67da112f`. Dossiês em `traces/dossies/cega-ext2/`, fora do git, sem leitura pelo Claude. Os 5 já tinham julgamento: custo zero.
+
 ## Pergunta de previsão
 
 Em 5 traces novos da fonte B, quantos você vai reprovar no C3?

@@ -1,0 +1,15 @@
+{
+  "trace_id": "c097-4e0e2e97",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "note": "C1: faltou citar dispositivo(s) esperado(s): LC214.art128.incIII, LC214.art128.incIV, LC214.art128.incVII; C2: 2025-01-16 (vigor_desde) / 2026-11-06 (coleta) / datas em outras_versoes constam das ferramentas",
+  "uncertain": [],
+  "kind": "revised",
+  "draft": "drafts/annotations/c097-4e0e2e97.json",
+  "version": 1,
+  "date": "2026-11-15"
+}

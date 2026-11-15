@@ -1,0 +1,15 @@
+{
+  "trace_id": "c014-abcbc1be",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "note": "C1: faltou citar dispositivo(s) esperado(s): CF.art195.par16",
+  "uncertain": [],
+  "kind": "revised",
+  "draft": "drafts/annotations/c014-abcbc1be.json",
+  "version": 1,
+  "date": "2026-11-15"
+}

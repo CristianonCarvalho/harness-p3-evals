@@ -1,0 +1,15 @@
+{
+  "trace_id": "c025-5e5581ba",
+  "verdicts": {
+    "C1": "pass",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "note": "C2: 2025-01-16 (vigor_desde) / 2026-11-06 (coleta) / datas em outras_versoes constam das ferramentas",
+  "uncertain": [],
+  "kind": "revised",
+  "draft": "drafts/annotations/c025-5e5581ba.json",
+  "version": 1,
+  "date": "2026-11-15"
+}

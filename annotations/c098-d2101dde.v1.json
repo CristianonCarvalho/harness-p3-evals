@@ -1,0 +1,15 @@
+{
+  "trace_id": "c098-d2101dde",
+  "verdicts": {
+    "C1": "pass",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "note": "",
+  "uncertain": [],
+  "kind": "revised",
+  "draft": "drafts/annotations/c098-d2101dde.json",
+  "version": 1,
+  "date": "2026-11-15"
+}

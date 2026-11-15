@@ -1,0 +1,15 @@
+{
+  "trace_id": "c008-80965a68",
+  "verdicts": {
+    "C1": "pass",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "note": "C1: menção a fundamento (art. 544, VI / EC 132) ou versão consta das ferramentas/metadados e todos os esperados foram citados",
+  "uncertain": [],
+  "kind": "revised",
+  "draft": "drafts/annotations/c008-80965a68.json",
+  "version": 1,
+  "date": "2026-11-15"
+}

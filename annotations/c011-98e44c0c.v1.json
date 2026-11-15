@@ -1,0 +1,15 @@
+{
+  "trace_id": "c011-98e44c0c",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "note": "C1: faltou citar dispositivo(s) esperado(s): ADCT.art125",
+  "uncertain": [],
+  "kind": "revised",
+  "draft": "drafts/annotations/c011-98e44c0c.json",
+  "version": 1,
+  "date": "2026-11-15"
+}

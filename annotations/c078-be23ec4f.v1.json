@@ -1,0 +1,15 @@
+{
+  "trace_id": "c078-be23ec4f",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "note": "C1: citação de dispositivo sem lastro no corpus",
+  "uncertain": [],
+  "kind": "revised",
+  "draft": "drafts/annotations/c078-be23ec4f.json",
+  "version": 1,
+  "date": "2026-11-15"
+}

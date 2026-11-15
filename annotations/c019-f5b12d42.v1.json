@@ -1,0 +1,15 @@
+{
+  "trace_id": "c019-f5b12d42",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "note": "C1: faltou citar dispositivo(s) esperado(s): ADCT.art129",
+  "uncertain": [],
+  "kind": "revised",
+  "draft": "drafts/annotations/c019-f5b12d42.json",
+  "version": 1,
+  "date": "2026-11-15"
+}

@@ -1,0 +1,15 @@
+{
+  "trace_id": "c058-14b93127",
+  "verdicts": {
+    "C1": "pass",
+    "C2": "pass",
+    "C3": "fail",
+    "C4": "n/a"
+  },
+  "note": "C3: postura inadequada diante do gabarito",
+  "uncertain": [],
+  "kind": "revised",
+  "draft": "drafts/annotations/c058-14b93127.json",
+  "version": 1,
+  "date": "2026-11-15"
+}

@@ -1,0 +1,15 @@
+{
+  "trace_id": "c038-ab72e325",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "fail",
+    "C4": "n/a"
+  },
+  "note": "C1: faltou citar dispositivo(s) esperado(s): ADCT.art129; C3: postura inadequada diante do gabarito",
+  "uncertain": [],
+  "kind": "revised",
+  "draft": "drafts/annotations/c038-ab72e325.json",
+  "version": 1,
+  "date": "2026-11-15"
+}

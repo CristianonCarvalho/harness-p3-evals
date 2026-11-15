@@ -1,0 +1,15 @@
+{
+  "trace_id": "c084-708ec0fb",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "note": "C1: citação de dispositivo sem lastro no corpus",
+  "uncertain": [],
+  "kind": "revised",
+  "draft": "drafts/annotations/c084-708ec0fb.json",
+  "version": 1,
+  "date": "2026-11-15"
+}

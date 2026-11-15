@@ -1,0 +1,14 @@
+{
+  "trace_id": "c081-e8cce232",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C3": "pass"
+  },
+  "justification": {
+    "C3": "O modelo respondeu à pergunta com base no art. 125 da LC 214/2025, indicando a alíquota zero de IBS e CBS em 2026 e sua continuidade em 2033. Também esclareceu as limitações da consulta quanto à lista de produtos e às regras gerais de transição, sem negar a existência da resposta principal."
+  }
+}

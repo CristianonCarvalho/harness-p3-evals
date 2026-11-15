@@ -1,0 +1,16 @@
+{
+  "trace_id": "c016-08ac5de3",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "pass",
+    "C3": "fail"
+  },
+  "justification": {
+    "C1": "A resposta cita o dispositivo constitucional esperado, que foi devolvido pelas ferramentas. As demais citações também constam dos retornos, inclusive o fundamento de vigência da emenda constitucional.",
+    "C3": "Embora cite a regra encontrada e reconheça a falta de dispositivos operacionais, o modelo afirma categoricamente detalhes sobre a retenção pela instituição financeira e o repasse ao fisco que não foram devolvidos pelas ferramentas. Assim, não limita a resposta à parte sustentada pelo corpus."
+  }
+}

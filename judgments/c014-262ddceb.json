@@ -1,0 +1,16 @@
+{
+  "trace_id": "c014-262ddceb",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "A resposta deixou de citar os dispositivos esperados do art. 195, §§ 16 e 18, da Constituição. Além disso, mencionou individualmente o art. 125 da LC 214/2025, que não consta do retorno das ferramentas.",
+    "C3": "O modelo apresentou a parte respondida pelo corpus, incluindo a devolução obrigatória para energia elétrica e GLP, e apontou a ausência de detalhes sobre critérios e operacionalização. Sua postura foi adequada a uma resposta parcial."
+  }
+}

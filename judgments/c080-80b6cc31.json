@@ -1,0 +1,16 @@
+{
+  "trace_id": "c080-80b6cc31",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "fail"
+  },
+  "justification": {
+    "C1": "Os dispositivos expressamente citados têm lastro nas saídas das ferramentas. Contudo, a resposta não cita nenhum dos dispositivos esperados: arts. 125, 127, 128 e 129 do ADCT.",
+    "C3": "O corpus é indicado como capaz de responder, mas o modelo afirmou não ter encontrado o início da transição nem confirmado o cronograma do ISS. Apresentou as datas com base na própria memória, e não no lastro das ferramentas."
+  }
+}

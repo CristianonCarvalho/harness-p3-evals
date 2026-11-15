@@ -1,0 +1,434 @@
+{
+  "dev_diagnostic": {
+    "com_skill": {
+      "C1": {
+        "ci": [
+          0.33630614316859386,
+          0.6636938568314061
+        ],
+        "decided_by": {
+          "code": 30,
+          "judge": 2
+        },
+        "excluded": 0,
+        "n": 32,
+        "pass": 16,
+        "rate": 0.5
+      },
+      "C2": {
+        "ci": [
+          0.7985253275199642,
+          0.9826897968048427
+        ],
+        "decided_by": {
+          "code": 23,
+          "judge": 9
+        },
+        "excluded": 0,
+        "n": 32,
+        "pass": 30,
+        "rate": 0.9375
+      },
+      "C3": {
+        "ci": [
+          0.514330003019676,
+          0.8204764788338126
+        ],
+        "decided_by": {
+          "code": 0,
+          "judge": 32
+        },
+        "excluded": 0,
+        "n": 32,
+        "pass": 22,
+        "rate": 0.6875
+      },
+      "C4": {
+        "ci": [
+          0.34237195288961925,
+          1.0
+        ],
+        "decided_by": {
+          "code": 2,
+          "judge": 0
+        },
+        "excluded": 0,
+        "n": 2,
+        "pass": 2,
+        "rate": 1.0
+      }
+    },
+    "sem_skill": {
+      "C1": {
+        "ci": [
+          0.09676933255921683,
+          0.7000116786584712
+        ],
+        "decided_by": {
+          "code": 0,
+          "judge": 6
+        },
+        "excluded": 0,
+        "n": 6,
+        "pass": 2,
+        "rate": 0.3333333333333333
+      },
+      "C2": {
+        "ci": [
+          0.43649056343635395,
+          0.9699474141282697
+        ],
+        "decided_by": {
+          "code": 4,
+          "judge": 2
+        },
+        "excluded": 0,
+        "n": 6,
+        "pass": 5,
+        "rate": 0.8333333333333334
+      },
+      "C3": {
+        "ci": [
+          0.43649056343635395,
+          0.9699474141282697
+        ],
+        "decided_by": {
+          "code": 0,
+          "judge": 6
+        },
+        "excluded": 0,
+        "n": 6,
+        "pass": 5,
+        "rate": 0.8333333333333334
+      }
+    }
+  },
+  "header": {
+    "corpus_version": "c269388fb2bd",
+    "date": "2026-11-14",
+    "judge": {
+      "model": "openai/gpt-6.1-terra",
+      "version": "openai/gpt-6.1-terra"
+    },
+    "judge_prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c",
+    "models": [
+      "claude-haiku-5-5"
+    ],
+    "n_traces": 120,
+    "p2_tag": "step-17",
+    "pending": {
+      "C1": 0,
+      "C2": 0,
+      "C3": 0,
+      "C4": 0
+    },
+    "round_id": "haiku-skill-id-20261114",
+    "seed": 20261114,
+    "skipped_traces": {
+      "erro": 1
+    },
+    "stale_judgments": 0
+  },
+  "judge": {
+    "C1": {
+      "calibrated": false,
+      "n_neg": 9,
+      "n_pos": 18,
+      "tnr": 1.0,
+      "tpr": 0.7777777777777778
+    },
+    "C2": {
+      "calibrated": false,
+      "n_neg": 1,
+      "n_pos": 6,
+      "tnr": 1.0,
+      "tpr": 1.0
+    },
+    "C3": {
+      "calibrated": false,
+      "n_neg": 6,
+      "n_pos": 24,
+      "tnr": 0.8333333333333334,
+      "tpr": 0.875
+    },
+    "C4": {
+      "calibrated": false,
+      "n_neg": 0,
+      "n_pos": 0,
+      "tnr": null,
+      "tpr": null
+    }
+  },
+  "rates": {
+    "com_skill": {
+      "C1": {
+        "ci": [
+          0.329460449863809,
+          0.559183455617138
+        ],
+        "decided_by": {
+          "code": 60,
+          "judge": 8
+        },
+        "excluded": 0,
+        "n": 68,
+        "pass": 30,
+        "rate": 0.4411764705882353
+      },
+      "C2": {
+        "ci": [
+          0.8781260781761931,
+          0.984883654346468
+        ],
+        "decided_by": {
+          "code": 50,
+          "judge": 18
+        },
+        "excluded": 0,
+        "n": 68,
+        "pass": 65,
+        "rate": 0.9558823529411765
+      },
+      "C3": {
+        "ci": [
+          0.5889349573627328,
+          0.8008113734539529
+        ],
+        "decided_by": {
+          "code": 0,
+          "judge": 68
+        },
+        "excluded": 0,
+        "n": 68,
+        "pass": 48,
+        "rate": 0.7058823529411765
+      },
+      "C4": {
+        "ci": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "decided_by": {
+          "code": 6,
+          "judge": 0
+        },
+        "excluded": 0,
+        "n": 6,
+        "pass": 6,
+        "rate": 1.0
+      }
+    },
+    "sem_skill": {
+      "C1": {
+        "ci": [
+          0.0,
+          0.21531701192718142
+        ],
+        "decided_by": {
+          "code": 3,
+          "judge": 11
+        },
+        "excluded": 0,
+        "n": 14,
+        "pass": 0,
+        "rate": 0.0
+      },
+      "C2": {
+        "ci": [
+          0.4535045882751561,
+          0.882788120898909
+        ],
+        "decided_by": {
+          "code": 10,
+          "judge": 4
+        },
+        "excluded": 0,
+        "n": 14,
+        "pass": 10,
+        "rate": 0.7142857142857143
+      },
+      "C3": {
+        "ci": [
+          0.3876400468214042,
+          0.8365550926279727
+        ],
+        "decided_by": {
+          "code": 0,
+          "judge": 14
+        },
+        "excluded": 0,
+        "n": 14,
+        "pass": 9,
+        "rate": 0.6428571428571429
+      }
+    }
+  },
+  "review": {
+    "anchoring": {
+      "C1": {
+        "change_rate": null,
+        "changed": 0,
+        "drafter_error_rate": null,
+        "flag": false,
+        "total": 0
+      },
+      "C2": {
+        "change_rate": null,
+        "changed": 0,
+        "drafter_error_rate": null,
+        "flag": false,
+        "total": 0
+      },
+      "C3": {
+        "change_rate": null,
+        "changed": 0,
+        "drafter_error_rate": null,
+        "flag": false,
+        "total": 0
+      },
+      "C4": {
+        "change_rate": null,
+        "changed": 0,
+        "drafter_error_rate": null,
+        "flag": false,
+        "total": 0
+      }
+    },
+    "corrections": {
+      "judge_first": {
+        "C1": {
+          "n_neg": 9,
+          "n_pos": 18,
+          "n_sem_juiz": 3,
+          "tnr": 1.0,
+          "tpr": 0.7777777777777778
+        },
+        "C2": {
+          "n_neg": 1,
+          "n_pos": 6,
+          "n_sem_juiz": 23,
+          "tnr": 1.0,
+          "tpr": 1.0
+        },
+        "C3": {
+          "n_neg": 6,
+          "n_pos": 24,
+          "n_sem_juiz": 0,
+          "tnr": 0.8333333333333334,
+          "tpr": 0.875
+        },
+        "C4": {
+          "n_neg": 0,
+          "n_pos": 0,
+          "n_sem_juiz": 30,
+          "tnr": null,
+          "tpr": null
+        }
+      },
+      "judge_latest": {
+        "C1": {
+          "n_neg": 9,
+          "n_pos": 18,
+          "n_sem_juiz": 3,
+          "tnr": 1.0,
+          "tpr": 0.7777777777777778
+        },
+        "C2": {
+          "n_neg": 1,
+          "n_pos": 6,
+          "n_sem_juiz": 23,
+          "tnr": 1.0,
+          "tpr": 1.0
+        },
+        "C3": {
+          "n_neg": 6,
+          "n_pos": 24,
+          "n_sem_juiz": 0,
+          "tnr": 0.8333333333333334,
+          "tpr": 0.875
+        },
+        "C4": {
+          "n_neg": 0,
+          "n_pos": 0,
+          "n_sem_juiz": 30,
+          "tnr": null,
+          "tpr": null
+        }
+      },
+      "n_corrected": 0,
+      "traces": []
+    },
+    "counts": {
+      "blind": 30,
+      "criterion_2_met": false,
+      "revised": 0,
+      "total": 30
+    },
+    "drafter_accuracy": {
+      "C1": {
+        "agree": 0,
+        "error_rate": null,
+        "total": 0
+      },
+      "C2": {
+        "agree": 0,
+        "error_rate": null,
+        "total": 0
+      },
+      "C3": {
+        "agree": 0,
+        "error_rate": null,
+        "total": 0
+      },
+      "C4": {
+        "agree": 0,
+        "error_rate": null,
+        "total": 0
+      }
+    },
+    "gabaritos": {
+      "changed": 8,
+      "disputed": 0,
+      "drafted": 100
+    },
+    "judge_blind": {
+      "C1": {
+        "n_neg": 9,
+        "n_pos": 18,
+        "n_sem_juiz": 3,
+        "tnr": 1.0,
+        "tpr": 0.7777777777777778
+      },
+      "C2": {
+        "n_neg": 1,
+        "n_pos": 6,
+        "n_sem_juiz": 23,
+        "tnr": 1.0,
+        "tpr": 1.0
+      },
+      "C3": {
+        "n_neg": 6,
+        "n_pos": 24,
+        "n_sem_juiz": 0,
+        "tnr": 0.8333333333333334,
+        "tpr": 0.875
+      },
+      "C4": {
+        "n_neg": 0,
+        "n_pos": 0,
+        "n_sem_juiz": 30,
+        "tnr": null,
+        "tpr": null
+      }
+    },
+    "motivos": {
+      "self_agreement": "Sem traces com as duas rodadas de anotação cega."
+    },
+    "self_agreement": null
+  },
+  "usage": {
+    "cost_usd": 0.666274,
+    "input_tokens": 11724083,
+    "output_tokens": 300942
+  }
+}

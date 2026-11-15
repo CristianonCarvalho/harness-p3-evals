@@ -1,0 +1,16 @@
+{
+  "trace_id": "c010-d6113ab9",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C2": "pass",
+    "C3": "pass"
+  },
+  "justification": {
+    "C2": "As datas de efeitos informadas para os arts. 153, VIII, da Constituição e 422 da LC 214/2025 coincidem com as ferramentas. A resposta não afirma que os dispositivos com efeitos indeterminados já produzem efeitos nem que o imposto já é cobrado na data de referência.",
+    "C3": "O corpus foi indicado como não respondendo à pergunta, e o modelo declarou explicitamente que não podia listar os produtos com base nele. As menções a categorias presentes nos trechos foram acompanhadas da ressalva de que não permitem estabelecer a lista de produtos sujeitos ao imposto."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "trace_id": "c024-ab82f01b",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C2": "fail",
+    "C3": "pass"
+  },
+  "justification": {
+    "C2": "A resposta generaliza a data de efeitos de 2026-01-01 para os dispositivos sobre alíquotas, mas a ferramenta indica efeitos indeterminados para os §§ 2º e 5º do art. 422. O § 2º, inclusive, é citado na resposta.",
+    "C3": "O modelo identificou o Imposto Seletivo e explicou sua incidência com base nos dispositivos devolvidos pelas ferramentas. Também delimitou os detalhes que não consultou, sem negar a existência de resposta para a pergunta."
+  }
+}

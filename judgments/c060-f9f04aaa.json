@@ -1,0 +1,16 @@
+{
+  "trace_id": "c060-f9f04aaa",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C2": "pass",
+    "C3": "pass"
+  },
+  "justification": {
+    "C2": "As datas de vigência e início de efeitos coincidem com os dados retornados pela ferramenta, que também confirma a produção de efeitos na data de referência. A data de coleta do corpus igualmente confere.",
+    "C3": "O modelo respondeu às condições previstas no art. 125 com base nas normas devolvidas e explicou a aplicação às importações. Também delimitou a ausência do Anexo I nas saídas consultadas, sem deixar de responder à pergunta."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "trace_id": "c083-7188a688",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "A resposta cita os demais dispositivos esperados com lastro nas ferramentas, mas não cita o art. 128 da LC 214/2025. A menção à faixa de arts. 126 a 142 não supre essa omissão.",
+    "C3": "O modelo respondeu à diferença entre as reduções, com base nos dispositivos devolvidos, e indicou limites para o enquadramento de serviços específicos. Não afirmou indevidamente que o corpus deixava de tratar da pergunta."
+  }
+}

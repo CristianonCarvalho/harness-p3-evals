@@ -1,0 +1,14 @@
+{
+  "trace_id": "c045-1f1d1208",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C3": "pass"
+  },
+  "justification": {
+    "C3": "O modelo apresentou a regra disponível, incluindo a exigência de regularização perante a Anvisa, e esclareceu que não tinha a lista de produtos e classificações do Anexo IV. Essa postura é adequada à resposta parcial indicada."
+  }
+}

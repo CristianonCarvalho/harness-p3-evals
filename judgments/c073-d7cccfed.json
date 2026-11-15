@@ -1,0 +1,14 @@
+{
+  "trace_id": "c073-d7cccfed",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C3": "pass"
+  },
+  "justification": {
+    "C3": "O corpus responde à pergunta, e o modelo respondeu corretamente que a regra deixa de produzir efeitos em 1º de janeiro de 2033, com base nos dados das ferramentas."
+  }
+}

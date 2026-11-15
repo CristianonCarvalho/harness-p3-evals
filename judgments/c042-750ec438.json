@@ -1,0 +1,16 @@
+{
+  "trace_id": "c042-750ec438",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C2": "pass",
+    "C3": "pass"
+  },
+  "justification": {
+    "C2": "As datas de 2026, 2027 e 2028 constam dos textos devolvidos, assim como a data de início dos efeitos, a data de referência e a data de coleta do corpus. A ferramenta também confirma que o art. 125 produzia efeitos na data de referência.",
+    "C3": "O corpus responde à pergunta, e o modelo identificou corretamente a alíquota estadual de 0,1% em 2026, com base no art. 125 do ADCT. A ressalva sobre a cobrança prática não impede a resposta à pergunta formulada."
+  }
+}

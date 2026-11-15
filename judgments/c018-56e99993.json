@@ -1,0 +1,16 @@
+{
+  "trace_id": "c018-56e99993",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "fail"
+  },
+  "justification": {
+    "C1": "A resposta cita o art. 156-A da CF, que consta do retorno das ferramentas, mas não cita o art. 195, V, da CF, exigido pelo gabarito. A referência genérica ao art. 195 não supre a ausência do inciso V.",
+    "C3": "Embora tenha respondido à pergunta, o modelo afirmou que a informação sobre a CBS vinha de conhecimento externo e não estava amparada nas saídas das ferramentas, único lastro admitido."
+  }
+}

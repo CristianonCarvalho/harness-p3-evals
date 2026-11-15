@@ -1,0 +1,16 @@
+{
+  "trace_id": "c058-205dccc7",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C2": "fail",
+    "C3": "pass"
+  },
+  "justification": {
+    "C2": "O período de 2029 a 2033 está respaldado, e a resposta reconhece a indeterminação dos efeitos do § 5º. Contudo, atribui efeitos desde 2026-01-01 ao § 1º e seguintes sem respaldo: o § 1º não foi devolvido e os efeitos do § 2º são indeterminados.",
+    "C3": "O modelo respondeu que o escalonamento começa em 2029 e ainda não é aplicado na data de referência, com base na norma encontrada. Embora tenha destacado incertezas sobre a produção de efeitos e os percentuais, não deixou de apresentar a resposta disponível no corpus."
+  }
+}

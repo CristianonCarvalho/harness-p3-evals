@@ -1,0 +1,16 @@
+{
+  "trace_id": "c070-26d46710",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C2": "pass",
+    "C3": "pass"
+  },
+  "justification": {
+    "C2": "O marco de 2027 para a redução das alíquotas do IPI e o de 2033 para a extinção dos impostos indicados no art. 129 constam dos textos devolvidos. A data de efeitos de 2023-12-21 e as datas de referência e coleta também conferem com as ferramentas.",
+    "C3": "O modelo respondeu à pergunta com base no dispositivo encontrado: a alíquota do IPI será zero para produtos em geral, com exceção dos produtos abrangidos pela regra da Zona Franca de Manaus. As ressalvas sobre informações não encontradas não impediram a resposta principal."
+  }
+}

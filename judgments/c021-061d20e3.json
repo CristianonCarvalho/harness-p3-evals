@@ -1,0 +1,16 @@
+{
+  "trace_id": "c021-061d20e3",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C2": "fail",
+    "C3": "pass"
+  },
+  "justification": {
+    "C2": "Os percentuais de 2029 a 2032 e as demais datas citadas constam nas ferramentas. Porém, a afirmação de que a redução para de vez em 2033 não é respaldada pelos textos devolvidos, que apenas fixam proporções até 2032.",
+    "C3": "O modelo respondeu à pergunta com as proporções anuais de redução previstas no art. 128 do ADCT, sem afirmar indevidamente que não havia resposta no corpus. Também distinguiu os trechos isolados cujo contexto não foi devolvido pelas ferramentas."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "trace_id": "c030-ff0d69c4",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C3": "fail"
+  },
+  "justification": {
+    "C3": "O corpus responde à pergunta, mas o modelo afirmou que não era possível confirmar a existência do cashback ou dizer se ele devolve ambos os tributos. Assim, apesar de identificar previsões constitucionais para os dois, deixou de dar a resposta disponível e declarou indevidamente que ela não consta do corpus."
+  }
+}

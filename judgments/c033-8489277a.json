@@ -1,0 +1,16 @@
+{
+  "trace_id": "c033-8489277a",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C2": "pass",
+    "C3": "fail"
+  },
+  "justification": {
+    "C2": "As datas de referência, coleta e produção de efeitos mencionadas constam nas saídas das ferramentas. A resposta distingue essas datas do início da cobrança e reconhece que o lastro não permite determinar esse ano.",
+    "C3": "O campo indica que o corpus responde à pergunta, mas o modelo afirma que não é possível identificar o ano de início da cobrança e não fornece uma resposta. Trata-se de falso não sei segundo o critério."
+  }
+}

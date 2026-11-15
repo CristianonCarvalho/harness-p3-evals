@@ -1,0 +1,16 @@
+{
+  "trace_id": "c079-48e39e9a",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "A resposta cita os três dispositivos esperados com lastro nas ferramentas. Porém, atribui à faixa de artigos da LC 214/2025 uma redução de 30% que não consta dos retornos.",
+    "C3": "O modelo respondeu com as alíquotas e a redução previstas nos dispositivos encontrados, distinguindo o valor de 0,8% como inferência e apontando a ausência de uma base expressa para a CBS em 2027 e 2028. Não declarou indevidamente que a pergunta não tinha resposta no corpus."
+  }
+}

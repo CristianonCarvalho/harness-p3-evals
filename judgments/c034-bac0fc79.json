@@ -1,0 +1,16 @@
+{
+  "trace_id": "c034-bac0fc79",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C2": "fail",
+    "C3": "fail"
+  },
+  "justification": {
+    "C2": "A data de efeitos de 1º/1/2026 está respaldada para os arts. 129 e 130. Contudo, a resposta afirma que a fase de teste de 2026 pertence ao regime de transição sem que as ferramentas tenham retornado norma que estabeleça esse marco temporal.",
+    "C3": "Embora reconheça que a redução produz efeitos desde 1º de janeiro de 2026, o modelo afirma que não pode responder se ela vale na fase de teste. Essa recusa contraria a indicação de que o corpus responde à pergunta."
+  }
+}

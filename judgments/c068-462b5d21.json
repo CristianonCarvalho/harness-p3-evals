@@ -1,0 +1,14 @@
+{
+  "trace_id": "c068-462b5d21",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C3": "pass"
+  },
+  "justification": {
+    "C3": "O modelo respondeu afirmativamente e explicou a mudança prevista para 2033 com base nas duas redações retornadas pelas ferramentas. Também delimitou adequadamente a ausência do texto do art. 158 da Constituição nas saídas consultadas."
+  }
+}

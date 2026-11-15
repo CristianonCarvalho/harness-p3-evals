@@ -1,0 +1,16 @@
+{
+  "trace_id": "c099-1a85cbaf",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C2": "pass",
+    "C3": "pass"
+  },
+  "justification": {
+    "C2": "As datas de vigência e de efeitos mencionadas para os dispositivos constitucionais, a EC 132 e o art. 126 da LC 214 conferem com as ferramentas. A data de referência e a data de coleta do corpus também estão respaldadas.",
+    "C3": "O modelo respondeu à pergunta listando as seis hipóteses de regimes específicos previstas na Constituição, em conformidade com os trechos devolvidos. Também distinguiu os regimes diferenciados e explicitou os limites da busca quanto à CBS, sem negar que o corpus trate do tema."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "trace_id": "c012-739d0d43",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C3": "fail"
+  },
+  "justification": {
+    "C3": "Embora relate que a busca não retornou dispositivos sobre grandes fortunas, o modelo afirma categoricamente que a reforma não criou o imposto e acrescenta informações sem lastro nas ferramentas. Como o corpus não responde à pergunta, deveria ter reconhecido que não era possível respondê-la com base nas normas consultadas."
+  }
+}

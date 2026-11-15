@@ -1,0 +1,16 @@
+{
+  "trace_id": "c050-6560d920",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "As citações do art. 156-A da CF e do art. 23, III, da EC 132/2023 têm lastro no retorno da ferramenta. Contudo, a resposta não cita o art. 1º da EC 132/2023, exigido pelo gabarito.",
+    "C3": "O modelo respondeu que a Constituição não previa o IBS em 2022 e fundamentou a resposta na inclusão do art. 156-A pela EC 132/2023, em conformidade com o lastro e com a indicação de que o corpus responde."
+  }
+}

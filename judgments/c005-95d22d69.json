@@ -1,0 +1,16 @@
+{
+  "trace_id": "c005-95d22d69",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C2": "pass",
+    "C3": "pass"
+  },
+  "justification": {
+    "C2": "As datas de efeitos, de referência e de coleta constam nas saídas das ferramentas. O período de 2029 a 2033 também consta no § 5º, cujos efeitos foram corretamente identificados como indeterminados.",
+    "C3": "O modelo apresentou a parte respondida pelo corpus: a combinação de alíquotas ad valorem e específicas e a previsão de fixação em lei ordinária. Também esclareceu que não encontrou os valores numéricos nos textos consultados."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "trace_id": "c084-a3b89e5d",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "A resposta contempla os dispositivos esperados da Constituição. Contudo, cita individualmente o art. 125 da LC 214/2025, que não foi devolvido pelas ferramentas; o art. 125 retornado pertence ao ADCT.",
+    "C3": "O modelo respondeu à pergunta, atribuindo a definição das regras ao legislador e distinguindo as previsões constitucionais para IBS e CBS. A ressalva sobre não ter encontrado os detalhes concretos da devolução não impede a resposta à questão formulada."
+  }
+}

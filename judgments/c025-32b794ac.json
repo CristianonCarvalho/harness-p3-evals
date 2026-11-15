@@ -1,0 +1,16 @@
+{
+  "trace_id": "c025-32b794ac",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C2": "pass",
+    "C3": "pass"
+  },
+  "justification": {
+    "C2": "As datas de referência, coleta, início de vigor e produção de efeitos constam nas saídas das ferramentas. A indicação de que a regra produz efeitos na data de referência também confere com o resultado retornado.",
+    "C3": "O modelo respondeu corretamente que a redução se aplica às alíquotas do IBS e da CBS, conforme o art. 130 devolvido pela ferramenta. A ressalva sobre a lista de serviços não impede a resposta à pergunta formulada."
+  }
+}

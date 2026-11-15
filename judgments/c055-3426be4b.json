@@ -1,0 +1,16 @@
+{
+  "trace_id": "c055-3426be4b",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C2": "pass",
+    "C3": "fail"
+  },
+  "justification": {
+    "C2": "A resposta reconhece corretamente que as datas de vigência e de produção de efeitos do dispositivo são indeterminadas nos dados retornados. A data de referência e a data de coleta mencionadas também constam nas saídas das ferramentas.",
+    "C3": "O campo de referência indica que o corpus responde à pergunta, mas o modelo afirmou que não encontrou uma data e que não era possível determinar se a exceção já produzia efeitos. Trata-se de uma postura de falso não sei."
+  }
+}

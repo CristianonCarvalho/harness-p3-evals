@@ -1,0 +1,14 @@
+{
+  "trace_id": "c090-6b11ea3b",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C3": "pass"
+  },
+  "justification": {
+    "C3": "O modelo respondeu à pergunta com a regra de redução de 60% e reconheceu a exceção para medicamentos sujeitos à alíquota zero. Também esclareceu que os trechos consultados não permitem identificar quais medicamentos se enquadram nessa exceção."
+  }
+}

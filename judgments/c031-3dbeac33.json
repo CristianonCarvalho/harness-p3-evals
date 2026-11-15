@@ -1,0 +1,16 @@
+{
+  "trace_id": "c031-3dbeac33",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "fail"
+  },
+  "justification": {
+    "C1": "A resposta não cita os dispositivos esperados: art. 125 e art. 125, § 4º, do ADCT. Além disso, cita o art. 156-B da CF, mas a ferramenta retornou apenas dispositivos específicos desse artigo, não seu caput.",
+    "C3": "O campo de referência indica que o corpus responde, mas o modelo afirmou que não podia determinar se o IBS era cobrado em 2026 e apresentou a informação apenas como lembrança não verificada. Assim, sua postura configura falso não sei."
+  }
+}

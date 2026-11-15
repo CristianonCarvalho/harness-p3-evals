@@ -1,0 +1,16 @@
+{
+  "trace_id": "c053-d879594a",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C2": "pass",
+    "C3": "pass"
+  },
+  "justification": {
+    "C2": "As datas de efeitos de 21/12/2023 e 01/01/2026 constam nas ferramentas para os dispositivos citados como exemplos. A resposta também reproduz corretamente as datas de consulta e de coleta, sem afirmar que o dispositivo de efeitos indeterminados já produz efeitos.",
+    "C3": "O modelo respondeu que o Imposto Seletivo não existia em 2020, apoiando-se nas datas de efeitos das normas encontradas. Também esclareceu os limites do corpus, sem afirmar indevidamente que não havia resposta."
+  }
+}

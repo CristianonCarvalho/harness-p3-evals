@@ -1,0 +1,16 @@
+{
+  "trace_id": "c022-6c418a1a",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "A resposta deixa de citar dois dispositivos esperados: os arts. 128 e 129 do ADCT. Os demais dispositivos citados encontram referência nas saídas das ferramentas.",
+    "C3": "O modelo respondeu afirmativamente à pergunta e fundamentou a transição no dispositivo retornado pela ferramenta. Também distinguiu a substituição da falta de confirmação, nas normas consultadas, da extinção expressa do ISS."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "trace_id": "c044-739ee529",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C3": "pass"
+  },
+  "justification": {
+    "C3": "O modelo apresentou a regra de redução para os serviços do Anexo II e identificou a educação desportiva em outro dispositivo pertinente. Também esclareceu que não tinha acesso à lista do Anexo II, respondendo adequadamente à parte disponível."
+  }
+}

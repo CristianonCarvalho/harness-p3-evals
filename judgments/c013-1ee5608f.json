@@ -1,0 +1,18 @@
+{
+  "trace_id": "c013-1ee5608f",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C2": "fail",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "A resposta não cita o dispositivo esperado, ADCT, art. 129. Além disso, os retornos não comprovam a extinção do ICMS em 1º de janeiro de 2033: a revogação com efeito nessa data refere-se ao ADCT, art. 82, § 2º.",
+    "C2": "A data de 1º de janeiro de 2033 foi apresentada como data de extinção do ICMS, mas a revogação encontrada nessa data refere-se ao ADCT, art. 82, § 2º, e não ao dispositivo que institui o imposto. A regra de transição de 2029 a 2033 também não estabelece essa data de extinção.",
+    "C3": "O modelo respondeu à pergunta com a data de 1º de janeiro de 2033 e explicou a transição. Também indicou a limitação de não ter encontrado o dispositivo de revogação expressa, sem afirmar que não havia resposta para a pergunta."
+  }
+}

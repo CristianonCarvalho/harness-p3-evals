@@ -1,0 +1,14 @@
+{
+  "trace_id": "c009-f19cd773",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C3": "pass"
+  },
+  "justification": {
+    "C3": "O modelo apresentou a parte disponível da resposta: a Constituição atribui à lei complementar a definição da forma e do prazo de ressarcimento. Também esclareceu que os dispositivos consultados não informam um prazo específico, sem inventar um número."
+  }
+}

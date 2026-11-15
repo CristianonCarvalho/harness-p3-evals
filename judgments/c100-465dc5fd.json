@@ -1,0 +1,16 @@
+{
+  "trace_id": "c100-465dc5fd",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C2": "pass",
+    "C3": "pass"
+  },
+  "justification": {
+    "C2": "A data de início dos efeitos do art. 139 e sua produção de efeitos na data de referência conferem com a ferramenta. A data de coleta do corpus também está respaldada.",
+    "C3": "O modelo respondeu à pergunta com a lista do art. 139 e suas condições, em conformidade com o lastro. A ressalva sobre o Anexo X não impede a resposta às categorias de produções perguntadas."
+  }
+}

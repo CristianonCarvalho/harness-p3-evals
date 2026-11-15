@@ -1,0 +1,16 @@
+{
+  "trace_id": "c017-792744e8",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "fail"
+  },
+  "justification": {
+    "C1": "A resposta cita o art. 156-A da CF, mas omite os dispositivos esperados do art. 195, V, e do art. 149-B da CF.",
+    "C3": "Embora responda que não há imposto único, o modelo afirma indevidamente que a CBS não está no corpus. As ferramentas retornaram dispositivos que mencionam expressamente a incidência do IBS e da CBS."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "trace_id": "c027-982971f2",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C3": "fail"
+  },
+  "justification": {
+    "C3": "O corpus responde à pergunta, mas o modelo afirmou que não era possível determinar se a imunidade alcança o Imposto Seletivo. Embora tenha respondido sobre o IBS, adotou uma postura de falso não sei quanto à outra parte da pergunta."
+  }
+}

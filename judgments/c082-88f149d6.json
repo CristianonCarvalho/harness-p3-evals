@@ -1,0 +1,16 @@
+{
+  "trace_id": "c082-88f149d6",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "A resposta deixou de citar dispositivos esperados sobre a repartição, incluindo o art. 158, IV, b, e § 2º, da CF e o art. 125, § 3º, I e II, do ADCT. Portanto, não cobre todos os dispositivos exigidos pelo gabarito.",
+    "C3": "O modelo identificou o Comitê Gestor como responsável pela administração e explicou a distribuição ao ente de destino, conforme as normas retornadas. A ressalva sobre percentuais e fórmulas não nega indevidamente a resposta disponível à pergunta."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "trace_id": "c086-f5fafa92",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "pass",
+    "C2": "pass",
+    "C3": "pass"
+  },
+  "justification": {
+    "C1": "A resposta cita o art. 128 do ADCT e seus incisos I a IV, todos presentes no retorno das ferramentas. Os demais dispositivos citados também possuem lastro nas saídas.",
+    "C2": "Os anos e proporções da transição constam do art. 128 do ADCT, assim como o prazo até 31/12/2032. A data de início dos efeitos e a afirmação de que o dispositivo está em vigor na data de referência também conferem com a ferramenta.",
+    "C3": "O corpus responde à pergunta, e o modelo apresentou corretamente as proporções das alíquotas para cada ano, com base no art. 128 do ADCT. A ressalva sobre a ausência das alíquotas estaduais e municipais não impede que a regra de transição seja respondida."
+  }
+}

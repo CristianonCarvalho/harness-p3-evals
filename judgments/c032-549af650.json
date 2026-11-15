@@ -1,0 +1,18 @@
+{
+  "trace_id": "c032-549af650",
+  "judge": {
+    "model": "openai/gpt-6.1-terra",
+    "version": "openai/gpt-6.1-terra",
+    "prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c"
+  },
+  "verdicts": {
+    "C1": "fail",
+    "C2": "fail",
+    "C3": "fail"
+  },
+  "justification": {
+    "C1": "A resposta cita o art. 348 da LC 214/2025, que não foi devolvido pelas ferramentas. Além disso, não cita nenhum dos dispositivos esperados do ADCT.",
+    "C2": "A resposta afirma cobrança integral da CBS em 2027 e apresenta marcos de transição de 2026 a 2033 que não estão respaldados pelos resultados da ferramenta. A ressalva de que essas informações não foram verificadas não supre a falta de lastro.",
+    "C3": "Embora responda 2027, o modelo afirma que o calendário de transição não está no corpus e apresenta a resposta como conhecimento externo, sem lastro nas ferramentas. Essa postura contraria a indicação de que o corpus responde à pergunta."
+  }
+}

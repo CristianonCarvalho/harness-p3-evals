@@ -1,0 +1,15 @@
+{
+  "trace_id": "c011-4029f85b",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "note": "C1: faltou citar os dispositivos esperados ADCT.art125, CF.art156-A.par1.incV, VI e XII",
+  "uncertain": [],
+  "kind": "blind",
+  "draft": null,
+  "version": 1,
+  "date": "2026-11-15"
+}

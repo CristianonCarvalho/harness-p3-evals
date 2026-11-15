@@ -1,0 +1,15 @@
+{
+  "trace_id": "c092-acd22959",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "pass"
+  },
+  "note": "C1: faltou citar os incisos I e II do parágrafo único do art. 129 da LC 214/2025 esperados no gabarito",
+  "uncertain": [],
+  "kind": "blind",
+  "draft": null,
+  "version": 1,
+  "date": "2026-11-15"
+}

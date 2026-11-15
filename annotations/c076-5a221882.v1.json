@@ -1,0 +1,15 @@
+{
+  "trace_id": "c076-5a221882",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "fail",
+    "C4": "n/a"
+  },
+  "note": "C1 e C3: citou e forneceu a redação do caput do art. 158 de memória sem respaldo nas ferramentas, quando o corpus não respondia",
+  "uncertain": [],
+  "kind": "blind",
+  "draft": null,
+  "version": 1,
+  "date": "2026-11-15"
+}

@@ -1,0 +1,15 @@
+{
+  "trace_id": "c041-43b96df9",
+  "verdicts": {
+    "C1": "pass",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "note": "",
+  "uncertain": [],
+  "kind": "blind",
+  "draft": null,
+  "version": 1,
+  "date": "2026-11-15"
+}

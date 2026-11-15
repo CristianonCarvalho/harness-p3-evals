@@ -1,0 +1,15 @@
+{
+  "trace_id": "c067-d80a51e0",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "fail",
+    "C4": "n/a"
+  },
+  "note": "C1: não citou nenhum dos 5 dispositivos esperados (CF, art. 212-A, II, a, b, c e ADCT, art. 129); C3: disse não ter encontrado resposta quando o corpus respondia plenamente",
+  "uncertain": [],
+  "kind": "blind",
+  "draft": null,
+  "version": 1,
+  "date": "2026-11-15"
+}

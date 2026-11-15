@@ -1,0 +1,14 @@
+{
+  "trace_id": "c086-54506fab",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "A resposta cita dispositivos que não foram devolvidos: art. 155, II, art. 156, III, art. 156-A e LC 160/2017, art. 3º (este só aparece mencionado dentro do texto do art. 128, § 2º, sem a norma). Os dispositivos esperados do gabarito (art. 128 e incisos I a IV) foram devolvidos e citados, mas o lastro falha pelas citações sem retorno. As datas de efeitos conferem com o devolvido (21/12/2023) e o prazo de 31/12/2032 consta do texto do § 3º.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

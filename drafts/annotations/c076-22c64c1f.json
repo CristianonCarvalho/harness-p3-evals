@@ -1,0 +1,14 @@
+{
+  "trace_id": "c076-22c64c1f",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1 falhou: a resposta menciona o art. 158 da CF, mas esse dispositivo não aparece no que foi devolvido (a consulta retornou id inexistente), então a citação não tem lastro.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

@@ -1,0 +1,14 @@
+{
+  "trace_id": "c008-80965a68",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1: a resposta cita CF, art. 195, V, que a tabela registra como não devolvido (o dispositivo só é mencionado dentro do texto do ADCT, art. 130, § 5º, sem retorno próprio); além disso, EC 132/2023, art. 23, III aparece apenas como origem/fundamento de efeitos de outros dispositivos, não como dispositivo devolvido, embora seja invocado para justificar a vigência em 2023-12-21. C2 e C3 sem problemas: as datas conferem com os efeitos devolvidos e, diante de answer_exists 'nao', o modelo não deu número categórico, explicando os dados faltantes.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

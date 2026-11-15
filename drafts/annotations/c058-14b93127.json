@@ -1,0 +1,16 @@
+{
+  "trace_id": "c058-14b93127",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "pass",
+    "C2": "pass",
+    "C3": "fail",
+    "C4": "n/a"
+  },
+  "uncertain": [
+    "C1"
+  ],
+  "note": "C1: o § 5º do art. 422 foi devolvido e citado, mas a tabela marca a menção ao art. 409 como 'citação sem a norma'; como o texto devolvido do § 5º contém essa referência, mantive o passe com dúvida. C3: o corpus responde (o § 5º devolvido fixa o escalonamento de 2029 a 2033), mas o modelo disse 'não se sabe'/'não é possível afirmar' em vez de responder que ainda não está valendo.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

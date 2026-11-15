@@ -1,0 +1,14 @@
+{
+  "trace_id": "c069-bf108116",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "Falta o dispositivo esperado CF, art. 158, IV, alínea, que não é citado na resposta. Além disso, a resposta cita art. 155, II e art. 156, III, que não foram devolvidos como dispositivos (apenas aparecem mencionados no texto do ADCT, art. 129).",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

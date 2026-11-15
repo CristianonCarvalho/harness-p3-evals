@@ -1,0 +1,16 @@
+{
+  "trace_id": "c047-66a35a0f",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "pass",
+    "C2": "fail",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [
+    "C2"
+  ],
+  "note": "C1 e C3 estão ok: os dois dispositivos esperados (art. 136 e art. 128, VII) foram devolvidos e citados, e a resposta, em caso parcial, entregou as duas regras e apontou a falta do Anexo VIII. Já em C2, a resposta afirma como \"vigência da publicação\" a data de 2025-01-16, que não aparece em nada do que foi devolvido, ou seja, foi inventada; as demais datas de efeitos citadas, 2026-01-01 e 2023-12-21, conferem com os efeitos devolvidos. A dúvida é se essa data, por não ser de efeitos, deveria mesmo reprovar em C2.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

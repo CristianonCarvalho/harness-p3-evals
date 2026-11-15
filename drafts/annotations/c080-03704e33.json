@@ -1,0 +1,14 @@
+{
+  "trace_id": "c080-03704e33",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1 falha porque a resposta cita EC 132/2023, art. 23, III, que não foi devolvido como dispositivo; a tabela só o registra como fundamento de efeitos/origem. A data de 2023-12-21, porém, está lastreada nos efeitos dos dispositivos do ADCT citados.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

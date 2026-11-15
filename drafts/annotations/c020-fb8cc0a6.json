@@ -1,0 +1,14 @@
+{
+  "trace_id": "c020-fb8cc0a6",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1 falha: o dispositivo esperado do gabarito (ADCT, art. 125) não está entre os citados — a resposta apoia-se no art. 126 —, e as menções ao art. 195, I e ao art. 239 aparecem sem que a norma tenha sido devolvida. As datas conferem: 2023-12-21 é o efeitos.desde dos dispositivos citados e 2026-11-13 é a data de referência, sem invenção.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

@@ -1,0 +1,14 @@
+{
+  "trace_id": "c013-efe76069",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1 reprova: além do ADCT art. 129 (devolvido e esperado), a resposta cita como dispositivos a CF art. 155, II, o art. 156, III e o art. 156-A, que não foram devolvidos pelas ferramentas (só aparecem mencionados dentro do texto do art. 129/130). C2 está fiel: 2033, o efeito de 2023-12-21 do art. 129 e a data de referência conferem, e o dia 1º/01/2033 é expressamente apresentado como interpretação, não como dado do corpus.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

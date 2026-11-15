@@ -1,0 +1,16 @@
+{
+  "trace_id": "c023-f3bf43f9",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "pass",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [
+    "C1"
+  ],
+  "note": "Os dispositivos esperados do gabarito (ADCT, art. 126 e art. 126, II) estão citados e foram devolvidos com o texto correspondente. Dúvida em C1: a resposta também referencia CF, art. 195, I, \"a\" (identificado como CBS) e art. 239, que não constam como dispositivos devolvidos de forma autônoma — o art. 239 e o art. 195, I, \"b\"/IV aparecem apenas dentro do texto devolvido do art. 126, II, e a alínea \"a\" atribuída à CBS não está no devolvido. Se isso for contado como citação sem lastro, C1 reprovaria. A data 31/12/2043 confere com o texto devolvido do art. 136, IV, e a resposta a limita corretamente às contribuições estaduais.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

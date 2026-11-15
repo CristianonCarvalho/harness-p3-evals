@@ -1,0 +1,14 @@
+{
+  "trace_id": "c019-f5b12d42",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1 falha: o gabarito espera o ADCT art. 129, que não foi citado. Além disso, a lista de tributos substituídos não está lastreada em dispositivo devolvido, e a citação ao art. 156-B só tem lastro no § 4º devolvido.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

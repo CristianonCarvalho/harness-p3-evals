@@ -1,0 +1,14 @@
+{
+  "trace_id": "c030-89647269",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "fail",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1: falta o dispositivo esperado CF, art. 195, § 16 — a resposta só cita o § 18 para a CBS, de modo que nem todos os dispositivos do gabarito estão entre os citados. C3: o gabarito indica que o corpus responde (answer_exists sim), mas a resposta afirma que 'o corpus não traz um cashback' e que não consegue afirmar se a devolução alcança IBS e CBS, postura de 'não encontrei' indevida. As datas (2023-12-21 e 2026-01-01) conferem com os efeitos devolvidos.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

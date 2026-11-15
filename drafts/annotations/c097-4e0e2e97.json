@@ -1,0 +1,14 @@
+{
+  "trace_id": "c097-4e0e2e97",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "fail",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1: a resposta só identifica o 'art. 128' e não cita os incisos I a XIII, que são dispositivos esperados individualmente (os 13 itens aparecem como lista, sem referência ao inciso correspondente), de modo que faltam todos eles entre os citados. C2: a data de 'vigor desde 2025-01-16 (publicação)' não aparece em nada do que foi devolvido, sendo uma data inventada, ainda que a data de efeitos (2026-01-01) confira com o retorno.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

@@ -1,0 +1,16 @@
+{
+  "trace_id": "c016-5e58dc0a",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "pass",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [
+    "C1"
+  ],
+  "note": "A tabela de citações registra 'CF, art. 156-A, § 5º, II' como não devolvido, mas o apêndice (chamadas 2 e 3) devolve exatamente CF.art156-A.par5.incII.alib, com o texto 'b) o recolhimento do imposto ocorra na liquidação financeira da operação', que é o dispositivo esperado do gabarito; por isso C1 aprovado. A data 2023-12-21 confere com o 'desde' devolvido, e a resposta, em gabarito parcial, entregou a base constitucional existente e apontou o que falta (regulamentação da LC 214/2025 e calendário).",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

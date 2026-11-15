@@ -396,3 +396,12 @@ def test_main_without_api_key_refuses_with_exit_2(monkeypatch, capsys):
     saida = capsys.readouterr()
     assert codigo == 2
     assert "OPENROUTER_API_KEY" in saida.out + saida.err
+
+
+def test_empty_content_is_rejected_and_the_batch_goes_on(tmp_path: Path):
+    # Achado de 2026-11-15: com o raciocinio gastando todo o max_tokens, o DeepSeek
+    # devolveu content None (finish_reason length) e o lote inteiro quebrava.
+    client = FakeClient(None, resposta())
+    res = draft_annotations_batch(_itens(2), **kw(tmp_path, client))
+    assert len(res["rejected"]) == 1 and len(res["written"]) == 1
+    assert "sem texto" in res["rejected"][0]["reasons"][0]

@@ -1,0 +1,14 @@
+{
+  "trace_id": "c054-0684674a",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "fail",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1: a resposta cita o art. 156 e o art. 23, III da EC 132/2023, que não constam do que foi devolvido pela ferramenta. C3: o gabarito registra answer_exists=nao, mas a resposta afirma categoricamente que o art. 156-A não existia em 2022.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

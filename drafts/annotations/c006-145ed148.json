@@ -1,0 +1,14 @@
+{
+  "trace_id": "c006-145ed148",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1 falha: a resposta cita o art. 127, § 1º, II, da LC 214/2025, que não foi devolvido por nenhuma chamada (só o § 2º, que a ele faz remissão); o art. 544, VI também não teve texto devolvido, constando apenas como origem dos efeitos. A data de 2026-01-01 confere com os efeitos devolvidos, e a postura de 'não encontrei' está correta diante de answer_exists: nao.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

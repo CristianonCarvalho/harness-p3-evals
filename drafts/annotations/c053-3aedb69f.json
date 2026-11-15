@@ -1,0 +1,14 @@
+{
+  "trace_id": "c053-3aedb69f",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1 falha: o gabarito espera também ADCT art. 126 e ADCT art. 126, I, \"a\", mas a resposta só cita o CF art. 153, VIII (esse, sim, devolvido) e não traz os dispositivos do ADCT. As datas de efeitos (desde 2023-12-21) conferem com o devolvido.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

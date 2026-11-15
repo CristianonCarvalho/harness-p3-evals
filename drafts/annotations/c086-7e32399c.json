@@ -1,0 +1,14 @@
+{
+  "trace_id": "c086-7e32399c",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "fail",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1 reprova: nenhum dos dispositivos esperados do gabarito (ADCT art. 128 e incisos I a IV) foi citado, e a resposta ainda cita o art. 409 sem norma, que não aparece no que foi devolvido. C3 reprova: o gabarito indica answer_exists 'sim', mas o modelo afirmou categoricamente que não encontrou a regra no corpus.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

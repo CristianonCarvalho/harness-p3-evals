@@ -1,0 +1,14 @@
+{
+  "trace_id": "c024-54119f3c",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1 falha: falta o ADCT, art. 126, I, alínea, esperado no gabarito, e a resposta cita a EC 132/2023, art. 23, III, como origem dos efeitos sem que esse dispositivo tenha sido devolvido pela ferramenta. As datas conferem com o devolvido (2023-12-21 para o CF, art. 153, VIII e 2026-01-01 para os arts. 419 e 422), e o art. 422, § 2º é corretamente apresentado como sem data de efeitos informada.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

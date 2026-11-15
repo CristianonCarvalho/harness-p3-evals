@@ -1,0 +1,14 @@
+{
+  "trace_id": "c039-975a1b07",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "fail",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1 falha: faltam os dispositivos esperados do gabarito (EC 132/2023, art. 22, II e sua alínea), e a resposta ainda cita a CF, arts. 156-A e 158, IV, que não foram devolvidos como dispositivos. C3 falha: o gabarito indica que o corpus responde à pergunta, mas o modelo afirmou que não encontrou o adicional de ICMS nem prazo final. Além disso, a resposta atribui os efeitos à EC 132/2023, art. 23, II, quando a origem devolvida é a EC 132/2023, art. 5º; a data em si (2033-01-01) confere com os efeitos devolvidos.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

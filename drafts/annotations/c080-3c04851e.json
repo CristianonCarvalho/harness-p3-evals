@@ -1,0 +1,16 @@
+{
+  "trace_id": "c080-3c04851e",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "fail",
+    "C4": "n/a"
+  },
+  "uncertain": [
+    "C3"
+  ],
+  "note": "C1: não citou nenhum dos dispositivos esperados do gabarito (ADCT arts. 125, 127, 128 e 129) e citou CF arts. 156-A e 156, III, que não aparecem no que foi devolvido. C3: embora dê o intervalo 2029-2033, afirma não ter conseguido verificar no corpus o cronograma de redução e a extinção final, que o gabarito indica estarem respondidos (answer_exists sim). C2 confere: 2023-12-21 bate com os efeitos devolvidos.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

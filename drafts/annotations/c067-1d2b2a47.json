@@ -1,0 +1,14 @@
+{
+  "trace_id": "c067-1d2b2a47",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "fail",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1 falha: a resposta cita CF, art. 212-A e EC 132/2023, art. 22, II, que não foram devolvidos, e omite os dispositivos esperados do gabarito (CF, art. 212-A, II e alíneas, e ADCT, art. 129). C3 falha: o gabarito indica que há resposta (answer_exists: sim), mas a resposta afirma que o corpus não permite confirmar o Fundeb e que não encontrou a regra de 2033.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

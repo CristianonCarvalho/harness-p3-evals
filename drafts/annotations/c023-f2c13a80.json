@@ -1,0 +1,14 @@
+{
+  "trace_id": "c023-f2c13a80",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "fail",
+    "C3": "fail",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1: não citou o ADCT art. 126 nem seu inciso II, dispositivos esperados no gabarito; a única citação (art. 136, IV) trata de outra contribuição. C2: a data central de 31/12/2026 não aparece em nada devolvido e o próprio modelo admite tê-la tirado da memória. C3: o corpus responde à pergunta (answer_exists: sim), mas a resposta afirma que a busca não retornou o dispositivo da transição.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

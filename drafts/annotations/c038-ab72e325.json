@@ -1,0 +1,14 @@
+{
+  "trace_id": "c038-ab72e325",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "fail",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1 reprova: faltam os dispositivos esperados do gabarito (ADCT arts. 128 e 129, só mencionados como faixa \"arts. 128 a 130\"), e a resposta atribui conteúdo a EC 132/2023, art. 1º e ao art. 22, II, da EC, que não constam do que foi devolvido (a citação a CF, art. 158, IV, \"a\" tem lastro na chamada 2). C3 reprova: o gabarito indica que o corpus responde, mas o modelo afirmou que \"o cronograma de redução gradual do ICMS\" não foi localizado e que os dispositivos da transição estariam fora do corpus, tratando como não verificado justamente o que responde à pergunta.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

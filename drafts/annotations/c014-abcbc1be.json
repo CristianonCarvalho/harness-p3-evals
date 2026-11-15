@@ -1,0 +1,14 @@
+{
+  "trace_id": "c014-abcbc1be",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "A resposta cita CF, art. 156-A, § 5º, VIII, § 13 e CF, art. 195, § 18, mas omite o CF, art. 195, § 16, que está entre os dispositivos esperados do gabarito; por isso C1 falha.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

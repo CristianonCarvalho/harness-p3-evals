@@ -1,0 +1,16 @@
+{
+  "trace_id": "c056-bdb4b337",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "pass",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [
+    "C1"
+  ],
+  "note": "Dúvida em C1: o art. 544, VI da LC 214 é citado como fundamento dos efeitos do art. 142, mas aparece apenas como origem/fundamento nos metadados das ferramentas, sem texto devolvido — a própria resposta ressalva que ele não está no corpus. Os demais dispositivos citados (art. 142 e art. 142, II) foram devolvidos integralmente, e o gabarito não exige dispositivo algum. As datas conferem: 2026-01-01 para o caput do art. 142 e ausência de data para o inciso II.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

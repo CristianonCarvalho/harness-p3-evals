@@ -1,0 +1,16 @@
+{
+  "trace_id": "c005-7f8fc833",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [
+    "C1"
+  ],
+  "note": "A resposta invoca a LC 214/2025, art. 544, VI como fundamento dos efeitos, mas esse dispositivo não foi devolvido por nenhuma chamada (aparece apenas como metadado de origem dos efeitos), o que compromete o lastro; além disso, a data 2026-01-01 confere com o campo de efeitos do art. 422. Os dispositivos esperados do gabarito (art. 422, § 1º e § 1º, I) estão citados e foram devolvidos. Em C3 a resposta parcial é adequada: expõe a regra existente e aponta a falta da lei ordinária e do Anexo XVII.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

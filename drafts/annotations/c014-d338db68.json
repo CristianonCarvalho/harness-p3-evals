@@ -1,0 +1,14 @@
+{
+  "trace_id": "c014-d338db68",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "A resposta não cita CF, art. 195, §§ 16 e 18, que estão entre os dispositivos esperados do gabarito, tanto que a exigência de todos os dispositivos esperados não é cumprida. As demais citações (art. 156-A, § 5º, VIII; § 13; LC 214/2025, arts. 125 e 128, VII) têm lastro no que foi devolvido, e as datas de efeitos conferem.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

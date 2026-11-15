@@ -1,0 +1,14 @@
+{
+  "trace_id": "c002-d28018ad",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "fail",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1 falha: a resposta cita art. 3º e art. 4º da EC, que não foram devolvidos pela ferramenta. C2 falha: as datas 'desde 2027' e 'desde 2033' atribuídas a esses artigos não constam do que foi devolvido para eles.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

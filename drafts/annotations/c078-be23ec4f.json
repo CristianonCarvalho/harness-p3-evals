@@ -1,0 +1,14 @@
+{
+  "trace_id": "c078-be23ec4f",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "A resposta cita o art. 198, § 2º, da CF e o art. 130 da LC 214/2025 sem o parágrafo único, dispositivos que não foram devolvidos pelas ferramentas; além disso, descreve de memória o conteúdo do caput do § 2º, o que não conta como lastro. C2 e C3 ficam corretos: não há datas inventadas e, como o gabarito é answer_exists: nao, o modelo acertou ao dizer que não encontrou.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

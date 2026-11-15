@@ -1,0 +1,16 @@
+{
+  "trace_id": "c040-5aee3f8a",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "pass",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [
+    "C1"
+  ],
+  "note": "Dúvida em C1: a resposta cita EC 132/2023, art. 23, III apenas como fundamento da data de efeitos, e esse inciso não tem texto devolvido, só aparece como metadado de efeitos/origem nos dispositivos retornados; considerei esse metadado lastro suficiente. O dispositivo esperado (ADCT, art. 76-A) foi citado e devolvido integralmente, e o prazo de 31/12/2032 consta do texto completo devolvido, ainda que a tabela de datas diga o contrário. A data de efeitos 2023-12-21 confere com o 'desde' devolvido e o modelo não converteu a ausência de 'até' em data inventada.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

@@ -1,0 +1,14 @@
+{
+  "trace_id": "c061-f243790e",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1 reprova: o gabarito exige CF, art. 146, III, \"d\", que não foi citado (a resposta traz apenas §§ 2º e 3º, I e II, faltando o inciso III). Além disso, cita CF, art. 195, V, que não consta entre os dispositivos devolvidos. C2 confere: as datas de efeitos (2023-12-21) e as datas textuais (2030 e 2035) batem com o apêndice.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

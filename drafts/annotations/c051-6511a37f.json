@@ -1,0 +1,14 @@
+{
+  "trace_id": "c051-6511a37f",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "fail",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1: a resposta cita os arts. 3º e 4º da EC 132/2023 sem que esses dispositivos tenham sido devolvidos; o art. 239 também aparece como citação sem norma devolvida. C2: a data 2033-01-01 não consta do que foi devolvido, e 2027-01-01 não foi devolvida como efeito do art. 3º citado.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

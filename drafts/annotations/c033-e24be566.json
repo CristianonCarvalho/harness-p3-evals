@@ -1,0 +1,14 @@
+{
+  "trace_id": "c033-e24be566",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "fail",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1 falhou: os dispositivos esperados do gabarito (ADCT, art. 126 e sua alínea) não foram citados, e a resposta cita EC 132/2023, art. 1º, EC 132/2023, art. 23, III, e LC 214/2025, art. 544 e art. 544, VI, sem lastro devolvido. C3 falhou: o gabarito indica que há resposta (answer_exists: sim), mas o modelo afirmou que o corpus não permite responder.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

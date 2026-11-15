@@ -1,0 +1,14 @@
+{
+  "trace_id": "c032-b8397e41",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "fail",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1: nenhum dos dispositivos esperados do gabarito (ADCT arts. 125, 126, 126, I e alínea, 127 e parágrafo único) foi citado; a resposta cita apenas CF, art. 195, V, que foi devolvido. C3: o gabarito registra answer_exists \"sim\", mas o modelo afirmou que não era possível responder com o corpus e não forneceu o ano, de modo que a postura de \"não encontrei\" é indevida. As datas efetivamente mencionadas (2023-12-21, 2026-11-06 e 2026-11-13) conferem com o que foi devolvido, então C2 passa.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

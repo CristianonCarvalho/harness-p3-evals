@@ -1,0 +1,16 @@
+{
+  "trace_id": "c012-762f4a07",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "fail",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [
+    "C2"
+  ],
+  "note": "C1 reprova porque a resposta cita o art. 153 da CF/88 como indicação de consulta externa, dispositivo que não foi devolvido por nenhuma das buscas (e o gabarito não tem dispositivos esperados, então só o lastro importa). Em C2, a data de referência 2026-11-13 confere, mas a data de coleta do corpus (2026-11-06) não aparece em nada do que as ferramentas devolveram, caracterizando data inventada; há dúvida apenas quanto a essa data de proveniência entrar no escopo do critério de efeitos. C3 está correto: com answer_exists 'nao', o modelo adotou postura de não-resposta em vez de afirmar categoricamente.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

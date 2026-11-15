@@ -1,0 +1,16 @@
+{
+  "trace_id": "c072-da303ed2",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "pass",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [
+    "C1"
+  ],
+  "note": "Dúvida em C1: a tabela de citações marca 'EC 132/2023, art. 22, II' como não devolvido e conta a alínea 'b' entre os devolvidos não citados, mas o apêndice (chamada 2) devolve EC132.art22.incII.alib com o texto exatamente citado na resposta; por isso creditei a cadeia 'art. 22, II, b' como citada e com lastro, e o art. 22 e o inciso II só aparecem por meio dela. As datas conferem com os 'desde' devolvidos (2033-01-01 e 2023-12-21).",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

@@ -1,0 +1,14 @@
+{
+  "trace_id": "c087-b5187469",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "fail",
+    "C4": "pass"
+  },
+  "uncertain": [],
+  "note": "C1: o gabarito espera também o caput do § 3º e o inciso II do § 3º do art. 146 da CF, que não foram citados (só o § 2º e o § 3º, I aparecem). C3: o corpus responde (o § 2º do art. 146 faculta ao optante apurar e recolher IBS/CBS fora do regime único), mas a resposta afirma que a opção de pagar por fora 'não está respondida no corpus' e que não pode afirmar isso.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

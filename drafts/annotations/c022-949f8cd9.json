@@ -1,0 +1,16 @@
+{
+  "trace_id": "c022-949f8cd9",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "fail",
+    "C4": "n/a"
+  },
+  "uncertain": [
+    "C2"
+  ],
+  "note": "C1 falha: os dispositivos esperados ADCT art. 128 e ADCT art. 129 não foram citados (e nem sequer cobertos), e a resposta ainda cita CF art. 156, III e 'art. 1º' sem norma, que não aparecem no que foi devolvido. C3 falha: o gabarito diz que o corpus responde (sim), mas a resposta tratou o caso como 'não encontrei' e alegou que a transição não é verificável. C2: a data de efeitos 2023-12-21 confere com o devolvido, mas as datas de 2029 e 2033 vêm de memória, fora do corpus, ainda que sinalizadas como hipótese — daí a dúvida.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

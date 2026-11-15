@@ -1,0 +1,14 @@
+{
+  "trace_id": "c074-76b529ed",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1 falha: a resposta cita o art. 145 da CF e transcreve seu caput, mas a consulta CF.art145 retornou id inexistente e a busca não devolveu esse dispositivo.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

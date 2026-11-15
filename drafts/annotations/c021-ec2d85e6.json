@@ -1,0 +1,16 @@
+{
+  "trace_id": "c021-ec2d85e6",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [
+    "C1"
+  ],
+  "note": "A resposta cita CF, art. 155, II, LC 160/2017, art. 3º e art. 156-A, que não foram devolvidos como dispositivos próprios (aparecem apenas mencionados dentro do texto de outros dispositivos), então falta lastro direto. Fico em dúvida se essa menção indireta bastaria para o C1; os dispositivos esperados do gabarito (art. 128 e incisos I a IV) estão citados e foram devolvidos. A data de 2023-12-21 confere com os efeitos devolvidos e 31/12/2032 consta do § 3º devolvido.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

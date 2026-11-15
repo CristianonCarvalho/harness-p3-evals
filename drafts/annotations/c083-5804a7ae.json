@@ -1,0 +1,14 @@
+{
+  "trace_id": "c083-5804a7ae",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "Falta o dispositivo esperado LC 214/2025, art. 128, que não é citado em nenhum momento da resposta. Além disso, a resposta cita o art. 544, VI da LC 214/2025 como fundamento dos efeitos, mas esse dispositivo não consta como devolvido pelas ferramentas (aparece apenas como origem de efeitos). A data de 2026-01-01 confere com o efeitos.desde devolvido para o art. 127.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

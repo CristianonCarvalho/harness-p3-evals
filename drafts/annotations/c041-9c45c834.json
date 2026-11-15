@@ -1,0 +1,16 @@
+{
+  "trace_id": "c041-9c45c834",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "pass",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [
+    "C1"
+  ],
+  "note": "Dúvida em C1: CF, art. 155, II só aparece dentro da transcrição literal do art. 12 devolvido, e EC 132/2023, art. 23, III consta na saída apenas como fundamento de efeitos/origem, embora a tabela de citações os liste como não devolvidos como dispositivos; considerei ambos com lastro, pois os dois dispositivos esperados (art. 12 e § 1º) foram devolvidos e citados. Em C2, as datas de 2029 e 2032 que a tabela de datas diz não constarem estão no texto integral do art. 12 devolvido, e 2023-12-21 confere com o efeitos.desde retornado.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

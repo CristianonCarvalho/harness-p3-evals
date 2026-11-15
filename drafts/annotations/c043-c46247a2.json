@@ -1,0 +1,14 @@
+{
+  "trace_id": "c043-c46247a2",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "fail",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1: a resposta cita LC 214/2025, art. 544, VI, e art. 126 sem que esses dispositivos tenham sido devolvidos; o art. 126 só aparece como remissão no parágrafo único do art. 125. C2: a data de publicação/vigor 2025-01-16 não aparece no que foi devolvido. C3 está adequado ao caráter parcial do gabarito.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

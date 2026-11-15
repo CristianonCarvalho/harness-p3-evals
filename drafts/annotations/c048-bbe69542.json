@@ -1,0 +1,14 @@
+{
+  "trace_id": "c048-bbe69542",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "pass",
+    "C2": "fail",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "As datas de efeitos (2026-01-01) conferem com o devolvido para o art. 138 e o art. 128, IX, mas a resposta afirma que a publicação (vigor_desde) foi 2025-01-16, data que não aparece em nada devolvido pelas ferramentas — data inventada. O restante (art. 138, §§ 1º e 10, art. 128, IX, art. 137 e EC 132/2023, art. 9º, § 1º, XI) tem lastro no apêndice, e a postura foi correta diante de resposta parcial (Anexo IX fora do corpus).",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

@@ -1,0 +1,14 @@
+{
+  "trace_id": "c099-6a6b647f",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1 falha: a resposta não cita o CF, art. 195, § 16, exigido pelo gabarito, e cita os arts. 125 e 127 da LC 214/2025, que não foram devolvidos. Além disso, o art. 23, III da EC 132/2023 aparece apenas como fundamento de origem/efeitos, não como dispositivo devolvido.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

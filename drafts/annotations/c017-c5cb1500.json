@@ -1,0 +1,14 @@
+{
+  "trace_id": "c017-c5cb1500",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1 falha: o gabarito exige CF, art. 195, V e CF, art. 149-B, e nenhum dos dois foi citado na resposta (o modelo chega a dizer que não verificou a base da CBS). As datas conferem com os efeitos devolvidos (2023-12-21 para o art. 156-A, 2026-01-01 para a LC 214/2025, art. 422).",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

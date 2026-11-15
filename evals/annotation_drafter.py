@@ -130,6 +130,10 @@ def draft_annotation(
         texto = resp["choices"][0]["message"]["content"]
     except (KeyError, IndexError, TypeError) as exc:
         raise DraftRejected(["resposta do modelo sem texto de conteúdo"]) from exc
+    if not isinstance(texto, str) or not texto.strip():
+        # Ex.: o raciocinio gastou todo o max_tokens e o conteudo veio vazio.
+        fim = (resp.get("choices") or [{}])[0].get("finish_reason")
+        raise DraftRejected([f"resposta do modelo sem texto de conteúdo (finish_reason: {fim})"])
     parsed = parse_annotation_draft(texto)
 
     candidata = {
@@ -226,7 +230,8 @@ def main(argv: list[str] | None = None) -> int:
         print(f"erro: {exc}", file=sys.stderr)
         return 1
 
-    with OpenRouterClient(chave) as client:
+    # O raciocinio do rascunhador chega a 4096 tokens: folga para a resposta caber.
+    with OpenRouterClient(chave, max_tokens=16000) as client:
         try:
             res = draft_annotations_batch(
                 itens,

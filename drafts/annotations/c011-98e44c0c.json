@@ -1,0 +1,14 @@
+{
+  "trace_id": "c011-98e44c0c",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1 falha: entre os dispositivos esperados está o ADCT, art. 125, que não é citado — a resposta apenas remete genericamente à faixa 'arts. 124 a 137' do ADCT e declara não tê-la consultado, de modo que a regra aplicável a 2026 fica sem indicação. As demais citações (CF, art. 156-A e §§ 1º, V, VI, VII, XII, e § 10) constam como devolvidas. A data de efeitos (2023-12-21) confere com o 'desde' devolvido.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

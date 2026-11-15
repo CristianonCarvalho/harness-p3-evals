@@ -1,0 +1,16 @@
+{
+  "trace_id": "c089-fd293f04",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "pass",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "pass"
+  },
+  "uncertain": [
+    "C1"
+  ],
+  "note": "Dúvida em C1: o art. 23, III da EC 132 é invocado como fundamento da data de efeitos, mas a tabela indica que ele só foi devolvido como origem de efeitos, sem texto próprio. Os dispositivos esperados (EC 132, art. 9º e art. 9º, § 4º) estão entre os citados e foram devolvidos, e as datas (2023-12-21, 2026-11-06, 2026-11-13) conferem com o retorno das ferramentas.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

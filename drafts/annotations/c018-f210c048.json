@@ -1,0 +1,14 @@
+{
+  "trace_id": "c018-f210c048",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "A resposta cita o art. 156-A e o art. 195, V, da CF, mas não houve chamada registrada e nada foi devolvido pelas ferramentas; assim, as citações não têm lastro e os dispositivos esperados não aparecem no material devolvido.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

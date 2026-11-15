@@ -1,0 +1,14 @@
+{
+  "trace_id": "c093-e8daf24e",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "pass",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "pass"
+  },
+  "uncertain": [],
+  "note": "",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

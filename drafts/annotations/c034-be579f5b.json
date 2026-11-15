@@ -1,0 +1,14 @@
+{
+  "trace_id": "c034-be579f5b",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "fail",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1: faltam os dispositivos esperados LC 214/2025, art. 128, art. 128, I e art. 128, II, e o art. 544, VI é citado como fundamento dos efeitos sem ter sido devolvido (arts. 156-A e 195, V também aparecem sem a norma). C2: a data 2025-01-16 (vigor_desde) não aparece em nada do que foi devolvido, sendo data inventada.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

@@ -1,0 +1,17 @@
+{
+  "trace_id": "c015-339e9ed8",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [
+    "C2",
+    "C3"
+  ],
+  "note": "C1 falha: a resposta cita apenas o ADCT art. 126, II e deixa de fora os dispositivos esperados ADCT art. 125, art. 125, § 1º e art. 126, I, 'a'; além disso, cita art. 195, I, art. 239, art. 195, V e art. 153, VIII, que não foram devolvidos como dispositivos. C2: as datas de efeitos conferem com o devolvido (2023-12-21, 2026-12-31, 2027-01-01, 2032-12-31), mas 2033-01-01 é inferida do fim do intervalo devolvido, não devolvida diretamente. C3: o modelo dá o núcleo (extinção condicionada à instituição da CBS), porém diz que não leu as regras de transição do ADCT, que o corpus contém.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

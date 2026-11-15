@@ -1,0 +1,16 @@
+{
+  "trace_id": "c098-d2101dde",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "pass",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [
+    "C1"
+  ],
+  "note": "Única dúvida em C1: a EC 132/2023, art. 23, III é invocada como fundamento da data de efeitos e consta apenas como origem/fundamento de efeitos dos dispositivos devolvidos, não como texto próprio de dispositivo. Os demais dispositivos citados (CF, art. 156-B, incisos I a III e §§ 6º a 8º) foram devolvidos com texto integral, e a data 21/12/2023 confere com o campo de efeitos desde 2023-12-21.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

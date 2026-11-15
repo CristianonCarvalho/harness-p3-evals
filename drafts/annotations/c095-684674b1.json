@@ -1,0 +1,16 @@
+{
+  "trace_id": "c095-684674b1",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "fail",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [
+    "C2"
+  ],
+  "note": "C1 reprova: o art. 544, VI é citado como fundamento dos efeitos, mas não foi devolvido por nenhuma ferramenta (só consta como metadado de 'efeitos desde'), e o art. 149 é citado sem texto próprio devolvido. Os dez incisos do parágrafo único do art. 419, esperados no gabarito, estão todos citados e foram devolvidos. Em C2, a data de efeitos 2026-01-01 confere com o devolvido, mas a data de publicação 2025-01-16 não aparece em nada devolvido (por isso a dúvida).",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

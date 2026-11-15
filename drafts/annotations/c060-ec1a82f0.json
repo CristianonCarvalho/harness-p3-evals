@@ -1,0 +1,17 @@
+{
+  "trace_id": "c060-ec1a82f0",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "fail",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [
+    "C1",
+    "C2"
+  ],
+  "note": "C1: a resposta cita CF art. 156-A, que não aparece no que foi devolvido como dispositivo; a dúvida é se a referência dentro do § 2º do art. 126 conta como citação. C2: a data de publicação 2025-01-16 não aparece no que foi devolvido, embora a data de efeitos 2026-01-01 confira. C3: o corpus responde e a resposta deu a condição do art. 125, apontando a falta do Anexo I.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

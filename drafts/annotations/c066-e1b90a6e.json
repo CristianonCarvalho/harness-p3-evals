@@ -1,0 +1,16 @@
+{
+  "trace_id": "c066-e1b90a6e",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [
+    "C1"
+  ],
+  "note": "C1 falha porque a resposta cita o art. 158, § 1º, o art. 158, § 2º e o art. 153, VIII, que não foram devolvidos pelas ferramentas; eles aparecem apenas como remissão dentro do texto devolvido do art. 159, § 3º. Fica a dúvida se essas remissões internas devem contar como citação sem lastro para o C1. O dispositivo esperado (CF, art. 159, § 3º) foi devolvido e as datas 2023-12-21, 2032-12-31 e 2033-01-01 conferem com os efeitos retornados.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

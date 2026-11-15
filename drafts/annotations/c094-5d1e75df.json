@@ -1,0 +1,16 @@
+{
+  "trace_id": "c094-5d1e75df",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "pass",
+    "C2": "fail",
+    "C3": "pass",
+    "C4": "pass"
+  },
+  "uncertain": [
+    "C1"
+  ],
+  "note": "C2: a resposta afirma vigência desde 16/01/2025 (publicação), data que não aparece em nada do que foi devolvido, ou seja, inventada. C1: fica a dúvida sobre o art. 544, VI (citado como fundamento dos efeitos, sem texto devolvido, só registrado como origem dos efeitos) e sobre o art. 168 (aparece apenas dentro da alínea 'b' transcrita); de todo modo, os dispositivos esperados do gabarito (art. 138 e § 2º, I, 'a') estão citados e lastreados.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

@@ -1,0 +1,14 @@
+{
+  "trace_id": "c073-29046ec4",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1 reprova: a EC 132/2023, art. 22, II, \"a\" — dispositivo esperado pelo gabarito — é citada como fonte da data final, mas a tabela registra que não aparece no que foi devolvido; o art. 158, § 1º, I também é citado sem ter sido devolvido como dispositivo. C2 passa porque 21/12/2023 e 31/12/2032 conferem com os efeitos devolvidos para o CF, art. 161, I. C3 passa porque o corpus responde e a resposta foi categórica, sem alegar que nada encontrou.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

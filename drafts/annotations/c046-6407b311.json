@@ -1,0 +1,14 @@
+{
+  "trace_id": "c046-6407b311",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "fail",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [],
+  "note": "C1 falha porque a resposta cita o art. 146 e o art. 544, VI, que não foram devolvidos como dispositivos. A data de efeitos de 2026-01-01 confere com o que foi devolvido para o art. 133.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

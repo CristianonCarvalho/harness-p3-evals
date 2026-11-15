@@ -1,0 +1,16 @@
+{
+  "trace_id": "c075-c037c9ae",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "pass",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [
+    "C1"
+  ],
+  "note": "A resposta não atribui conteúdo ao art. 155, § 1º: apenas registra que a consulta ao id correspondente retornou 'id inexistente no corpus' e que as duas buscas ficaram abaixo do limiar, o que o apêndice confirma. Resta dúvida sobre se mencionar o dispositivo procurado conta como 'citação' para o C1; mantenho a aprovação porque não há afirmação de conteúdo sem lastro.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

@@ -1,0 +1,16 @@
+{
+  "trace_id": "c025-5e5581ba",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "verdicts": {
+    "C1": "pass",
+    "C2": "fail",
+    "C3": "pass",
+    "C4": "n/a"
+  },
+  "uncertain": [
+    "C2"
+  ],
+  "note": "C2 falha: a resposta afirma \"Publicação em 2025-01-16\", data que não aparece em nada do que foi devolvido; a data de efeitos 2026-01-01, essa sim, confere com o efeitos.desde do art. 130. Fica a dúvida sobre se uma data de publicação (e não de efeitos) é abrangida pelo critério. C1 passa: o dispositivo esperado (art. 130) e o art. 128, II foram devolvidos, e o art. 544, VI aparece ao menos como fundamento de efeitos/origem nos metadados.",
+  "prompt_sha": "11e7f1222408",
+  "blind": false
+}

@@ -14,7 +14,11 @@ dependencies = ["httpx"]
 evals = "evals.cli:main"
 
 [dependency-groups]
-dev = ["pytest", "pytest-timeout"]
+dev = [
+    "bandit>=1.9.4",
+    "pytest",
+    "pytest-timeout",
+]
 
 [tool.hatch.build.targets.wheel]
 packages = ["evals"]

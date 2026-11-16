@@ -1,0 +1,5 @@
+import subprocess
+
+
+def listar(nome):
+    return subprocess.run("ls " + nome, shell=True)

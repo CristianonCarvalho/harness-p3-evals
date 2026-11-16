@@ -275,8 +275,8 @@ Resumo das decisões da [spec](docs/superpowers/specs/2026-11-10-p3-evals-design
 | D6 | Divisão | 30 de desenvolvimento e 70 de teste, por caso, estratificada, sorteada antes de anotar |
 | D7 | CI | Só offline; as rodadas pagas são sob demanda |
 | D8 | Juiz | De outra família que a dos avaliados, via OpenRouter, com versão fixada |
-| D9 | Condições | 100 casos local com skill; ~20 sem skill (H11); casos de segurança no remoto (H12) |
-| D10 | Modelos e custo | Sonnet 5.5 e Haiku 5.5; teto definido depois de uma rodada piloto |
+| D9 | Condições | 100 casos local com skill; ~20 sem skill (H11); casos de segurança no remoto (H12), **não executados** (ver Limites) |
+| D10 | Modelos e custo | Sonnet 5.5 e Haiku 5.5 no plano; medido só o Haiku (ver Limites); teto definido depois da rodada piloto |
 | D11 | Método | Sem Meister, passo a passo, com Haiku 5.5 no desenvolvimento do entorno |
 | D12 | Relatório | JSON canônico + Markdown gerado, com intervalo e marca de ruído |
 | D13 | Caso e gabarito | Gabarito mínimo estruturado, conferido offline contra as ferramentas |
@@ -288,8 +288,10 @@ Resumo das decisões da [spec](docs/superpowers/specs/2026-11-10-p3-evals-design
 - **A referência é a fidelidade ao corpus, não a correção jurídica.** O gabarito reflete o que o corpus traz. Um gabarito juridicamente incompleto em relação ao direito tributário geral, mas fiel aos textos das normas do P2, é considerado correto pelo harness.
 - **Amostra cega e calibração de C2 e C4.** Com 54 traces cegos, C1 e C3 calibraram acima dos limiares. O C2 teve apenas 1 reprovação humana em 54 traces (o modelo avaliado raramente erra datas quando responde), e o C4 teve 0 reprovações no teste, ficando ambos declarados como limites empíricos decorrentes da distribuição dos dados.
 - **Ancoragem em traces revisados.** Na anotação com rascunho de IA, o relatório apontou alerta de "possível ancoragem" no C1 (taxa de alteração humana de 12,9% frente a um erro do rascunhador de 40% na amostra cega). O desenho do projeto isola esse risco restringindo a calibração do juiz estritamente às anotações cegas.
-- **Autoconsistência humana medida.** A reanotação cega de 10 traces obteve 100% de concordância, confirmando que a régua de decisão é estável e que as divergências residuais decorrem da capacidade do modelo do juiz, e não de inconsistência do anotador.
-- **Modelos avaliados.** As rodadas completas foram executadas sobre a família Claude (Haiku 3.5), servindo como linha de base para futuras expansões.
+- **Autoconsistência humana medida, em amostra pequena.** A reanotação cega de 10 traces obteve 100% de concordância (intervalo de 95%: 72% a 100%). Isso indica que a régua é estável e que as divergências com o juiz vêm sobretudo do juiz, mas a amostra é pequena e a reanotação foi feita 2 dias depois da primeira, então parte da concordância pode ser memória.
+- **Modelos avaliados.** As rodadas completas foram executadas sobre a família Claude (Haiku 5.5, `claude-haiku-5-5`), servindo como linha de base para futuras expansões.
+- **O server remoto não foi medido.** Os 8 casos de segurança (H12) na condição remota, sem o hook do P2 no caminho, não rodaram: faltaram as variáveis do server (`TAXLAW_REMOTE_URL`, `TAXLAW_HTTP_TOKEN`). O comando `run-round --conditions remoto` está pronto; o comportamento com CPF fora do hook segue sem número.
+- **Sonnet não medido.** Uma sonda de 2 casos no Sonnet 5.5 (esforço baixo) custou cerca de US$ 0,09 por trace, 15 vezes o Haiku; a troca de modelo deu lugar a uma troca de prompt (skill pedindo o id) como primeiro antes/depois.
 - **O CI é exclusivamente offline.** O CI protege o harness, os cálculos estatísticos, os formatos e a privacidade; execuções de modelos reais são feitas sob demanda localmente com travas de teto de custo.
 - **C2 é conservador no código.** Ele só aprova sozinho; tudo o mais vai ao juiz.
 

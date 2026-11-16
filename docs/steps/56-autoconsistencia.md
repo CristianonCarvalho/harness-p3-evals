@@ -35,7 +35,7 @@ python3 -m evals.cli check-repo
 
 - **Concordância perfeita (100%):** nenhum veredito mudou entre a primeira anotação cega e a reanotação.
 - **Estabilidade da régua:** o resultado demonstra que os critérios (exigência de todos os dispositivos esperados em C1, descarte de menções genéricas ou faixas, confronto de C3 com o gabarito) são claros e determinísticos na aplicação humana.
-- **Validação do juiz:** comprova que o TPR de 76,0% do juiz no C1 e o TPR de 90,7% no C3 refletem a acurácia do modelo juiz, e não imprecisão ou ruído da anotação humana de referência.
+- **Validação do juiz:** indica que o TPR de 76,0% do juiz no C1 e o TPR de 90,7% no C3 refletem sobretudo a acurácia do juiz, e não ruído da anotação humana. Ressalvas: 10 em 10 tem intervalo de 95% de 72% a 100%, e a reanotação veio 2 dias depois da primeira, então parte da concordância pode ser memória.
 
 **Situação dos critérios de conclusão do projeto:**
 - **Critério 1 (relatório numérico):** atendido.

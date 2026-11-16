@@ -19,8 +19,8 @@ rules:
     message: "Rede só pelo cliente aprovado (evals/client.py)."
     paths:
       exclude:
-        - evals/client.py
-        - tests/
+        - "**/evals/client.py"
+        - "**/tests/"
     pattern-either:
       - pattern: requests.$FUNC(...)
       - pattern: httpx.$FUNC(...)

@@ -1,0 +1,28 @@
+rules:
+  - id: agent-shell-true
+    languages: [python]
+    severity: ERROR
+    message: "subprocess com shell=True permite injeção de comando."
+    pattern: subprocess.$FUNC(..., shell=True, ...)
+
+  - id: agent-eval-exec
+    languages: [python]
+    severity: ERROR
+    message: "eval e exec executam texto como código."
+    pattern-either:
+      - pattern: eval(...)
+      - pattern: exec(...)
+
+  - id: agent-network-outside-client
+    languages: [python]
+    severity: ERROR
+    message: "Rede só pelo cliente aprovado (evals/client.py)."
+    paths:
+      exclude:
+        - evals/client.py
+        - tests/
+    pattern-either:
+      - pattern: requests.$FUNC(...)
+      - pattern: httpx.$FUNC(...)
+      - pattern: urllib.request.urlopen(...)
+      - pattern: socket.socket(...)

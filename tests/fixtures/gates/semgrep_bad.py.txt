@@ -1,0 +1,9 @@
+import subprocess
+
+
+def a(x):
+    return eval(x)
+
+
+def b(x):
+    return subprocess.run(x, shell=True)

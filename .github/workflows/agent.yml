@@ -1,0 +1,106 @@
+# Agente que abre PR. Só dispara à mão, com o ID de um caso versionado em pipeline/pr_cases.
+# Esteira: carregar caso -> agente -> orçamento -> guard de caminhos -> (App) abre o PR.
+# O agente roda SEM credencial de escrita e SEM Bash: só lê e edita arquivos. O token que
+# escreve no repositório (do GitHub App) só nasce no fim, depois do guard.
+# Os nomes dos passos "Guard de caminhos", "Orçamento" e "Sem mudanças (recusado)" são lidos
+# por pipeline/lote.py: não renomeie sem atualizar lá.
+name: agent
+
+on:
+  workflow_dispatch:
+    inputs:
+      case_id:
+        description: "ID do caso em pipeline/pr_cases (ex.: 01-bom)"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: agent
+  cancel-in-progress: false
+
+jobs:
+  agent:
+    name: agent
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      # O input vai para variável de ambiente, nunca direto num "run:" (injeção de comando).
+      CASE_ID: ${{ inputs.case_id }}
+      MAX_COST_USD: "1.00"
+      MAX_TURNS: "10"
+    steps:
+      # Ações fixadas pelo hash do commit (o rótulo pode ser movido pelo dono; o hash, não).
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@07a047e608db84b3d8c06cd9a7c7dcc9c355c18e  # v10.3.2
+      - run: uv sync --locked
+
+      - name: Carregar caso
+        id: caso
+        run: uv run python -m pipeline.load_case "$CASE_ID" --output "$GITHUB_OUTPUT"
+
+      - name: Agente
+        id: claude
+        uses: anthropics/claude-code-action@d1f58ad5e6f4d2b79547e63e37c2116064135896  # v1.0.277
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          github_token: ${{ github.token }}
+          prompt: ${{ steps.caso.outputs.prompt }}
+          # Sem Bash: o agente não executa código (um teste escrito por ele rodaria com o token
+          # no ambiente). Sem rede: WebFetch e WebSearch também ficam de fora.
+          claude_args: >-
+            --max-turns ${{ env.MAX_TURNS }}
+            --allowedTools "Read,Edit,Write,Glob,Grep"
+            --disallowedTools "Bash,WebFetch,WebSearch"
+
+      - name: Orçamento
+        env:
+          EXEC_FILE: ${{ steps.claude.outputs.execution_file }}
+        run: uv run python -m pipeline.check_budget "$EXEC_FILE" --max-cost "$MAX_COST_USD" --max-turns "$MAX_TURNS"
+
+      - name: Guard de caminhos
+        run: |
+          { git diff --name-only --no-renames HEAD; git ls-files --others --exclude-standard; } \
+            | uv run python -m pipeline.guard_paths
+
+      - name: Detectar mudanças
+        id: mudancas
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "mudou=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "mudou=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Sem mudanças (recusado)
+        if: steps.mudancas.outputs.mudou == 'false'
+        run: echo "::notice::O agente não alterou nada. Desfecho - recusado."
+
+      - name: Token do App
+        if: steps.mudancas.outputs.mudou == 'true'
+        id: app
+        uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510  # v3.3.0
+        with:
+          app-id: ${{ vars.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+
+      - name: Abrir PR
+        if: steps.mudancas.outputs.mudou == 'true'
+        env:
+          GH_TOKEN: ${{ steps.app.outputs.token }}
+          RUN_ID: ${{ github.run_id }}
+        run: |
+          BRANCH="agent/${CASE_ID}-${RUN_ID}"
+          git config user.name "p4-agent"
+          git config user.email "p4-agent@users.noreply.github.com"
+          git switch -c "$BRANCH"
+          git add -A
+          git commit -m "agent: caso $CASE_ID"
+          git push "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "$BRANCH"
+          gh pr create --base main --head "$BRANCH" \
+            --title "agent: caso $CASE_ID" \
+            --body "PR aberto pelo agente (run ${RUN_ID}). Caso: ${CASE_ID}."

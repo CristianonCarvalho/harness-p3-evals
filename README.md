@@ -382,3 +382,4 @@ python3 -m evals.cli compare reports/2026-11-14-haiku-20261114-b.json reports/20
 | [`docs/steps/`](docs/steps/) | Uma nota por passo, com a previsão feita antes de rodar |
 | [`docs/p2/`](docs/p2/) | O contrato das ferramentas do P2 e os limites dele como hipóteses |
 | [`CLAUDE.md`](CLAUDE.md) | Regras e contexto do projeto |
+

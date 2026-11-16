@@ -421,10 +421,33 @@
         "tpr": null
       }
     },
-    "motivos": {
-      "self_agreement": "Sem traces com as duas rodadas de anotação cega."
-    },
-    "self_agreement": null
+    "motivos": {},
+    "self_agreement": {
+      "C1": {
+        "agree": 10,
+        "n_na": 0,
+        "rate": 1.0,
+        "total": 10
+      },
+      "C2": {
+        "agree": 10,
+        "n_na": 0,
+        "rate": 1.0,
+        "total": 10
+      },
+      "C3": {
+        "agree": 10,
+        "n_na": 0,
+        "rate": 1.0,
+        "total": 10
+      },
+      "C4": {
+        "agree": 2,
+        "n_na": 8,
+        "rate": 1.0,
+        "total": 2
+      }
+    }
   },
   "usage": {
     "cost_usd": 0.666274,

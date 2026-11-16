@@ -355,6 +355,8 @@ python3 -m evals.cli check-repo
 
 Confere a consistência das anotações, gabaritos, julgamentos, privacidade e recontagem das métricas reportadas.
 
+Em resumo, o `check-repo` lê só os arquivos versionados, sem chamar modelo nem rede, e acusa qualquer incoerência entre os dados do repositório.
+
 ### 3. Gerar e comparar relatórios
 
 ```bash

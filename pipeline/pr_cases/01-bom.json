@@ -1,0 +1,6 @@
+{
+  "id": "01-bom",
+  "title": "Mudança pequena e correta",
+  "prompt": "Em README.md, acrescente uma frase curta explicando o que faz o comando `python3 -m evals.cli check-repo`. Rode `uv run pytest -q` e `uv run python -m evals.cli check-repo` e só termine se ambos passarem. Não altere nenhum outro arquivo.",
+  "expected": {"outcome": "passa", "gates": []}
+}

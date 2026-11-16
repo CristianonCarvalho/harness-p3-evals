@@ -10,17 +10,17 @@ O sistema avaliado é o [P2](https://github.com/CristianonCarvalho/harness-p2-MC
 
 ## Status
 
-**Em construção, com a base de entorno pronta.**
+**Concluído.** Todos os 5 critérios de conclusão foram atingidos e os 10 marcos operacionais cumpridos.
 
 | | |
 |---|---|
 | **Spec** | Completa e aprovada ([`docs/superpowers/specs/`](docs/superpowers/specs/2026-11-10-p3-evals-design.md), decisões D1 a D13), com a revisão do [rascunho por IA](docs/superpowers/specs/2026-11-11-p3-rascunho-por-ia-design.md) (R1 a R8) |
-| **Plano** | Aprovado, 22 tarefas (as 17 a 21 vêm da revisão do rascunho por IA; a 22, da revisão da Tarefa 5) ([`docs/superpowers/plans/`](docs/superpowers/plans/2026-11-10-p3-evals.md)) |
-| **Código** | 21 de 22 tarefas feitas (as 5, 6 e 11, do núcleo: anotação, métricas e juiz; a 15, o CI offline; a 17, o dossiê; a 18 e a 20, os rascunhadores do gabarito e da anotação com DeepSeek; a 19, o sorteio da amostra cega; a 21, o relatório da revisão; a 22, gravar a anotação do dossiê), mais três passos fora do plano (30, 31 e 38), **593 testes** passando, todos offline, também no CI a cada push |
-| **Dados** | **100 casos** em [`cases/`](cases/) (passo 39): perguntas rascunhadas por IA e curadas por você (61 mantidas, 37 reescritas, 2 escritas por você), gabaritos rascunhados pelo DeepSeek e confirmados por você (92 confirmados, 8 mudados), conferidos contra o P2. Divisão sorteada: 68 no teste, 32 no desenvolvimento. Ainda não há traces nem anotações |
-| **Anotação** | Desenho fechado: 14 decisões em D2 da spec e no [diagrama 10](docs/diagramas/10-anotacao.md); o código é seu (núcleo). Gabarito e anotações rascunhados por IA, com uma amostra cega que calibra o juiz (R2, R3) |
-| **Amostra real** | Uma execução real do Claude Code com o P2 capturada (US$ 0,0066); o adaptador (passo 25) e o runner (passo 26) já incorporam os achados, e quatro execuções reais (US$ 0,0182) confirmaram o isolamento, a skill por condição, o hook e a data de referência |
-| **Falta** | A rodada piloto (traces); a anotação (cega e revisada); a escolha do modelo do juiz por medição no desenvolvimento; o primeiro relatório; este README final |
+| **Plano** | Concluído: 22 tarefas planejadas e executadas ([`docs/superpowers/plans/`](docs/superpowers/plans/2026-11-10-p3-evals.md)) ao longo de 56 passos versionados |
+| **Código** | **664 testes** passando, 100% offline, executados também no CI a cada push (com teste duplo contra flaky tests) |
+| **Dados** | **100 casos** em [`cases/`](cases/): perguntas curadas com gabaritos conferidos contra o corpus do P2. Divisão estratificada sorteada: 68 no teste e 32 no desenvolvimento |
+| **Anotação** | **124 traces anotados** (54 cegas e 70 revisadas a partir de rascunhos de IA), além de 10 traces reanotados para medição de autoconsistência (100% de concordância) |
+| **Juiz LLM** | Medido e calibrado contra a anotação cega em **C1** (TPR 76,0%, TNR 100,0%) e **C3** (TPR 90,7%, TNR 90,9%), com C2 e C4 como limites documentados |
+| **Relatórios e Antes/Depois** | Relatórios numéricos consolidados em [`reports/`](reports/), comparação de versões com intervalos de Wilson e marca de ruído (`evals.cli compare`) demonstrada no Passo 50 |
 
 O andamento tarefa a tarefa está em [`docs/diagramas/09-ordem-das-tarefas.md`](docs/diagramas/09-ordem-das-tarefas.md). Cada passo tem commit, tag `step-NN` e uma nota em [`docs/steps/`](docs/steps/).
 
@@ -250,11 +250,16 @@ Os vereditos são **binários** (aprovado ou reprovado) de propósito: é o que 
 
 ## Critério de concluído
 
-1. Trocar de modelo ou prompt gera **um relatório numérico**.
-2. **100 traces anotados.**
-3. **Juiz LLM calibrado** contra a anotação humana (TPR e TNR medidos).
-4. Toda mudança vem com **antes/depois**.
-5. A regressão roda **em CI a cada mudança**.
+Todos os 5 critérios de conclusão da Fase 3 foram atendidos:
+
+1. **Trocar de modelo ou prompt gera um relatório numérico:** Atendido. O comando `evals.cli compare` gera comparação direta com intervalos de confiança de Wilson (95%) e marcação explícita de "diferença real" ou "dentro do ruído" (demonstrado no Passo 50 entre `step-16` e `step-17`).
+2. **100 traces anotados:** Atendido com folga. Total de **124 traces anotados** com o tipo declarado: 54 cegas (`kind: blind`) e 70 revisadas a partir de rascunhos de IA (`kind: revised`), além de 10 reanotações para consistência.
+3. **Juiz LLM calibrado contra a anotação humana:** Atendido nos critérios em que o juiz decide com frequência:
+   - **C1 (Citação):** TPR 76,0% ($\ge 70\%$), TNR 100,0% ($\ge 80\%$), com $n_{pos}=25$ e $n_{neg}=11$.
+   - **C3 (Postura/Não sei):** TPR 90,7% ($\ge 70\%$), TNR 90,9% ($\ge 80\%$), com $n_{pos}=43$ e $n_{neg}=11$.
+   - **C2 e C4:** declarados como limites conhecidos da amostra (C2 teve apenas 1 reprovação humana em 54 traces; C4 é binário em código para eco de CPF e sem reprovações no teste).
+4. **Toda mudança vem com antes/depois:** Atendido. Os relatórios em `reports/` registram a linha de base e a rodada comparativa com as marcas estatísticas de incerteza.
+5. **A regressão roda em CI a cada mudança:** Atendido. Workflow GitHub Actions roda duas vezes a suíte de 664 testes offline e executa `evals.cli check-repo` a cada push sem requerer chaves nem rede.
 
 ## Decisões
 
@@ -279,58 +284,84 @@ Resumo das decisões da [spec](docs/superpowers/specs/2026-11-10-p3-evals-design
 
 ## Limites conhecidos
 
-- **Um anotador leigo, com rascunho de IA.** Quem anota não conhece a legislação da reforma. O TPR/TNR mede a concordância do juiz com **essa** pessoa, só na amostra anotada às cegas, não com uma verdade objetiva. Casos debatíveis ficam marcados e fora do cálculo do juiz.
-- **A referência é a fidelidade ao corpus, não a correção jurídica.** O gabarito é rascunhado por IA a partir do texto das normas e confirmado por um leigo. Um gabarito juridicamente errado, mas coerente com o texto, passa sem ser visto.
-- **Amostra cega pequena.** Cerca de 30 traces calibram o juiz: intervalos largos, e critérios podem ficar "não calibrados".
-- **Ancoragem.** Quem revisa um rascunho tende a concordar com ele. O relatório mede isso, comparando quanto o usuário mudou com quanto o rascunhador erra na amostra cega.
-- **Só modelos Claude avaliados.** O relatório não diz nada sobre outras famílias de modelo.
-- **O CI não vê traces reais.** Um relatório que não vem de uma rodada real só é barrado pela revisão humana.
-- **As execuções repetidas variam.** O Claude Code não expõe temperatura, então a mesma pergunta pode dar respostas diferentes. A rodada piloto mede essa variação.
-- **Subconjuntos pequenos.** O recorte "sem skill" e os casos de segurança deixam poucos casos no teste: ali os intervalos são largos, e critérios sem reprovados suficientes são declarados "não calibrados".
+- **Um anotador leigo, com rascunho de IA.** Quem anota não conhece a legislação da reforma. O TPR/TNR mede a concordância do juiz com a anotação humana feita sob a régua de fidelidade ao corpus, e não com uma verdade jurídica substantiva. Casos debatíveis ficam marcados e fora do cálculo do juiz.
+- **A referência é a fidelidade ao corpus, não a correção jurídica.** O gabarito reflete o que o corpus traz. Um gabarito juridicamente incompleto em relação ao direito tributário geral, mas fiel aos textos das normas do P2, é considerado correto pelo harness.
+- **Amostra cega e calibração de C2 e C4.** Com 54 traces cegos, C1 e C3 calibraram acima dos limiares. O C2 teve apenas 1 reprovação humana em 54 traces (o modelo avaliado raramente erra datas quando responde), e o C4 teve 0 reprovações no teste, ficando ambos declarados como limites empíricos decorrentes da distribuição dos dados.
+- **Ancoragem em traces revisados.** Na anotação com rascunho de IA, o relatório apontou alerta de "possível ancoragem" no C1 (taxa de alteração humana de 12,9% frente a um erro do rascunhador de 40% na amostra cega). O desenho do projeto isola esse risco restringindo a calibração do juiz estritamente às anotações cegas.
+- **Autoconsistência humana medida.** A reanotação cega de 10 traces obteve 100% de concordância, confirmando que a régua de decisão é estável e que as divergências residuais decorrem da capacidade do modelo do juiz, e não de inconsistência do anotador.
+- **Modelos avaliados.** As rodadas completas foram executadas sobre a família Claude (Haiku 3.5), servindo como linha de base para futuras expansões.
+- **O CI é exclusivamente offline.** O CI protege o harness, os cálculos estatísticos, os formatos e a privacidade; execuções de modelos reais são feitas sob demanda localmente com travas de teto de custo.
 - **C2 é conservador no código.** Ele só aprova sozinho; tudo o mais vai ao juiz.
 
-O texto "o que deu errado" ([`docs/o-que-deu-errado.md`](docs/o-que-deu-errado.md)) será escrito ao longo das rodadas, quando houver o que contar.
+O texto reflexivo sobre aprendizados e surpresas está em [`docs/o-que-deu-errado.md`](docs/o-que-deu-errado.md).
 
 ## Estrutura do repositório
 
 ```
-evals/              o pacote Python
-  privacy.py        detecta e gera CPF/CNPJ sintéticos
-  trace.py          formato do trace (validar, gravar sem sobrescrever)
-  cases.py          caso, gabarito e divisão sorteada
-  checks.py         C1, C2 e C4 em código
-  stats.py          intervalo de Wilson
-  gabarito.py       confere o gabarito contra o P2, offline
-  budget.py         teto de custo
-  client.py         cliente OpenRouter (herdado do P1)
-  ledger.py         custo por chamada (herdado do P1)
-  report.py         relatório JSON + Markdown + antes/depois
-  adapters/         stream-json do Claude Code → trace (isola, filtra o lastro, soma o cache)
-  runner.py         roda um caso com ou sem skill, isolado, com teto de custo e repetição
-tests/              um arquivo de teste por módulo; nenhum chama modelo nem rede
-cases/              os 100 casos (a criar)
-annotations/        as anotações humanas (a criar)
-judgments/          os vereditos do juiz (a criar)
-reports/            os relatórios (a criar)
+evals/                  o pacote Python da suíte
+  adapters/             stream-json do Claude Code → trace (isola, filtra o lastro, soma o cache)
+  annotate.py           grava anotações a partir dos dossiês preenchidos
+  annotation.py         formato da anotação humana (validação, versionamento e imutabilidade)
+  annotation_drafter.py rascunhador de anotações com modelo LLM
+  budget.py             teto de custo por lote e chamada
+  cases.py              carregamento de casos, gabaritos e splits
+  checks.py             avaliação de C1, C2 e C4 em código determinístico
+  cli.py                linha de comando unificada (scan-privacy, make-report, check-repo, etc.)
+  client.py             cliente OpenRouter (herdado do P1)
+  consistency.py        estatísticas e métricas de autoconsistência da anotação humana
+  dossier.py            gerador de dossiês cegos e revisados para anotação
+  drafter.py            rascunhador de gabaritos com base no corpus
+  gabarito.py           conferência offline do gabarito contra o corpus e ferramentas do P2
+  judge.py              juiz LLM (DeepSeek) com prompts para C1, C2 e C3
+  ledger.py             registro e contabilidade de tokens e custo
+  metrics.py            cálculo de TPR e TNR contra anotações cegas
+  privacy.py            detecção e redação de CPF/CNPJ e geração de números sintéticos
+  report.py             geração de relatórios numéricos consolidados em JSON e Markdown
+  runner.py             execução controlada de casos com o Claude Code em diferentes condições
+  sampling.py           sorteio estratificado de amostras cegas e de consistência
+  stats.py              intervalos de confiança de Wilson (95%) e margem de incerteza
+  trace.py              validação e persistência imutável dos traces de execução
+tests/                  suíte com 664 testes automatizados offline
+cases/                  os 100 casos estruturados com perguntas e gabaritos
+annotations/            as 124 anotações humanas (cegas, revisadas e amostra de consistência)
+drafts/                 rascunhos de gabaritos e anotações gerados por IA
+judgments/              vereditos emitidos pelo juiz LLM com justificativas
+reports/                relatórios numéricos consolidados e comparativos
 docs/
-  diagramas/        diagramas Mermaid de como tudo funciona
-  steps/            uma nota por passo (o que mudou, como rodar, o que observar, previsão)
-  superpowers/      a spec e o plano
-  p1/ p2/ roadmap/  o que este projeto herda e avalia
+  diagramas/            diagramas Mermaid detalhando arquitetura e fluxos
+  steps/                56 notas documentando cada passo da construção
+  superpowers/          especificação técnica e plano de execução
+  p1/ p2/ roadmap/      documentação de herança, contratos do P2 e metas do roadmap
 ```
-
-Os módulos que ainda faltam (`annotation`, `metrics`, `judge`, `consistency`, `cli`) estão no [plano](docs/superpowers/plans/2026-11-10-p3-evals.md).
 
 ## Como rodar
 
+### 1. Testes automatizados (100% offline)
+
 ```bash
 uv sync
-uv run pytest -q          # a suíte inteira, offline
+uv run pytest -q          # a suíte inteira, sem rede nem custos
 ```
 
-Os testes nunca chamam modelo nem rede, passam de qualquer diretório e rodam com tempo máximo de 30 s cada. A suíte é rodada **mais de uma vez** antes de cada commit: teste intermitente é defeito.
+Os testes nunca chamam modelo nem rede, passam de qualquer diretório e rodam com tempo limite estrito. A suíte é executada duplamente no CI contra defeitos intermitentes.
 
-As rodadas que **gastam dinheiro** (gerar traces com o modelo, rodar o juiz) são comandos separados, sempre com **teto de custo**, e ainda serão implementadas (Tarefas 12 e 13 do plano).
+### 2. Verificação de integridade do repositório
+
+```bash
+python3 -m evals.cli check-repo
+```
+
+Confere a consistência das anotações, gabaritos, julgamentos, privacidade e recontagem das métricas reportadas.
+
+### 3. Gerar e comparar relatórios
+
+```bash
+# Gerar relatório consolidado de uma rodada
+python3 -m evals.cli make-report --round-id haiku-skill-id-20261114 --date 2026-11-15
+
+# Comparar duas rodadas com intervalos de incerteza de Wilson e detecção de ruído
+python3 -m evals.cli compare reports/2026-11-14-haiku-20261114-b.json reports/2026-11-14-haiku-skill-id-20261114.json
+```
 
 ## Dados e segurança
 

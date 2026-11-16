@@ -1,0 +1,33 @@
+# CodeQL: análise de fluxo de dados. O push na main cria a baseline dos alertas antigos;
+# sem ela o GitHub não sabe dizer quais alertas de um PR são novos.
+# O job fica verde mesmo com alertas: quem bloqueia o merge é a regra code_scanning do ruleset.
+name: codeql
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  codeql:
+    name: codeql
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      security-events: write  # só este job publica resultados na aba Security
+    steps:
+      # Ações fixadas pelo hash do commit (o rótulo pode ser movido pelo dono; o hash, não).
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: github/codeql-action/init@33d7b85da1a04171e211befe2c739303b9a4c066  # v4.39.3
+        with:
+          languages: python
+          queries: security-extended
+      - uses: github/codeql-action/analyze@33d7b85da1a04171e211befe2c739303b9a4c066  # v4.39.3
+        with:
+          category: "/language:python"

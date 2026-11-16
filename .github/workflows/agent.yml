@@ -31,6 +31,8 @@ jobs:
       CASE_ID: ${{ inputs.case_id }}
       MAX_COST_USD: "1.00"
       MAX_TURNS: "10"
+      # Modelo do agente, fixado pelo ID completo (um apelido pode passar a apontar para outro).
+      AGENT_MODEL: claude-haiku-5-5
     steps:
       # Ações fixadas pelo hash do commit (o rótulo pode ser movido pelo dono; o hash, não).
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
@@ -54,6 +56,7 @@ jobs:
           # no ambiente). Sem rede: WebFetch e WebSearch também ficam de fora.
           claude_args: >-
             --max-turns ${{ env.MAX_TURNS }}
+            --model ${{ env.AGENT_MODEL }}
             --allowedTools "Read,Edit,Write,Glob,Grep"
             --disallowedTools "Bash,WebFetch,WebSearch"
 

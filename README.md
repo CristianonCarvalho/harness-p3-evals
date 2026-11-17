@@ -353,7 +353,7 @@ Os testes nunca chamam modelo nem rede, passam de qualquer diretório e rodam co
 python3 -m evals.cli check-repo
 ```
 
-Confere a consistência das anotações, gabaritos, julgamentos, privacidade e recontagem das métricas reportadas.
+Confere a consistência das anotações, gabaritos, julgamentos, privacidade e recontagem das métricas reportadas. Sai com código 1 se houver algum problema, e roda sem chamar modelo nem rede.
 
 ### 3. Gerar e comparar relatórios
 

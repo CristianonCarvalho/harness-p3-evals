@@ -1,7 +1,7 @@
 {
   "p2_tag": "step-17",
   "models": [
-    "claude-haiku-5-5"
+    "claude-sonnet-5-5"
   ],
   "judge_model": "openai/gpt-6.1-terra",
   "judge_prompts_sha256": "8885a7f48594a48adbf780911f8dfbe544931f7295af8a2ae9616c121bf6662c",

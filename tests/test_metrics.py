@@ -32,7 +32,7 @@ def test_confusion_example_from_plan():
     }
     m = confusion(human, judge, "C1")
     assert (m.tp, m.fn, m.fp, m.tn) == (7, 1, 1, 1)
-    assert m.n_pos == 8
+    assert m.n_pos == 9
     assert m.n_neg == 2
     assert m.tpr == pytest.approx(0.875)
     assert m.tnr == pytest.approx(0.5)

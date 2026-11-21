@@ -391,6 +391,20 @@ def _check_limiares(root: Path, nome, relatorio, problemas: list[str], avisos: l
 # 8. run.json: antes e depois
 
 
+def _check_prompts_run(root: Path, run: dict, problemas: list[str], avisos: list[str]) -> None:
+    """Os prompts do juiz mudaram desde o run.json? Se mudaram, falta um relatório novo."""
+    declarado = run.get("judge_prompts_sha256")
+    if _vazio(declarado):
+        return
+    atual = hash_prompts(root / "config" / "judge_prompts")
+    if atual is None:
+        avisos.append("config/judge_prompts ausente: o hash dos prompts não é verificado")
+        return
+    if atual != declarado:
+        problemas.append("config/judge_prompts mudou desde config/run.json: o hash dos prompts "
+                         "não bate; rode um relatório novo e atualize o run.json")
+
+
 def _check_run(root: Path, nome, relatorio, problemas: list[str], avisos: list[str]) -> None:
     caminho = root / "config" / "run.json"
     if not caminho.is_file():
@@ -405,6 +419,7 @@ def _check_run(root: Path, nome, relatorio, problemas: list[str], avisos: list[s
     vazios = [c for c in CAMPOS_RUN if _vazio(run.get(c))]
     if vazios:
         avisos.append(f"config/run.json incompleto: {', '.join(vazios)}")
+    _check_prompts_run(root, run, problemas, avisos)
     if nome is None:
         avisos.append("sem relatório ainda (config/run.json existe, mas reports/ não tem relatório)")
         return

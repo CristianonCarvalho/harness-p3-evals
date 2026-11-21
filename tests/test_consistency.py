@@ -403,6 +403,20 @@ def test_run_sem_relatorio_avisa(tmp_path):
     assert "sem relatório ainda" in " ".join(resultado.warnings)
 
 
+def test_prompt_editado_sem_relatorio_novo_falha(tmp_path):
+    prompts = tmp_path / "config" / "judge_prompts"
+    _escreve(prompts / "C1.md", "critério original")
+    h = hash_prompts(prompts)
+    _escreve(tmp_path / "config" / "run.json", _run(judge_prompts_sha256=h))
+    _relatorio(tmp_path, "2026-01-15", {}, header=dict(HEADER, judge_prompts_sha256=h))
+    assert check_repo(tmp_path).problems == []
+
+    _escreve(prompts / "C1.md", "critério editado")
+    problemas = check_repo(tmp_path).problems
+    assert len(problemas) == 1
+    assert "config/judge_prompts mudou desde config/run.json" in problemas[0]
+
+
 # 10. Hash dos prompts
 
 
